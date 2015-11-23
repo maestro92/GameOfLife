@@ -1,0 +1,87 @@
+vs: EG_GOLUserInput.vs, fs: EG_GOLUserInput.fs
+Error in Init_Shader with u_modelViewProjMat
+Error in Init_Shader with u_modelViewMat
+Error in Init_Shader with u_viewMat
+Error in Init_Shader with u_projMat
+Error in Init_Shader with u_modelMat
+Error in Init_Shader with u_viewNoRotateMat
+Error in Init_Shader with u_normalMat
+Error in Init_Shader
+vs: EG_GOLUpdate.vs, fs: EG_GOLUpdate.fs
+Shader Compile Status: 
+ERROR: 0:18: 'texture2D' : no matching overloaded function found (using implicit conversion) 
+ERROR: 0:18: 'assign' :  cannot convert from 'const float' to 'FragColor 4-component vector of float'
+
+
+
+Error in Init_Shader with u_modelViewProjMat
+Error in Init_Shader with u_modelViewMat
+Error in Init_Shader with u_viewMat
+Error in Init_Shader with u_projMat
+Error in Init_Shader with u_modelMat
+Error in Init_Shader with u_viewNoRotateMat
+Error in Init_Shader with u_normalMat
+Error in Init_Shader
+vs: EG_GOLRender.vs, fs: EG_GOLRender.fs
+Error in Init_Shader with u_modelViewProjMat
+Error in Init_Shader with u_modelViewMat
+Error in Init_Shader with u_viewMat
+Error in Init_Shader with u_projMat
+Error in Init_Shader with u_modelMat
+Error in Init_Shader with u_viewNoRotateMat
+Error in Init_Shader with u_normalMat
+Error in Init_Shader
+Error in Init_Shader with u_texture
+vs: /EG_GUIShaders/EG_GUI.vs, fs: /EG_GUIShaders/EG_GUI.fs
+Error in Init_Shader with u_modelViewMat
+Error in Init_Shader with u_viewMat
+Error in Init_Shader with u_projMat
+Error in Init_Shader with u_modelMat
+Error in Init_Shader with u_viewNoRotateMat
+Error in Init_Shader with u_normalMat
+Error in Init_Shader
+vs: EG_TextureRenderer.vs, fs: EG_TextureRenderer.fs
+Error in Init_Shader with u_modelViewMat
+Error in Init_Shader with u_viewMat
+Error in Init_Shader with u_projMat
+Error in Init_Shader with u_modelMat
+Error in Init_Shader with u_viewNoRotateMat
+Error in Init_Shader with u_normalMat
+Error in Init_Shader
+vs: /EG_NoiseBasedParticleEffectShaders/EG_CompositeShader.vs, fs: /EG_NoiseBasedParticleEffectShaders/EG_CompositeShader.fs
+The file /EG_NoiseBasedParticleEffectShaders/EG_CompositeShader.vscannot be openned
+
+The file /EG_NoiseBasedParticleEffectShaders/EG_CompositeShader.fscannot be openned
+
+Error in Init_Shader with u_modelViewProjMat
+Error in Init_Shader with u_modelViewMat
+Error in Init_Shader with u_viewMat
+Error in Init_Shader with u_projMat
+Error in Init_Shader with u_modelMat
+Error in Init_Shader with u_viewNoRotateMat
+Error in Init_Shader with u_normalMat
+Error in Init_Shader
+Error in Init_Shader with u_backgroundTexture
+Error in Init_Shader with u_particlesTexture
+vs: EG_InstancedRenderingShadowMap.vs, fs: EG_InstancedRenderingShadowMap.fs
+vs: EG_InstancedRendering.vs, fs: EG_InstancedRendering.fs
+BaseLight.hs
+Error in Init_Shader
+Error in Init_Shader
+Error happened while loading the texture: 1282
+Loading Texture Assets/Images/Scroll.png
+vs: /EG_GUIShaders/EG_GUIText.vs, fs: /EG_GUIShaders/EG_GUIText.fs
+Error in Init_Shader with u_modelViewMat
+Error in Init_Shader with u_viewMat
+Error in Init_Shader with u_projMat
+Error in Init_Shader with u_modelMat
+Error in Init_Shader with u_viewNoRotateMat
+Error in Init_Shader with u_normalMat
+Error in Init_Shader
+Loading Texture assets/font.jpg
+Start
+clicking right
+clicking Up right
+clicking left
+clicking Up left
+Terminating normally.

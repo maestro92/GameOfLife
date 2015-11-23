@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GameOfLife" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Explosion Generator" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add option="-DGLEW_STATIC" />
+					<Add directory="C:/Program Files (x86)/GnuWin32/include" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/include" />
+					<Add directory="libraries/zlib-1.2.8" />
+					<Add directory="../My3DChess" />
+					<Add directory="EG_Camera" />
+					<Add directory="EG_Emitter" />
+					<Add directory="EG_GUI" />
+					<Add directory="EG_Light" />
+					<Add directory="EG_Model" />
+					<Add directory="EG_Model/EG_BuiltinModel" />
+					<Add directory="EG_ParticleEffects" />
+					<Add directory="EG_Renderer" />
+					<Add directory="EG_Utility" />
+					<Add directory="EG_WorldObject" />
+					<Add directory="EG_WorldObject/EG_WorldObject" />
+					<Add directory="EG_Renderer/EG_DeferredShading" />
+					<Add directory="EG_Renderer/EG_DeferredShadingLightPass" />
+					<Add directory="EG_Renderer/EG_ParticleEffectsRenderers" />
+				</Compiler>
+				<Linker>
+					<Add option="-lglew32" />
+					<Add option="-lglew32s" />
+					<Add option="-lglew32mx" />
+					<Add option="-lmingw32" />
+					<Add option="-lSDLmain" />
+					<Add option="-lSDL" />
+					<Add option="-llibpng" />
+					<Add option="-llibpng12" />
+					<Add option="-lSDL_ttf" />
+					<Add option="-lSDL_image" />
+					<Add option="-lSDL_mixer" />
+					<Add option="-lSDL_net" />
+					<Add option="-lopengl32" />
+					<Add option="-lglu32" />
+					<Add option="-lglut32" />
+					<Add option="-lassimp" />
+					<Add library="libraries\lib\Assimp\x64\assimp.lib" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\glew32.lib" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\glew32s.lib" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libmingw32.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libopengl32.a" />
+					<Add library="libraries\lib\SDL_image.lib" />
+					<Add library="libraries\lib\libSDL.dll.a" />
+					<Add library="libraries\lib\libSDLmain.a" />
+					<Add library="libraries\lib\libpng.dll.a" />
+					<Add library="libraries\lib\libpng12.dll.a" />
+					<Add directory="C:/Program Files (x86)/GnuWin32/lib" />
+					<Add directory="D:/Martin/Programming/C_C++/Projects/My3DChess/" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Explosion Generator" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Linker>
+			<Add option="-lmingw32" />
+			<Add option="-lSDLmain" />
+			<Add option="-lSDL" />
+			<Add library="C:\SDL-1.2.14\lib\libSDL.dll.a" />
+			<Add library="C:\SDL-1.2.14\lib\libSDLmain.a" />
+			<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libmingw32.a" />
+		</Linker>
+		<Unit filename="EG_Camera/EG_Camera.cpp" />
+		<Unit filename="EG_Camera/EG_Camera.h" />
+		<Unit filename="EG_Camera/EG_FirstPersonPovCamera.cpp" />
+		<Unit filename="EG_Camera/EG_FirstPersonPovCamera.h" />
+		<Unit filename="EG_Camera/EG_OrbitCamera.cpp" />
+		<Unit filename="EG_Camera/EG_OrbitCamera.h" />
+		<Unit filename="EG_Camera/EG_ThirdPersonPovCamera.cpp" />
+		<Unit filename="EG_Camera/EG_ThirdPersonPovCamera.h" />
+		<Unit filename="EG_Emitter/EG_Emitter.cpp" />
+		<Unit filename="EG_Emitter/EG_Emitter.h" />
+		<Unit filename="EG_Emitter/EG_EmitterParticle.cpp" />
+		<Unit filename="EG_Emitter/EG_EmitterParticle.h" />
+		<Unit filename="EG_GUI/EG_Button.cpp" />
+		<Unit filename="EG_GUI/EG_Button.h" />
+		<Unit filename="EG_GUI/EG_Control.cpp" />
+		<Unit filename="EG_GUI/EG_Control.h" />
+		<Unit filename="EG_GUI/EG_Label.cpp" />
+		<Unit filename="EG_GUI/EG_Label.h" />
+		<Unit filename="EG_GUI/EG_ListBox.cpp" />
+		<Unit filename="EG_GUI/EG_ListBox.h" />
+		<Unit filename="EG_GUI/EG_Rect.h" />
+		<Unit filename="EG_GUI/EG_Slider.cpp" />
+		<Unit filename="EG_GUI/EG_Slider.h" />
+		<Unit filename="EG_GUI/EG_Text.cpp" />
+		<Unit filename="EG_GUI/EG_Text.h" />
+		<Unit filename="EG_GameBoard.cpp" />
+		<Unit filename="EG_GameBoard.h" />
+		<Unit filename="EG_Light/EG_AllLights.cpp" />
+		<Unit filename="EG_Light/EG_AllLights.h" />
+		<Unit filename="EG_Light/EG_BaseLight.cpp" />
+		<Unit filename="EG_Light/EG_BaseLight.h" />
+		<Unit filename="EG_Light/EG_DirectionalLight.cpp" />
+		<Unit filename="EG_Light/EG_DirectionalLight.h" />
+		<Unit filename="EG_Light/EG_PointLight.cpp" />
+		<Unit filename="EG_Light/EG_PointLight.h" />
+		<Unit filename="EG_Light/EG_SpotLight.cpp" />
+		<Unit filename="EG_Light/EG_SpotLight.h" />
+		<Unit filename="EG_Main.cpp" />
+		<Unit filename="EG_Main.h" />
+		<Unit filename="EG_Math.cpp" />
+		<Unit filename="EG_Math.h" />
+		<Unit filename="EG_Model/EG_BuiltinModel/EG_CubeModel.cpp" />
+		<Unit filename="EG_Model/EG_BuiltinModel/EG_CubeModel.h" />
+		<Unit filename="EG_Model/EG_BuiltinModel/EG_QuadModelABS.cpp" />
+		<Unit filename="EG_Model/EG_BuiltinModel/EG_QuadModelABS.h" />
+		<Unit filename="EG_Model/EG_BuiltinModel/EG_XYZAxisModel.cpp" />
+		<Unit filename="EG_Model/EG_BuiltinModel/EG_XYZAxisModel.h" />
+		<Unit filename="EG_Model/EG_ImportedAnimatedModel.cpp" />
+		<Unit filename="EG_Model/EG_ImportedAnimatedModel.h" />
+		<Unit filename="EG_Model/EG_ImportedModel.cpp" />
+		<Unit filename="EG_Model/EG_ImportedModel.h" />
+		<Unit filename="EG_Model/EG_InstancedModel.cpp" />
+		<Unit filename="EG_Model/EG_InstancedModel.h" />
+		<Unit filename="EG_Model/EG_Mesh.cpp" />
+		<Unit filename="EG_Model/EG_Mesh.h" />
+		<Unit filename="EG_Model/EG_Model.cpp" />
+		<Unit filename="EG_Model/EG_Model.h" />
+		<Unit filename="EG_Model/EG_ModelABS.cpp" />
+		<Unit filename="EG_Model/EG_ModelABS.h" />
+		<Unit filename="EG_Model/EG_VertexData.h" />
+		<Unit filename="EG_Renderer/EG_BillboardRenderer.cpp" />
+		<Unit filename="EG_Renderer/EG_BillboardRenderer.h" />
+		<Unit filename="EG_Renderer/EG_DeferredShadingLightPass/EG_DeferredShadingDirectionalLightPass.h" />
+		<Unit filename="EG_Renderer/EG_DeferredShadingLightPass/EG_DeferredShadingLightPass.h" />
+		<Unit filename="EG_Renderer/EG_DeferredShadingLightPass/EG_DeferredShadingPointLightPass.h" />
+		<Unit filename="EG_Renderer/EG_DeferredShading/EG_DeferredShading.h" />
+		<Unit filename="EG_Renderer/EG_DeferredShading/EG_DeferredShadingGeometryPass.h" />
+		<Unit filename="EG_Renderer/EG_DeferredShading/EG_DeferredShadingLightPos.h" />
+		<Unit filename="EG_Renderer/EG_DeferredShading/EG_DeferredShadingReflection.h" />
+		<Unit filename="EG_Renderer/EG_DeferredShading/EG_DeferredShadingSkybox.h" />
+		<Unit filename="EG_Renderer/EG_DeferredShading/EG_DeferredShadingStencilPass.h" />
+		<Unit filename="EG_Renderer/EG_GeneralRenderer.cpp" />
+		<Unit filename="EG_Renderer/EG_GeneralRenderer.h" />
+		<Unit filename="EG_Renderer/EG_GeneralSceneRenderer.cpp" />
+		<Unit filename="EG_Renderer/EG_GeneralSceneRenderer.h" />
+		<Unit filename="EG_Renderer/EG_InstancedRenderer.cpp" />
+		<Unit filename="EG_Renderer/EG_InstancedRenderer.h" />
+		<Unit filename="EG_Renderer/EG_ParticleEffectsRenderers/EG_NoiseBasedParticleEffectRenderer.h" />
+		<Unit filename="EG_Renderer/EG_ParticleEffectsRenderers/EG_NoiseBasedParticleEffectRendererGPU.h" />
+		<Unit filename="EG_Renderer/EG_ParticleEffectsRenderers/EG_ParticleSystemRenderer.h" />
+		<Unit filename="EG_Renderer/EG_ReflectionRenderer.cpp" />
+		<Unit filename="EG_Renderer/EG_ReflectionRenderer.h" />
+		<Unit filename="EG_Renderer/EG_Renderer.cpp" />
+		<Unit filename="EG_Renderer/EG_Renderer.h" />
+		<Unit filename="EG_Renderer/EG_RendererManager.cpp" />
+		<Unit filename="EG_Renderer/EG_RendererManager.h" />
+		<Unit filename="EG_Renderer/EG_SceneRenderer.cpp" />
+		<Unit filename="EG_Renderer/EG_SceneRenderer.h" />
+		<Unit filename="EG_Renderer/EG_SkinningRenderer.cpp" />
+		<Unit filename="EG_Renderer/EG_SkinningRenderer.h" />
+		<Unit filename="EG_Renderer/EG_TextureRenderer.cpp" />
+		<Unit filename="EG_Renderer/EG_TextureRenderer.h" />
+		<Unit filename="EG_Renderer/EG_TwoPassRayCastingRenderer.cpp" />
+		<Unit filename="EG_Renderer/EG_TwoPassRayCastingRenderer.h" />
+		<Unit filename="EG_Shader.cpp" />
+		<Unit filename="EG_Shader.h" />
+		<Unit filename="EG_TimeManager.cpp" />
+		<Unit filename="EG_TimeManager.h" />
+		<Unit filename="EG_Utility/EG_Utility.cpp" />
+		<Unit filename="EG_Utility/EG_Utility.h" />
+		<Unit filename="EG_Utility/EG_Utility_AssimpMath.cpp" />
+		<Unit filename="EG_Utility/EG_Utility_Debug.cpp" />
+		<Unit filename="EG_Utility/EG_Utility_GL.cpp" />
+		<Unit filename="EG_Utility/EG_Utility_GLUniLoc.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="EG_Utility/EG_Utility_Math.cpp" />
+		<Unit filename="EG_WorldObject/EG_FullScreenQuad.cpp" />
+		<Unit filename="EG_WorldObject/EG_FullScreenQuad.h" />
+		<Unit filename="EG_WorldObject/EG_Skybox.cpp" />
+		<Unit filename="EG_WorldObject/EG_Skybox.h" />
+		<Unit filename="EG_WorldObject/EG_Smoke.cpp" />
+		<Unit filename="EG_WorldObject/EG_Smoke.h" />
+		<Unit filename="EG_WorldObject/EG_WorldAnimatedObject.cpp" />
+		<Unit filename="EG_WorldObject/EG_WorldAnimatedObject.h" />
+		<Unit filename="EG_WorldObject/EG_WorldBox.cpp" />
+		<Unit filename="EG_WorldObject/EG_WorldBox.h" />
+		<Unit filename="EG_WorldObject/EG_WorldObject.cpp" />
+		<Unit filename="EG_WorldObject/EG_WorldObject.h" />
+		<Unit filename="EG_WorldObject/EG_WorldSphere.cpp" />
+		<Unit filename="EG_WorldObject/EG_WorldSphere.h" />
+		<Unit filename="EG_deferredShading.h" />
+		<Unit filename="Particle.h" />
+		<Unit filename="Random.h" />
+		<Unit filename="Smoke_struct.h" />
+		<Unit filename="define.h" />
+		<Unit filename="mesh.cpp" />
+		<Unit filename="mesh.h" />
+		<Unit filename="meshData.h" />
+		<Unit filename="pipeline.cpp" />
+		<Unit filename="pipeline.h" />
+		<Unit filename="sceneLoader.cpp" />
+		<Unit filename="sceneLoader.h" />
+		<Unit filename="texture.cpp" />
+		<Unit filename="texture.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
