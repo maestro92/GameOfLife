@@ -101,7 +101,7 @@ void ExplosionGenerator::initRenderers()
     m_rm.init();
     r_instancedRenderer.init(2);
 
-    m_board = GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT, 50);
+    m_board = GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT, 20);
 
     tempTexture = EG_Utility::loadTexture("Assets/Images/Scroll.png");
 }
@@ -349,6 +349,16 @@ void ExplosionGenerator::start()
             update();
             forwardRender();
             SDL_GL_SwapBuffers();
+            int a = 1;
+
+            next_game_tick += INTERVAL;
+            delay_time = next_game_tick - SDL_GetTicks();
+
+            if (next_game_tick > SDL_GetTicks())
+                SDL_Delay(next_game_tick - SDL_GetTicks());
+            next_game_tick = SDL_GetTicks() + INTERVAL;
+
+
     }
 }
 

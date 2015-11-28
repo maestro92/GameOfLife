@@ -144,9 +144,13 @@ void GameBoard::update(EG_Renderer* renderer)
     glViewport(0, 0, m_numGridsX, m_numGridsY);
     glBindFramebuffer(GL_FRAMEBUFFER, m_simulationDoubleBuffer.pong.FBO);
 
+    pipeline temp_pipeline;
+    temp_pipeline.loadIdentity();
+    temp_pipeline.ortho(-1,1,-1,1,-1,1);
+
     renderer->enableShader(RENDER_PASS1);
         renderer->setData(RENDER_PASS1, "u_sourceTexture", 0, GL_TEXTURE0, m_simulationDoubleBuffer.ping.colorTexture);
-        renderer->loadUniformLocations(RENDER_PASS1);
+        renderer->loadUniformLocations(temp_pipeline, RENDER_PASS1);
         m_boardQuadModel.render();
     renderer->disableShader(RENDER_PASS1);
 }

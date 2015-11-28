@@ -90,4 +90,8 @@ Loading Texture assets/font.jpg
 Start
 clicking left
 clicking Up left
+clicking left
+clicking Up left
+clicking left
+clicking Up left
 Terminating normally.
