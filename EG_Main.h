@@ -13,7 +13,7 @@
 #include "EG_DirectionalLight.h"
 #include "EG_AllLights.h"
 #include "EG_ImportedAnimatedModel.h"
-#include "EG_BillboardList.h"
+
 
 
 #include "EG_DeferredShadingGeometryPass.h"
@@ -82,7 +82,6 @@
 
 #include "EG_GeneralRenderer.h"
 
-#include "L_Cube_Sphere_ParticleEffect.h"
 
 #define NO_SDL_GLEXT
 #include <GL/glew.h>
@@ -95,7 +94,7 @@
 
 
 #include "EG_Smoke.h"
-#include "CollisionDetection_HGrid.h"
+
 
 
 #define FRAME_VALUES 10
@@ -186,7 +185,8 @@ class ExplosionGenerator
         float m_specularIntensity;
         float m_specularPower;
 
-
+        bool m_inputMode;
+        bool m_switchFlag;
 
         Smoke smoke;
 
@@ -206,8 +206,6 @@ class ExplosionGenerator
         EG_InstancedModel  instancedSphere;
 
 
-        EG_WorldAnimatedObject  o_animatedLegoMan;
-        EG_WorldAnimatedObject  o_animatedBob;
         EG_FullScreenQuad       o_fullScreenQuad;
 
 //        EG_QuadModelABS     o_fullScreenQuad;

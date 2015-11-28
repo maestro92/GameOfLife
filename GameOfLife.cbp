@@ -18,7 +18,7 @@
 					<Add directory="C:/Program Files (x86)/GnuWin32/include" />
 					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/include" />
 					<Add directory="libraries/zlib-1.2.8" />
-					<Add directory="../My3DChess" />
+					<Add directory="../GameOfLife" />
 					<Add directory="EG_Camera" />
 					<Add directory="EG_Emitter" />
 					<Add directory="EG_GUI" />
@@ -62,7 +62,7 @@
 					<Add library="libraries\lib\libpng.dll.a" />
 					<Add library="libraries\lib\libpng12.dll.a" />
 					<Add directory="C:/Program Files (x86)/GnuWin32/lib" />
-					<Add directory="D:/Martin/Programming/C_C++/Projects/My3DChess/" />
+					<Add directory="../GameOfLife" />
 				</Linker>
 			</Target>
 			<Target title="Release">

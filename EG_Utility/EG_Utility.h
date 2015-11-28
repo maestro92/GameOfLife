@@ -80,6 +80,18 @@ struct EG_FrameBufferObject
     GLuint FBO;
     GLuint colorTexture;
     GLuint depthTexture;
+
+    void clear()
+    {
+        clear(glm::vec4(0,0,0,1));
+    }
+
+    void clear(glm::vec4 v)
+    {
+        glBindFramebuffer(GL_FRAMEBUFFER, FBO);
+        glClearColor(v.x, v.y, v.z, v.a);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    }
 };
 
 // double buffering
@@ -93,6 +105,18 @@ struct EG_DoubleFrameBufferObject
         EG_FrameBufferObject temp = ping;
         ping = pong;
         pong = temp;
+    }
+
+    void clear()
+    {
+        ping.clear();
+        pong.clear();
+    }
+
+    void clear(glm::vec4 v)
+    {
+        ping.clear(v);
+        pong.clear(v);
     }
 };
 
@@ -125,6 +149,7 @@ class EG_Utility
         static SDL_Surface* loadRawImage(string filename);
         static SDL_Surface* loadSDLImage(string filename);
         static GLuint loadTexture(string filename);
+        static GLuint loadTexture(string filename, GLuint filteringParam);
         static GLuint createTexture(int w, int h);
         static GLuint create3DTexture(int w, int h, int d);
 

@@ -53,6 +53,8 @@ ExplosionGenerator::ExplosionGenerator()
     m_increaseFlag = false;
     m_decreaseFlag = false;
     m_explodeFlag = false;
+    m_inputMode = true;
+    m_switchFlag = false;
 
     m_GUIComponentsFlags = 0;
     m_GUIComponentsIDs = 0;
@@ -99,9 +101,7 @@ void ExplosionGenerator::initRenderers()
     m_rm.init();
     r_instancedRenderer.init(2);
 
-    m_board = GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT, 10);
-
-//    m_board = GameBoard(100, 100, 5);
+    m_board = GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT, 50);
 
     tempTexture = EG_Utility::loadTexture("Assets/Images/Scroll.png");
 }
@@ -287,7 +287,6 @@ void ExplosionGenerator::start()
                             m_orbitCamera.m_pivotOffset.y = 3.0f;
 
 
-
 //                            space_bar = false;
                             m_explodeFlag = false;
                             addSmoke = false;
@@ -296,6 +295,12 @@ void ExplosionGenerator::start()
                             m_explodeFlag = true;
                             m_smokeStartTime = SDL_GetTicks();
                             addSmoke = true;
+
+
+                            if(m_inputMode)
+                                m_switchFlag = true;
+                            m_inputMode = !m_inputMode;
+
   //                          space_bar = true;
                             break;
                         case SDLK_v:
@@ -359,11 +364,31 @@ void ExplosionGenerator::update()
     m_mouseState.m_pos = glm::vec2(mx, SCREEN_HEIGHT - my);
 
 
-    r_Technique = &m_rm.r_GOLUpdate;
-//    glm::vec2 pos(0.5, 0.5);
-    // EG_Utility::debug("mouse position", m_mouseState.m_pos);
-    m_board.initUserInput(m_rm.r_GOLUserInput, m_mouseState);
-    m_board.m_boardDisplayBuffer.swapFrontBack();
+    // r_Technique = &m_rm.r_GOLUpdate;
+
+
+    if(m_inputMode)
+    {
+        r_Technique = &m_rm.r_GOLUserInput;
+        m_board.initUserInput(r_Technique, m_mouseState);
+        m_board.m_userInputBoardDoubleBuffer.swapFrontBack();
+    }
+    else
+    {
+        if(m_switchFlag)
+        {
+            r_Technique = &m_rm.r_GOLRenderIntermediate;
+            m_board.renderInputToSimulation(r_Technique, m_board.m_inputToSimulationRenderInfo);
+            m_switchFlag = false;
+        }
+
+//        cout << "update not inputMode" << endl;
+
+
+        r_Technique = &m_rm.r_GOLUpdate;
+        m_board.update(r_Technique);
+        m_board.m_simulationDoubleBuffer.swapFrontBack();
+    }
     // smoke.SwapSurfaces(&VelocityField);
 /*
     r_Technique = &m_rm.r_textureRenderer;
@@ -409,18 +434,34 @@ void ExplosionGenerator::forwardRender()
     glClearColor(1.0,0.0,0.0,1.0);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    r_Technique = &m_rm.r_textureRenderer;
-
-    m_rm.r_textureRenderer.setData(RENDER_PASS1, "u_texture", 0,
-                                                  GL_TEXTURE0,
-                                                  m_board.getColorTexture(0));
-
+    if(m_inputMode)
+    {
+        r_Technique = &m_rm.r_GOLRenderInput;
+        m_board.renderInput(r_Technique);
+    }
+    else
+    {
+        r_Technique = &m_rm.r_GOLRenderSimluation;
+        m_board.renderSimulation(r_Technique);
+    }
 /*
-    m_rm.r_textureRenderer.setData(RENDER_PASS1, "u_texture", 0,
-                                                  GL_TEXTURE0,
-                                                  tempTexture);
+        pipeline temp_pipeline;
+        temp_pipeline.loadIdentity();
+        temp_pipeline.ortho(-1,1,-1,1,-1,1);
+
+        glDisable(GL_DEPTH_TEST);
+        glDisable(GL_CULL_FACE);
+        glDisable(GL_BLEND);
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+        m_rm.r_GOLRender.enableShader(RENDER_PASS1);
+            m_rm.r_GOLRender.loadUniformLocations(temp_pipeline, RENDER_PASS1);
+            m_board.m_boardQuadModel.render();
+        m_rm.r_GOLRender.disableShader(RENDER_PASS1);
 */
-    o_fullScreenQuad.render(r_Technique, RENDER_PASS1, RENDER_TO_SCREEN);
+
+    // m_board.m_boardQuadModel.render();
+
 
 
     /*

@@ -17,7 +17,6 @@
 #include <fstream>
 #include <cstdio>
 
-#include "EG_ParticleEffect.h"
 #include "define.h"
 
 #include "EG_WorldObject.h"

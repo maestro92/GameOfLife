@@ -15,9 +15,48 @@ enum BufferId
     BACK
 };
 
+enum FBOTargetId
+{
+    INPUT = 0,
+    SIMULATION
+};
+
+
+
 class GameBoard
 {
-    private:
+    // private:
+    public:
+        struct RenderInfo
+        {
+            int width;
+            int height;
+            GLuint srcTexture;
+            GLuint FBOtarget;
+            int srcPresentValue;
+            int srcEmptyValue;
+            int dstPresentValue;
+            int dstEmptyValue;
+
+            RenderInfo()
+            { }
+
+            void set(int w, int h, GLuint srcTx, GLuint fbo, int rpv, int wpv)
+            {
+                width = w;
+                height = h;
+
+                srcTexture = srcTx;
+                FBOtarget = fbo;
+
+                srcPresentValue = rpv;
+                srcEmptyValue = 1 - rpv;
+
+                dstPresentValue = wpv;
+                dstEmptyValue = 1 - wpv;
+            }
+        };
+
         int m_numGridsX;
         int m_numGridsY;
         float m_width;
@@ -27,13 +66,18 @@ class GameBoard
 
         int m_gridSize;
 
+        RenderInfo m_inputToSimulationRenderInfo;
+      //  RenderInfo m_inputToScreenRenderInfo;
+        RenderInfo m_simulationToInputRenderInfo;
+      //  RenderInfo m_simulationToScreenRenderInfo;
+
         WorldObject o_quadObject;
         EG_QuadModelABS m_boardQuadModel;
 
         vector<vector<bool>> m_grids;
 
     public:
-        EG_DoubleFrameBufferObject m_boardDisplayBuffer;
+        EG_DoubleFrameBufferObject m_userInputBoardDoubleBuffer;
         EG_DoubleFrameBufferObject m_simulationDoubleBuffer;
 
         GameBoard() : GameBoard(20, 20, 1)
@@ -52,15 +96,23 @@ class GameBoard
         bool getBoard(int x, int y);
 
 
-        GLuint getColorTexture(int id);
+        GLuint getUserInputBoardColorTexture(int id);
         void attachFBO(int id);
-//        void initUserInput(EG_GeneralRenderer* renderer);
-//        void initUserInput(EG_GeneralRenderer& renderer, glm::vec2 pos);
-        void initUserInput(EG_GeneralRenderer& renderer, MouseState& mouseState);
 
-        void update(EG_GeneralRenderer& renderer);
-        void render(EG_GeneralRenderer& renderer);
+        void inputToSimluationBoard(EG_Renderer* renderer);
+        void initUserInput(EG_Renderer* renderer, MouseState& mouseState);
 
+        void update(EG_Renderer* renderer);
+
+        void renderInput(EG_Renderer* renderer, FBOTargetId target);
+        void renderInput(EG_Renderer* renderer, GLuint fboTarget);
+        void renderInput(EG_Renderer* renderer);
+
+        void renderInputToSimulation(EG_Renderer* renderer, RenderInfo& rInfo);
+
+        void renderSimulation(EG_Renderer* renderer, FBOTargetId target);
+        void renderSimulation(EG_Renderer* renderer, GLuint fboTarget);
+        void renderSimulation(EG_Renderer* renderer);
 
 };
 

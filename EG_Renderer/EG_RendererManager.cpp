@@ -27,13 +27,27 @@ void EG_RendererManager::init()
     r_GOLUserInput.addDataPair(RENDER_PASS1, "u_invHeight", DP_FLOAT);
     r_GOLUserInput.addDataPair(RENDER_PASS1, "u_mouseLeftBtnDown", DP_BOOL);
 
+
     s = new Shader("EG_GOLUpdate.vs", "EG_GOLUpdate.fs");
     r_GOLUpdate.addShader(s);
+    r_GOLUpdate.addDataPair(RENDER_PASS1, "u_sourceTexture", DP_INT);
 
+    s = new Shader("EG_GOLRenderInput.vs", "EG_GOLRenderInput.fs");
+    r_GOLRenderInput.addShader(s);
+    r_GOLRenderInput.addDataPair(RENDER_PASS1, "u_inputTexture",    DP_INT);
 
-    s = new Shader("EG_GOLRender.vs", "EG_GOLRender.fs");
-    r_GOLRender.addShader(s);
-    r_GOLRender.addDataPair(RENDER_PASS1, "u_texture",    DP_INT);
+    s = new Shader("EG_GOLRenderSimulation.vs", "EG_GOLRenderSimulation.fs");
+    r_GOLRenderSimluation.addShader(s);
+    r_GOLRenderSimluation.addDataPair(RENDER_PASS1, "u_simulationTexture",    DP_INT);
+
+    s = new Shader("EG_GOLRenderIntermediate.vs", "EG_GOLRenderIntermediate.fs");
+    r_GOLRenderIntermediate.addShader(s);
+    r_GOLRenderIntermediate.addDataPair(RENDER_PASS1, "u_sourceTexture",    DP_INT);
+    r_GOLRenderIntermediate.addDataPair(RENDER_PASS1, "u_srcPresentValue",  DP_INT);
+    r_GOLRenderIntermediate.addDataPair(RENDER_PASS1, "u_srcEmptyValue",    DP_INT);
+    r_GOLRenderIntermediate.addDataPair(RENDER_PASS1, "u_dstPresentValue",  DP_INT);
+    r_GOLRenderIntermediate.addDataPair(RENDER_PASS1, "u_dstEmptyValue",    DP_INT);
+
 
 
     /// r_GUIRenderer
