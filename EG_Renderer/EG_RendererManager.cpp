@@ -32,9 +32,15 @@ void EG_RendererManager::init()
     r_GOLUpdate.addShader(s);
     r_GOLUpdate.addDataPair(RENDER_PASS1, "u_sourceTexture", DP_INT);
 
+
     s = new Shader("EG_GOLRenderInput.vs", "EG_GOLRenderInput.fs");
     r_GOLRenderInput.addShader(s);
     r_GOLRenderInput.addDataPair(RENDER_PASS1, "u_inputTexture",    DP_INT);
+    r_GOLRenderInput.addDataPair(RENDER_PASS1, "u_startGridX", DP_FLOAT);
+    r_GOLRenderInput.addDataPair(RENDER_PASS1, "u_startGridY", DP_FLOAT);
+    r_GOLRenderInput.addDataPair(RENDER_PASS1, "u_endGridX", DP_FLOAT);
+    r_GOLRenderInput.addDataPair(RENDER_PASS1, "u_endGridY", DP_FLOAT);
+
 
     s = new Shader("EG_GOLRenderSimulation.vs", "EG_GOLRenderSimulation.fs");
     r_GOLRenderSimluation.addShader(s);

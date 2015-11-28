@@ -17,17 +17,18 @@ out vec4 FragColor;
 void main()
 {
 	vec2 fragCoord = gl_FragCoord.xy;
-	vec2 tc = vec2(1.0, 1.0);
-	tc.x = fragCoord.x * u_invWidth;
-	tc.y = fragCoord.y * u_invHeight;
-
-	vec4 color = texture(u_boardTexture, tc);
  	bool bx = (u_startGridX <= fragCoord.x) && (fragCoord.x <= u_endGridX);
  	bool by = (u_startGridY <= fragCoord.y) && (fragCoord.y <= u_endGridY);
  	if(bx && by && u_mouseLeftBtnDown)
  		FragColor = vec4(0.0,0.0,0.0,1.0);
 	else
+	{
+		vec2 tc = vec2(1.0, 1.0);
+		tc.x = fragCoord.x * u_invWidth;
+		tc.y = fragCoord.y * u_invHeight;
+		vec4 color = texture(u_boardTexture, tc);
 		FragColor = color;
+	}
 /*
  	if(fragCoord.x < u_inputPosition.x && fragCoord.y < u_inputPosition.y)
 	// if(fragCoord.x < tempPos.x && fragCoord.y < tempPos.y)	

@@ -65,6 +65,7 @@ class GameBoard
         float m_inverseHeight;
 
         int m_gridSize;
+        float m_invGridSize;
 
         RenderInfo m_inputToSimulationRenderInfo;
       //  RenderInfo m_inputToScreenRenderInfo;
@@ -107,13 +108,14 @@ class GameBoard
         void renderInput(EG_Renderer* renderer, FBOTargetId target);
         void renderInput(EG_Renderer* renderer, GLuint fboTarget);
         void renderInput(EG_Renderer* renderer);
+        void renderInput(EG_Renderer* renderer, MouseState& mouseState);
 
         void renderInputToSimulation(EG_Renderer* renderer, RenderInfo& rInfo);
 
         void renderSimulation(EG_Renderer* renderer, FBOTargetId target);
         void renderSimulation(EG_Renderer* renderer, GLuint fboTarget);
         void renderSimulation(EG_Renderer* renderer);
-
+        glm::vec2 screenCoordToBoardCoord(glm::vec2 pos);
 };
 
 

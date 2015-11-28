@@ -77,6 +77,7 @@ void GameBoard::setHeight(int h)
 void GameBoard::setGridSize(int s)
 {
     m_gridSize = s;
+    m_invGridSize = 1/(float)m_gridSize;
 }
 
 int GameBoard::getWidth()
@@ -100,6 +101,14 @@ bool GameBoard::getBoard(int x, int y)
 }
 
 
+glm::vec2 GameBoard::screenCoordToBoardCoord(glm::vec2 pos)
+{
+    glm::vec2 bCoord;
+    bCoord.x = floor(pos.x * m_invGridSize);
+    bCoord.y = floor(pos.y * m_invGridSize);
+    return bCoord;
+}
+
 void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState)
 {
 //    glViewport(0, 0, m_width, m_height);
@@ -109,13 +118,17 @@ void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState)
 
     // glBindFramebuffer(GL_FRAMEBUFFER, 0);
   //  attachBuffer(FRONT);
-    glm::vec2 pos = mouseState.m_pos;
-
+ //   glm::vec2 pos = mouseState.m_pos;
+/*
     float sx = floor(pos.x / m_gridSize);
     sx *= m_gridSize;
 
     float sy = floor(pos.y / m_gridSize);
     sy *= m_gridSize;
+*/
+    glm::vec2 spos = screenCoordToBoardCoord(mouseState.m_pos);
+    float sx = spos.x * m_gridSize;
+    float sy = spos.y * m_gridSize;
 
     float ex = sx + m_gridSize;
     float ey = sy + m_gridSize;
@@ -203,6 +216,49 @@ void GameBoard::renderInput(EG_Renderer* renderer, GLuint target)
 
     renderer->disableShader(RENDER_PASS1);
 }
+
+
+
+void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState)
+{
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+/*
+    glm::vec2 pos = mouseState.m_pos;
+    float sx = floor(pos.x / m_gridSize);
+    sx *= m_gridSize;
+
+    float sy = floor(pos.y / m_gridSize);
+    sy *= m_gridSize;
+
+    float ex = sx + m_gridSize;
+    float ey = sy + m_gridSize;f
+*/
+
+    glm::vec2 spos = screenCoordToBoardCoord(mouseState.m_pos);
+    float sx = spos.x * m_gridSize;
+    float sy = spos.y * m_gridSize;
+
+    float ex = sx + m_gridSize;
+    float ey = sy + m_gridSize;
+
+    pipeline temp_pipeline;
+    temp_pipeline.loadIdentity();
+    temp_pipeline.ortho(-1,1,-1,1,-1,1);
+
+    renderer->enableShader(RENDER_PASS1);
+        renderer->setData(RENDER_PASS1, "u_inputTexture", 0,
+                                        GL_TEXTURE0,
+                                        m_userInputBoardDoubleBuffer.ping.colorTexture);
+        renderer->setData(RENDER_PASS1, "u_startGridX", sx);
+        renderer->setData(RENDER_PASS1, "u_startGridY", sy);
+        renderer->setData(RENDER_PASS1, "u_endGridX", ex);
+        renderer->setData(RENDER_PASS1, "u_endGridY", ey);
+        renderer->loadUniformLocations(temp_pipeline, RENDER_PASS1);
+        m_boardQuadModel.render();
+
+    renderer->disableShader(RENDER_PASS1);
+}
+
 
 
 void GameBoard::renderInput(EG_Renderer* renderer)

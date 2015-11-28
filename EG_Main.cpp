@@ -5,12 +5,6 @@
 
 using namespace std;
 
-
-
-#define NBP_SMOKE_EFFECT 0
-#define NBP_SMOKE_EFFECT_GPU 0
-#define INSTANCED_RENDERING 1
-
 // https://www.youtube.com/watch?v=tlXM8qDOS3U
 // Screen dimension constants
 const int SCREEN_WIDTH = 800;
@@ -30,35 +24,17 @@ SDL_Surface* pDisplaySurface = NULL;
 //event structure
 SDL_Event event;
 
-
 static float runningTime = 0.0f;
-bool space_bar = false;
-int flag = 0;
-int inc_flag = 1;
 
 
 ExplosionGenerator::ExplosionGenerator()
 {
-    angle = 0;
     isRunning = true;
-    isFirstPersonCamera     = false;
-    isStencilTextureMode    = false;
-    isDepthTextureMode      = false;
-    dvel                    = false;
-    addSmoke                = false;
-    holdKeyFlag             = false;
-    toggleFlag              = false;
-    overrideAddSmokeFlag    = false;
-
-    m_increaseFlag = false;
-    m_decreaseFlag = false;
-    m_explodeFlag = false;
     m_inputMode = true;
     m_switchFlag = false;
 
     m_GUIComponentsFlags = 0;
     m_GUIComponentsIDs = 0;
-
 
     initRenderers();
     initObjects();
@@ -93,24 +69,16 @@ void ExplosionGenerator::initOpenGL()
 }
 
 
-
-
-
 void ExplosionGenerator::initRenderers()
 {
     m_rm.init();
-    r_instancedRenderer.init(2);
-
-    m_board = GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT, 20);
-
     tempTexture = EG_Utility::loadTexture("Assets/Images/Scroll.png");
 }
 
 
-
 void ExplosionGenerator::initObjects()
 {
-
+    m_board = GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT, 5);
 }
 
 
@@ -174,12 +142,6 @@ void ExplosionGenerator::initGUI()
 }
 
 
-void ExplosionGenerator::initFrameBuffers()
-{
-
-}
-
-
 void ExplosionGenerator::start()
 {
     cout << "Start" << endl;
@@ -204,7 +166,6 @@ void ExplosionGenerator::start()
 			{
                 case SDL_QUIT:
                     isRunning = false;
-                    cout << "quitting game" << endl;
                     break;
 
                 case SDL_MOUSEBUTTONUP:
@@ -212,17 +173,14 @@ void ExplosionGenerator::start()
                     {
                         case SDL_BUTTON_LEFT:
                             cout << "clicking Up left" << endl;
-                            m_orbitCamera.m_leftMouseDown = false;
                             m_mouseState.m_leftButtonDown = false;
                             SDL_GetMouseState(&tmpx,&tmpy);
-                            m_orbitCamera.m_mousePrevious = glm::vec2(tmpx, tmpy);
                             break;
 
                         case SDL_BUTTON_RIGHT:
                             cout << "clicking Up right" << endl;
                             m_mouseState.m_rightButtonDown = false;
                             SDL_GetMouseState(&tmpx,&tmpy);
-                            m_orbitCamera.m_mousePrevious = glm::vec2(tmpx, tmpy);
                             m_mouseState.m_rightButtonDown = false;
 
                             break;
@@ -236,7 +194,6 @@ void ExplosionGenerator::start()
                         int tmpx,tmpy;
                         case SDL_BUTTON_LEFT:
                             cout << "clicking left" << endl;
-                            m_orbitCamera.m_leftMouseDown = true;
                             SDL_GetMouseState(&tmpx,&tmpy);
                             m_mouseState.m_leftButtonDown = true;
                             break;
@@ -246,102 +203,29 @@ void ExplosionGenerator::start()
                             SDL_GetMouseState(&tmpx,&tmpy);
                             m_mouseState.m_rightButtonDown = true;
                             break;
-
-                        case SDL_BUTTON_WHEELUP:
-                            cout << "wheel up" << endl;
-                            break;
-
-                        case SDL_BUTTON_WHEELDOWN:
-                            cout << "wheel down" << endl;
-                            break;
                     }
                     break;
 
                 case SDL_KEYUP:
                     switch (event.key.keysym.sym)
                     {
-                        case SDLK_x:
-                            overrideAddSmokeFlag = false;
-                            addSmoke = false;
-                            break;
 
-                        case SDLK_o:
-                            holdKeyFlag = false;
-                            break;
-
-                        case SDLK_e:
-                            m_increaseFlag = false;
-                            break;
-
-                        case SDLK_q:
-                            m_decreaseFlag = false;
-                            break;
                     }
                     break;
 
                 case SDL_KEYDOWN:
                     switch (event.key.keysym.sym)
                     {
-                        case SDLK_ESCAPE:   isRunning = false;    break;
-                        case SDLK_z:
-                            m_orbitCamera.m_pivotOffset.y = 3.0f;
-
-
-//                            space_bar = false;
-                            m_explodeFlag = false;
-                            addSmoke = false;
+                        case SDLK_ESCAPE:
+                            isRunning = false;
                             break;
+
                         case SDLK_SPACE:
-                            m_explodeFlag = true;
-                            m_smokeStartTime = SDL_GetTicks();
-                            addSmoke = true;
-
-
                             if(m_inputMode)
                                 m_switchFlag = true;
                             m_inputMode = !m_inputMode;
-
-  //                          space_bar = true;
-                            break;
-                        case SDLK_v:
-                            dvel = !dvel;
-                            break;
-                        case SDLK_e:
-                            m_increaseFlag = true;
-                     //       EG_Utility::printGlm("Here", m_orbitCamera.m_pivotOffset);
                             break;
 
-                        case SDLK_q:
-                            m_decreaseFlag = true;
-                            break;
-
-
-                        case SDLK_l:
-                            isDepthTextureMode = !isDepthTextureMode;
-                            break;
-                        case SDLK_m:
-                            isFirstPersonCamera = !isFirstPersonCamera;
-                            break;
-                        case SDLK_n:
-                            isStencilTextureMode = !isStencilTextureMode;
-                            break;
-
-                        case SDLK_i:
-                            toggleFlag = !toggleFlag;
-                            break;
-
-                        case SDLK_o:
-                            holdKeyFlag = true;
-                            break;
-
-                        case SDLK_p:
-                            firstPersonPovCamera.setMouseInFlag(false);
-//                            myThirdPOV_camera.mouseIn(false);
-                            break;
-                        case SDLK_x:
-                            cout << "here" << endl;
-                            overrideAddSmokeFlag = true;
-                            addSmoke = true;
                     }
                     break;
 			}
@@ -351,12 +235,15 @@ void ExplosionGenerator::start()
             SDL_GL_SwapBuffers();
             int a = 1;
 
-            next_game_tick += INTERVAL;
-            delay_time = next_game_tick - SDL_GetTicks();
+            if(!m_inputMode)
+            {
+                next_game_tick += INTERVAL;
+                delay_time = next_game_tick - SDL_GetTicks();
 
-            if (next_game_tick > SDL_GetTicks())
-                SDL_Delay(next_game_tick - SDL_GetTicks());
-            next_game_tick = SDL_GetTicks() + INTERVAL;
+                if (next_game_tick > SDL_GetTicks())
+                    SDL_Delay(next_game_tick - SDL_GetTicks());
+                next_game_tick = SDL_GetTicks() + INTERVAL;
+            }
 
 
     }
@@ -367,7 +254,6 @@ void ExplosionGenerator::update()
 {
   //  m_GUIComponentsFlags = 0;
     float fDeltaTime = m_timeManager.GetElapsedTime();
-    angle+=0.05f;
 
     int mx, my;
     SDL_GetMouseState(&mx,&my);
@@ -399,14 +285,7 @@ void ExplosionGenerator::update()
         m_board.update(r_Technique);
         m_board.m_simulationDoubleBuffer.swapFrontBack();
     }
-    // smoke.SwapSurfaces(&VelocityField);
-/*
-    r_Technique = &m_rm.r_textureRenderer;
-    m_rm.r_textureRenderer.setData(RENDER_PASS1, "u_texture", 0,
-                                                  GL_TEXTURE0,
-                                                  m_board.getColorTexture(0));
-    o_fullScreenQuad.render(r_Technique, RENDER_PASS1, RENDER_TO_SCREEN);
-*/
+
     runningTime = (float)((double)SDL_GetTicks() - (double)m_timeManager.getStartTime()) / 1000.0f;
 }
 
@@ -447,45 +326,24 @@ void ExplosionGenerator::forwardRender()
     if(m_inputMode)
     {
         r_Technique = &m_rm.r_GOLRenderInput;
-        m_board.renderInput(r_Technique);
+        m_board.renderInput(r_Technique, m_mouseState);
     }
     else
     {
         r_Technique = &m_rm.r_GOLRenderSimluation;
         m_board.renderSimulation(r_Technique);
     }
-/*
-        pipeline temp_pipeline;
-        temp_pipeline.loadIdentity();
-        temp_pipeline.ortho(-1,1,-1,1,-1,1);
 
-        glDisable(GL_DEPTH_TEST);
-        glDisable(GL_CULL_FACE);
-        glDisable(GL_BLEND);
-        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    renderGUI();
+}
 
-        m_rm.r_GOLRender.enableShader(RENDER_PASS1);
-            m_rm.r_GOLRender.loadUniformLocations(temp_pipeline, RENDER_PASS1);
-            m_board.m_boardQuadModel.render();
-        m_rm.r_GOLRender.disableShader(RENDER_PASS1);
-*/
-
-    // m_board.m_boardQuadModel.render();
-
-
-
-    /*
-    glDisable(GL_CULL_FACE);
-    glViewport(0,0,SCREEN_WIDTH, SCREEN_HEIGHT);
-
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
-    glDisable(GL_DEPTH_TEST);
-    glClearColor(0.0,0.0,0.0,1.0);
-    glClear(GL_COLOR_BUFFER_BIT);
-
+void ExplosionGenerator::initGUIRenderStage()
+{
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
 
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 
     m_pipeline.reset();
     m_pipeline.matrixMode(PROJECTION_MATRIX);
@@ -494,52 +352,21 @@ void ExplosionGenerator::forwardRender()
 
     m_pipeline.matrixMode(MODEL_MATRIX);
     m_pipeline.loadIdentity();
-
-
-    board.render(m_rm.r_GOLRender);
-*/
-  //  renderGUI();
 }
-
-
-
-void ExplosionGenerator::getUserInput(glm::vec2 position)
-{
-    /*
-    GLuint p = ApplyImpulse_shader->getProgramId();
-    glUseProgram(p);
-
-    GLint pointLoc = glGetUniformLocation(p, "Point");
-    GLint radiusLoc = glGetUniformLocation(p, "Radius");
-    GLint fillColorLoc = glGetUniformLocation(p, "FillColor");
-
-    glUniform2f(pointLoc, (float) position.x, (float) position.y);
-    glUniform1f(radiusLoc, SplatRadius);
-    glUniform3f(fillColorLoc, value, value, value);
-
-    glBindFramebuffer(GL_FRAMEBUFFER, dest.FboHandle);
-    glEnable(GL_BLEND);
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-    ResetState();
-    */
-}
-
-
-
 
 void ExplosionGenerator::renderGUI()
 {
-  //  initGUIRenderStage();
+    initGUIRenderStage();
 
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+//glEnable(GL_BLEND);
+ //   glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 
     /// http://sdl.beuc.net/sdl.wiki/SDL_Average_FPS_Measurement
     unsigned int getTicks = SDL_GetTicks();
     m_timeManager.addTick(getTicks);
     m_fps = m_timeManager.computeAverageFPS();
 
-    string final_str = "Explosion Generator  FPS:" + EG_Utility::floatToStr(m_fps);
+    string final_str = "(" + EG_Utility::floatToStr(m_mouseState.m_pos.x) + ", " + EG_Utility::floatToStr(SCREEN_HEIGHT - m_mouseState.m_pos.y) + ")";
     EG_Control::m_textEngine.render(m_pipeline, 0, 10, final_str.c_str());
 
     /// render Each GUI component
@@ -549,4 +376,5 @@ void ExplosionGenerator::renderGUI()
         EG_Control* control = m_GUIComponents[i];
         control->render(m_pipeline, r_Technique, RENDER_PASS1);
     }
+    glDisable(GL_BLEND);
 }

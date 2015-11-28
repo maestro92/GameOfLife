@@ -71,13 +71,8 @@ Error in Init_Shader with u_normalMat
 Error in Init_Shader
 Error in Init_Shader with u_backgroundTexture
 Error in Init_Shader with u_particlesTexture
-vs: EG_InstancedRenderingShadowMap.vs, fs: EG_InstancedRenderingShadowMap.fs
-vs: EG_InstancedRendering.vs, fs: EG_InstancedRendering.fs
-BaseLight.hs
-Error in Init_Shader
-Error in Init_Shader
-Error happened while loading the texture: 1282
 Loading Texture Assets/Images/Scroll.png
+Error happened while loading the texture: 1282
 vs: /EG_GUIShaders/EG_GUIText.vs, fs: /EG_GUIShaders/EG_GUIText.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
@@ -88,10 +83,6 @@ Error in Init_Shader with u_normalMat
 Error in Init_Shader
 Loading Texture assets/font.jpg
 Start
-clicking left
-clicking Up left
-clicking left
-clicking Up left
 clicking left
 clicking Up left
 Terminating normally.

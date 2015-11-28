@@ -121,28 +121,15 @@ v for volatile
 s for static
 i for indexes and iterators
 e for events
-
-
 */
 
 
 
 class ExplosionGenerator
 {
-
     private:
         EG_RendererManager              m_rm;
         EG_Renderer*                    r_Technique;
-        EG_SceneRenderer                r_sceneRenderer;
-
-
-
-        EG_SkinningRenderer                     r_skinning;
-        EG_InstancedRenderer                    r_instancedRenderer;
-
-        EG_BillboardRenderer                    r_billBoardRenderer;
-        EG_TextureRenderer                      r_textureRenderer;
-
 
 
         /// GUI
@@ -160,9 +147,8 @@ class ExplosionGenerator
         EG_Slider m_particleCountSlider;    float m_particleCount;
         EG_Slider m_velocitySlider;         float m_velocity;
         EG_Slider m_maxRadiusSlider;        float m_maxRadius;
-
-
         EG_ListBox m_listBox;
+
 
         int m_GUIComponentsIDs;
         unsigned int m_GUIComponentsFlags;
@@ -171,54 +157,18 @@ class ExplosionGenerator
 
         EG_TimeManager m_timeManager;
         long long m_runningTime;
-
-        EG_AllLights allLights;
-
-
         MouseState m_mouseState;
-        GLuint VBO;
-        GLuint FBO;
-        GLuint FBO1;
+
         pipeline m_pipeline;
 
-        // Material Property
-        float m_specularIntensity;
-        float m_specularPower;
 
         bool m_inputMode;
         bool m_switchFlag;
 
-        Smoke smoke;
-
-
-        EG_FirstPersonPovCamera firstPersonPovCamera;
-        EG_ThirdPersonPovCamera thirdPersonPovCamera;
-        EG_OrbitCamera m_orbitCamera;
-
-
-
 
         EG_Model*   modelPtr;
         EG_ModelABS*    p_modelPtr;
-        EG_XYZAxisModel m_axisModel;
 
-
-        EG_InstancedModel  instancedSphere;
-
-
-        EG_FullScreenQuad       o_fullScreenQuad;
-
-//        EG_QuadModelABS     o_fullScreenQuad;
-
-        WorldObject     o_worldAxis;
-        WorldBox        o_wall;
-
-//        meshLoader* deferredShadingQuad;
-
-        bool holdKeyFlag;
-        bool toggleFlag;
-
-        bool overrideAddSmokeFlag;
 
         float m_fps;
         float m_iterRefreshRate;
@@ -228,36 +178,10 @@ class ExplosionGenerator
         unsigned int m_frameTicksIndex;
         unsigned int m_prevFrameTick;
 
-
         bool isRunning;
-        bool isFirstPersonCamera;
-        bool dvel;
-        bool addSmoke;
-        bool isStencilTextureMode;
-        bool isDepthTextureMode;
-
-        bool m_explodeFlag;
-
-        float m_smokeStartTime;
-        float m_smokeDuration;
-
-        /// textures
-        unsigned int depthTexture;
 
 
-
-
-
-
-        /// Matrices
-        bool m_increaseFlag;
-        bool m_decreaseFlag;
-
-        float angle;
         EG_Label m_lb;
-
-
-
 
         GLuint tempTexture;
 
@@ -266,16 +190,13 @@ class ExplosionGenerator
         ExplosionGenerator();
         ~ExplosionGenerator();
 
-
         /// init functions
         void initOpenGL();
         void initObjects();
         void initModels();
         void initRenderers();
 
-
         void initGUI();
-        void initFrameBuffers();
 
         void start();
         void update();
@@ -285,16 +206,7 @@ class ExplosionGenerator
         void initGUIRenderStage();
         void getUserInput(glm::vec2 position);
 
-        void renderShadowMap();
         void renderGUI();
-
-
-        void initTransformFeedBackTest();
-        void initTransformFeedBackTestBackup();
-
-        void updateTransformFeedbackTest();
-        void transformFeedBackTest();
-
 };
 
 

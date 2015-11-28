@@ -1693,10 +1693,10 @@
 1436768233 source:d:\martin\programming\c_c++\projects\gameoflife\eg_emitter\eg_emitterparticle.cpp
 	"EG_EmitterParticle.h"
 
-1448700200 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.cpp
+1448748831 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.cpp
 	"EG_GameBoard.h"
 
-1448680554 d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.h
+1448748425 d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.h
 	"define.h"
 	"EG_QuadModelABS.h"
 	"EG_GeneralRenderer.h"
@@ -1827,13 +1827,13 @@
 1421081666 source:d:\martin\programming\c_c++\projects\gameoflife\eg_light\eg_spotlight.cpp
 	"EG_SpotLight.h"
 
-1448703464 source:d:\martin\programming\c_c++\projects\gameoflife\eg_main.cpp
+1448748194 source:d:\martin\programming\c_c++\projects\gameoflife\eg_main.cpp
 	"EG_Main.h"
 	"gl/gl.h"
 	"gl/glu.h"
 	"SDL\SDL.h"
 
-1448678868 d:\martin\programming\c_c++\projects\gameoflife\eg_main.h
+1448742649 d:\martin\programming\c_c++\projects\gameoflife\eg_main.h
 	<cstdlib>
 	<iostream>
 	<stdio.h>
@@ -2294,7 +2294,7 @@
 1446362610 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderer.cpp
 	"EG_Renderer.h"
 
-1448680580 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.cpp
+1448747135 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.cpp
 	"EG_RendererManager.h"
 
 1438985863 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_scenerenderer.cpp
