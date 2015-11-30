@@ -33,25 +33,8 @@ GameBoard::GameBoard(int w, int h, int s)
 
     m_simulationDoubleBuffer = EG_Utility::createDoubleFrameBufferObject(m_numGridsX, m_numGridsY);
     m_simulationDoubleBuffer.clear();
-    /*
-    attachFBO(FRONT);
-    glClearColor(1, 1, 1, 1);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    attachFBO(BACK);
-    glClearColor(1, 1, 1, 1);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-*/
 
-/*
-    attachFBO(FRONT);
-    glClearColor(1, 1, 1, 1);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-    attachFBO(BACK);
-    glClearColor(1, 1, 1, 1);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-*/
 
     m_inputToSimulationRenderInfo.set(m_numGridsX, m_numGridsY,
                                         m_userInputBoardDoubleBuffer.ping.colorTexture,
@@ -111,21 +94,8 @@ glm::vec2 GameBoard::screenCoordToBoardCoord(glm::vec2 pos)
 
 void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState)
 {
-//    glViewport(0, 0, m_width, m_height);
-//    glBindFramebuffer(GL_FRAMEBUFFER, doubleBoardBuffer.ping.colorTexture);
- //   glBindFramebuffer(GL_FRAMEBUFFER, m_doubleBoardBuffer.pong.FBO);
     glBindFramebuffer(GL_FRAMEBUFFER, m_userInputBoardDoubleBuffer.pong.FBO);
 
-    // glBindFramebuffer(GL_FRAMEBUFFER, 0);
-  //  attachBuffer(FRONT);
- //   glm::vec2 pos = mouseState.m_pos;
-/*
-    float sx = floor(pos.x / m_gridSize);
-    sx *= m_gridSize;
-
-    float sy = floor(pos.y / m_gridSize);
-    sy *= m_gridSize;
-*/
     glm::vec2 spos = screenCoordToBoardCoord(mouseState.m_pos);
     float sx = spos.x * m_gridSize;
     float sy = spos.y * m_gridSize;
@@ -134,8 +104,6 @@ void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState)
     float ey = sy + m_gridSize;
 
     renderer->enableShader(RENDER_PASS1);
-
-//        renderer->setData(RENDER_PASS1, "u_startGridX", sx);
         renderer->setData(RENDER_PASS1, "u_boardTexture", 0, GL_TEXTURE0, m_userInputBoardDoubleBuffer.ping.colorTexture);
         renderer->setData(RENDER_PASS1, "u_startGridX", sx);
         renderer->setData(RENDER_PASS1, "u_startGridY", sy);
@@ -144,7 +112,6 @@ void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState)
         renderer->setData(RENDER_PASS1, "u_invWidth", m_inverseWidth);
         renderer->setData(RENDER_PASS1, "u_invHeight", m_inverseHeight);
         renderer->setData(RENDER_PASS1, "u_mouseLeftBtnDown", mouseState.m_leftButtonDown);
-//        renderer->setData(RENDER_PASS1, "u_boardTexture", 0, GL_TEXTURE0, m_board.getColorTexture(0));
 
         renderer->loadUniformLocations(RENDER_PASS1);
         m_boardQuadModel.render();
@@ -222,17 +189,6 @@ void GameBoard::renderInput(EG_Renderer* renderer, GLuint target)
 void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState)
 {
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
-/*
-    glm::vec2 pos = mouseState.m_pos;
-    float sx = floor(pos.x / m_gridSize);
-    sx *= m_gridSize;
-
-    float sy = floor(pos.y / m_gridSize);
-    sy *= m_gridSize;
-
-    float ex = sx + m_gridSize;
-    float ey = sy + m_gridSize;f
-*/
 
     glm::vec2 spos = screenCoordToBoardCoord(mouseState.m_pos);
     float sx = spos.x * m_gridSize;
@@ -258,6 +214,46 @@ void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState)
 
     renderer->disableShader(RENDER_PASS1);
 }
+
+
+
+
+void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern)
+{
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+    glm::vec2 spos = screenCoordToBoardCoord(mouseState.m_pos);
+    int sx = (int)(spos.x * m_gridSize);
+    int sy = (int)(spos.y * m_gridSize);
+
+    int ex = (int)(sx + m_gridSize);
+    int ey = (int)(sy + m_gridSize);
+
+    EG_Utility::debug("grid pos is", glm::vec2(sx, sy));
+
+    pipeline temp_pipeline;
+    temp_pipeline.loadIdentity();
+    temp_pipeline.ortho(-1,1,-1,1,-1,1);
+
+    renderer->enableShader(RENDER_PASS1);
+        renderer->setData(RENDER_PASS1, "u_inputTexture", 0,
+                                        GL_TEXTURE0,
+                                        m_userInputBoardDoubleBuffer.ping.colorTexture);
+
+        renderer->setData(RENDER_PASS1, "u_patternTexture", 1,
+                                        GL_TEXTURE1,
+                                        pattern->m_patternTexture);
+
+        renderer->setData(RENDER_PASS1, "u_patternBottomRightX", sx);
+        renderer->setData(RENDER_PASS1, "u_patternBottomRightY", sy);
+        renderer->setData(RENDER_PASS1, "u_patternWidth", pattern->m_width);
+        renderer->setData(RENDER_PASS1, "u_patternHeight", pattern->m_height);
+        renderer->loadUniformLocations(temp_pipeline, RENDER_PASS1);
+        m_boardQuadModel.render();
+
+    renderer->disableShader(RENDER_PASS1);
+}
+
 
 
 
@@ -289,15 +285,6 @@ void GameBoard::renderInputToSimulation(EG_Renderer* renderer, RenderInfo& rInfo
     renderer->disableShader(RENDER_PASS1);
 
 }
-
-
-
-
-
-
-
-
-
 
 
 void GameBoard::renderSimulation(EG_Renderer* renderer, FBOTargetId target)
@@ -334,22 +321,3 @@ void GameBoard::renderSimulation(EG_Renderer* renderer)
 }
 
 
-GLuint GameBoard::getUserInputBoardColorTexture(int id)
-{
-    if(id == FRONT)
-        return m_userInputBoardDoubleBuffer.ping.colorTexture;
-    else
-        return m_userInputBoardDoubleBuffer.pong.colorTexture;
-}
-
-void GameBoard::attachFBO(int id)
-{
-    if(id == FRONT)
-        glBindFramebuffer(GL_FRAMEBUFFER, m_userInputBoardDoubleBuffer.ping.FBO);
-    else
-        glBindFramebuffer(GL_FRAMEBUFFER, m_userInputBoardDoubleBuffer.pong.FBO);
-
-//    glClearColor(0, 0, 0, 1);
-//    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-}

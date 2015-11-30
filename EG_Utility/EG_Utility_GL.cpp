@@ -149,6 +149,45 @@ GLuint EG_Utility::loadTexture(string filename, GLuint filteringParam)
 }
 
 
+// http://stackoverflow.com/questions/8767166/passing-a-2d-array-to-a-c-function
+GLuint EG_Utility::loadTexture(vector<vector<vector<GLubyte>>> data, GLuint filteringParam)
+{
+    int h = data.size();
+    int w = data[0].size();
+
+    GLubyte temp[h][w][4];
+
+    for(int y = 0; y < h; y++)
+    {
+        for(int x = 0; x < w; x++)
+        {
+            temp[y][x][0] = (data[y][x][0]);
+            temp[y][x][1] = (data[y][x][1]);
+            temp[y][x][2] = (data[y][x][2]);
+            temp[y][x][3] = (data[y][x][3]);
+        }
+    }
+
+    unsigned int num;
+    glGenTextures(1,&num);
+
+    // tell OpenGL we want to use this texture
+    glBindTexture(GL_TEXTURE_2D,num);       //and use the texture, we have just generated
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, w, h, 0, GL_RGBA, GL_UNSIGNED_INT_8_8_8_8, temp);        //we make the actual texture
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, filteringParam);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, filteringParam);
+
+    // if you comment these two lines out, you will see the edges of the cube
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_S,GL_CLAMP);      //we repeat the pixels in the edge of the texture, it will hide that 1px wide line at the edge of the cube, which you have seen in the video
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_T,GL_CLAMP);      //we do it for vertically and horizontally (previous line)
+
+    //we delete the image, we don't need it anymore
+    glBindTexture(GL_TEXTURE_2D,0);
+    return num;
+}
+
+
 GLuint EG_Utility::createTexture(int w, int h)
 {
     GLuint textureID;

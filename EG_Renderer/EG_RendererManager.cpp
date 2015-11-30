@@ -42,6 +42,16 @@ void EG_RendererManager::init()
     r_GOLRenderInput.addDataPair(RENDER_PASS1, "u_endGridY", DP_FLOAT);
 
 
+    s = new Shader("EG_GOLRenderInputWithPattern.vs", "EG_GOLRenderInputWithPattern.fs");
+    r_GOLRenderInputWithPattern.addShader(s);
+    r_GOLRenderInputWithPattern.addDataPair(RENDER_PASS1, "u_inputTexture",         DP_INT);
+    r_GOLRenderInputWithPattern.addDataPair(RENDER_PASS1, "u_patternTexture",       DP_INT);
+    r_GOLRenderInputWithPattern.addDataPair(RENDER_PASS1, "u_patternBottomRightX",  DP_INT);
+    r_GOLRenderInputWithPattern.addDataPair(RENDER_PASS1, "u_patternBottomRightY",  DP_INT);
+    r_GOLRenderInputWithPattern.addDataPair(RENDER_PASS1, "u_patternWidth",         DP_INT);
+    r_GOLRenderInputWithPattern.addDataPair(RENDER_PASS1, "u_patternHeight",        DP_INT);
+
+
     s = new Shader("EG_GOLRenderSimulation.vs", "EG_GOLRenderSimulation.fs");
     r_GOLRenderSimluation.addShader(s);
     r_GOLRenderSimluation.addDataPair(RENDER_PASS1, "u_simulationTexture",    DP_INT);
@@ -67,13 +77,6 @@ void EG_RendererManager::init()
     r_textureRenderer.addShader(s);
     r_textureRenderer.addDataPair(RENDER_PASS1, "u_texture",    DP_INT);
 
-
-    ///r_particleCompositeRenderer
-    s = new Shader("/EG_NoiseBasedParticleEffectShaders/EG_CompositeShader.vs",
-                   "/EG_NoiseBasedParticleEffectShaders/EG_CompositeShader.fs");
-    r_particleCompositeRenderer.addShader(s);
-    r_particleCompositeRenderer.addDataPair(RENDER_PASS1, "u_backgroundTexture",    DP_INT);
-    r_particleCompositeRenderer.addDataPair(RENDER_PASS1, "u_particlesTexture",     DP_INT);
 }
 
 

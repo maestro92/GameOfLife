@@ -3,7 +3,6 @@
 
 #include "EG_Shader.h"
 
-#include "EG_TwoPassRayCastingRenderer.h"
 #include "Smoke_struct.h"
 
 #define NO_SDL_GLEXT

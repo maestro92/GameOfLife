@@ -75,6 +75,7 @@ struct EG_TextureObject
     int depth;
 };
 
+
 struct EG_FrameBufferObject
 {
     GLuint FBO;
@@ -150,6 +151,8 @@ class EG_Utility
         static SDL_Surface* loadSDLImage(string filename);
         static GLuint loadTexture(string filename);
         static GLuint loadTexture(string filename, GLuint filteringParam);
+        static GLuint loadTexture(vector<vector<vector<GLubyte>>> data, GLuint filteringParam);
+
         static GLuint createTexture(int w, int h);
         static GLuint create3DTexture(int w, int h, int d);
 
@@ -215,6 +218,7 @@ vector<T> EG_Utility::reserveVector(int size)
     v.reserve(size);
     return v;
 }
+
 
 
 #endif

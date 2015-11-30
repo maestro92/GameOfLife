@@ -700,7 +700,7 @@
 
 1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\gl.h
 
-1448699248 d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility.h
+1448841577 d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility.h
 	<cstdlib>
 	<vector>
 	<iostream>
@@ -1693,14 +1693,15 @@
 1436768233 source:d:\martin\programming\c_c++\projects\gameoflife\eg_emitter\eg_emitterparticle.cpp
 	"EG_EmitterParticle.h"
 
-1448748831 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.cpp
+1448853199 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.cpp
 	"EG_GameBoard.h"
 
-1448748425 d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.h
+1448850768 d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.h
 	"define.h"
 	"EG_QuadModelABS.h"
 	"EG_GeneralRenderer.h"
 	"EG_WorldObject.h"
+	"GOL_Model.h"
 
 1444336284 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gbuffer.cpp
 	"EG_GBuffer.h"
@@ -1827,13 +1828,13 @@
 1421081666 source:d:\martin\programming\c_c++\projects\gameoflife\eg_light\eg_spotlight.cpp
 	"EG_SpotLight.h"
 
-1448748194 source:d:\martin\programming\c_c++\projects\gameoflife\eg_main.cpp
+1448853773 source:d:\martin\programming\c_c++\projects\gameoflife\eg_main.cpp
 	"EG_Main.h"
 	"gl/gl.h"
 	"gl/glu.h"
 	"SDL\SDL.h"
 
-1448742649 d:\martin\programming\c_c++\projects\gameoflife\eg_main.h
+1448850240 d:\martin\programming\c_c++\projects\gameoflife\eg_main.h
 	<cstdlib>
 	<iostream>
 	<stdio.h>
@@ -1845,13 +1846,6 @@
 	"EG_DirectionalLight.h"
 	"EG_AllLights.h"
 	"EG_ImportedAnimatedModel.h"
-	"EG_DeferredShadingGeometryPass.h"
-	"EG_DeferredShadingSkybox.h"
-	"EG_DeferredShadingReflection.h"
-	"EG_DeferredShadingLightPos.h"
-	"EG_DeferredShadingStencilPass.h"
-	"EG_DeferredShadingPointLightPass.h"
-	"EG_DeferredShadingDirectionalLightPass.h"
 	"EG_GameBoard.h"
 	"EG_Emitter.h"
 	"EG_Camera.h"
@@ -1867,17 +1861,10 @@
 	"EG_Skybox.h"
 	"EG_Shader.h"
 	"sceneLoader.h"
+	"GOL_Square.h"
+	"GOL_SquareOutline.h"
 	"EG_Label.h"
-	"EG_TwoPassRayCastingRenderer.h"
-	"EG_SceneRenderer.h"
-	"EG_ReflectionRenderer.h"
 	"EG_TextureRenderer.h"
-	"EG_SkinningRenderer.h"
-	"EG_InstancedRenderer.h"
-	"EG_BillboardRenderer.h"
-	"EG_ParticleSystemRenderer.h"
-	"EG_NoiseBasedParticleEffectRenderer.h"
-	"EG_NoiseBasedParticleEffectRendererGPU.h"
 	"EG_RendererManager.h"
 	"EG_WorldAnimatedObject.h"
 	"EG_FullScreenQuad.h"
@@ -2077,7 +2064,7 @@
 1436648164 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_particleeffectsrenderers\eg_noisebasedparticleeffectrenderergpu.h
 	"EG_Renderer.h"
 
-1448679667 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.h
+1448850013 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.h
 	"EG_GeneralRenderer.h"
 
 1440567720 d:\martin\programming\c_c++\projects\gameoflife\eg_worldobject\eg_fullscreenquad.h
@@ -2158,9 +2145,8 @@
 	<stdio.h>
 	<math.h>
 
-1448678864 d:\martin\programming\c_c++\projects\gameoflife\eg_worldobject\eg_smoke.h
+1448831768 d:\martin\programming\c_c++\projects\gameoflife\eg_worldobject\eg_smoke.h
 	"EG_Shader.h"
-	"EG_TwoPassRayCastingRenderer.h"
 	"Smoke_struct.h"
 	<GL/glew.h>
 	<vector>
@@ -2294,7 +2280,7 @@
 1446362610 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderer.cpp
 	"EG_Renderer.h"
 
-1448747135 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.cpp
+1448853220 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.cpp
 	"EG_RendererManager.h"
 
 1438985863 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_scenerenderer.cpp
@@ -2333,7 +2319,7 @@
 1438574014 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_debug.cpp
 	"EG_Utility.h"
 
-1448668319 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_gl.cpp
+1448843706 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_gl.cpp
 	"EG_Utility.h"
 
 1433710619 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_gluniloc.cpp
@@ -2508,4 +2494,24 @@
 1415432244 d:\martin\programming\c_c++\projects\gameoflife\smoke_struct.h
 	"define.h"
 	<GL/glew.h>
+
+1448749968 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\eg_golmodel.cpp
+
+1448847571 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_model.cpp
+	"GOL_Model.h"
+
+1448847561 d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_model.h
+	"EG_Utility.h"
+
+1448847845 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_square.cpp
+	"GOL_Square.h"
+
+1448847586 d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_square.h
+	"GOL_Model.h"
+
+1448852231 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_squareoutline.cpp
+	"GOL_SquareOutline.h"
+
+1448847609 d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_squareoutline.h
+	"GOL_Model.h"
 

@@ -6,6 +6,7 @@
 #include "EG_QuadModelABS.h"
 #include "EG_GeneralRenderer.h"
 #include "EG_WorldObject.h"
+#include "GOL_Model.h"
 
 using namespace std;
 
@@ -96,10 +97,6 @@ class GameBoard
 
         bool getBoard(int x, int y);
 
-
-        GLuint getUserInputBoardColorTexture(int id);
-        void attachFBO(int id);
-
         void inputToSimluationBoard(EG_Renderer* renderer);
         void initUserInput(EG_Renderer* renderer, MouseState& mouseState);
 
@@ -109,6 +106,7 @@ class GameBoard
         void renderInput(EG_Renderer* renderer, GLuint fboTarget);
         void renderInput(EG_Renderer* renderer);
         void renderInput(EG_Renderer* renderer, MouseState& mouseState);
+        void renderInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern);
 
         void renderInputToSimulation(EG_Renderer* renderer, RenderInfo& rInfo);
 

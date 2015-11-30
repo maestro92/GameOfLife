@@ -15,15 +15,6 @@
 #include "EG_ImportedAnimatedModel.h"
 
 
-
-#include "EG_DeferredShadingGeometryPass.h"
-#include "EG_DeferredShadingSkybox.h"
-#include "EG_DeferredShadingReflection.h"
-#include "EG_DeferredShadingLightPos.h"
-#include "EG_DeferredShadingStencilPass.h"
-#include "EG_DeferredShadingPointLightPass.h"
-#include "EG_DeferredShadingDirectionalLightPass.h"
-
 #include "EG_GameBoard.h"
 
 #include "EG_Emitter.h"
@@ -49,22 +40,17 @@
 #include "sceneLoader.h"
 
 
+/// GOL_Shapes
+#include "GOL_Square.h"
+#include "GOL_SquareOutline.h"
+
+
 /// GUI
 #include "EG_Label.h"
 
 
 /// Renderers
-#include "EG_TwoPassRayCastingRenderer.h"
-#include "EG_SceneRenderer.h"
-#include "EG_ReflectionRenderer.h"
 #include "EG_TextureRenderer.h"
-#include "EG_SkinningRenderer.h"
-
-#include "EG_InstancedRenderer.h"
-#include "EG_BillboardRenderer.h"
-#include "EG_ParticleSystemRenderer.h"
-#include "EG_NoiseBasedParticleEffectRenderer.h"
-#include "EG_NoiseBasedParticleEffectRendererGPU.h"
 
 #include "EG_RendererManager.h"
 
@@ -180,12 +166,16 @@ class ExplosionGenerator
 
         bool isRunning;
 
+        GOL_Square m_GOLSquare;
+        GOL_SquareOutline m_GOLSquareOutline;
+        GOL_Model* m_GOLModelPtr;
 
         EG_Label m_lb;
 
         GLuint tempTexture;
 
         GameBoard m_board;
+
     public:
         ExplosionGenerator();
         ~ExplosionGenerator();

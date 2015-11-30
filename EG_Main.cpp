@@ -78,7 +78,11 @@ void ExplosionGenerator::initRenderers()
 
 void ExplosionGenerator::initObjects()
 {
-    m_board = GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT, 5);
+    int gridSize = 5;
+    m_board = GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT, gridSize);
+
+    m_GOLSquare = GOL_Square(1, 1, gridSize);
+    m_GOLSquareOutline = GOL_SquareOutline(5, 5, gridSize);
 }
 
 
@@ -325,8 +329,15 @@ void ExplosionGenerator::forwardRender()
 
     if(m_inputMode)
     {
+    /*
         r_Technique = &m_rm.r_GOLRenderInput;
         m_board.renderInput(r_Technique, m_mouseState);
+     */
+
+        r_Technique = &m_rm.r_GOLRenderInputWithPattern;
+        m_GOLModelPtr = &m_GOLSquareOutline;
+        m_board.renderInput(r_Technique, m_mouseState, m_GOLModelPtr);
+
     }
     else
     {
