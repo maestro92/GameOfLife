@@ -92,8 +92,12 @@
 			<Add library="C:\SDL-1.2.14\lib\libSDLmain.a" />
 			<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libmingw32.a" />
 		</Linker>
-		<Unit filename="EG_GOLModel/EG_GOLModel.cpp" />
-		<Unit filename="EG_GOLModel/EG_GOLModel.h" />
+		<Unit filename="EG_GOLModel/GOL_Model.cpp" />
+		<Unit filename="EG_GOLModel/GOL_Model.h" />
+		<Unit filename="EG_GOLModel/GOL_Square.cpp" />
+		<Unit filename="EG_GOLModel/GOL_Square.h" />
+		<Unit filename="EG_GOLModel/GOL_SquareOutline.cpp" />
+		<Unit filename="EG_GOLModel/GOL_SquareOutline.h" />
 		<Unit filename="EG_GUI/EG_Button.cpp" />
 		<Unit filename="EG_GUI/EG_Button.h" />
 		<Unit filename="EG_GUI/EG_Control.cpp" />

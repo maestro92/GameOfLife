@@ -269,8 +269,10 @@ void ExplosionGenerator::update()
 
     if(m_inputMode)
     {
-        r_Technique = &m_rm.r_GOLUserInput;
-        m_board.initUserInput(r_Technique, m_mouseState);
+        r_Technique = &m_rm.r_GOLUserInputWithPattern;
+        m_GOLModelPtr = &m_GOLSquareOutline;
+
+        m_board.initUserInput(r_Technique, m_mouseState, m_GOLModelPtr);
         m_board.m_userInputBoardDoubleBuffer.swapFrontBack();
     }
     else
@@ -336,6 +338,7 @@ void ExplosionGenerator::forwardRender()
 
         r_Technique = &m_rm.r_GOLRenderInputWithPattern;
         m_GOLModelPtr = &m_GOLSquareOutline;
+//        m_GOLModelPtr = &m_GOLSquare;
         m_board.renderInput(r_Technique, m_mouseState, m_GOLModelPtr);
 
     }

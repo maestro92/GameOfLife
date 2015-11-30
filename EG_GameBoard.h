@@ -99,6 +99,7 @@ class GameBoard
 
         void inputToSimluationBoard(EG_Renderer* renderer);
         void initUserInput(EG_Renderer* renderer, MouseState& mouseState);
+        void initUserInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern);
 
         void update(EG_Renderer* renderer);
 

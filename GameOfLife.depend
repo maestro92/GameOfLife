@@ -1693,10 +1693,10 @@
 1436768233 source:d:\martin\programming\c_c++\projects\gameoflife\eg_emitter\eg_emitterparticle.cpp
 	"EG_EmitterParticle.h"
 
-1448853199 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.cpp
+1448874329 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.cpp
 	"EG_GameBoard.h"
 
-1448850768 d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.h
+1448873895 d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.h
 	"define.h"
 	"EG_QuadModelABS.h"
 	"EG_GeneralRenderer.h"
@@ -1828,7 +1828,7 @@
 1421081666 source:d:\martin\programming\c_c++\projects\gameoflife\eg_light\eg_spotlight.cpp
 	"EG_SpotLight.h"
 
-1448853773 source:d:\martin\programming\c_c++\projects\gameoflife\eg_main.cpp
+1448874805 source:d:\martin\programming\c_c++\projects\gameoflife\eg_main.cpp
 	"EG_Main.h"
 	"gl/gl.h"
 	"gl/glu.h"
@@ -2064,7 +2064,7 @@
 1436648164 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_particleeffectsrenderers\eg_noisebasedparticleeffectrenderergpu.h
 	"EG_Renderer.h"
 
-1448850013 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.h
+1448854792 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.h
 	"EG_GeneralRenderer.h"
 
 1440567720 d:\martin\programming\c_c++\projects\gameoflife\eg_worldobject\eg_fullscreenquad.h
@@ -2280,7 +2280,7 @@
 1446362610 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderer.cpp
 	"EG_Renderer.h"
 
-1448853220 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.cpp
+1448874360 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.cpp
 	"EG_RendererManager.h"
 
 1438985863 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_scenerenderer.cpp
@@ -2503,13 +2503,13 @@
 1448847561 d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_model.h
 	"EG_Utility.h"
 
-1448847845 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_square.cpp
+1448873363 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_square.cpp
 	"GOL_Square.h"
 
 1448847586 d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_square.h
 	"GOL_Model.h"
 
-1448852231 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_squareoutline.cpp
+1448873455 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_squareoutline.cpp
 	"GOL_SquareOutline.h"
 
 1448847609 d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_squareoutline.h

@@ -27,6 +27,17 @@ void EG_RendererManager::init()
     r_GOLUserInput.addDataPair(RENDER_PASS1, "u_invHeight", DP_FLOAT);
     r_GOLUserInput.addDataPair(RENDER_PASS1, "u_mouseLeftBtnDown", DP_BOOL);
 
+    s = new Shader("EG_GOLUserInputWithPattern.vs", "EG_GOLUserInputWithPattern.fs");
+    r_GOLUserInputWithPattern.addShader(s);
+    r_GOLUserInputWithPattern.addDataPair(RENDER_PASS1, "u_boardTexture", DP_INT);
+    r_GOLUserInputWithPattern.addDataPair(RENDER_PASS1, "u_patternTexture",       DP_INT);
+    r_GOLUserInputWithPattern.addDataPair(RENDER_PASS1, "u_patternBottomRightX",  DP_INT);
+    r_GOLUserInputWithPattern.addDataPair(RENDER_PASS1, "u_patternBottomRightY",  DP_INT);
+    r_GOLUserInputWithPattern.addDataPair(RENDER_PASS1, "u_patternWidth",         DP_INT);
+    r_GOLUserInputWithPattern.addDataPair(RENDER_PASS1, "u_patternHeight",        DP_INT);
+    r_GOLUserInputWithPattern.addDataPair(RENDER_PASS1, "u_mouseLeftBtnDown",   DP_BOOL);
+
+
 
     s = new Shader("EG_GOLUpdate.vs", "EG_GOLUpdate.fs");
     r_GOLUpdate.addShader(s);

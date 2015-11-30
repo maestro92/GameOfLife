@@ -12,9 +12,12 @@ class EG_RendererManager
 
         EG_GeneralRenderer  r_GOLUpdate;
         EG_GeneralRenderer  r_GOLUserInput;
+        EG_GeneralRenderer  r_GOLUserInputWithPattern;
+
         EG_GeneralRenderer  r_GOLRenderInput;
-        EG_GeneralRenderer  r_GOLRenderIntermediate;
         EG_GeneralRenderer  r_GOLRenderInputWithPattern;
+
+        EG_GeneralRenderer  r_GOLRenderIntermediate;
         EG_GeneralRenderer  r_GOLRenderSimluation;
 
 

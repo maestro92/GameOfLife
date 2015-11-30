@@ -103,6 +103,11 @@ void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState)
     float ex = sx + m_gridSize;
     float ey = sy + m_gridSize;
 
+    EG_Utility::debug("grid pos is", glm::vec2(sx, sy));
+    EG_Utility::debug("grid end is", glm::vec2(ex, ey));
+
+    cout << endl << endl;
+
     renderer->enableShader(RENDER_PASS1);
         renderer->setData(RENDER_PASS1, "u_boardTexture", 0, GL_TEXTURE0, m_userInputBoardDoubleBuffer.ping.colorTexture);
         renderer->setData(RENDER_PASS1, "u_startGridX", sx);
@@ -115,6 +120,41 @@ void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState)
 
         renderer->loadUniformLocations(RENDER_PASS1);
         m_boardQuadModel.render();
+    renderer->disableShader(RENDER_PASS1);
+}
+
+
+void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern)
+{
+    glBindFramebuffer(GL_FRAMEBUFFER, m_userInputBoardDoubleBuffer.pong.FBO);
+
+    glm::vec2 spos = screenCoordToBoardCoord(mouseState.m_pos);
+    int sx = (int)(spos.x * m_gridSize);
+    int sy = (int)(spos.y * m_gridSize);
+
+    int ex = (int)(sx + m_gridSize);
+    int ey = (int)(sy + m_gridSize);
+    pipeline temp_pipeline;
+    temp_pipeline.loadIdentity();
+    temp_pipeline.ortho(-1,1,-1,1,-1,1);
+
+    renderer->enableShader(RENDER_PASS1);
+        renderer->setData(RENDER_PASS1, "u_boardTexture", 0,
+                                        GL_TEXTURE0,
+                                        m_userInputBoardDoubleBuffer.ping.colorTexture);
+
+        renderer->setData(RENDER_PASS1, "u_patternTexture", 1,
+                                        GL_TEXTURE1,
+                                        pattern->m_patternTexture);
+
+        renderer->setData(RENDER_PASS1, "u_patternBottomRightX", ex);
+        renderer->setData(RENDER_PASS1, "u_patternBottomRightY", sy);
+        renderer->setData(RENDER_PASS1, "u_patternWidth", pattern->m_width);
+        renderer->setData(RENDER_PASS1, "u_patternHeight", pattern->m_height);
+        renderer->setData(RENDER_PASS1, "u_mouseLeftBtnDown", mouseState.m_leftButtonDown);
+        renderer->loadUniformLocations(temp_pipeline, RENDER_PASS1);
+        m_boardQuadModel.render();
+
     renderer->disableShader(RENDER_PASS1);
 }
 
@@ -197,6 +237,9 @@ void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState)
     float ex = sx + m_gridSize;
     float ey = sy + m_gridSize;
 
+
+
+
     pipeline temp_pipeline;
     temp_pipeline.loadIdentity();
     temp_pipeline.ortho(-1,1,-1,1,-1,1);
@@ -229,7 +272,10 @@ void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState, GOL_M
     int ex = (int)(sx + m_gridSize);
     int ey = (int)(sy + m_gridSize);
 
-    EG_Utility::debug("grid pos is", glm::vec2(sx, sy));
+
+
+  // EG_Utility::debug("grid pos is", glm::vec2(sx, sy));
+  //  EG_Utility::debug("grid rightbot is", glm::vec2(ex, sy));
 
     pipeline temp_pipeline;
     temp_pipeline.loadIdentity();
@@ -244,7 +290,7 @@ void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState, GOL_M
                                         GL_TEXTURE1,
                                         pattern->m_patternTexture);
 
-        renderer->setData(RENDER_PASS1, "u_patternBottomRightX", sx);
+        renderer->setData(RENDER_PASS1, "u_patternBottomRightX", ex);
         renderer->setData(RENDER_PASS1, "u_patternBottomRightY", sy);
         renderer->setData(RENDER_PASS1, "u_patternWidth", pattern->m_width);
         renderer->setData(RENDER_PASS1, "u_patternHeight", pattern->m_height);
