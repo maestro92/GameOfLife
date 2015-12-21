@@ -71,24 +71,44 @@ void ExplosionGenerator::initOpenGL()
 
 void ExplosionGenerator::initRenderers()
 {
-    m_rm.init();
-    tempTexture = EG_Utility::loadTexture("Assets/Images/Scroll.png");
+    m_rm.init(SCREEN_WIDTH, SCREEN_HEIGHT);
+    tempTexture = EG_Utility::loadTexture("Assets/Images/tank1B.png");
 }
 
 
 void ExplosionGenerator::initObjects()
 {
-    int gridSize = 5;
-    m_board = GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT, gridSize);
+    m_gridSize = 5;
+    m_board = GameBoard(SCREEN_WIDTH-200, SCREEN_HEIGHT, m_gridSize);
 
-    m_GOLSquare = GOL_Square(1, 1, gridSize);
-    m_GOLSquareOutline = GOL_SquareOutline(5, 5, gridSize);
+    int x = SCREEN_WIDTH - 200;
+    int y = 0;
+    int w = 200;
+    int h = SCREEN_HEIGHT;
+    m_GUIManager.init(SCREEN_WIDTH, SCREEN_HEIGHT, x, y, w, h);
+
+  //  m_GOLSquare = GOL_Square(1, 1, m_gridSize);
+  //  m_GOLSquareOutline = GOL_SquareOutline(5, 5, m_gridSize);
 }
 
 
 void ExplosionGenerator::initModels()
 {
+//    m_GOLSquare = GOL_Model(GOL_Model::generateSquareGridModel(1), m_gridSize);
+//    m_GOLSquareOutline = GOL_Model(GOL_Model::generateSquareOutlineGridModel(5), m_gridSize);
 
+    m_GOLModelManager.init(m_gridSize);
+    m_GOLModelPtr = m_GOLModelManager.getDefaultGOLModel();
+/*
+    m_GOLModelTitles.push_back("Default Square");
+    m_GOLModelTitles.push_back("Square Outline");
+    m_GOLModelTitles.push_back("Space Ship");
+
+    m_GOLModelMenu.push_back(new GOL_Model(GOL_Model::generateSquareGridModel(1), m_gridSize));
+    m_GOLModelMenu.push_back(new GOL_Model(GOL_Model::generateSquareOutlineGridModel(5), m_gridSize));
+    m_GOLModelMenu.push_back(new GOL_Model(GOL_Model::generateSpaceShipModel(), m_gridSize));
+    m_GOLModelMenu.push_back(&m_GOLSquareOutline);
+*/
 }
 
 
@@ -98,51 +118,50 @@ void ExplosionGenerator::initGUI()
 
     EG_Control::m_textEngine.initialize();
 
-    int X_OFFSET = 10;
+    int X_OFFSET = 600;
 
     int SLIDER_HEIGHT = 35;
     int BUTTON_WIDTH = 200;
     int BUTTON_HEIGHT = 35;
 
+/*
     m_particleCountSlider.setID(m_GUIComponentsIDs);
     m_particleCountSlider.setRect(X_OFFSET, 400, BUTTON_WIDTH, SLIDER_HEIGHT);
     m_particleCountSlider.setColor(DARK_GRAY);
     m_particleCountSlider.setSliderColor(GREEN);
-    m_particleCountSlider.setLabel("Particle Count");
+    m_particleCountSlider.setText("Particle Count");
     m_particleCountSlider.setValue(&m_particleCount);
     m_particleCountSlider.setMaxValue(100);
     m_particleCountSlider.setMinValue(0.5);
     m_particleCountSlider.setValueType(EG_Slider::INT_TYPE);
     m_particleCountSlider.initColoredQuad();
     m_GUIComponents.push_back(&m_particleCountSlider);
+*/
 
-
+/*
     m_smokeSizeSlider.setID(m_GUIComponentsIDs);
     m_smokeSizeSlider.setRect(X_OFFSET, 250, BUTTON_WIDTH, SLIDER_HEIGHT);
     m_smokeSizeSlider.setColor(DARK_GRAY);
     m_smokeSizeSlider.setSliderColor(GREEN);
-    m_smokeSizeSlider.setLabel("Smoke Size");
+    m_smokeSizeSlider.setText("Smoke Size");
     m_smokeSizeSlider.setValue(&m_smokeSize);
     m_smokeSizeSlider.setMaxValue(20);
     m_smokeSizeSlider.setMinValue(2);
     m_smokeSizeSlider.initColoredQuad();
     m_GUIComponents.push_back(&m_smokeSizeSlider);
-
-
+*/
+    m_resetButton = EG_Button("Reset", X_OFFSET, 200, BUTTON_WIDTH, BUTTON_HEIGHT, BLUE);
+    m_resetButton.setColors(BLUE, GREEN, RED);
     m_resetButton.setID(m_GUIComponentsIDs);
-    m_resetButton.setRect(X_OFFSET, 200, BUTTON_WIDTH, BUTTON_HEIGHT);
-    m_resetButton.setLabel("Reset");
-    m_resetButton.setColor(GRAY);
-    m_resetButton.initColoredQuad();
     m_GUIComponents.push_back(&m_resetButton);
 
-
+    m_triggerButton = EG_Button("EXPLODE!", X_OFFSET, 0, BUTTON_WIDTH, BUTTON_HEIGHT, BLUE);
+    m_triggerButton.setColors(GREEN, BLUE, RED);
     m_triggerButton.setID(m_GUIComponentsIDs);
-    m_triggerButton.setRect(X_OFFSET, 150, BUTTON_WIDTH, BUTTON_HEIGHT);
-    m_triggerButton.setLabel("EXPLODE!");
-    m_triggerButton.setColor(GRAY);
-    m_triggerButton.initColoredQuad();
     m_GUIComponents.push_back(&m_triggerButton);
+
+    m_GUIManager.m_GOLModelListBox.setID(m_GUIComponentsIDs);
+    m_GUIComponents.push_back(&m_GUIManager.m_GOLModelListBox);
 }
 
 
@@ -230,8 +249,16 @@ void ExplosionGenerator::start()
                             m_inputMode = !m_inputMode;
                             break;
 
+                        case SDLK_r:
+                            EG_Utility::debug("pressing R");
+
+
+
+                            break;
                     }
                     break;
+
+
 			}
         }
             update();
@@ -256,23 +283,44 @@ void ExplosionGenerator::start()
 
 void ExplosionGenerator::update()
 {
-  //  m_GUIComponentsFlags = 0;
     float fDeltaTime = m_timeManager.GetElapsedTime();
 
     int mx, my;
     SDL_GetMouseState(&mx,&my);
+    EG_Utility::debug("mouse is", glm::vec2(mx, SCREEN_HEIGHT - my));
+
     m_mouseState.m_pos = glm::vec2(mx, SCREEN_HEIGHT - my);
 
+    bool sliding = false;
+    bool b = false;
 
-    // r_Technique = &m_rm.r_GOLUpdate;
+//    std::bitset<32> flag(m_GUIComponentsFlags);
+//    cout << flag << endl;
 
+
+  //  if(m_GUIComponentsFlags == 0)
+
+//    sliding = m_particleCountSlider.update(m_mouseState, m_GUIComponentsFlags) || m_maxRadiusSlider.update(m_mouseState, m_GUIComponentsFlags);
+//    sliding = m_velocitySlider.update(m_mouseState, m_GUIComponentsFlags);
+//    sliding = m_smokeSizeSlider.update(m_mouseState, m_GUIComponentsFlags);
+    b = m_triggerButton.update(m_mouseState, m_GUIComponentsFlags);
+    b = m_resetButton.update(m_mouseState, m_GUIComponentsFlags);
+
+    b = m_GUIManager.m_GOLModelListBox.update(m_mouseState);
+
+    int index = m_GUIManager.m_GOLModelListBox.getIndex();
+    m_GOLModelPtr = m_GOLModelManager.getModel(index);
+
+    // m_GOLModelPtr = m_GOLModelMenu[m_GUIManager.m_GOLModelListBox.getIndex()];
+
+    // if(m_GOLModelListBox.getIndex())
 
     if(m_inputMode)
     {
         r_Technique = &m_rm.r_GOLUserInputWithPattern;
-        m_GOLModelPtr = &m_GOLSquareOutline;
-
+        // m_GOLModelPtr = &m_GOLSquareOutline;
         m_board.initUserInput(r_Technique, m_mouseState, m_GOLModelPtr);
+//        m_board.initUserInput(r_Technique, m_mouseState, m_GOLModelPtr, m_GOLModelManager.getModel(2)->getTexture());
         m_board.m_userInputBoardDoubleBuffer.swapFrontBack();
     }
     else
@@ -280,12 +328,9 @@ void ExplosionGenerator::update()
         if(m_switchFlag)
         {
             r_Technique = &m_rm.r_GOLRenderIntermediate;
-            m_board.renderInputToSimulation(r_Technique, m_board.m_inputToSimulationRenderInfo);
+            m_board.renderInputToSimulation(r_Technique);
             m_switchFlag = false;
         }
-
-//        cout << "update not inputMode" << endl;
-
 
         r_Technique = &m_rm.r_GOLUpdate;
         m_board.update(r_Technique);
@@ -320,27 +365,24 @@ int main(int argc, char *argv[])
 
 void ExplosionGenerator::forwardRender()
 {
-    glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
 
-    glClearColor(1.0,0.0,0.0,1.0);
+    glClearColor(0.1,0.1,0.1,1.0);
+//    glClearColor(1.0,1.0,1.0,1.0);
     glClear(GL_COLOR_BUFFER_BIT);
 
     if(m_inputMode)
     {
-    /*
-        r_Technique = &m_rm.r_GOLRenderInput;
-        m_board.renderInput(r_Technique, m_mouseState);
-     */
-
         r_Technique = &m_rm.r_GOLRenderInputWithPattern;
-        m_GOLModelPtr = &m_GOLSquareOutline;
+    //    m_GOLModelPtr = &m_GOLSquareOutline;
 //        m_GOLModelPtr = &m_GOLSquare;
-        m_board.renderInput(r_Technique, m_mouseState, m_GOLModelPtr);
+//        m_board.initUserInput(r_Technique, m_mouseState, m_GOLModelManager.getModel(2)->getTexture());
 
+    //    m_board.renderInput(r_Technique, m_mouseState, m_GOLModelPtr);
+    //      m_board.renderInput(r_Technique, m_mouseState, m_GOLModelPtr, m_GOLModelManager.getModel(2)->getTexture());
+          m_board.renderInput(r_Technique, m_mouseState, m_GOLModelPtr);
     }
     else
     {
@@ -348,11 +390,33 @@ void ExplosionGenerator::forwardRender()
         m_board.renderSimulation(r_Technique);
     }
 
+
+
     renderGUI();
 }
 
+/*
 void ExplosionGenerator::initGUIRenderStage()
 {
+    glDisable(GL_DEPTH_TEST);
+    glDisable(GL_CULL_FACE);
+
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+
+    m_pipeline.reset();
+    m_pipeline.matrixMode(PROJECTION_MATRIX);
+    m_pipeline.loadIdentity();
+    m_pipeline.ortho(0, SCREEN_WIDTH, 0, SCREEN_HEIGHT, -1, 1);
+
+    m_pipeline.matrixMode(MODEL_MATRIX);
+    m_pipeline.loadIdentity();
+}
+*/
+
+void ExplosionGenerator::initGUIRenderStage()
+{
+    glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
 
@@ -372,23 +436,43 @@ void ExplosionGenerator::renderGUI()
 {
     initGUIRenderStage();
 
-//glEnable(GL_BLEND);
- //   glBlendFunc(GL_SRC_ALPHA, GL_ONE);
-
     /// http://sdl.beuc.net/sdl.wiki/SDL_Average_FPS_Measurement
     unsigned int getTicks = SDL_GetTicks();
     m_timeManager.addTick(getTicks);
     m_fps = m_timeManager.computeAverageFPS();
 
-    string final_str = "(" + EG_Utility::floatToStr(m_mouseState.m_pos.x) + ", " + EG_Utility::floatToStr(SCREEN_HEIGHT - m_mouseState.m_pos.y) + ")";
+    string final_str = "(" + EG_Utility::floatToStr(m_mouseState.m_pos.x) + ", " + EG_Utility::floatToStr(m_mouseState.m_pos.y) + ")";
     EG_Control::m_textEngine.render(m_pipeline, 0, 10, final_str.c_str());
 
+    glDisable(GL_BLEND);
+
+
+    m_rm.renderTextureSingle(m_GUIManager.getGUIPaletteTexture(), 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
+
     /// render Each GUI component
-    r_Technique = &m_rm.r_GUIRenderer;
+    r_Technique = &m_rm.r_RectRenderer;
+
     for(int i=0; i<m_GUIComponents.size(); i++)
     {
         EG_Control* control = m_GUIComponents[i];
-        control->render(m_pipeline, r_Technique, RENDER_PASS1);
+        control->render(m_pipeline, r_Technique);
     }
-    glDisable(GL_BLEND);
+
+/*
+    m_rm.r_ButtonRenderer.enableShader(RENDER_PASS1);
+    m_rm.r_ButtonRenderer.setData(RENDER_PASS1, "u_color", glm::vec3(1.0,0.0,0.0));
+
+    m_pipeline.pushMatrix();
+        m_pipeline.translate(m_triggerButton.m_rect.x, m_triggerButton.m_rect.y, 0);
+        m_pipeline.scale(m_triggerButton.m_rect.w, m_triggerButton.m_rect.h, 1.0);
+
+        m_rm.r_ButtonRenderer.loadUniformLocations(m_pipeline, RENDER_PASS1);
+        m_rm.m_textureQuad.render();
+    m_pipeline.popMatrix();
+    m_rm.r_ButtonRenderer.disableShader(RENDER_PASS1);
+*/
+//    m_rm.renderTexture(m_GOLModelManager.getModel(2)->getTexture(), 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
+//    m_rm.renderTexture(tempTexture, 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
+
+ //   m_rm.renderTexture(m_GUIManager.getGUIPaletteTexture(), 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
 }

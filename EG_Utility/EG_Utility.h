@@ -95,6 +95,10 @@ struct EG_FrameBufferObject
     }
 };
 
+
+typedef vector<vector<vector<GLubyte>>> EG_TextureDataBuffer;
+
+
 // double buffering
 struct EG_DoubleFrameBufferObject
 {
@@ -138,17 +142,22 @@ class EG_Utility
         static float randFloat(float min=0, float max=1);
 
 
-        /// EG_Utility_GL.cpp
-      //  static SDL_Surface* m_displaySurface;
+        /// EG_Utility_SDL.cpp
         static void initSDL(int w, int h, SDL_Surface* & m_displaySurface);
         static void exitSDL(SDL_Surface* & m_displaySurface);
+        static SDL_Surface* loadRawImage(string filename);
+        static SDL_Surface* loadSDLImage(string filename);
+
+
+        /// EG_Utility_GL.cpp
         static void initGLEW();
         static void errorCheck();
         static GLuint createFBO();
         static void errorCheckFBO();
         static void bindFBO(GLuint target);
-        static SDL_Surface* loadRawImage(string filename);
-        static SDL_Surface* loadSDLImage(string filename);
+
+        static EG_TextureDataBuffer createEmptyBuffer(int w, int h);
+
         static GLuint loadTexture(string filename);
         static GLuint loadTexture(string filename, GLuint filteringParam);
         static GLuint loadTexture(vector<vector<vector<GLubyte>>> data, GLuint filteringParam);
@@ -185,6 +194,7 @@ class EG_Utility
         static void debugLn(string s, int l=0);
 
         static void debug(string s);
+        static void debug(string s, bool b);
         static void debug(string s, string s2);
         static void debug(string s, unsigned int i);
         static void debug(string s, int i);

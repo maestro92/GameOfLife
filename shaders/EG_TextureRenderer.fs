@@ -16,10 +16,20 @@ void main()
 	value.z = pow(value.z,32);
 	FragColor = value;
 #else
-	vec2 tc = vf_UV;	 tc.y = 1.0 - tc.y;
+	vec2 tc = vf_UV;	 // tc.y = 1.0 - tc.y;
 	// pos = tc;
 
+	
 	FragColor = texture(u_texture, tc);
+/*
+	if(gl_FragCoord.y > 200)
+		FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+	else
+		FragColor = vec4(0.0, 1.0, 0.0, 1.0);	
+*/
+
+	// FragColor = vec4(0.0, 1.0, 0.0, 1.0);
+
 //	FragColor = vec4(1.0,0.0,0.0,1.0);
 //	FragColor = vec4(outUV.x, outUV.x, outUV.x, 1.0);
 //	FragColor = vec4(outUV.y, outUV.y, outUV.y, 1.0);

@@ -9,7 +9,11 @@ class EG_GeneralRenderer : public EG_Renderer
         EG_GeneralRenderer();
         ~EG_GeneralRenderer();
         void init(int nShaders);
+
+        virtual void loadUniformLocations();
         virtual void loadUniformLocations(int pass);
+
+        virtual void loadUniformLocations(pipeline& p);
         virtual void loadUniformLocations(pipeline& p, int pass);
 };
 #endif // EG_FIRE_EFFECT_RENDERER_H_

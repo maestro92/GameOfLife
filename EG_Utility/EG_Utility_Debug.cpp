@@ -18,6 +18,14 @@ void EG_Utility::debug(string s)
     cout << s << endl;
 }
 
+void EG_Utility::debug(string s, bool b)
+{
+    if(b)
+        cout << "true" << endl;
+    else
+        cout << "false" << endl;
+}
+
 void EG_Utility::debug(string s, string s2)
 {
     cout << s << "  "  << s2 << endl;

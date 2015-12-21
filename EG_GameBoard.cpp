@@ -22,13 +22,25 @@ GameBoard::GameBoard(int w, int h, int s)
 
     m_inverseWidth = 1/(float)w;
     m_inverseHeight = 1/(float)h;
-//    m_boardQuadModel.init(-0.5, 1, -1, 1,
-//                            0.0, 0.0, 1.0);
 
+    /*
+
+        pipeline temp_pipeline;
+        temp_pipeline.loadIdentity();
+        temp_pipeline.ortho(-1,1,-1,1,-1,1);
+
+        the parameters of the ortho should match the dimensions of the quadModel
+        if quadModel is init    left:0  right:1
+                                bot:0   top:1
+
+        then the ortho should also be
+                                left:0  right:1
+                                bot:0   top:1
+    */
     m_boardQuadModel.init(-1, 1, -1, 1,
                           0.0, 0.0, 1.0);
 
-    m_userInputBoardDoubleBuffer = EG_Utility::createDoubleFrameBufferObject(w, h);
+    m_userInputBoardDoubleBuffer = EG_Utility::createDoubleFrameBufferObject(m_width, m_height);
     m_userInputBoardDoubleBuffer.clear(glm::vec4(1.0,1.0,1.0,1.0));
 
     m_simulationDoubleBuffer = EG_Utility::createDoubleFrameBufferObject(m_numGridsX, m_numGridsY);
@@ -92,8 +104,10 @@ glm::vec2 GameBoard::screenCoordToBoardCoord(glm::vec2 pos)
     return bCoord;
 }
 
+/*
 void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState)
 {
+    glViewport(0, 0, m_width, m_height);
     glBindFramebuffer(GL_FRAMEBUFFER, m_userInputBoardDoubleBuffer.pong.FBO);
 
     glm::vec2 spos = screenCoordToBoardCoord(mouseState.m_pos);
@@ -122,10 +136,11 @@ void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState)
         m_boardQuadModel.render();
     renderer->disableShader(RENDER_PASS1);
 }
-
+*/
 
 void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern)
 {
+    glViewport(0, 0, m_width, m_height);
     glBindFramebuffer(GL_FRAMEBUFFER, m_userInputBoardDoubleBuffer.pong.FBO);
 
     glm::vec2 spos = screenCoordToBoardCoord(mouseState.m_pos);
@@ -159,6 +174,41 @@ void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState, GOL
 }
 
 
+void GameBoard::initUserInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern, GLuint texture)
+{
+    glViewport(0, 0, m_width, m_height);
+    glBindFramebuffer(GL_FRAMEBUFFER, m_userInputBoardDoubleBuffer.pong.FBO);
+
+    glm::vec2 spos = screenCoordToBoardCoord(mouseState.m_pos);
+    int sx = (int)(spos.x * m_gridSize);
+    int sy = (int)(spos.y * m_gridSize);
+
+    int ex = (int)(sx + m_gridSize);
+    int ey = (int)(sy + m_gridSize);
+    pipeline temp_pipeline;
+    temp_pipeline.loadIdentity();
+    temp_pipeline.ortho(-1,1,-1,1,-1,1);
+
+    renderer->enableShader(RENDER_PASS1);
+        renderer->setData(RENDER_PASS1, "u_boardTexture", 0,
+                                        GL_TEXTURE0,
+                                        texture);
+
+        renderer->setData(RENDER_PASS1, "u_patternTexture", 1,
+                                        GL_TEXTURE1,
+                                        pattern->m_patternTexture);
+
+        renderer->setData(RENDER_PASS1, "u_patternBottomRightX", ex);
+        renderer->setData(RENDER_PASS1, "u_patternBottomRightY", sy);
+        renderer->setData(RENDER_PASS1, "u_patternWidth", pattern->m_width);
+        renderer->setData(RENDER_PASS1, "u_patternHeight", pattern->m_height);
+        renderer->setData(RENDER_PASS1, "u_mouseLeftBtnDown", mouseState.m_leftButtonDown);
+        renderer->loadUniformLocations(temp_pipeline, RENDER_PASS1);
+        m_boardQuadModel.render();
+
+    renderer->disableShader(RENDER_PASS1);
+}
+
 void GameBoard::update(EG_Renderer* renderer)
 {
     glViewport(0, 0, m_numGridsX, m_numGridsY);
@@ -175,6 +225,7 @@ void GameBoard::update(EG_Renderer* renderer)
     renderer->disableShader(RENDER_PASS1);
 }
 
+/*
 void GameBoard::renderInput(EG_Renderer* renderer, FBOTargetId target)
 {
     if(target == SIMULATION)
@@ -200,15 +251,6 @@ void GameBoard::renderInput(EG_Renderer* renderer, GLuint target)
 {
     glBindFramebuffer(GL_FRAMEBUFFER, target);
 
-    /*
-        the parameters of the ortho should match the dimensions of the quadModel
-        if quadModel is init    left:0  right:1
-                                bot:0   top:1
-
-        then the ortho should also be
-                                left:0  right:1
-                                bot:0   top:1
-    */
     pipeline temp_pipeline;
     temp_pipeline.loadIdentity();
     temp_pipeline.ortho(-1,1,-1,1,-1,1);
@@ -225,7 +267,6 @@ void GameBoard::renderInput(EG_Renderer* renderer, GLuint target)
 }
 
 
-
 void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState)
 {
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -236,9 +277,6 @@ void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState)
 
     float ex = sx + m_gridSize;
     float ey = sy + m_gridSize;
-
-
-
 
     pipeline temp_pipeline;
     temp_pipeline.loadIdentity();
@@ -257,12 +295,13 @@ void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState)
 
     renderer->disableShader(RENDER_PASS1);
 }
-
+*/
 
 
 
 void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern)
 {
+    glViewport(0, 0, m_width, m_height);
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
     glm::vec2 spos = screenCoordToBoardCoord(mouseState.m_pos);
@@ -271,8 +310,6 @@ void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState, GOL_M
 
     int ex = (int)(sx + m_gridSize);
     int ey = (int)(sy + m_gridSize);
-
-
 
   // EG_Utility::debug("grid pos is", glm::vec2(sx, sy));
   //  EG_Utility::debug("grid rightbot is", glm::vec2(ex, sy));
@@ -303,13 +340,57 @@ void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState, GOL_M
 
 
 
+void GameBoard::renderInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern, GLuint texture)
+{
+    glViewport(0, 0, m_width, m_height);
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+    glm::vec2 spos = screenCoordToBoardCoord(mouseState.m_pos);
+    int sx = (int)(spos.x * m_gridSize);
+    int sy = (int)(spos.y * m_gridSize);
+
+    int ex = (int)(sx + m_gridSize);
+    int ey = (int)(sy + m_gridSize);
+
+    pipeline temp_pipeline;
+    temp_pipeline.loadIdentity();
+    temp_pipeline.ortho(-1,1,-1,1,-1,1);
+
+    renderer->enableShader(RENDER_PASS1);
+        renderer->setData(RENDER_PASS1, "u_inputTexture", 0,
+                                        GL_TEXTURE0,
+                                        texture);
+/*
+        renderer->setData(RENDER_PASS1, "u_patternTexture", 1,
+                                        GL_TEXTURE1,
+                                        pattern->m_patternTexture);
+*/
+        renderer->setData(RENDER_PASS1, "u_patternBottomRightX", ex);
+        renderer->setData(RENDER_PASS1, "u_patternBottomRightY", sy);
+  //      renderer->setData(RENDER_PASS1, "u_patternWidth", pattern->m_width);
+    //    renderer->setData(RENDER_PASS1, "u_patternHeight", pattern->m_height);
+        renderer->loadUniformLocations(temp_pipeline, RENDER_PASS1);
+        m_boardQuadModel.render();
+
+    renderer->disableShader(RENDER_PASS1);
+}
+
+
+
+/*
 void GameBoard::renderInput(EG_Renderer* renderer)
 {
     renderInput(renderer, 0);
 }
+*/
 
 
-void GameBoard::renderInputToSimulation(EG_Renderer* renderer, RenderInfo& rInfo)
+void GameBoard::renderInputToSimulation(EG_Renderer* renderer)
+{
+    renderIntermediate(renderer, m_inputToSimulationRenderInfo);
+}
+
+void GameBoard::renderIntermediate(EG_Renderer* renderer, RenderInfo& rInfo)
 {
     glViewport(0, 0, rInfo.width, rInfo.height);
     glBindFramebuffer(GL_FRAMEBUFFER, rInfo.FBOtarget);
@@ -329,7 +410,6 @@ void GameBoard::renderInputToSimulation(EG_Renderer* renderer, RenderInfo& rInfo
         m_boardQuadModel.render();
 
     renderer->disableShader(RENDER_PASS1);
-
 }
 
 

@@ -12,36 +12,29 @@ class EG_ListBox : public EG_Control
 {
     public:
         EG_ListBox();
-        EG_ListBox(int x, int y, int width, int height);
-
-        virtual void initColoredQuad();
+        EG_ListBox(string text, int x, int y, int width, int height,
+                   glm::vec3 color, int rowNum, int colNum);
 
         void addItem(string item);
         void removeItem(int index);
         void setCurrent(int index);
 
+        void setColors(glm::vec3 rectColor, glm::vec3 itemRectColor);
+
         int getIndex();
         int getCount();
 
-
-
-//        void update(int posX, int posY, int width, int height);
-        using EG_Control::update;
         virtual bool update(MouseState & state);
 
-
-        virtual void render (pipeline& m_pipeline,
-                            EG_Renderer* Renderer,
-                            int RenderPassID);
+        void render (pipeline& p, EG_Renderer* r);
         virtual int getType();
 
     protected:
         int m_curIndex;
+        int m_rowNum;
+        int m_colNum;
 
-        EG_Rect         m_curQuadData;
-        EG_QuadModelABS m_curQuadModel;
-
-
+        glm::vec3 m_itemRectColor;
 
         vector<string> m_items;
 };

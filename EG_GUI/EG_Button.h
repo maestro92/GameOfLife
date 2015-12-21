@@ -11,39 +11,27 @@ class EG_Button : public EG_Control
 
     public:
         EG_Button();
-        EG_Button(string label, int x, int y, int width, int height,
-                   glm::vec3 c);
+        EG_Button(string text, int x, int y, int width, int height, glm::vec3 c);
 
         /// http://stackoverflow.com/questions/4271245/why-do-i-get-no-matching-function-when-i-inherit-this-function
         using EG_Control::update;
 
-        virtual void initColoredQuad();
-
         virtual bool update(MouseState & state);
         virtual bool update(MouseState & state, unsigned int& groupFlag);
-  //      virtual bool update1(MouseState & state, unsigned int& groupFlag);
-    //    virtual bool update(string label);
-    //    virtual void render(int x, int y);
 
-  //      virtual bool update(glm::vec3 c);
-  //      virtual bool update(glm::vec3 c1, glm::vec3 c2, glm::vec3 c3, glm::vec3 c4);
+        void setTextures(GLuint bgTexId, GLuint highlightTexId, GLuint pressedTexId);
+        void setColors(glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pressedColor);
 
-        virtual void render(pipeline& m_pipeline,
-                            EG_Renderer* Renderer,
-                            int RenderPassID);
+        virtual void render(pipeline& p, EG_Renderer* r);
 
         virtual int getType();
 
     protected:
         bool m_down;
-    //    string m_label;
-//        EG_Quad m_rectQuad;
 
+        glm::vec3 m_highlightColor;
+        glm::vec3 m_pressedColor;
 
-        EG_QuadModelABS m_highlightQuadModel;
-        EG_QuadModelABS m_pressedQuadModel;
-
-        GLuint m_idleTexture;
         GLuint m_highlightTexture;
         GLuint m_pressedTexture;
         /// have three textures for it

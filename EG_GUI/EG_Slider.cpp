@@ -2,37 +2,30 @@
 
 const int tickSize = 5;
 
-
-EG_Slider::EG_Slider() : EG_Slider("", 0, 10, 0, 0, 100, 100)
+EG_Slider::EG_Slider() : EG_Slider("Martin :)", 0, 0, 100, 100, BLUE, 0, 10)
 {
 
 }
 
-EG_Slider::EG_Slider(string label, float min, float max,
-               int x, int y, int width, int height) : EG_Control(x,y,width,height)
+EG_Slider::EG_Slider(string text, int x, int y, int width, int height,
+                     glm::vec3 color, float min, float max) : EG_Control(text, x, y, width, height, color)
 {
     m_defaultValue = 0.0f;
     m_current = NULL;
     m_maxValue = max;
     m_minValue = min;
     m_dragging = false;
-    m_label = label;
     m_valueType = FLOAT_TYPE;
-}
 
-void EG_Slider::initColoredQuad()
-{
-    EG_Control::initColoredQuad();
     m_sliderQuadRect.set(m_rect.x, m_rect.y, tickSize, m_rect.h);
-    m_sliderQuadModel.init(tickSize, m_rect.h, m_sliderColor);
 }
 
 
-void EG_Slider::setSliderColor(glm::vec3 c)
+void EG_Slider::setColors(glm::vec3 rectColor, glm::vec3 sliderColor)
 {
-    m_sliderColor = c;
+    m_rectColor = rectColor;
+    m_sliderColor = sliderColor;
 }
-
 
 void EG_Slider::setMaxValue(float max)
 {
@@ -49,13 +42,10 @@ void EG_Slider::setDefaultValue(float value)
     m_defaultValue = value;
 }
 
-
-
 void EG_Slider::setValueType(int t)
 {
     m_valueType = t;
 }
-
 
 void EG_Slider::setValue(float *value)
 {
@@ -63,7 +53,6 @@ void EG_Slider::setValue(float *value)
     if (m_current != NULL)
         m_defaultValue = *m_current;
 }
-
 
 float EG_Slider::getValue()
 {
@@ -190,9 +179,7 @@ void EG_Slider::render(pipeline& m_pipeline,
                     EG_Renderer* Renderer,
                     int RenderPassID)
 {
-//    EG_Control::render(m_pipeline, Renderer, RENDER_PASS1);
-    p_modelPtr = &m_quadModel;
-
+    /*
     EG_Control::render(m_pipeline, Renderer, RENDER_PASS1, m_rect, p_modelPtr);
 
     int offset_x = (int)((*m_current - m_minValue) / (m_maxValue - m_minValue) * (m_rect.w - tickSize) + m_rect.x);
@@ -227,7 +214,7 @@ void EG_Slider::render(pipeline& m_pipeline,
         stringstream ss;
         ss << count;
         string cs = ss.str();
-        s = m_label + ": " + cs;
+        s = m_text + ": " + cs;
     }
     else
     {
@@ -235,11 +222,12 @@ void EG_Slider::render(pipeline& m_pipeline,
         ostringstream buff;
         buff << num;
         string cs = buff.str();
-        s = m_label + ": " + cs;
+        s = m_text + ": " + cs;
     }
 
     // offset_y = m_rect.y + m_rect.h - EG_Control::m_textEngine.fontSize - 2;
     EG_Control::m_textEngine.render(m_pipeline, offset_x, offset_y, 15, s.c_str());
+    */
 }
 
 int EG_Slider::getType()

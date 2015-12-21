@@ -13,7 +13,7 @@
 #include "EG_DirectionalLight.h"
 #include "EG_AllLights.h"
 #include "EG_ImportedAnimatedModel.h"
-
+#include "GOL_ModelManager.h"
 
 #include "EG_GameBoard.h"
 
@@ -41,9 +41,6 @@
 
 
 /// GOL_Shapes
-#include "GOL_Square.h"
-#include "GOL_SquareOutline.h"
-
 
 /// GUI
 #include "EG_Label.h"
@@ -56,7 +53,7 @@
 
 #include "EG_WorldAnimatedObject.h"
 #include "EG_FullScreenQuad.h"
-
+#include "GOL_GUIManager.h"
 #include "EG_Button.h"
 #include "EG_XYZAxisModel.h"
 #include "EG_WorldBox.h"
@@ -119,7 +116,8 @@ class ExplosionGenerator
 
 
         /// GUI
-        EG_Label m_frameRateLabel;
+        EG_Label m_GUIPanel;
+
         EG_Button m_triggerButton;
         EG_Button m_resetButton;
         EG_Button m_minimizeButton;
@@ -134,6 +132,9 @@ class ExplosionGenerator
         EG_Slider m_velocitySlider;         float m_velocity;
         EG_Slider m_maxRadiusSlider;        float m_maxRadius;
         EG_ListBox m_listBox;
+
+        GOL_GUIManager m_GUIManager;
+
 
 
         int m_GUIComponentsIDs;
@@ -152,6 +153,7 @@ class ExplosionGenerator
         bool m_switchFlag;
 
 
+
         EG_Model*   modelPtr;
         EG_ModelABS*    p_modelPtr;
 
@@ -166,10 +168,20 @@ class ExplosionGenerator
 
         bool isRunning;
 
-        GOL_Square m_GOLSquare;
-        GOL_SquareOutline m_GOLSquareOutline;
-        GOL_Model* m_GOLModelPtr;
 
+        GOL_Model* m_GOLModelPtr;
+        GOL_Model m_GOLSquare;
+        GOL_Model m_GOLSquareOutline;
+        GOL_Model m_GOLSpaceShip;
+
+   //     vector<string> m_GOLModelTitles;
+   //     vector<GOL_Model*> m_GOLModels;
+
+        GOL_ModelManager m_GOLModelManager;
+        //GOL_Square m_GOLSquare;
+        //GOL_SquareOutline m_GOLSquareOutline;
+
+        int m_gridSize;
         EG_Label m_lb;
 
         GLuint tempTexture;

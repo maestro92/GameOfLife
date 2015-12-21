@@ -25,18 +25,9 @@ class EG_Label : public EG_Control
     public:
 
         EG_Label();
-        EG_Label(string label, int posX, int posY, int width, int height);
-
-        void init();
-
-        bool update(string label);
-        virtual void render(pipeline& m_pipeline,
-                            EG_Renderer* Renderer,
-                            int RenderPassID);
-
+        EG_Label(string text, int x, int y, int width, int height, glm::vec3 color);
         virtual int getType();
 
-        string m_label;
 };
 
 

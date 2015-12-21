@@ -2,23 +2,18 @@
 
 const int m_itemHeight = 18;
 
-EG_ListBox::EG_ListBox() : EG_ListBox(0,0,1,1)
+EG_ListBox::EG_ListBox()
 {
 }
 
-EG_ListBox::EG_ListBox(int x, int y, int width, int height) : EG_Control(x, y, width, height)
+EG_ListBox::EG_ListBox(string text, int x, int y, int width, int height,
+                       glm::vec3 color, int rowNum, int colNum) :
+            EG_Control(text, x, y, width, height, color)
 {
+    m_rowNum = rowNum;
+    m_colNum = colNum;
     m_curIndex = 0;
 }
-
-
-void EG_ListBox::initColoredQuad()
-{
-    EG_Control::initColoredQuad();
-    m_curQuadData.set(0,0, m_rect.w, m_itemHeight);
-    m_curQuadModel.init(m_rect.w, m_itemHeight, BLUE);
-}
-
 
 void EG_ListBox::addItem(string item)
 {
@@ -68,12 +63,16 @@ int EG_ListBox::getIndex()
     return m_curIndex;
 }
 
-
 int EG_ListBox::getCount()
 {
     return (int)m_items.size();
 }
 
+void EG_ListBox::setColors(glm::vec3 rectColor, glm::vec3 itemRectColor)
+{
+    m_rectColor = rectColor;
+    m_itemRectColor = itemRectColor;
+}
 
 bool EG_ListBox::update(MouseState & state)
 {
@@ -82,9 +81,10 @@ bool EG_ListBox::update(MouseState & state)
     int x = state.m_pos.x;
     int y = state.m_pos.y;
 
-    if( m_isInside == true && state.m_leftButtonDown)
+    if( m_isInside && state.m_leftButtonDown)
     {
-        int tempIndex = (y - m_rect.y) / m_itemHeight;
+    //    int tempIndex = (y - m_rect.y) / m_itemHeight;
+        int tempIndex = (m_rect.y + m_rect.h - y) / m_itemHeight;
 
         if( tempIndex >= 0 && tempIndex < (int)m_items.size())
         {
@@ -96,10 +96,26 @@ bool EG_ListBox::update(MouseState & state)
 }
 
 
-void EG_ListBox::render(pipeline& m_pipeline,
-                            EG_Renderer* Renderer,
-                            int RenderPassID)
+void EG_ListBox::render(pipeline& p, EG_Renderer* r)
 {
+    r->enableShader();
+        r->setData(RENDER_PASS1, "u_color", m_rectColor);
+        EG_Control::renderSingle(p, r, m_rect);
+
+        // render the itemRectBox
+        if( m_curIndex >= 0)
+        {
+            int offset_x = m_rect.x;
+            int offset_y = m_rect.y + m_rect.h - ((m_curIndex + 1) * m_itemHeight);
+
+            EG_Rect itemRect(offset_x, offset_y, m_rect.w, m_itemHeight);
+            r->setData(RENDER_PASS1, "u_color", m_itemRectColor);
+            EG_Control::renderSingle(p, r, itemRect);
+        }
+
+    r->disableShader();
+
+    /*
     EG_Control::render(m_pipeline, Renderer, RENDER_PASS1);
     int offset_x;
     int offset_y = 0;
@@ -127,6 +143,7 @@ void EG_ListBox::render(pipeline& m_pipeline,
 
    //     EG_Control::m_textEngine.render(m_pipeline, offset_x, offset_y, m_label.c_str());
     }
+    */
 }
 
 

@@ -22,9 +22,9 @@ void EG_QuadModelABS::initIndices(vector<unsigned int>& indices)
     indices.push_back(1);
     indices.push_back(2);
 
-    indices.push_back(0);
     indices.push_back(2);
     indices.push_back(3);
+    indices.push_back(0);
 }
 
 void EG_QuadModelABS::init()
@@ -41,8 +41,7 @@ void EG_QuadModelABS::init(int w, int h)
 
 
 
-
-
+/*
 void EG_QuadModelABS::init(int w, int h, float cx, float cy, float cw)
 {
     /// assigning a quad for rendering textures
@@ -50,24 +49,60 @@ void EG_QuadModelABS::init(int w, int h, float cx, float cy, float cw)
     std::vector<EG_VertexData> vertices;
     EG_VertexData tmp;
 
-    float cx1 = cx;  float cx2 = cx+1;
-    float cy1 = cy;  float cy2 = cy+1;
+    float cx0 = cx;  float cx1 = cx+1;
+    float cy0 = cy;  float cy1 = cy+1;
     //1.
     tmp.m_position = glm::vec3(0.0, h, 0.0);
-    tmp.m_UV = glm::vec2(cx1 * cw, cy1 * cw);
+    tmp.m_UV = glm::vec2(cx0 * cw, cy0 * cw);
     vertices.push_back(tmp);
     //2.
     tmp.m_position = glm::vec3(0.0, 0.0, 0.0);
-    tmp.m_UV = glm::vec2(cx1 * cw, cy2 * cw);
+    tmp.m_UV = glm::vec2(cx0 * cw, cy1 * cw);
     vertices.push_back(tmp);
 
     //3.
     tmp.m_position = glm::vec3(w, 0.0, 0.0);
-    tmp.m_UV = glm::vec2(cx2 * cw, cy2 * cw);
+    tmp.m_UV = glm::vec2(cx1 * cw, cy1 * cw);
     vertices.push_back(tmp);
     //4.
     tmp.m_position = glm::vec3(w, h, 0.0);
-    tmp.m_UV = glm::vec2(cx2 * cw, cy1 * cw);
+    tmp.m_UV = glm::vec2(cx1 * cw, cy0 * cw);
+    vertices.push_back(tmp);
+
+    initIndices(indices);
+
+    EG_Mesh m(vertices, indices);
+    m_meshes.push_back(m);
+}
+*/
+
+void EG_QuadModelABS::init(int w, int h, float uv_x, float uv_y, float uv_w)
+{
+    /// assigning a quad for rendering textures
+    std::vector<unsigned int> indices;
+    std::vector<EG_VertexData> vertices;
+    EG_VertexData tmp;
+
+    float uv_x0 = uv_x;  float uv_x1 = uv_x + 1;
+    float uv_y0 = uv_y;  float uv_y1 = uv_y + 1;
+
+
+    /// 0. bot left
+    tmp.m_position = glm::vec3(0.0, 0.0, 0.0);
+    tmp.m_UV = glm::vec2(uv_x0 * uv_w, uv_y0 * uv_w);
+    vertices.push_back(tmp);
+    /// 1. bot right
+    tmp.m_position = glm::vec3(w, 0.0, 0.0);
+    tmp.m_UV = glm::vec2(uv_x1 * uv_w, uv_y0 * uv_w);
+    vertices.push_back(tmp);
+
+    /// 2. top right
+    tmp.m_position = glm::vec3(w, h, 0.0);
+    tmp.m_UV = glm::vec2(uv_x1 * uv_w, uv_y1 * uv_w);
+    vertices.push_back(tmp);
+    /// 3. top left
+    tmp.m_position = glm::vec3(0.0, h, 0.0);
+    tmp.m_UV = glm::vec2(uv_x0 * uv_w, uv_y1 * uv_w);
     vertices.push_back(tmp);
 
     initIndices(indices);
@@ -79,7 +114,6 @@ void EG_QuadModelABS::init(int w, int h, float cx, float cy, float cw)
 
 void EG_QuadModelABS::init(int w, int h, glm::vec3 c)
 {
-
     init(w, h, c, c, c, c);
 }
 
@@ -137,27 +171,27 @@ void EG_QuadModelABS::init(float l, float r,
     std::vector<EG_VertexData> vertices;
     EG_VertexData tmp;
 
-    float cx1 = cx;  float cx2 = cx+1;
-    float cy1 = cy;  float cy2 = cy+1;
+    float cx0 = cx;  float cx1 = cx+1;
+    float cy0 = cy;  float cy1 = cy+1;
 
     ///1. left-top
     tmp.m_position = glm::vec3(l, t, 0.0);
-    tmp.m_UV = glm::vec2(cx1 * cw, cy1 * cw);
+    tmp.m_UV = glm::vec2(cx0 * cw, cy0 * cw);
     vertices.push_back(tmp);
 
     ///2. left-bottom
     tmp.m_position = glm::vec3(l, b, 0.0);
-    tmp.m_UV = glm::vec2(cx1 * cw, cy2 * cw);
+    tmp.m_UV = glm::vec2(cx0 * cw, cy1 * cw);
     vertices.push_back(tmp);
 
     ///3. right-bottom
     tmp.m_position = glm::vec3(r, b, 0.0);
-    tmp.m_UV = glm::vec2(cx2 * cw, cy2 * cw);
+    tmp.m_UV = glm::vec2(cx1 * cw, cy1 * cw);
     vertices.push_back(tmp);
 
     ///4. right-top
     tmp.m_position = glm::vec3(r, t, 0.0);
-    tmp.m_UV = glm::vec2(cx2 * cw, cy1 * cw);
+    tmp.m_UV = glm::vec2(cx1 * cw, cy0 * cw);
     vertices.push_back(tmp);
 
     initIndices(indices);

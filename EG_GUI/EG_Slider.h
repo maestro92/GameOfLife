@@ -19,19 +19,17 @@ class EG_Slider : public EG_Control
 
 
         EG_Slider();
-        EG_Slider(string label, float min, float max,
-               int x, int y, int width, int height);
+        EG_Slider(string label, int x, int y, int width, int height,
+                  glm::vec3 color, float min, float max);
 
         void setDefaultValue(float value);
         void setValue(float *value);
 
-        void setSliderColor(glm::vec3 c);
+        void setColors(glm::vec3 rectColor, glm::vec3 sliderColor);
 
         void setMaxValue(float max);
         void setMinValue(float min);
         float getValue();
-
-        virtual void initColoredQuad();
 
         virtual bool update(MouseState &state);
         virtual bool update(MouseState &state, unsigned int& groupFlag);
@@ -48,8 +46,8 @@ class EG_Slider : public EG_Control
     protected:
 
         EG_Rect m_sliderQuadRect;
-        EG_QuadModelABS m_sliderQuadModel;
         glm::vec3 m_sliderColor;
+
         float m_defaultValue;
         float m_minValue;
         float m_maxValue;

@@ -94,6 +94,10 @@ void EG_Renderer::initDataPairUniLoc(DataPair* p, int pass, const char* name)
 }
 
 
+void EG_Renderer::addDataPair(const char* name, int dataType)
+{
+    addDataPair(RENDER_PASS1, name, dataType);
+}
 
 void EG_Renderer::addDataPair(int pass, const char* name, int dataType)
 {
@@ -171,6 +175,8 @@ void EG_Renderer::addDataPair(int pass, const char* name, int dataType)
 //    std::pair<string, DataPair*> newPair(name, p);
 //    tables[pass].insert(newPair);
 }
+
+
 
 
 void EG_Renderer::setData(int pass, const char* name, bool value)
@@ -310,6 +316,12 @@ bool EG_Renderer::Init_Shader_GL_Location(Shader* s, Matrices_Location& Mat)
 void EG_Renderer::loadUniformLocations(int RenderPassID)
 {}
 
+
+void EG_Renderer::loadUniformLocations(pipeline& p)
+{
+    loadUniformLocations(p, RENDER_PASS1);
+}
+
 void EG_Renderer::loadUniformLocations(pipeline& p, int RenderPassID)
 {
     if(RenderPassID != m_curShader)
@@ -341,12 +353,22 @@ void EG_Renderer::loadUniformLocations(pipeline& p, int RenderPassID)
 
 
 
+void EG_Renderer::enableShader()
+{
+    enableShader(RENDER_PASS1);
+}
+
 void EG_Renderer::enableShader(int RenderPassID)
 {
     m_shaders[RenderPassID]->useShader();
     m_curShader = RenderPassID;
 }
 
+
+void EG_Renderer::disableShader()
+{
+    disableShader(RENDER_PASS1);
+}
 
 void EG_Renderer::disableShader(int RenderPassID)
 {

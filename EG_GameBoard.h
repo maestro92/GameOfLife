@@ -22,8 +22,6 @@ enum FBOTargetId
     SIMULATION
 };
 
-
-
 class GameBoard
 {
     // private:
@@ -69,9 +67,7 @@ class GameBoard
         float m_invGridSize;
 
         RenderInfo m_inputToSimulationRenderInfo;
-      //  RenderInfo m_inputToScreenRenderInfo;
         RenderInfo m_simulationToInputRenderInfo;
-      //  RenderInfo m_simulationToScreenRenderInfo;
 
         WorldObject o_quadObject;
         EG_QuadModelABS m_boardQuadModel;
@@ -98,18 +94,17 @@ class GameBoard
         bool getBoard(int x, int y);
 
         void inputToSimluationBoard(EG_Renderer* renderer);
-        void initUserInput(EG_Renderer* renderer, MouseState& mouseState);
         void initUserInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern);
-
+        void initUserInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern, GLuint texture);
         void update(EG_Renderer* renderer);
 
-        void renderInput(EG_Renderer* renderer, FBOTargetId target);
-        void renderInput(EG_Renderer* renderer, GLuint fboTarget);
-        void renderInput(EG_Renderer* renderer);
-        void renderInput(EG_Renderer* renderer, MouseState& mouseState);
         void renderInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern);
+        void renderInput(EG_Renderer* renderer, MouseState& mouseState, GOL_Model* pattern, GLuint texture);
 
-        void renderInputToSimulation(EG_Renderer* renderer, RenderInfo& rInfo);
+
+        void renderInputToSimulation(EG_Renderer* renderer);
+        void renderSimulationToInput(EG_Renderer* renderer);
+        void renderIntermediate(EG_Renderer* renderer, RenderInfo& rInfo);
 
         void renderSimulation(EG_Renderer* renderer, FBOTargetId target);
         void renderSimulation(EG_Renderer* renderer, GLuint fboTarget);

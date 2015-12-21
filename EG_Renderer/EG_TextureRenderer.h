@@ -37,7 +37,7 @@ class EG_TextureRenderer : public EG_Renderer
         virtual void loadUniformLocations(pipeline& p, int pass);
         void renderFullScreen(GLuint TextureID);
         void renderFullScreen(GLuint TextureID, GLuint FboTarget);
-
+        void render(GLuint TextureID, GLuint FboTarget, int x, int y);
 
    //     void render(unsigned int TextureId, GLuint FboTarget, int Width, int Height, pipeline& m_pipeline);
    //     void renderFullScreen(unsigned int TextureId, GLuint FboTarget, int Width, int Height);

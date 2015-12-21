@@ -92,12 +92,6 @@
 			<Add library="C:\SDL-1.2.14\lib\libSDLmain.a" />
 			<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libmingw32.a" />
 		</Linker>
-		<Unit filename="EG_GOLModel/GOL_Model.cpp" />
-		<Unit filename="EG_GOLModel/GOL_Model.h" />
-		<Unit filename="EG_GOLModel/GOL_Square.cpp" />
-		<Unit filename="EG_GOLModel/GOL_Square.h" />
-		<Unit filename="EG_GOLModel/GOL_SquareOutline.cpp" />
-		<Unit filename="EG_GOLModel/GOL_SquareOutline.h" />
 		<Unit filename="EG_GUI/EG_Button.cpp" />
 		<Unit filename="EG_GUI/EG_Button.h" />
 		<Unit filename="EG_GUI/EG_Control.cpp" />
@@ -111,11 +105,12 @@
 		<Unit filename="EG_GUI/EG_Slider.h" />
 		<Unit filename="EG_GUI/EG_Text.cpp" />
 		<Unit filename="EG_GUI/EG_Text.h" />
+		<Unit filename="EG_GUI/GOL_GUIManager.cpp" />
+		<Unit filename="EG_GUI/GOL_GUIManager.h" />
 		<Unit filename="EG_GameBoard.cpp" />
 		<Unit filename="EG_GameBoard.h" />
 		<Unit filename="EG_Main.cpp" />
 		<Unit filename="EG_Main.h" />
-		<Unit filename="EG_Math.cpp" />
 		<Unit filename="EG_Math.h" />
 		<Unit filename="EG_Model/EG_BuiltinModel/EG_CubeModel.cpp" />
 		<Unit filename="EG_Model/EG_BuiltinModel/EG_CubeModel.h" />
@@ -157,6 +152,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="EG_Utility/EG_Utility_Math.cpp" />
+		<Unit filename="EG_Utility/EG_Utility_SDL.cpp" />
 		<Unit filename="EG_WorldObject/EG_FullScreenQuad.cpp" />
 		<Unit filename="EG_WorldObject/EG_FullScreenQuad.h" />
 		<Unit filename="EG_WorldObject/EG_Skybox.cpp" />
@@ -172,6 +168,8 @@
 		<Unit filename="EG_WorldObject/EG_WorldSphere.cpp" />
 		<Unit filename="EG_WorldObject/EG_WorldSphere.h" />
 		<Unit filename="EG_deferredShading.h" />
+		<Unit filename="GOL_Model.cpp" />
+		<Unit filename="GOL_Model.h" />
 		<Unit filename="Particle.h" />
 		<Unit filename="Random.h" />
 		<Unit filename="Smoke_struct.h" />

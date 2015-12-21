@@ -700,7 +700,7 @@
 
 1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\gl.h
 
-1448841577 d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility.h
+1450656336 d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility.h
 	<cstdlib>
 	<vector>
 	<iostream>
@@ -1357,7 +1357,7 @@
 	"glm/gtx/transform.hpp"
 	<GL/glew.h>
 
-1446362348 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderer.h
+1450609041 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderer.h
 	"define.h"
 	"EG_Shader.h"
 	"pipeline.h"
@@ -1687,16 +1687,16 @@
 1436763264 d:\martin\programming\c_c++\projects\gameoflife\eg_emitter\eg_emitterparticle.h
 	"define.h"
 
-1446104967 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_generalrenderer.h
+1450608569 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_generalrenderer.h
 	"EG_Renderer.h"
 
 1436768233 source:d:\martin\programming\c_c++\projects\gameoflife\eg_emitter\eg_emitterparticle.cpp
 	"EG_EmitterParticle.h"
 
-1448874329 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.cpp
+1450719130 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.cpp
 	"EG_GameBoard.h"
 
-1448873895 d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.h
+1450719092 d:\martin\programming\c_c++\projects\gameoflife\eg_gameboard.h
 	"define.h"
 	"EG_QuadModelABS.h"
 	"EG_GeneralRenderer.h"
@@ -1710,13 +1710,13 @@
 	"define.h"
 	<GL/glew.h>
 
-1434775782 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_button.cpp
+1450609173 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_button.cpp
 	"EG_Button.h"
 
-1431980449 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_button.h
+1450608716 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_button.h
 	"EG_Control.h"
 
-1446361663 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_control.h
+1450612976 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_control.h
 	"pipeline.h"
 	"define.h"
 	"EG_Utility.h"
@@ -1744,16 +1744,16 @@
 	<unordered_map>
 	<cstdio>
 
-1430425924 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_rect.h
+1450552168 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_rect.h
 	"define.h"
 
-1433645952 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_control.cpp
+1450610206 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_control.cpp
 	"EG_Control.h"
 
-1431980655 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_label.cpp
+1450604490 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_label.cpp
 	"EG_Label.h"
 
-1431980544 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_label.h
+1450604498 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_label.h
 	"pipeline.h"
 	"define.h"
 	"EG_Utility.h"
@@ -1765,18 +1765,18 @@
 	<unordered_map>
 	"EG_Control.h"
 
-1431980584 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_listbox.cpp
+1450655416 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_listbox.cpp
 	"EG_ListBox.h"
 
-1431980557 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_listbox.h
+1450614746 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_listbox.h
 	<vector>
 	"EG_Rect.h"
 	"EG_Control.h"
 
-1434775782 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_slider.cpp
+1450604918 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_slider.cpp
 	"EG_Slider.h"
 
-1431980591 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_slider.h
+1450606339 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_slider.h
 	"EG_Control.h"
 
 1444332441 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_text.cpp
@@ -1828,13 +1828,13 @@
 1421081666 source:d:\martin\programming\c_c++\projects\gameoflife\eg_light\eg_spotlight.cpp
 	"EG_SpotLight.h"
 
-1448874805 source:d:\martin\programming\c_c++\projects\gameoflife\eg_main.cpp
+1450724744 source:d:\martin\programming\c_c++\projects\gameoflife\eg_main.cpp
 	"EG_Main.h"
 	"gl/gl.h"
 	"gl/glu.h"
 	"SDL\SDL.h"
 
-1448850240 d:\martin\programming\c_c++\projects\gameoflife\eg_main.h
+1450653869 d:\martin\programming\c_c++\projects\gameoflife\eg_main.h
 	<cstdlib>
 	<iostream>
 	<stdio.h>
@@ -1846,6 +1846,7 @@
 	"EG_DirectionalLight.h"
 	"EG_AllLights.h"
 	"EG_ImportedAnimatedModel.h"
+	"GOL_ModelManager.h"
 	"EG_GameBoard.h"
 	"EG_Emitter.h"
 	"EG_Camera.h"
@@ -1861,13 +1862,12 @@
 	"EG_Skybox.h"
 	"EG_Shader.h"
 	"sceneLoader.h"
-	"GOL_Square.h"
-	"GOL_SquareOutline.h"
 	"EG_Label.h"
 	"EG_TextureRenderer.h"
 	"EG_RendererManager.h"
 	"EG_WorldAnimatedObject.h"
 	"EG_FullScreenQuad.h"
+	"GOL_GUIManager.h"
 	"EG_Button.h"
 	"EG_XYZAxisModel.h"
 	"EG_WorldBox.h"
@@ -2027,7 +2027,7 @@
 	<sstream>
 	"EG_Renderer.h"
 
-1438987492 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_texturerenderer.h
+1450507779 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_texturerenderer.h
 	"pipeline.h"
 	<GL/glew.h>
 	<cstdlib>
@@ -2064,8 +2064,10 @@
 1436648164 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_particleeffectsrenderers\eg_noisebasedparticleeffectrenderergpu.h
 	"EG_Renderer.h"
 
-1448854792 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.h
+1450614869 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.h
+	"EG_QuadModelABS.h"
 	"EG_GeneralRenderer.h"
+	"EG_Rect.h"
 
 1440567720 d:\martin\programming\c_c++\projects\gameoflife\eg_worldobject\eg_fullscreenquad.h
 	<cstdlib>
@@ -2177,7 +2179,7 @@
 1432152617 source:d:\martin\programming\c_c++\projects\gameoflife\eg_model\eg_builtinmodel\eg_cubemodel.cpp
 	"EG_CubeModel.h"
 
-1440566612 source:d:\martin\programming\c_c++\projects\gameoflife\eg_model\eg_builtinmodel\eg_quadmodelabs.cpp
+1450721783 source:d:\martin\programming\c_c++\projects\gameoflife\eg_model\eg_builtinmodel\eg_quadmodelabs.cpp
 	"EG_QuadModelABS.h"
 
 1440564808 source:d:\martin\programming\c_c++\projects\gameoflife\eg_model\eg_builtinmodel\eg_xyzaxismodel.cpp
@@ -2244,7 +2246,7 @@
 1432693606 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_deferredshadinglightpass\eg_deferredshadingpointlightpass.cpp
 	"EG_DeferredShadingPointLightPass.h"
 
-1446104998 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_generalrenderer.cpp
+1450608573 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_generalrenderer.cpp
 	"EG_GeneralRenderer.h"
 
 1438576607 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_generalscenerenderer.cpp
@@ -2277,10 +2279,10 @@
 1432045055 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_reflectionrenderer.cpp
 	"EG_ReflectionRenderer.h"
 
-1446362610 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderer.cpp
+1450609030 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderer.cpp
 	"EG_Renderer.h"
 
-1448874360 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.cpp
+1450715031 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.cpp
 	"EG_RendererManager.h"
 
 1438985863 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_scenerenderer.cpp
@@ -2289,7 +2291,7 @@
 1432137635 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_skinningrenderer.cpp
 	"EG_SkinningRenderer.h"
 
-1438987905 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_texturerenderer.cpp
+1450513549 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_texturerenderer.cpp
 	"EG_TextureRenderer.h"
 
 1436153102 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_twopassraycastingrenderer.cpp
@@ -2316,10 +2318,10 @@
 1433644866 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_assimpmath.cpp
 	"EG_Utility.h"
 
-1438574014 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_debug.cpp
+1450656302 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_debug.cpp
 	"EG_Utility.h"
 
-1448843706 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_gl.cpp
+1450554641 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_gl.cpp
 	"EG_Utility.h"
 
 1433710619 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_gluniloc.cpp
@@ -2497,21 +2499,62 @@
 
 1448749968 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\eg_golmodel.cpp
 
-1448847571 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_model.cpp
+1449091196 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_model.cpp
 	"GOL_Model.h"
 
-1448847561 d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_model.h
+1449090180 d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_model.h
 	"EG_Utility.h"
 
-1448873363 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_square.cpp
+1449090109 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_square.cpp
 	"GOL_Square.h"
 
 1448847586 d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_square.h
 	"GOL_Model.h"
 
-1448873455 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_squareoutline.cpp
+1448876653 source:d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_squareoutline.cpp
 	"GOL_SquareOutline.h"
 
 1448847609 d:\martin\programming\c_c++\projects\gameoflife\eg_golmodel\gol_squareoutline.h
 	"GOL_Model.h"
+
+1448943502 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\gol_gui.cpp
+
+1450718268 d:\martin\programming\c_c++\projects\gameoflife\gol_model.h
+	"EG_Utility.h"
+
+1450713651 source:d:\martin\programming\c_c++\projects\gameoflife\gol_model.cpp
+	"GOL_Model.h"
+
+1449181512 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_sdl.cpp
+	"EG_Utility.h"
+
+1449991980 source:d:\martin\programming\c_c++\projects\gameoflife\gol_texturemodel.cpp
+	"GOL_TextureModel.h"
+
+1449992078 d:\martin\programming\c_c++\projects\gameoflife\gol_texturemodel.h
+	"EG_Utility.h"
+
+1450615895 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\gol_guimanager.cpp
+	"GOL_GUIManager.h"
+
+1450615021 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\gol_guimanager.h
+	"pipeline.h"
+	"EG_Utility.h"
+	"EG_Rect.h"
+	"EG_Slider.h"
+	"EG_ListBox.h"
+	"EG_Button.h"
+
+1450612583 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_toggle.cpp
+	"EG_Toggle.h"
+
+1450612516 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_toggle.h
+	"EG_Control.h"
+
+1450655332 d:\martin\programming\c_c++\projects\gameoflife\gol_modelmanager.h
+	"EG_Utility.h"
+	"GOL_Model.h"
+
+1450661692 source:d:\martin\programming\c_c++\projects\gameoflife\gol_modelmanager.cpp
+	"GOL_ModelManager.h"
 

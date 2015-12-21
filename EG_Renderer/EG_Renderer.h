@@ -335,7 +335,10 @@ class EG_Renderer
         void addShader(Shader* s);
         void allocateMemberVariables(int nShaders);
         void initMemberVariables();
+
+        void enableShader();
         void enableShader(int RenderPassID);
+        void disableShader();
         void disableShader(int RenderPassID);
 
 
@@ -345,10 +348,12 @@ class EG_Renderer
         bool Init_Shader_GL_Location(Shader* s, Matrices_Location& Mat);
 
         virtual void loadUniformLocations(int RenderPassID);
+        virtual void loadUniformLocations(pipeline& p);
         virtual void loadUniformLocations(pipeline& p, int RenderPassID);
         virtual void render();
 
         void initDataPairUniLoc(DataPair* p, int pass, const char* name);
+        void addDataPair(const char* name, int dataType);
         void addDataPair(int pass, const char* name, int dataType);
 
         GLuint getUniLoc(Shader* s, const char* name);
@@ -378,6 +383,19 @@ class EG_Renderer
 
 
         void printTables();
+        /*
+        void setData(const char* name, bool value);
+        void setData(const char* name, int value);
+        void setData(const char* name, int value, GLuint textureId, GLuint unit);
+        void setData(const char* name, float value);
+        void setData(const char* name, glm::vec2 value);
+        void setData(const char* name, glm::vec3 value);
+        void setData(const char* name, glm::vec4 value);
+        void setData(const char* name, glm::mat3 value);
+        void setData(const char* name, glm::mat4 value);
+        void errorCheck(const char* name);
+        */
+
         void setData(int pass, const char* name, bool value);
         void setData(int pass, const char* name, int value);
         void setData(int pass, const char* name, int value, GLuint textureId, GLuint unit);

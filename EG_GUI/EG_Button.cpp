@@ -3,53 +3,18 @@
 
 EG_Button::EG_Button()
 {
+
+}
+
+
+EG_Button::EG_Button(string text, int x, int y, int width, int height, glm::vec3 c) :
+    EG_Control(text, x, y, width, height, c)
+{
     m_down = false;
-    m_idleTexture = 0;
-    m_highlightTexture = 0;
-    m_pressedTexture = 0;
-    m_vertexColors.resize(4);
+    m_highlightTexture = -1;
+    m_pressedTexture = -1;
 }
 
-
-
-EG_Button::EG_Button(string label, int x, int y, int width, int height, glm::vec3 c) : EG_Control(x, y, width, height, c)
-{
-    m_label = label;
-    m_down = false;
-}
-
-
-void EG_Button::initColoredQuad()
-{
-    EG_Control::initColoredQuad();
-//    m_highlightQuadModel.init(m_width, m_height, BLUE);
-//    m_pressedQuadModel.init(m_width, m_height, GREEN);
-    m_highlightQuadModel.init(m_rect.w, m_rect.h, BLUE);
-    m_pressedQuadModel.init(m_rect.w, m_rect.h, GREEN);
-
-}
-
-
-
-
-/*
-void EG_Button::init(int posX, int posY, int width, int height)
-{
-    m_position = glm::vec2(posX, posY);
-//    m_rectQuad.init(400, 400);
-    m_width = width;
-    m_height = height;
-    m_rectQuad.init(width, height);
-}
-*/
-
-
-/*
-bool EG_Button::update(string label)
-{
-    m_label = label;
-}
-*/
 
 bool EG_Button::update(MouseState & state)
 {
@@ -120,19 +85,53 @@ bool EG_Button::update(MouseState & state, unsigned int& groupFlag)
 */
 }
 
-
-
-
-
-
-void EG_Button::render( pipeline& m_pipeline,
-                        EG_Renderer* Renderer,
-                        int RenderPassID)
+void EG_Button::setTextures(GLuint bgTexId, GLuint highlightTexId, GLuint pressedTexId)
 {
+    m_rectTexture = bgTexId;
+    m_highlightTexture = highlightTexId;
+    m_pressedTexture = pressedTexId;
+}
+
+void EG_Button::setColors(glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pressedColor)
+{
+    m_rectColor = bgColor;
+    m_highlightColor = highlightColor;
+    m_pressedColor = pressedColor;
+}
+
+
+void EG_Button::render(pipeline& p, EG_Renderer* r)
+{
+    r->enableShader();
+
+    if(m_isInside && !m_down)
+        r->setData(RENDER_PASS1, "u_color", m_highlightColor);
+    else if (m_down)
+        r->setData(RENDER_PASS1, "u_color", m_pressedColor);
+    else
+        r->setData(RENDER_PASS1, "u_color", m_rectColor);
+
+    EG_Control::renderSingle(p, r, m_rect);
+    r->disableShader();
+
+ //   cout << "offset_x " << offset_x << endl;
+ //   cout << "offset_y " << offset_y << endl;
+
+ //   EG_Control::m_textEngine.render(m_pipeline, offset_x, offset_y, m_text.c_str());
+
+    /*
+    Renderer->enableShader(RenderPassID);
+
     if(m_isInside && !m_down)
     {
-        p_modelPtr = &m_highlightQuadModel;
-        EG_Control::render(m_pipeline, Renderer, RENDER_PASS1, p_modelPtr);
+        p.pushMatrix();
+            p.scale(m_rect.w, m_rect.y, 0);
+            p.translate(m_rect.x, m_rect.y, 0);
+            Renderer->loadUniformLocations(p, RenderPassID);
+            m_quadModel.render();
+        p.popMatrix();
+
+
 
         float offset_x = 0.025 * m_rect.w;
         float offset_y = 0.05 * m_rect.h;
@@ -143,20 +142,6 @@ void EG_Button::render( pipeline& m_pipeline,
             EG_Control::customMatrixRender(m_pipeline, Renderer, RENDER_PASS1);
         m_pipeline.popMatrix();
 
-
-
-
-/*
-     //   p_modelPtr = &m_quadModel;
-        m_pipeline.pushMatrix();
-
-            m_pipeline.translate( glm::vec3(m_rect.x, m_rect.y, 0) );
-        //    m_pipeline.scale(0.9);
-            Renderer->loadUniformLocations(m_pipeline, RenderPassID);
-            m_quadModel.render();
-
-        m_pipeline.popMatrix();
-  */
     }
 
 
@@ -170,21 +155,18 @@ void EG_Button::render( pipeline& m_pipeline,
 
 
 
-    int offset_x = computeTextStartingX(m_label);
+    int offset_x = computeTextStartingX(m_text);
     int offset_y = computeTextStartingY();
 
 
+    Renderer->disableShader(RenderPassID);
 
  //   cout << "offset_x " << offset_x << endl;
  //   cout << "offset_y " << offset_y << endl;
 
-    EG_Control::m_textEngine.render(m_pipeline, offset_x, offset_y, m_label.c_str());
+ //   EG_Control::m_textEngine.render(m_pipeline, offset_x, offset_y, m_text.c_str());
+*/
 }
-
-
-
-
-
 
 
 int EG_Button::getType()

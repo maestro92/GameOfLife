@@ -10,27 +10,23 @@ struct EG_Rect
     int w;
     int h;
 
-
-
-    void setXY(int posX, int posY)
+    EG_Rect()
     {
-        x = posX;
-        y = posY;
+        set(0, 0, 1, 1);
     }
 
-
-    void setWH(int width, int height)
+    EG_Rect(int x, int y, int w, int h)
     {
-        w = width;
-        h = height;
+        set(x, y, w, h);
     }
 
-    void set(int x, int y, int width, int height)
+    void set(int x, int y, int w, int h)
     {
-        setXY(x,y);
-        setWH(width, height);
+        this->x = x;
+        this->y = y;
+        this->w = w;
+        this->h = h;
     }
-
 };
 
 #endif // EG_RECT_H_

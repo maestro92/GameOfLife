@@ -21,10 +21,6 @@
 using namespace std;
 
 
-//static glm::vec3 WHITE;
-
-
-
 
 
 class EG_Control
@@ -35,92 +31,56 @@ class EG_Control
         {   LABEL = 0,
             BUTTON,
             LIST_BOX,
-            SLIDER
+            SLIDER,
+            TOGGLE,
         };
     public:
         EG_Control();
-        EG_Control(int x, int y, int width, int height);
-
-        EG_Control(int x, int y, int width, int height,
-                   glm::vec3 c);
-
-        EG_Control(int x, int y, int width, int height,
-                   glm::vec3 c1, glm::vec3 c2, glm::vec3 c3, glm::vec3 c4);
-
-        void initTextRenderer();
+        EG_Control(string text, int x, int y, int width, int height, glm::vec3 color);
 
         virtual ~EG_Control();
 
-/*
-        virtual void initQuad();
-        virtual void initQuad(glm::vec3 c);
-        virtual void initQuad(glm::vec3 c1, glm::vec3 c2, glm::vec3 c3, glm::vec3 c4);
-*/
+        // for labels, or basic controls, there'll only be one background
+        virtual void setTexture(GLuint id);
 
-        virtual void initTexturedQuad();
-        virtual void initColoredQuad();
-        virtual void initColoredQuad(int w, int h, glm::vec3 c);
-//        virtual void initColoredQuad(glm::vec3 c1, glm::vec3 c2, glm::vec3 c3, glm::vec3 c4);
+        // assuming that each vertex will only have one color, so i'm gonna just pass one color in
+        virtual void setColor(glm::vec3 color);
 
-
-
-    //    virtual bool update(int x, int y, int width, int height);
-     //   virtual bool update(glm::vec3 c);
-    //    virtual bool update(glm::vec3 c1, glm::vec3 c2, glm::vec3 c3, glm::vec3 c4);
         virtual bool update(MouseState & state);
         virtual bool update(MouseState & state, unsigned int& groupFlag);
 
-        virtual void render(pipeline& m_pipeline,
-                            EG_Renderer* Renderer,
-                            int RenderPassID);
+        static void renderSingle(pipeline& p,
+                                 EG_Renderer* Renderer,
+                                 EG_Rect& rect);
 
-        virtual void customMatrixRender(pipeline& m_pipeline,
-                        EG_Renderer* Renderer,
-                        int RenderPassID);
-
-        virtual void render(pipeline& m_pipeline,
-                        EG_Renderer* Renderer,
-                        int RenderPassID, EG_ModelABS* model);
-
-        virtual void render(pipeline& m_pipeline,
-                        EG_Renderer* Renderer,
-                        int RenderPassID, EG_Rect r, EG_ModelABS* model);
-
+        virtual void render(pipeline& p,
+                            EG_Renderer* Renderer);
 
         virtual int getType() = 0;
-
         void setID(int& ID);
-        void setPosition(int x, int y);
-        void setSize(int width, int height);
         void setRect(int x, int y, int w, int h);
-        void setColor(glm::vec3 c);
-        void setColor(glm::vec3 c1, glm::vec3 c2, glm::vec3 c3, glm::vec3 c4);
-        void setLabel(string label);
+
+        void setText(string text);
         int computeTextStartingX(string s);
         int computeTextStartingY();
 
 
 
-        int getWidth();
-        int getHeight();
 
-        EG_ModelABS* p_modelPtr;
-     //   glm::vec2 m_position;
-     //   int m_width;
-     //   int m_height;
+        GLuint m_rectTexture;
         bool m_isInside;
-        string m_label;
-
         int m_id;
-
+        string m_text;
         EG_Rect m_rect;
+        glm::vec3 m_rectColor;
 
         /// http://stackoverflow.com/questions/7083612/defining-a-static-variable-of-base-class
 
         static EG_Text m_textEngine;
-        EG_QuadModelABS m_quadModel;
-        vector<glm::vec3> m_vertexColors;
+        static EG_QuadModelABS m_quadModel;
+
 };
+
 
 
 #endif // EG_GUI_CONTROLS
