@@ -105,9 +105,7 @@ int EG_Control::computeTextStartingY()
 }
 
 
-void EG_Control::renderSingle(pipeline& p,
-                              EG_Renderer* r,
-                              EG_Rect& rect)
+void EG_Control::renderSingle(pipeline& p, EG_Renderer* r, EG_Rect& rect)
 {
     p.pushMatrix();
         p.translate(rect.x, rect.y, 0);
@@ -118,8 +116,7 @@ void EG_Control::renderSingle(pipeline& p,
 }
 
 
-void EG_Control::render(pipeline& p,
-                        EG_Renderer* r)
+void EG_Control::render(pipeline& p, EG_Renderer* r)
 {
     r->enableShader();
     p.pushMatrix();

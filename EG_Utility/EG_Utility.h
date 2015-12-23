@@ -125,6 +125,7 @@ struct EG_DoubleFrameBufferObject
     }
 };
 
+
 class EG_Utility
 {
     public:

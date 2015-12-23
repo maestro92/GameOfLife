@@ -40,8 +40,6 @@
 #include "sceneLoader.h"
 
 
-/// GOL_Shapes
-
 /// GUI
 #include "EG_Label.h"
 
@@ -53,7 +51,7 @@
 
 #include "EG_WorldAnimatedObject.h"
 #include "EG_FullScreenQuad.h"
-#include "GOL_GUIManager.h"
+#include "gui_manager.h"
 #include "EG_Button.h"
 #include "EG_XYZAxisModel.h"
 #include "EG_WorldBox.h"
@@ -62,6 +60,9 @@
 #include "EG_Slider.h"
 
 #include "pipeline.h"
+
+#include <ft2build.h>
+#include FT_FREETYPE_H
 
 #include "EG_GeneralRenderer.h"
 
@@ -74,6 +75,7 @@
 #include "SDL/SDL_image.h"
 #include "EG_TimeManager.h"
 
+#include "character.h"
 
 
 #include "EG_Smoke.h"
@@ -133,7 +135,6 @@ class ExplosionGenerator
         EG_Slider m_maxRadiusSlider;        float m_maxRadius;
         EG_ListBox m_listBox;
 
-        GOL_GUIManager m_GUIManager;
 
 
 
@@ -177,7 +178,7 @@ class ExplosionGenerator
    //     vector<string> m_GOLModelTitles;
    //     vector<GOL_Model*> m_GOLModels;
 
-        GOL_ModelManager m_GOLModelManager;
+
         //GOL_Square m_GOLSquare;
         //GOL_SquareOutline m_GOLSquareOutline;
 
@@ -185,10 +186,17 @@ class ExplosionGenerator
         EG_Label m_lb;
 
         GLuint tempTexture;
+        GLuint tex;
 
         GameBoard m_board;
 
+
+        GOL_GUIManager m_GUIManager;
+        GOL_ModelManager m_GOLModelManager;
     public:
+
+
+
         ExplosionGenerator();
         ~ExplosionGenerator();
 
@@ -209,6 +217,8 @@ class ExplosionGenerator
         void getUserInput(glm::vec2 position);
 
         void renderGUI();
+
+        void RenderText(string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color);
 };
 
 

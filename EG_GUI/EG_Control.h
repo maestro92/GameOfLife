@@ -65,8 +65,6 @@ class EG_Control
         int computeTextStartingY();
 
 
-
-
         GLuint m_rectTexture;
         bool m_isInside;
         int m_id;

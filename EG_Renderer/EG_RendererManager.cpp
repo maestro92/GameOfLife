@@ -83,22 +83,25 @@ void EG_RendererManager::init(int screenWidth, int screenHeight)
     r_GOLRenderIntermediate.addDataPair(RENDER_PASS1, "u_dstEmptyValue",    DP_INT);
 
 
-    /// r_CustomGUIPanelRenderer
-    s = new Shader("/EG_GUIShaders/GOL_CustomGUIPanel.vs", "/EG_GUIShaders/GOL_CustomGUIPanel.fs");
-    r_CustomGUIPanelRenderer.addShader(s);
 
-
-
-    /// r_GUIRenderer
-    s = new Shader("/EG_GUIShaders/EG_Rect.vs", "/EG_GUIShaders/EG_Rect.fs");
-    r_RectRenderer.addShader(s);
-    r_RectRenderer.addDataPair(RENDER_PASS1, "u_color", DP_VEC3);
 
 
     /// r_textureRenderer
     s = new Shader("EG_TextureRenderer.vs", "EG_TextureRenderer.fs");
     r_textureRenderer.addShader(s);
     r_textureRenderer.addDataPair(RENDER_PASS1, "u_texture",    DP_INT);
+
+
+    /// r_GUIRectRenderer
+    s = new Shader("/EG_GUIShaders/EG_Rect.vs", "/EG_GUIShaders/EG_Rect.fs");
+    r_RectRenderer.addShader(s);
+    r_RectRenderer.addDataPair(RENDER_PASS1, "u_color", DP_VEC3);
+
+    /// r_TextRenderer
+    s = new Shader("/EG_GUIShaders/EG_Text.vs", "/EG_GUIShaders/EG_Text.fs");
+    r_textRenderer.addShader(s);
+    r_textRenderer.addDataPair(RENDER_PASS1, "u_texture",   DP_INT);
+    r_textRenderer.addDataPair(RENDER_PASS1, "u_color",     DP_VEC3);
 
 }
 
@@ -175,5 +178,20 @@ void EG_RendererManager::renderTextureSingle(GLuint TextureId, GLuint FboTarget,
 
 }
 
+void EG_RendererManager::renderText(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
+{
+    glViewport(0, 0, m_screenWidth, m_screenHeight);
 
+    r_textRenderer.enableShader(RENDER_PASS1);
+    r_textRenderer.setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, TextureId);
+
+    m_texturePipeline.pushMatrix();
+        m_texturePipeline.translate(rect.x, rect.y, 0);
+        m_texturePipeline.scale(rect.w, rect.h, 1.0);
+
+        r_textRenderer.loadUniformLocations(m_texturePipeline, RENDER_PASS1);
+        m_textureQuad.render();
+    m_texturePipeline.popMatrix();
+    r_textRenderer.disableShader(RENDER_PASS1);
+}
 

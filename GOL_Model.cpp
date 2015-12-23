@@ -25,9 +25,9 @@ GOL_Model::GOL_Model(string name, EG_TextureDataBuffer gData, int gs)
         for (int x = 0; x < m_width; x++)
         {
             int num = (int)m_pixelData[y][x][3];
-            cout << ((num == 255) ? 1 : 0);
+        //    cout << ((num == 255) ? 1 : 0);
         }
-        cout << endl;
+     //   cout << endl;
     }
 }
 

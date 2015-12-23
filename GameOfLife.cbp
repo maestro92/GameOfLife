@@ -170,6 +170,8 @@
 		<Unit filename="EG_deferredShading.h" />
 		<Unit filename="GOL_Model.cpp" />
 		<Unit filename="GOL_Model.h" />
+		<Unit filename="GOL_ModelManager.cpp" />
+		<Unit filename="GOL_ModelManager.h" />
 		<Unit filename="Particle.h" />
 		<Unit filename="Random.h" />
 		<Unit filename="Smoke_struct.h" />

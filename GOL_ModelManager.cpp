@@ -11,6 +11,10 @@ void GOL_ModelManager::init(int gs)
     m_GOLModels.push_back(new GOL_Model("Dot", generateSquareGridModel(1), gs));
     m_GOLModels.push_back(new GOL_Model("Square Outline", generateSquareOutlineGridModel(5), gs));
     m_GOLModels.push_back(new GOL_Model("Glider", readModelFromFile("GOL_glider.txt"), gs));
+    m_GOLModels.push_back(new GOL_Model("Lightweight Spaceship", readModelFromFile("GOL_lightweight_spaceship.txt"), gs));
+    m_GOLModels.push_back(new GOL_Model("Blinker", readModelFromFile("GOL_blinker.txt"), gs));
+    m_GOLModels.push_back(new GOL_Model("Beacon", readModelFromFile("GOL_beacon.txt"), gs));
+
 }
 
 string GOL_ModelManager::getFilePath(string filename)
@@ -24,7 +28,7 @@ string GOL_ModelManager::getFilePath(string filename)
 EG_TextureDataBuffer GOL_ModelManager::readModelFromFile(string filename)
 {
     string path = getFilePath(filename);
-    EG_Utility::debug("path is", path);
+ //   EG_Utility::debug("path is", path);
 
 
     ifstream file(path);
@@ -34,7 +38,7 @@ EG_TextureDataBuffer GOL_ModelManager::readModelFromFile(string filename)
     int cols = 0;
     while(getline(file, str))
     {
-        EG_Utility::debug(str);
+ //       EG_Utility::debug(str);
         cols = str.size();
         rows++;
     }
@@ -48,7 +52,7 @@ EG_TextureDataBuffer GOL_ModelManager::readModelFromFile(string filename)
         for(int x=0; x<str.size(); x++)
         {
             char c = str[x];
-            EG_Utility::debug("c is", (c == '#'));
+    //        EG_Utility::debug("c is", (c == '#'));
 
             buffer[y][x][0] = 255;
             buffer[y][x][1] = (c == '#') ? 0 : 255;
@@ -59,26 +63,6 @@ EG_TextureDataBuffer GOL_ModelManager::readModelFromFile(string filename)
     }
 
     return buffer;
-
-  //  string text(filename);
-  //  EG_Utility::debug("text", text);
-
-  //  ifstream in(p_str);
-/*
-    if(!in.is_open())
-    {
-        cout << "The file " << fn << "cannot be openned\n" << endl;
-        return;
-    }
-
-    char tmp[300];
-    while(!in.eof())
-    {
-        in.getline(tmp,300);
-        str+=tmp;
-        str+='\n';
-    }
-*/
 }
 
 
@@ -134,7 +118,7 @@ GOL_Model* GOL_ModelManager::getDefaultGOLModel()
 {
     if(m_GOLModels.size()<=0 || m_GOLModels[0] == NULL)
     {
-        EG_Utility::debug("in GOL_ModelManager getDefaultGOLModel");
+        EG_Utility::debug("Error in GOL_ModelManager getDefaultGOLModel");
         exit(1);
     }
     return m_GOLModels[0];
@@ -144,9 +128,14 @@ GOL_Model* GOL_ModelManager::getModel(int index)
 {
     if(index >= m_GOLModels.size())
     {
-        EG_Utility::debug("in GOL_ModelManager getModel");
+        EG_Utility::debug("Error in GOL_ModelManager getModel");
         exit(1);
     }
     return m_GOLModels[index];
+}
+
+vector<GOL_Model*> GOL_ModelManager::getModels()
+{
+    return m_GOLModels;
 }
 

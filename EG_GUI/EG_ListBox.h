@@ -13,7 +13,7 @@ class EG_ListBox : public EG_Control
     public:
         EG_ListBox();
         EG_ListBox(string text, int x, int y, int width, int height,
-                   glm::vec3 color, int rowNum, int colNum);
+                   glm::vec3 color, int colNum);
 
         void addItem(string item);
         void removeItem(int index);
@@ -31,8 +31,13 @@ class EG_ListBox : public EG_Control
 
     protected:
         int m_curIndex;
-        int m_rowNum;
+        int m_curIndexX;
+        int m_curIndexY;
+
         int m_colNum;
+
+        float m_itemWidth;
+        float m_itemHeight;
 
         glm::vec3 m_itemRectColor;
 

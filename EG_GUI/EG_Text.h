@@ -18,7 +18,6 @@
 #include <cstdio>
 using namespace std;
 
-
 class EG_Text
 {
     public:
@@ -62,8 +61,6 @@ class EG_Text
         int m_fontSize = 20;
         int m_fontSpace = -9;
 
-
-    //    EG_TextRenderer    r_textRenderer;
         EG_GeneralRenderer r_textRenderer;
 };
 

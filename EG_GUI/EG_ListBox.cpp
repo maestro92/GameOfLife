@@ -1,18 +1,28 @@
 #include "EG_ListBox.h"
 
-const int m_itemHeight = 18;
+
 
 EG_ListBox::EG_ListBox()
 {
 }
 
 EG_ListBox::EG_ListBox(string text, int x, int y, int width, int height,
-                       glm::vec3 color, int rowNum, int colNum) :
+                       glm::vec3 color, int colNum) :
             EG_Control(text, x, y, width, height, color)
 {
-    m_rowNum = rowNum;
     m_colNum = colNum;
+
     m_curIndex = 0;
+    m_curIndexX = 0;
+    m_curIndexY = 0;
+
+    m_itemWidth = (float)((float)width / (float)m_colNum);
+    m_itemHeight = 18;
+
+    EG_Utility::debug("width", width);
+    EG_Utility::debug("height", height);
+    EG_Utility::debug("m_colNum", m_colNum);
+    EG_Utility::debug("m_itemWidth", m_itemWidth);
 }
 
 void EG_ListBox::addItem(string item)
@@ -83,7 +93,28 @@ bool EG_ListBox::update(MouseState & state)
 
     if( m_isInside && state.m_leftButtonDown)
     {
-    //    int tempIndex = (y - m_rect.y) / m_itemHeight;
+        int x_index = (x - m_rect.x) / m_itemWidth;
+        int y_index = (m_rect.y + m_rect.h - y) / m_itemHeight;
+
+
+        bool bx = x_index >= 0 && x_index < m_colNum;
+        bool by = y_index >= 0 && y_index < ( (int)m_items.size() / m_colNum) ;
+
+
+        if( bx && by )
+        {
+            m_curIndex = y_index * m_colNum + x_index;
+
+            EG_Utility::debug("m_curIndex", m_curIndex);
+            EG_Utility::debug("xi, yi", glm::vec2(x_index, y_index));
+
+            m_curIndexX = x_index;
+            m_curIndexY = y_index;
+            return true;
+        }
+
+
+        /*
         int tempIndex = (m_rect.y + m_rect.h - y) / m_itemHeight;
 
         if( tempIndex >= 0 && tempIndex < (int)m_items.size())
@@ -91,6 +122,8 @@ bool EG_ListBox::update(MouseState & state)
             m_curIndex = tempIndex;
             return true;
         }
+        */
+
     }
     return false;
 }
@@ -105,12 +138,22 @@ void EG_ListBox::render(pipeline& p, EG_Renderer* r)
         // render the itemRectBox
         if( m_curIndex >= 0)
         {
+            int offset_x = m_rect.x + m_curIndexX * m_itemWidth;
+            int offset_y = m_rect.y + m_rect.h - ((m_curIndexY + 1) * m_itemHeight);
+
+            EG_Rect itemRect(offset_x, offset_y, m_itemWidth, m_itemHeight);
+            r->setData(RENDER_PASS1, "u_color", m_itemRectColor);
+            EG_Control::renderSingle(p, r, itemRect);
+
+
+            /*
             int offset_x = m_rect.x;
             int offset_y = m_rect.y + m_rect.h - ((m_curIndex + 1) * m_itemHeight);
 
-            EG_Rect itemRect(offset_x, offset_y, m_rect.w, m_itemHeight);
+            EG_Rect itemRect(offset_x, offset_y, m_itemWidth.w, m_itemHeight);
             r->setData(RENDER_PASS1, "u_color", m_itemRectColor);
             EG_Control::renderSingle(p, r, itemRect);
+            */
         }
 
     r->disableShader();
