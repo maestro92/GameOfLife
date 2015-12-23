@@ -50,7 +50,7 @@
 #include "EG_RendererManager.h"
 
 #include "EG_WorldAnimatedObject.h"
-#include "EG_FullScreenQuad.h"
+
 #include "gui_manager.h"
 #include "EG_Button.h"
 #include "EG_XYZAxisModel.h"
@@ -75,10 +75,8 @@
 #include "SDL/SDL_image.h"
 #include "EG_TimeManager.h"
 
-#include "character.h"
+#include "text_engine.h"
 
-
-#include "EG_Smoke.h"
 
 
 

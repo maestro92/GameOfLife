@@ -1834,7 +1834,7 @@
 	"gl/glu.h"
 	"SDL\SDL.h"
 
-1450844298 d:\martin\programming\c_c++\projects\gameoflife\eg_main.h
+1450845936 d:\martin\programming\c_c++\projects\gameoflife\eg_main.h
 	<cstdlib>
 	<iostream>
 	<stdio.h>
@@ -1866,7 +1866,6 @@
 	"EG_TextureRenderer.h"
 	"EG_RendererManager.h"
 	"EG_WorldAnimatedObject.h"
-	"EG_FullScreenQuad.h"
 	"gui_manager.h"
 	"EG_Button.h"
 	"EG_XYZAxisModel.h"
@@ -1882,8 +1881,7 @@
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	"EG_TimeManager.h"
-	"character.h"
-	"EG_Smoke.h"
+	"text_engine.h"
 
 1445500070 d:\martin\programming\c_c++\projects\gameoflife\eg_particleeffects\eg_noisebasedparticleeffect.h
 	<stdio.h>
@@ -2601,4 +2599,6 @@
 	"EG_Button.h"
 	"GOL_Model.h"
 	"EG_GeneralRenderer.h"
+
+1450845912 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\text_engine.h
 
