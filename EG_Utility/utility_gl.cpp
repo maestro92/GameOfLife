@@ -1,8 +1,8 @@
-#include "EG_Utility.h"
+#include "utility.h"
 
 
 
-void EG_Utility::initGLEW()
+void Utility::initGLEW()
 {
     // initialize Glew
     GLenum err = glewInit();
@@ -13,7 +13,7 @@ void EG_Utility::initGLEW()
 }
 
 
-GLuint EG_Utility::createFBO()
+GLuint Utility::createFBO()
 {
     GLuint FBO;
     glGenFramebuffers(1, &FBO);
@@ -21,14 +21,14 @@ GLuint EG_Utility::createFBO()
 }
 
 
-void EG_Utility::bindFBO(GLuint target)
+void Utility::bindFBO(GLuint target)
 {
 
 
 }
 
 
-void EG_Utility::errorCheckFBO()
+void Utility::errorCheckFBO()
 {
     int i=glCheckFramebufferStatus(GL_FRAMEBUFFER);
 	if(i!=GL_FRAMEBUFFER_COMPLETE)
@@ -42,13 +42,13 @@ void EG_Utility::errorCheckFBO()
 
 
 
-GLuint EG_Utility::loadTexture(string filename)
+GLuint Utility::loadTexture(string filename)
 {
     return loadTexture(filename, GL_LINEAR);
 }
 
 
-GLuint EG_Utility::loadTexture(string filename, GLuint filteringParam)
+GLuint Utility::loadTexture(string filename, GLuint filteringParam)
 {
     cout << "Loading Texture " << filename << endl;
 
@@ -76,7 +76,7 @@ GLuint EG_Utility::loadTexture(string filename, GLuint filteringParam)
 
 
 // http://stackoverflow.com/questions/8767166/passing-a-2d-array-to-a-c-function
-GLuint EG_Utility::loadTexture(vector<vector<vector<GLubyte>>> data, GLuint filteringParam)
+GLuint Utility::loadTexture(vector<vector<vector<GLubyte>>> data, GLuint filteringParam)
 {
     int h = data.size();
     int w = data[0].size();
@@ -114,7 +114,7 @@ GLuint EG_Utility::loadTexture(vector<vector<vector<GLubyte>>> data, GLuint filt
 }
 
 
-GLuint EG_Utility::createTexture(int w, int h)
+GLuint Utility::createTexture(int w, int h)
 {
     GLuint textureID;
     glGenTextures(1,&textureID);
@@ -130,9 +130,9 @@ GLuint EG_Utility::createTexture(int w, int h)
 
 
 
-EG_TextureDataBuffer EG_Utility::createEmptyBuffer(int w, int h)
+TextureDataBuffer Utility::createEmptyBuffer(int w, int h)
 {
-    EG_TextureDataBuffer dataBuffer;
+    TextureDataBuffer dataBuffer;
     dataBuffer.resize(h);
     for(int i=0; i<h; i++)
     {
@@ -145,7 +145,7 @@ EG_TextureDataBuffer EG_Utility::createEmptyBuffer(int w, int h)
 
 
 /*
-GLuint EG_Utility::createTexture(int w, int h)
+GLuint Utility::createTexture(int w, int h)
 {
     GLuint textureID;
     glGenTextures(1,&textureID);
@@ -160,7 +160,7 @@ GLuint EG_Utility::createTexture(int w, int h)
 }
 */
 /*
-GLuint EG_Utility::create3DTexture(int w, int h, int d)
+GLuint Utility::create3DTexture(int w, int h, int d)
 {
     GLuint textureID;
     glGenTextures(1,&textureID);
@@ -170,7 +170,7 @@ GLuint EG_Utility::create3DTexture(int w, int h, int d)
 */
 
 
-GLuint EG_Utility::createDepthTexture(int w, int h)
+GLuint Utility::createDepthTexture(int w, int h)
 {
     GLuint textureID;
 
@@ -190,7 +190,7 @@ GLuint EG_Utility::createDepthTexture(int w, int h)
 
 
 
-void EG_Utility::setTextureParameters(int w, int h, int internal_format, int format)
+void Utility::setTextureParameters(int w, int h, int internal_format, int format)
 {
    	glTexImage2D(GL_TEXTURE_2D, 0, internal_format, w, h, 0, format, GL_FLOAT, NULL);
 
@@ -204,7 +204,7 @@ void EG_Utility::setTextureParameters(int w, int h, int internal_format, int for
 
 
 
-GLuint EG_Utility::createCubemapTexture()
+GLuint Utility::createCubemapTexture()
 {
     /// need to pass in the pictures in the following order
     /// left, right, top, bottom, near, far
@@ -226,7 +226,7 @@ GLuint EG_Utility::createCubemapTexture()
 
 
 
-GLuint EG_Utility::createCubemapTexture(string* filenames)
+GLuint Utility::createCubemapTexture(string* filenames)
 {
     /// need to pass in the pictures in the following order
     /// left, right, top, bottom, near, far
@@ -252,7 +252,7 @@ GLuint EG_Utility::createCubemapTexture(string* filenames)
 
 
 
-void EG_Utility::setCubemapTextureParameters()
+void Utility::setCubemapTextureParameters()
 {
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP);
@@ -263,7 +263,7 @@ void EG_Utility::setCubemapTextureParameters()
 
 
 
-void EG_Utility::errorCheck()
+void Utility::errorCheck()
 {
     int i;
     i = glGetError();
@@ -275,9 +275,9 @@ void EG_Utility::errorCheck()
 
 
 
-EG_FrameBufferObject EG_Utility::createFrameBufferObject(int width, int height)
+FrameBufferObject Utility::createFrameBufferObject(int width, int height)
 {
-    EG_FrameBufferObject pod;
+    FrameBufferObject pod;
 
     pod.depthTexture = createDepthTexture(width, height);
 
@@ -298,21 +298,21 @@ EG_FrameBufferObject EG_Utility::createFrameBufferObject(int width, int height)
 }
 
 
-EG_DoubleFrameBufferObject EG_Utility::createDoubleFrameBufferObject(int width, int height)
+DoubleFrameBufferObject Utility::createDoubleFrameBufferObject(int width, int height)
 {
-    EG_DoubleFrameBufferObject fbObj;
+    DoubleFrameBufferObject fbObj;
     fbObj.ping = createFrameBufferObject(width, height);
     fbObj.pong = createFrameBufferObject(width, height);
     return fbObj;
 }
 
 
-void EG_Utility::setupFrameBuffer()
+void Utility::setupFrameBuffer()
 {
     setupFrameBuffer(0);
 }
 
-void EG_Utility::setupFrameBuffer(GLuint target)
+void Utility::setupFrameBuffer(GLuint target)
 {
     glBindFramebuffer(GL_FRAMEBUFFER, target);
     glClearColor(0.0,0.0,0.0,1.0);

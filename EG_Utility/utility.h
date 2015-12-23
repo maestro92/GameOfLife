@@ -1,5 +1,5 @@
-#ifndef EG_UTILITY_H
-#define EG_UTILITY_H
+#ifndef UTILITY_H_
+#define UTILITY_H_
 
 #include <cstdlib>
 #include <vector>
@@ -14,7 +14,7 @@
 #define NO_SDL_GLEXT
 #include <GL/glew.h>
 
-#include "EG_Shader.h"
+#include "Shader.h"
 
 
 #include "define.h"
@@ -33,7 +33,7 @@
 
 using namespace std;
 
-//typedef std::<EG_NoiseBasedParticle> EG_NoiseBasedParticleList;
+//typedef std::<NoiseBasedParticle> NoiseBasedParticleList;
 
 #define RENDER_TO_SCREEN 0
 
@@ -67,7 +67,7 @@ struct MouseState
 
 };
 
-struct EG_TextureObject
+struct TextureObject
 {
     GLuint id;
     int width;
@@ -76,7 +76,7 @@ struct EG_TextureObject
 };
 
 
-struct EG_FrameBufferObject
+struct FrameBufferObject
 {
     GLuint FBO;
     GLuint colorTexture;
@@ -96,18 +96,18 @@ struct EG_FrameBufferObject
 };
 
 
-typedef vector<vector<vector<GLubyte>>> EG_TextureDataBuffer;
+typedef vector<vector<vector<GLubyte>>> TextureDataBuffer;
 
 
 // double buffering
-struct EG_DoubleFrameBufferObject
+struct DoubleFrameBufferObject
 {
-    EG_FrameBufferObject ping;   // buffer 1
-    EG_FrameBufferObject pong;   // buffer 2
+    FrameBufferObject ping;   // buffer 1
+    FrameBufferObject pong;   // buffer 2
 
     void swapFrontBack()
     {
-        EG_FrameBufferObject temp = ping;
+        FrameBufferObject temp = ping;
         ping = pong;
         pong = temp;
     }
@@ -126,38 +126,38 @@ struct EG_DoubleFrameBufferObject
 };
 
 
-class EG_Utility
+class Utility
 {
     public:
-        EG_Utility();
-        ~EG_Utility();
+        Utility();
+        ~Utility();
 
 
         template<typename T>
             static vector<T> reserveVector(int size);
 
-        /// EG_Utility_Math.cpp
+        /// Utility_Math.cpp
         static float DEGREE_TO_RADIAN;
         static float RADIAN_TO_DEGREE;
         static string floatToStr(float value);
         static float randFloat(float min=0, float max=1);
 
 
-        /// EG_Utility_SDL.cpp
+        /// Utility_SDL.cpp
         static void initSDL(int w, int h, SDL_Surface* & m_displaySurface);
         static void exitSDL(SDL_Surface* & m_displaySurface);
         static SDL_Surface* loadRawImage(string filename);
         static SDL_Surface* loadSDLImage(string filename);
 
 
-        /// EG_Utility_GL.cpp
+        /// Utility_GL.cpp
         static void initGLEW();
         static void errorCheck();
         static GLuint createFBO();
         static void errorCheckFBO();
         static void bindFBO(GLuint target);
 
-        static EG_TextureDataBuffer createEmptyBuffer(int w, int h);
+        static TextureDataBuffer createEmptyBuffer(int w, int h);
 
         static GLuint loadTexture(string filename);
         static GLuint loadTexture(string filename, GLuint filteringParam);
@@ -171,14 +171,14 @@ class EG_Utility
         static GLuint createCubemapTexture(string* filenames);
         static void setTextureParameters(int w, int h, int internal_format, int format);
         static void setCubemapTextureParameters();
-        static EG_FrameBufferObject createFrameBufferObject(int width, int height);
-        static EG_DoubleFrameBufferObject createDoubleFrameBufferObject(int width, int height);
+        static FrameBufferObject createFrameBufferObject(int width, int height);
+        static DoubleFrameBufferObject createDoubleFrameBufferObject(int width, int height);
 
         static void setupFrameBuffer();
         static void setupFrameBuffer(GLuint target);
 
 
-        /// EG_Utility_AssimpMath.cpp
+        /// Utility_AssimpMath.cpp
         static glm::vec3 toGlmVec(aiVector3D& v2);
         static glm::mat4 toGlmMat(aiMatrix3x3 m2);
         static glm::mat4 toGlmMat(aiMatrix4x4& m2);
@@ -190,7 +190,7 @@ class EG_Utility
         static glm::vec3 scaleGlmVec(const glm::vec3 v, float s1, float s2, float s3);
 
 
-        /// EG_Utility_Debug.cpp
+        /// Utility_Debug.cpp
         static void debugLn(int l=0);
         static void debugLn(string s, int l=0);
 
@@ -208,7 +208,7 @@ class EG_Utility
         static void checkGLError();
 
 
-        /// EG_Utility_UniLoc.cpp
+        /// Utility_UniLoc.cpp
         static void setUniLoc(GLuint location, int value);
         static void setUniLoc(GLuint location, float value);
         static void setUniLoc(GLuint location, float x, float y);
@@ -223,7 +223,7 @@ class EG_Utility
 
 
 template<typename T>
-vector<T> EG_Utility::reserveVector(int size)
+vector<T> Utility::reserveVector(int size)
 {
     vector<T> v;
     v.reserve(size);

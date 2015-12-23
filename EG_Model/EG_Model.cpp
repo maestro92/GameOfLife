@@ -116,12 +116,12 @@ bool EG_Model::initFromAiScene(const aiScene* s, const string& Filename)
         NumIndices += m_Meshes[i].NumIndices;
     }
 
-    vector<glm::vec3> Positions     = EG_Utility::reserveVector<glm::vec3> (NumVertices);
-    vector<glm::vec3> Normals       = EG_Utility::reserveVector<glm::vec3> (NumVertices);
-    vector<glm::vec3> Tangents      = EG_Utility::reserveVector<glm::vec3> (NumVertices);
-    vector<glm::vec3> Colors        = EG_Utility::reserveVector<glm::vec3> (NumVertices);
-    vector<glm::vec2> UVs           = EG_Utility::reserveVector<glm::vec2> (NumVertices);
-    vector<unsigned int> Indices    = EG_Utility::reserveVector<unsigned int> (NumIndices);
+    vector<glm::vec3> Positions     = Utility::reserveVector<glm::vec3> (NumVertices);
+    vector<glm::vec3> Normals       = Utility::reserveVector<glm::vec3> (NumVertices);
+    vector<glm::vec3> Tangents      = Utility::reserveVector<glm::vec3> (NumVertices);
+    vector<glm::vec3> Colors        = Utility::reserveVector<glm::vec3> (NumVertices);
+    vector<glm::vec2> UVs           = Utility::reserveVector<glm::vec2> (NumVertices);
+    vector<unsigned int> Indices    = Utility::reserveVector<unsigned int> (NumIndices);
 
 
     for (unsigned int i=0; i<m_Meshes.size(); i++)
@@ -182,14 +182,14 @@ void EG_Model::initVertexVectors(const aiMesh* m,
     for (unsigned int i = 0 ; i < m->mNumVertices ; i++)
     {
         /// position, normal, tangent, color, uv
-        glm::vec3 pos = EG_Utility::toGlmVec(m->mVertices[i]);
-        glm::vec3 norm = EG_Utility::toGlmVec(m->mNormals[i]);
+        glm::vec3 pos = Utility::toGlmVec(m->mVertices[i]);
+        glm::vec3 norm = Utility::toGlmVec(m->mNormals[i]);
         glm::vec3 tang = glm::vec3(1.0, 0.0, 0.0);
         glm::vec3 color = defaultColor;
         glm::vec2 uv = glm::vec2(0.0f, 0.0f);
 
         if(m->mTangents)
-            tang = EG_Utility::toGlmVec(m->mTangents[i]);
+            tang = Utility::toGlmVec(m->mTangents[i]);
 
         /// colors
         if(m->mColors[0])

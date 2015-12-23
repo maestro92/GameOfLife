@@ -1,24 +1,24 @@
 
-#include "EG_Renderer.h"
+#include "Renderer.h"
 
 
-EG_Renderer::EG_Renderer()
+Renderer::Renderer()
 {
     m_curShader = -1;
 }
 
-EG_Renderer::~EG_Renderer()
+Renderer::~Renderer()
 {
 
 }
 
 
-void EG_Renderer::init()
+void Renderer::init()
 {
 
 }
 
-void EG_Renderer::init(int nShaders)
+void Renderer::init(int nShaders)
 {
 
 }
@@ -27,7 +27,7 @@ void EG_Renderer::init(int nShaders)
 
 
 
-void EG_Renderer::allocateMemberVariables(int nShaders)
+void Renderer::allocateMemberVariables(int nShaders)
 {
     m_numShaders = nShaders;
 //    Matrices_UniLoc = new Matrices_Location[m_numShaders];
@@ -39,7 +39,7 @@ void EG_Renderer::allocateMemberVariables(int nShaders)
     m_allDataPairs.resize(nShaders);
 }
 
-void EG_Renderer::addShader(Shader* s)
+void Renderer::addShader(Shader* s)
 {
     m_shaders.push_back(s);
 
@@ -55,7 +55,7 @@ void EG_Renderer::addShader(Shader* s)
 }
 
 
-void EG_Renderer::initMemberVariables()
+void Renderer::initMemberVariables()
 {
     for(int i=0; i<m_numShaders; i++)
         Init_Shader_GL_Location(m_shaders[i], m_matricesUniLocs[i]);
@@ -68,7 +68,7 @@ void EG_Renderer::initMemberVariables()
 
 
 
-GLuint EG_Renderer::GetUniformLocation(Shader* s, const char* name)
+GLuint Renderer::GetUniformLocation(Shader* s, const char* name)
 {
     unsigned int shaderID = s->getProgramId();
 
@@ -81,25 +81,25 @@ GLuint EG_Renderer::GetUniformLocation(Shader* s, const char* name)
     return location;
 }
 /*
-void EG_Renderer::initDataPairUniLoc(DataPair* p, Shader* s, const char* name)
+void Renderer::initDataPairUniLoc(DataPair* p, Shader* s, const char* name)
 {
     p->uniLoc = getUniLoc(s, name);
 }
 */
 
-void EG_Renderer::initDataPairUniLoc(DataPair* p, int pass, const char* name)
+void Renderer::initDataPairUniLoc(DataPair* p, int pass, const char* name)
 {
     p->uniLoc = getUniLoc(m_shaders[pass], name);
     m_allDataPairs[pass].push_back(p);
 }
 
 
-void EG_Renderer::addDataPair(const char* name, int dataType)
+void Renderer::addDataPair(const char* name, int dataType)
 {
     addDataPair(RENDER_PASS1, name, dataType);
 }
 
-void EG_Renderer::addDataPair(int pass, const char* name, int dataType)
+void Renderer::addDataPair(int pass, const char* name, int dataType)
 {
     DataPair* p;
 
@@ -160,14 +160,14 @@ void EG_Renderer::addDataPair(int pass, const char* name, int dataType)
 /*
     DataPair* dpdp = tables[RENDER_PASS2]["u_color"];
     dpdp->setValue(glm::vec4(1.0,0.0,0.0,1.0));
-    EG_Utility::debug("it is", dpdp->value)
+    Utility::debug("it is", dpdp->value)
 */
 
 
 
 /*
     (tables[RENDER_PASS2]["u_color"])->setValue(glm::vec4(1.0,0.0,0.0,1.0));
-   // EG_Utility::debug("it is", (tables[RENDER_PASS2]["u_color"])->value);
+   // Utility::debug("it is", (tables[RENDER_PASS2]["u_color"])->value);
     tables[RENDER_PASS2]["u_color"]->printValue();
     int a = 1;
 */
@@ -179,19 +179,19 @@ void EG_Renderer::addDataPair(int pass, const char* name, int dataType)
 
 
 
-void EG_Renderer::setData(int pass, const char* name, bool value)
+void Renderer::setData(int pass, const char* name, bool value)
 {
     errorCheck(pass, name);
     tables[pass][name]->setValue(value);
 }
 
-void EG_Renderer::setData(int pass, const char* name, int value)
+void Renderer::setData(int pass, const char* name, int value)
 {
     errorCheck(pass, name);
     tables[pass][name]->setValue(value);
 }
 
-void EG_Renderer::setData(int pass, const char* name, int value, GLuint unit, GLuint textureId)
+void Renderer::setData(int pass, const char* name, int value, GLuint unit, GLuint textureId)
 {
     errorCheck(pass, name);
 
@@ -202,43 +202,43 @@ void EG_Renderer::setData(int pass, const char* name, int value, GLuint unit, GL
     tables[pass][name]->setValue(value);
 }
 
-void EG_Renderer::setData(int pass, const char* name, float value)
+void Renderer::setData(int pass, const char* name, float value)
 {
     errorCheck(pass, name);
     tables[pass][name]->setValue(value);
 }
 
-void EG_Renderer::setData(int pass, const char* name, glm::vec2 value)
+void Renderer::setData(int pass, const char* name, glm::vec2 value)
 {
     errorCheck(pass, name);
     tables[pass][name]->setValue(value);
 }
 
-void EG_Renderer::setData(int pass, const char* name, glm::vec3 value)
+void Renderer::setData(int pass, const char* name, glm::vec3 value)
 {
     errorCheck(pass, name);
     tables[pass][name]->setValue(value);
 }
 
-void EG_Renderer::setData(int pass, const char* name, glm::vec4 value)
+void Renderer::setData(int pass, const char* name, glm::vec4 value)
 {
     errorCheck(pass, name);
     tables[pass][name]->setValue(value);
 }
 
-void EG_Renderer::setData(int pass, const char* name, glm::mat3 value)
+void Renderer::setData(int pass, const char* name, glm::mat3 value)
 {
     errorCheck(pass, name);
     tables[pass][name]->setValue(value);
 }
 
-void EG_Renderer::setData(int pass, const char* name, glm::mat4 value)
+void Renderer::setData(int pass, const char* name, glm::mat4 value)
 {
     errorCheck(pass, name);
     tables[pass][name]->setValue(value);
 }
 
-void EG_Renderer::errorCheck(int pass, const char* name)
+void Renderer::errorCheck(int pass, const char* name)
 {
     if(tables[pass].find(name) == tables[pass].end())
     {
@@ -251,14 +251,14 @@ void EG_Renderer::errorCheck(int pass, const char* name)
 
 
 
-void EG_Renderer::printTables()
+void Renderer::printTables()
 {
 
     DataPair* dp = tables[1]["u_color"];
 
     for (int i=0; i<tables.size(); i++)
     {
-        EG_Utility::debug("Table ", i);
+        Utility::debug("Table ", i);
 
         for ( auto it = tables[i].begin(); it != tables[i].end(); ++it )
         {
@@ -266,12 +266,12 @@ void EG_Renderer::printTables()
             cout << ":" << it->second << endl;
         }
 
-        EG_Utility::debugLn(2);
+        Utility::debugLn(2);
     }
 }
 
 /*
-void EG_Renderer::initDataPairUniLoc(DataPair* p, Shader* s, int pass, const char* name)
+void Renderer::initDataPairUniLoc(DataPair* p, Shader* s, int pass, const char* name)
 {
     p->uniLoc = getUniLoc(s, name);
     m_allDataPairs[pass].push_back(p);
@@ -279,13 +279,13 @@ void EG_Renderer::initDataPairUniLoc(DataPair* p, Shader* s, int pass, const cha
 */
 
 
-GLuint EG_Renderer::getUniLoc(Shader* s, const char* name)
+GLuint Renderer::getUniLoc(Shader* s, const char* name)
 {
     return GetUniformLocation(s, name);
 }
 
 // assign GL location
-bool EG_Renderer::Init_Shader_GL_Location(Shader* s, Matrices_Location& Mat)
+bool Renderer::Init_Shader_GL_Location(Shader* s, Matrices_Location& Mat)
 {
     unsigned int shaderID = s->getProgramId();
 
@@ -313,20 +313,20 @@ bool EG_Renderer::Init_Shader_GL_Location(Shader* s, Matrices_Location& Mat)
 
 
 
-void EG_Renderer::loadUniformLocations(int RenderPassID)
+void Renderer::loadUniformLocations(int RenderPassID)
 {}
 
 
-void EG_Renderer::loadUniformLocations(pipeline& p)
+void Renderer::loadUniformLocations(pipeline& p)
 {
     loadUniformLocations(p, RENDER_PASS1);
 }
 
-void EG_Renderer::loadUniformLocations(pipeline& p, int RenderPassID)
+void Renderer::loadUniformLocations(pipeline& p, int RenderPassID)
 {
     if(RenderPassID != m_curShader)
     {
-        EG_Utility::debug("######### RenderPassID Not Matching");
+        Utility::debug("######### RenderPassID Not Matching");
     }
 
 	if(!p.matricesReady)
@@ -353,24 +353,24 @@ void EG_Renderer::loadUniformLocations(pipeline& p, int RenderPassID)
 
 
 
-void EG_Renderer::enableShader()
+void Renderer::enableShader()
 {
     enableShader(RENDER_PASS1);
 }
 
-void EG_Renderer::enableShader(int RenderPassID)
+void Renderer::enableShader(int RenderPassID)
 {
     m_shaders[RenderPassID]->useShader();
     m_curShader = RenderPassID;
 }
 
 
-void EG_Renderer::disableShader()
+void Renderer::disableShader()
 {
     disableShader(RENDER_PASS1);
 }
 
-void EG_Renderer::disableShader(int RenderPassID)
+void Renderer::disableShader(int RenderPassID)
 {
     m_shaders[RenderPassID]->delShader();
     m_curShader = -1;
@@ -382,65 +382,65 @@ void EG_Renderer::disableShader(int RenderPassID)
     }
 }
 
-void EG_Renderer::setUniformLocation(GLuint location, bool value)
+void Renderer::setUniformLocation(GLuint location, bool value)
 {
     glUniform1i(location, value);
 }
 
-void EG_Renderer::setUniformLocation(GLuint location, int value)
+void Renderer::setUniformLocation(GLuint location, int value)
 {
     glUniform1i(location, value);
 }
 
-void EG_Renderer::setUniformLocation(GLuint location, float value)
+void Renderer::setUniformLocation(GLuint location, float value)
 {
     glUniform1f(location, value);
 }
 
-void EG_Renderer::setUniformLocation(GLuint location, float x, float y)
+void Renderer::setUniformLocation(GLuint location, float x, float y)
 {
     glUniform2f(location, x, y);
 }
 
-void EG_Renderer::setUniformLocation(GLuint location, glm::vec2 value)
+void Renderer::setUniformLocation(GLuint location, glm::vec2 value)
 {
     glUniform2f(location, value.x, value.y);
 }
 
-void EG_Renderer::setUniformLocation(GLuint location, glm::vec3 value)
+void Renderer::setUniformLocation(GLuint location, glm::vec3 value)
 {
     glUniform3f(location, value.x, value.y, value.z);
 }
 
 /// http://glm.g-truc.net/0.9.2/api/a00132_source.html
 /// source code of glm::vec4, you see the union
-void EG_Renderer::setUniformLocation(GLuint location, glm::vec4 value)
+void Renderer::setUniformLocation(GLuint location, glm::vec4 value)
 {
     glUniform4f(location, value.x, value.y, value.z, value.w);
 }
 
-void EG_Renderer::setUniformLocation(GLuint location, glm::mat3 value)
+void Renderer::setUniformLocation(GLuint location, glm::mat3 value)
 {
     glUniformMatrix3fv(location, 1, GL_FALSE, &value[0][0]);
 }
 
-void EG_Renderer::setUniformLocation(GLuint location, glm::mat4 value)
+void Renderer::setUniformLocation(GLuint location, glm::mat4 value)
 {
     glUniformMatrix4fv(location, 1, GL_FALSE, &value[0][0]);
 }
 
-void EG_Renderer::setUniformLocationTranspose(GLuint location, glm::mat4 value)
+void Renderer::setUniformLocationTranspose(GLuint location, glm::mat4 value)
 {
     glUniformMatrix4fv(location, 1, GL_TRUE, &value[0][0]);
 }
 
-void EG_Renderer::render()
+void Renderer::render()
 {
 
 }
 
 
-void EG_Renderer::getAllMatrixUniLocs()
+void Renderer::getAllMatrixUniLocs()
 {
     for(int i=0; i<m_numShaders; i++)
         getMatrixUniLocs(m_shaders[i], m_matricesUniLocs[i]);
@@ -450,7 +450,7 @@ void EG_Renderer::getAllMatrixUniLocs()
 }
 
 
-bool EG_Renderer::getMatrixUniLocs(Shader* s, Matrices_Location& Mat)
+bool Renderer::getMatrixUniLocs(Shader* s, Matrices_Location& Mat)
 {
     Mat.ModelviewProjection = getUniLoc( s, "u_modelViewProjMat");
     Mat.ModelviewMatrix     = getUniLoc( s, "u_modelViewMat");
@@ -478,7 +478,7 @@ bool EG_Renderer::getMatrixUniLocs(Shader* s, Matrices_Location& Mat)
 
 
 
-void EG_Renderer::setAllDataPairUniLocs(int pass)
+void Renderer::setAllDataPairUniLocs(int pass)
 {
     int size = m_allDataPairs[pass].size();
     for(int i=0; i<size; i++)
@@ -489,42 +489,42 @@ void EG_Renderer::setAllDataPairUniLocs(int pass)
 
 
 
-void EG_Renderer::setDataPairUniLoc(BoolDataPair& dp)
+void Renderer::setDataPairUniLoc(BoolDataPair& dp)
 {
     setUniformLocation(dp.uniLoc, dp.value);
 }
 
-void EG_Renderer::setDataPairUniLoc(IntDataPair& dp)
+void Renderer::setDataPairUniLoc(IntDataPair& dp)
 {
     setUniformLocation(dp.uniLoc, dp.value);
 }
 
-void EG_Renderer::setDataPairUniLoc(FloatDataPair& dp)
+void Renderer::setDataPairUniLoc(FloatDataPair& dp)
 {
     setUniformLocation(dp.uniLoc, dp.value);
 }
 
-void EG_Renderer::setDataPairUniLoc(Vec2DataPair& dp)
+void Renderer::setDataPairUniLoc(Vec2DataPair& dp)
 {
     setUniformLocation(dp.uniLoc, dp.value.x, dp.value.y);
 }
 
-void EG_Renderer::setDataPairUniLoc(Vec3DataPair& dp)
+void Renderer::setDataPairUniLoc(Vec3DataPair& dp)
 {
     setUniformLocation(dp.uniLoc, dp.value);
 }
 
-void EG_Renderer::setDataPairUniLoc(Vec4DataPair& dp)
+void Renderer::setDataPairUniLoc(Vec4DataPair& dp)
 {
     setUniformLocation(dp.uniLoc, dp.value);
 }
 
-void EG_Renderer::setDataPairUniLoc(Mat3DataPair& dp)
+void Renderer::setDataPairUniLoc(Mat3DataPair& dp)
 {
     setUniformLocation(dp.uniLoc, dp.value);
 }
 
-void EG_Renderer::setDataPairUniLoc(Mat4DataPair& dp)
+void Renderer::setDataPairUniLoc(Mat4DataPair& dp)
 {
     setUniformLocation(dp.uniLoc, dp.value);
 }

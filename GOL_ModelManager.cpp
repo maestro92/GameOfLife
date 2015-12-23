@@ -25,10 +25,10 @@ string GOL_ModelManager::getFilePath(string filename)
 }
 
 
-EG_TextureDataBuffer GOL_ModelManager::readModelFromFile(string filename)
+TextureDataBuffer GOL_ModelManager::readModelFromFile(string filename)
 {
     string path = getFilePath(filename);
- //   EG_Utility::debug("path is", path);
+ //   Utility::debug("path is", path);
 
 
     ifstream file(path);
@@ -38,12 +38,12 @@ EG_TextureDataBuffer GOL_ModelManager::readModelFromFile(string filename)
     int cols = 0;
     while(getline(file, str))
     {
- //       EG_Utility::debug(str);
+ //       Utility::debug(str);
         cols = str.size();
         rows++;
     }
-    EG_Utility::debug("cols, rows is", glm::vec2(rows, cols));
-    EG_TextureDataBuffer buffer = EG_Utility::createEmptyBuffer(cols, rows);
+    Utility::debug("cols, rows is", glm::vec2(rows, cols));
+    TextureDataBuffer buffer = Utility::createEmptyBuffer(cols, rows);
 
     int y = 0;
     ifstream file1(path);
@@ -52,7 +52,7 @@ EG_TextureDataBuffer GOL_ModelManager::readModelFromFile(string filename)
         for(int x=0; x<str.size(); x++)
         {
             char c = str[x];
-    //        EG_Utility::debug("c is", (c == '#'));
+    //        Utility::debug("c is", (c == '#'));
 
             buffer[y][x][0] = 255;
             buffer[y][x][1] = (c == '#') ? 0 : 255;
@@ -66,9 +66,9 @@ EG_TextureDataBuffer GOL_ModelManager::readModelFromFile(string filename)
 }
 
 
-EG_TextureDataBuffer GOL_ModelManager::generateSquareGridModel(int size)
+TextureDataBuffer GOL_ModelManager::generateSquareGridModel(int size)
 {
-    EG_TextureDataBuffer gridData = EG_Utility::createEmptyBuffer(size, size);
+    TextureDataBuffer gridData = Utility::createEmptyBuffer(size, size);
 
     for (int y = 0; y < size; y++)
     {
@@ -86,9 +86,9 @@ EG_TextureDataBuffer GOL_ModelManager::generateSquareGridModel(int size)
 /*
     The SquareOutlineModel is in Grid coordinates
 */
-EG_TextureDataBuffer GOL_ModelManager::generateSquareOutlineGridModel(int size)
+TextureDataBuffer GOL_ModelManager::generateSquareOutlineGridModel(int size)
 {
-    EG_TextureDataBuffer gridData = EG_Utility::createEmptyBuffer(size, size);
+    TextureDataBuffer gridData = Utility::createEmptyBuffer(size, size);
 
     for (int y = 0; y < size; y++)
     {
@@ -118,7 +118,7 @@ GOL_Model* GOL_ModelManager::getDefaultGOLModel()
 {
     if(m_GOLModels.size()<=0 || m_GOLModels[0] == NULL)
     {
-        EG_Utility::debug("Error in GOL_ModelManager getDefaultGOLModel");
+        Utility::debug("Error in GOL_ModelManager getDefaultGOLModel");
         exit(1);
     }
     return m_GOLModels[0];
@@ -128,7 +128,7 @@ GOL_Model* GOL_ModelManager::getModel(int index)
 {
     if(index >= m_GOLModels.size())
     {
-        EG_Utility::debug("Error in GOL_ModelManager getModel");
+        Utility::debug("Error in GOL_ModelManager getModel");
         exit(1);
     }
     return m_GOLModels[index];

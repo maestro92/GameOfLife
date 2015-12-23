@@ -5,7 +5,7 @@
 
 #include "pipeline.h"
 #include "define.h"
-#include "EG_Utility.h"
+#include "utility.h"
 #include "EG_QuadModelABS.h"
 #include "EG_Text.h"
 #include "EG_Rect.h"
@@ -50,11 +50,11 @@ class EG_Control
         virtual bool update(MouseState & state, unsigned int& groupFlag);
 
         static void renderSingle(pipeline& p,
-                                 EG_Renderer* Renderer,
+                                 Renderer* r,
                                  EG_Rect& rect);
 
         virtual void render(pipeline& p,
-                            EG_Renderer* Renderer);
+                            Renderer* r);
 
         virtual int getType() = 0;
         void setID(int& ID);

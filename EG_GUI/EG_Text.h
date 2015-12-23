@@ -3,10 +3,10 @@
 
 #include "pipeline.h"
 #include "define.h"
-#include "EG_Utility.h"
+#include "utility.h"
 #include "EG_QuadModelABS.h"
-#include "EG_Renderer.h"
-#include "EG_GeneralRenderer.h"
+#include "renderer.h"
+#include "general_renderer.h"
 
 #define NO_SDL_GLEXT
 #include <GL/glew.h>
@@ -41,7 +41,7 @@ class EG_Text
     //                int x, int y, const char *in_text, ...);
 /*
         void render(pipeline& m_pipeline,
-                    EG_Renderer* Renderer,
+                    Renderer* Renderer,
                     int RenderPassID,
                     int x, int y, const char *in_text, ...);
 */
@@ -61,7 +61,7 @@ class EG_Text
         int m_fontSize = 20;
         int m_fontSpace = -9;
 
-        EG_GeneralRenderer r_textRenderer;
+        GeneralRenderer r_textRenderer;
 };
 
 

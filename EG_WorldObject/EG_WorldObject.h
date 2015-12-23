@@ -16,7 +16,7 @@
 #include "EG_DeferredShading.h"
 #include "sceneLoader.h"
 #include "pipeline.h"
-#include "EG_Renderer.h"
+#include "renderer.h"
 
 #define SPHERE  0
 #define BOX     1
@@ -122,44 +122,44 @@ class WorldObject
         void setModel(EG_ModelABS* model);
 
 
-        virtual void render(EG_Renderer* Renderer, int pass);
+        virtual void render(Renderer* renderer, int pass);
 
         virtual void renderSingle(pipeline& m_pipeline,
-                            EG_Renderer* Renderer,
+                            Renderer* renderer,
                             int RenderPassID,
                             meshLoader* model);
 
         virtual void render(pipeline& m_pipeline,
-                            EG_Renderer* Renderer,
+                            Renderer* renderer,
                             int RenderPassID,
                             meshLoader* model);
 
         virtual void renderGroup(   pipeline& m_pipeline,
-                                    EG_Renderer* Renderer,
+                                    Renderer* renderer,
                                     int RenderPassID,
                                     meshLoader* model);
 
 
         void renderGroup(   pipeline& m_pipeline,
-                            EG_Renderer* Renderer,
+                            Renderer* renderer,
                             int RenderPassID,
                             EG_Model* model);
 
         void renderSingle(  pipeline& m_pipeline,
-                            EG_Renderer* Renderer,
+                            Renderer* renderer,
                             int RenderPassID,
                             EG_Model* model);
 
 
 
         void renderSingle( pipeline& m_pipeline,
-                                EG_Renderer* Renderer,
+                                Renderer* renderer,
                                 int RenderPassID,
                                 EG_ModelABS* model);
 
 
         void renderGroup( pipeline& m_pipeline,
-                                EG_Renderer* Renderer,
+                                Renderer* renderer,
                                 int RenderPassID,
                                 EG_ModelABS* model);
 

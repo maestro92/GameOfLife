@@ -8,13 +8,13 @@
 
 
 #include "EG_QuadModelABS.h"
-#include "EG_Utility.h"
+#include "utility.h"
 #include "pipeline.h"
 #include "EG_EmitterParticle.h"
 
 
 
-#include "EG_GeneralRenderer.h"
+#include "general_renderer.h"
 
 using namespace std;
 
@@ -71,7 +71,7 @@ class EG_Emitter
 
 
         EG_QuadModelABS m_quad;
-        EG_GeneralRenderer m_renderer;
+        GeneralRenderer m_renderer;
 
 };
 

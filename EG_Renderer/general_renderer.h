@@ -1,13 +1,13 @@
-#ifndef EG_GENERAL_RENDERER_H_
-#define EG_GENERAL_RENDERER_H_
+#ifndef GENERAL_RENDERER_H_
+#define GENERAL_RENDERER_H_
 
-#include "EG_Renderer.h"
+#include "renderer.h"
 
-class EG_GeneralRenderer : public EG_Renderer
+class GeneralRenderer : public Renderer
 {
     public:
-        EG_GeneralRenderer();
-        ~EG_GeneralRenderer();
+        GeneralRenderer();
+        ~GeneralRenderer();
         void init(int nShaders);
 
         virtual void loadUniformLocations();

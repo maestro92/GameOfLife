@@ -13,7 +13,7 @@ GOL_Model::GOL_Model(string name, int gw, int gh, int gs)
     init(gs);
 }
 
-GOL_Model::GOL_Model(string name, EG_TextureDataBuffer gData, int gs)
+GOL_Model::GOL_Model(string name, TextureDataBuffer gData, int gs)
 {
     m_name = name;
     m_gridHeight = gData.size();
@@ -30,6 +30,7 @@ GOL_Model::GOL_Model(string name, EG_TextureDataBuffer gData, int gs)
      //   cout << endl;
     }
 }
+
 
 
 void GOL_Model::init(int gs)
@@ -53,7 +54,7 @@ void GOL_Model::init(int gs)
     this function takes the gridData (which is in grid coordinate) and converts
     it into pixel coordinate
 */
-void GOL_Model::initTexture(EG_TextureDataBuffer gridData)
+void GOL_Model::initTexture(TextureDataBuffer gridData)
 {
     for (int y = 0; y < m_gridHeight; y++)
     {
@@ -77,7 +78,7 @@ void GOL_Model::initTexture(EG_TextureDataBuffer gridData)
             }
         }
     }
-    m_patternTexture = EG_Utility::loadTexture(m_pixelData, GL_NEAREST);
+    m_patternTexture = Utility::loadTexture(m_pixelData, GL_NEAREST);
 }
 
 

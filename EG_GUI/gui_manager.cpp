@@ -1,9 +1,7 @@
 #include "gui_manager.h"
 
 
-
-
-void GOL_GUIManager::init(int screenWidth, int screenHeight,
+void GUIManager::init(int screenWidth, int screenHeight,
                           int paletteX, int paletteY,
                           int paletteWidth, int paletteHeight)
 {
@@ -23,7 +21,7 @@ void GOL_GUIManager::init(int screenWidth, int screenHeight,
 
     m_paletteRect.set(paletteX, paletteY, paletteWidth, paletteHeight);
 
-    EG_TextureDataBuffer pixelData = EG_Utility::createEmptyBuffer(paletteWidth, paletteHeight);
+    TextureDataBuffer pixelData = Utility::createEmptyBuffer(paletteWidth, paletteHeight);
 
     for(int y = 0; y < paletteHeight; y++)
     {
@@ -63,7 +61,7 @@ void GOL_GUIManager::init(int screenWidth, int screenHeight,
             }
         }
     }
-    m_GUIPaletteTexture = EG_Utility::loadTexture(pixelData, GL_NEAREST);
+    m_GUIPaletteTexture = Utility::loadTexture(pixelData, GL_NEAREST);
 
     int x = m_screenWidth - 200;
     int y = 300;
@@ -74,6 +72,13 @@ void GOL_GUIManager::init(int screenWidth, int screenHeight,
 
 
     Shader* s;
+
+
+    /// r_textureRenderer
+    s = new Shader("EG_TextureRenderer.vs", "EG_TextureRenderer.fs");
+    r_textureRenderer.addShader(s);
+    r_textureRenderer.addDataPair(RENDER_PASS1, "u_texture",    DP_INT);
+
 
     /// r_GUIRenderer
     s = new Shader("/EG_GUIShaders/EG_Rect.vs", "/EG_GUIShaders/EG_Rect.fs");
@@ -88,7 +93,7 @@ void GOL_GUIManager::init(int screenWidth, int screenHeight,
 }
 
 
-void GOL_GUIManager::setGOLModelListBoxMenuContent(vector<GOL_Model*> models)
+void GUIManager::setGOLModelListBoxMenuContent(vector<GOL_Model*> models)
 {
     int count = models.size();
     for(int i=0; i<count; i++)
@@ -97,12 +102,12 @@ void GOL_GUIManager::setGOLModelListBoxMenuContent(vector<GOL_Model*> models)
     }
 }
 
-GLuint GOL_GUIManager::getGUIPaletteTexture()
+GLuint GUIManager::getGUIPaletteTexture()
 {
     return m_GUIPaletteTexture;
 }
 
-void GOL_GUIManager::initGUIRenderingSetup()
+void GUIManager::initGUIRenderingSetup()
 {
     glViewport(0, 0, m_screenWidth, m_screenHeight);
     glDisable(GL_DEPTH_TEST);
@@ -112,7 +117,79 @@ void GOL_GUIManager::initGUIRenderingSetup()
     glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 }
 
-void GOL_GUIManager::renderText(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
+
+
+void GUIManager::renderTextureFullScreen(GLuint TextureId)
+{
+
+}
+
+
+void GUIManager::renderTextureFullScreen(GLuint TextrureId, GLuint FboTarget)
+{
+
+
+}
+
+
+void GUIManager::renderTexture(GLuint TextureId, int x, int y, int width, int height)
+{
+
+}
+
+
+void GUIManager::renderTexture(GLuint TextureId, GLuint FboTarget, int x, int y, int width, int height)
+{
+    glViewport(0, 0, m_screenWidth, m_screenHeight);
+
+    r_textureRenderer.enableShader(RENDER_PASS1);
+    r_textureRenderer.setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, TextureId);
+
+    m_GUIPipeline.pushMatrix();
+        m_GUIPipeline.translate(x, y, 0);
+        m_GUIPipeline.scale(width, height, 1.0);
+
+        r_textureRenderer.loadUniformLocations(m_GUIPipeline, RENDER_PASS1);
+        m_textureQuad.render();
+    m_GUIPipeline.popMatrix();
+    r_textureRenderer.disableShader(RENDER_PASS1);
+}
+
+
+void GUIManager::renderTexture(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
+{
+    renderTexture(TextureId, FboTarget, rect.x, rect.y, rect.w, rect.h);
+}
+
+
+void GUIManager::renderTextureSingle(GLuint TextureId, int x, int y, int width, int height)
+{
+
+}
+
+void GUIManager::renderTextureSingle(GLuint TextureId, GLuint FboTarget, int x, int y, int width, int height)
+{
+    r_textureRenderer.enableShader();
+    r_textureRenderer.setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, TextureId);
+
+    m_GUIPipeline.pushMatrix();
+        m_GUIPipeline.translate(x, y, 0);
+        m_GUIPipeline.scale(width, height, 1.0);
+
+        r_textureRenderer.loadUniformLocations(m_GUIPipeline);
+        m_textureQuad.render();
+    m_GUIPipeline.popMatrix();
+    r_textureRenderer.disableShader();
+}
+
+void GUIManager::renderTextureSingle(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
+{
+
+}
+
+
+/*
+void GUIManager::renderText(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
 {
     glViewport(0, 0, m_screenWidth, m_screenHeight);
 
@@ -127,7 +204,6 @@ void GOL_GUIManager::renderText(GLuint TextureId, GLuint FboTarget, EG_Rect rect
         m_textureQuad.render();
     m_GUIPipeline.popMatrix();
     r_textRenderer.disableShader(RENDER_PASS1);
-
 }
-
+*/
 

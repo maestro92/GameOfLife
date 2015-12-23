@@ -86,16 +86,13 @@ void EG_RendererManager::init(int screenWidth, int screenHeight)
 
 
 
-    /// r_textureRenderer
-    s = new Shader("EG_TextureRenderer.vs", "EG_TextureRenderer.fs");
-    r_textureRenderer.addShader(s);
-    r_textureRenderer.addDataPair(RENDER_PASS1, "u_texture",    DP_INT);
 
 
     /// r_GUIRectRenderer
     s = new Shader("/EG_GUIShaders/EG_Rect.vs", "/EG_GUIShaders/EG_Rect.fs");
     r_RectRenderer.addShader(s);
     r_RectRenderer.addDataPair(RENDER_PASS1, "u_color", DP_VEC3);
+
 
     /// r_TextRenderer
     s = new Shader("/EG_GUIShaders/EG_Text.vs", "/EG_GUIShaders/EG_Text.fs");
@@ -107,76 +104,7 @@ void EG_RendererManager::init(int screenWidth, int screenHeight)
 
 
 
-void EG_RendererManager::renderTextureFullScreen(GLuint TextureId)
-{
 
-}
-
-
-void EG_RendererManager::renderTextureFullScreen(GLuint TextrureId, GLuint FboTarget)
-{
-
-
-
-
-
-}
-
-
-void EG_RendererManager::renderTexture(GLuint TextureId, int x, int y, int width, int height)
-{
-
-}
-
-
-void EG_RendererManager::renderTexture(GLuint TextureId, GLuint FboTarget, int x, int y, int width, int height)
-{
-    glViewport(0, 0, m_screenWidth, m_screenHeight);
-
-    r_textureRenderer.enableShader(RENDER_PASS1);
-    r_textureRenderer.setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, TextureId);
-
-    m_texturePipeline.pushMatrix();
-        m_texturePipeline.translate(x, y, 0);
-        m_texturePipeline.scale(width, height, 1.0);
-
-        r_textureRenderer.loadUniformLocations(m_texturePipeline, RENDER_PASS1);
-        m_textureQuad.render();
-    m_texturePipeline.popMatrix();
-    r_textureRenderer.disableShader(RENDER_PASS1);
-}
-
-
-void EG_RendererManager::renderTexture(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
-{
-    renderTexture(TextureId, FboTarget, rect.x, rect.y, rect.w, rect.h);
-}
-
-
-void EG_RendererManager::renderTextureSingle(GLuint TextureId, int x, int y, int width, int height)
-{
-
-}
-
-void EG_RendererManager::renderTextureSingle(GLuint TextureId, GLuint FboTarget, int x, int y, int width, int height)
-{
-    r_textureRenderer.enableShader();
-    r_textureRenderer.setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, TextureId);
-
-    m_texturePipeline.pushMatrix();
-        m_texturePipeline.translate(x, y, 0);
-        m_texturePipeline.scale(width, height, 1.0);
-
-        r_textureRenderer.loadUniformLocations(m_texturePipeline);
-        m_textureQuad.render();
-    m_texturePipeline.popMatrix();
-    r_textureRenderer.disableShader();
-}
-
-void EG_RendererManager::renderTextureSingle(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
-{
-
-}
 
 void EG_RendererManager::renderText(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
 {

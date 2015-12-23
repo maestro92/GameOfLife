@@ -11,8 +11,8 @@
 #include <fstream>
 #include <cstdio>
 
-#include "EG_utility.h"
-#include "EG_Shader.h"
+#include "utility.h"
+#include "shader.h"
 #include "sceneLoader.h"
 #include "pipeline.h"
 #include "EG_WorldObject.h"
@@ -34,9 +34,9 @@ class EG_SkyBox : public WorldObject
 
         void init();
 
-        void render(EG_Renderer* Renderer, int RenderPassID);
-        void renderStatic(EG_Renderer* Renderer, int RenderPassID);
-        void renderDynamic(EG_Renderer* Renderer, int RenderPassID);
+        void render(Renderer* Renderer, int RenderPassID);
+        void renderStatic(Renderer* Renderer, int RenderPassID);
+        void renderDynamic(Renderer* Renderer, int RenderPassID);
 
         void renderToCubeMapFace();
         void renderToCubeMapTexture();
@@ -46,21 +46,21 @@ class EG_SkyBox : public WorldObject
 
 
     //    void render(Shader* skybox_shader);
-    //    void render(pipeline& m_pipeline, EG_Renderer* Renderer, int RenderPassID);
+    //    void render(pipeline& m_pipeline, Renderer* Renderer, int RenderPassID);
 
 
  //       void RenderSkyBox(Shader* skybox_shader);
  //       void RenderSkyBox(Shader* skybox_shader, pipeline& m_pipeline);
 
  //       void RenderSkyBox2();
-  //      void RenderSkyBox2(pipeline &m_pipeline, EG_Renderer* Renderer, int RenderPassID);
+  //      void RenderSkyBox2(pipeline &m_pipeline, Renderer* Renderer, int RenderPassID);
 
  //       void Render111(Shader* skybox_shader);
 //        void renderDynamic
 
 
 
-//        EG_Utility utility_function;
+//        Utility utility_function;
     //    unsigned int Static_CubeMap_ColorTextureID;
         unsigned int Dynamic_CubeMap_ColorTextureID;
         unsigned int Dynamic_CubeMap_DepthTextureID;

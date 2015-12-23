@@ -34,7 +34,7 @@ bool EG_ImportedAnimatedModel::loadModel(string filename)
 
     if (m_Scene)
     {
-        m_GlobalInverseTransform = EG_Utility::toGlmMat(m_Scene->mRootNode->mTransformation);
+        m_GlobalInverseTransform = Utility::toGlmMat(m_Scene->mRootNode->mTransformation);
         m_GlobalInverseTransform = glm::inverse(m_GlobalInverseTransform);
         ret = initFromAiScene(m_Scene, filename);
         cout << "Ret is " << ret << endl;
@@ -96,16 +96,16 @@ bool EG_ImportedAnimatedModel::initFromAiScene(const aiScene* s, const string& F
         NumIndices += m_Meshes[i].NumIndices;
     }
 
-    vector<glm::vec3> Positions     = EG_Utility::reserveVector<glm::vec3> (NumVertices);
-    vector<glm::vec3> Normals       = EG_Utility::reserveVector<glm::vec3> (NumVertices);
-    vector<glm::vec3> Tangents      = EG_Utility::reserveVector<glm::vec3> (NumVertices);
-    vector<glm::vec3> Colors        = EG_Utility::reserveVector<glm::vec3> (NumVertices);
-    vector<glm::vec2> UVs           = EG_Utility::reserveVector<glm::vec2> (NumVertices);
-    vector<unsigned int> Indices    = EG_Utility::reserveVector<unsigned int> (NumIndices);
+    vector<glm::vec3> Positions     = Utility::reserveVector<glm::vec3> (NumVertices);
+    vector<glm::vec3> Normals       = Utility::reserveVector<glm::vec3> (NumVertices);
+    vector<glm::vec3> Tangents      = Utility::reserveVector<glm::vec3> (NumVertices);
+    vector<glm::vec3> Colors        = Utility::reserveVector<glm::vec3> (NumVertices);
+    vector<glm::vec2> UVs           = Utility::reserveVector<glm::vec2> (NumVertices);
+    vector<unsigned int> Indices    = Utility::reserveVector<unsigned int> (NumIndices);
     vector<VertexBoneData> Bones;
     Bones.resize(NumVertices);
 
-    //    = EG_Utility::reserveVector<VertexBoneData> (NumVertices);
+    //    = Utility::reserveVector<VertexBoneData> (NumVertices);
   //  vector<glm::vec3> Positions;
   //  vector<glm::vec3> Normals;
   //  vector<glm::vec3> Tangents;
@@ -185,7 +185,7 @@ void EG_ImportedAnimatedModel::loadBones(unsigned int MeshIndex, const aiMesh* m
             m_NumBones++;
 
             BoneInfo bi;
-            bi.boneOffset = EG_Utility::toGlmMat(m->mBones[i]->mOffsetMatrix);
+            bi.boneOffset = Utility::toGlmMat(m->mBones[i]->mOffsetMatrix);
             m_BoneInfo.push_back(bi);
             */
 
@@ -194,7 +194,7 @@ void EG_ImportedAnimatedModel::loadBones(unsigned int MeshIndex, const aiMesh* m
 	        BoneInfo bi;
 			m_BoneInfo.push_back(bi);
 
-			m_BoneInfo[BoneIndex].boneOffset = EG_Utility::toGlmMat(m->mBones[i]->mOffsetMatrix);
+			m_BoneInfo[BoneIndex].boneOffset = Utility::toGlmMat(m->mBones[i]->mOffsetMatrix);
 
 			//   m_BoneInfo[BoneIndex].BoneOffset1 = pMesh->mBones[i]->mOffsetMatrix;
 
@@ -264,7 +264,7 @@ void EG_ImportedAnimatedModel::readNodeHierarchy(float animationTime, const aiNo
     string nodeName(node->mName.data);
     const aiAnimation* animation = m_Scene->mAnimations[0];
 
-    glm::mat4 nodeTransformation = EG_Utility::toGlmMat(node->mTransformation);
+    glm::mat4 nodeTransformation = Utility::toGlmMat(node->mTransformation);
 
     const aiNodeAnim* nodeAnim = findNodeAnim(animation, nodeName);
 
@@ -318,7 +318,7 @@ void EG_ImportedAnimatedModel::readNodeHierarchyTranspose(float animationTime, c
     string nodeName(node->mName.data);
     const aiAnimation* animation = m_Scene->mAnimations[0];
 
-    glm::mat4 nodeTransformation = EG_Utility::toGlmMat(node->mTransformation);
+    glm::mat4 nodeTransformation = Utility::toGlmMat(node->mTransformation);
 
     const aiNodeAnim* nodeAnim = findNodeAnim(animation, nodeName);
 
@@ -351,7 +351,7 @@ glm::mat4 EG_ImportedAnimatedModel::computeInterpolatedScalingMatrix(float anima
     glm::mat4 out;
     if(nKeys == 1)
     {
-        glm::vec3 v = EG_Utility::toGlmVec(nodeAnim->mScalingKeys[0].mValue);
+        glm::vec3 v = Utility::toGlmVec(nodeAnim->mScalingKeys[0].mValue);
         out = glm::scale(v.x, v.y, v.z);
         return out;
     }
@@ -379,7 +379,7 @@ glm::mat4 EG_ImportedAnimatedModel::computeInterpolatedRotationMatrix(float anim
     if(nKeys == 1)
     {
         aiMatrix3x3 m = nodeAnim->mRotationKeys[0].mValue.GetMatrix();
-        out = EG_Utility::toGlmMat(m);
+        out = Utility::toGlmMat(m);
         return out;
     }
 
@@ -394,7 +394,7 @@ glm::mat4 EG_ImportedAnimatedModel::computeInterpolatedRotationMatrix(float anim
 
     aiQuaternion q = computeInterpolatedQuaternion(animationTime, key2, key1);
     aiMatrix3x3 m = q.GetMatrix();
-    out = EG_Utility::toGlmMat(m);
+    out = Utility::toGlmMat(m);
     return out;
 }
 
@@ -408,7 +408,7 @@ glm::mat4 EG_ImportedAnimatedModel::computeInterpolatedPositionMatrix(float anim
 
     if(nKeys == 1)
     {
-        glm::vec3 v = EG_Utility::toGlmVec(nodeAnim->mPositionKeys[0].mValue);
+        glm::vec3 v = Utility::toGlmVec(nodeAnim->mPositionKeys[0].mValue);
         out = glm::transpose(glm::translate(v.x, v.y, v.z));
         return out;
     }
@@ -484,8 +484,8 @@ glm::vec3 EG_ImportedAnimatedModel::computeInterpolatedVector(float animationTim
 {
     float factor = computeInterpolationTimeFactor(animationTime, k2.mTime, k1.mTime);
 
-    glm::vec3 start = EG_Utility::toGlmVec(k1.mValue);
-    glm::vec3 end = EG_Utility::toGlmVec(k2.mValue);
+    glm::vec3 start = Utility::toGlmVec(k1.mValue);
+    glm::vec3 end = Utility::toGlmVec(k2.mValue);
     glm::vec3 delta = end - start;
 
     glm::vec3 out = start + factor * delta;

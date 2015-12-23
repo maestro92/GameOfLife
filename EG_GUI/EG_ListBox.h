@@ -26,7 +26,7 @@ class EG_ListBox : public EG_Control
 
         virtual bool update(MouseState & state);
 
-        void render (pipeline& p, EG_Renderer* r);
+        void render (pipeline& p, Renderer* r);
         virtual int getType();
 
     protected:

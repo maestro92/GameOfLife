@@ -98,7 +98,7 @@ void EG_Text::buildCharToIndexMapping()
 
 void EG_Text::buildTextureFont()
 {
-    fontTexture = EG_Utility::loadTexture("assets/font.jpg");
+    fontTexture = Utility::loadTexture("assets/font.jpg");
 //    glBindTexture(GL_TEXTURE_2D, fontTexture->texID);
 
     float gap = 1/16;

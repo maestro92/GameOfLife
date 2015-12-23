@@ -19,10 +19,10 @@ EG_ListBox::EG_ListBox(string text, int x, int y, int width, int height,
     m_itemWidth = (float)((float)width / (float)m_colNum);
     m_itemHeight = 18;
 
-    EG_Utility::debug("width", width);
-    EG_Utility::debug("height", height);
-    EG_Utility::debug("m_colNum", m_colNum);
-    EG_Utility::debug("m_itemWidth", m_itemWidth);
+    Utility::debug("width", width);
+    Utility::debug("height", height);
+    Utility::debug("m_colNum", m_colNum);
+    Utility::debug("m_itemWidth", m_itemWidth);
 }
 
 void EG_ListBox::addItem(string item)
@@ -105,8 +105,8 @@ bool EG_ListBox::update(MouseState & state)
         {
             m_curIndex = y_index * m_colNum + x_index;
 
-            EG_Utility::debug("m_curIndex", m_curIndex);
-            EG_Utility::debug("xi, yi", glm::vec2(x_index, y_index));
+            Utility::debug("m_curIndex", m_curIndex);
+            Utility::debug("xi, yi", glm::vec2(x_index, y_index));
 
             m_curIndexX = x_index;
             m_curIndexY = y_index;
@@ -129,7 +129,7 @@ bool EG_ListBox::update(MouseState & state)
 }
 
 
-void EG_ListBox::render(pipeline& p, EG_Renderer* r)
+void EG_ListBox::render(pipeline& p, Renderer* r)
 {
     r->enableShader();
         r->setData(RENDER_PASS1, "u_color", m_rectColor);

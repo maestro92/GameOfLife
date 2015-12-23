@@ -1,49 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="EG_Renderer\EG_GeneralRenderer.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_GUI\EG_Label.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="356" topLine="0" />
+			<Cursor1 position="511" topLine="13" />
 		</Cursor>
 	</File>
-	<File name="EG_TimeManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_WorldObject\EG_WorldBox.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="434" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="EG_Renderer\EG_Renderer.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3681" topLine="224" />
-		</Cursor>
-	</File>
-	<File name="EG_Renderer\EG_RendererManager.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="906" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="EG_GameBoard.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6069" topLine="184" />
-		</Cursor>
-	</File>
-	<File name="EG_WorldObject\EG_WorldObject.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6947" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="EG_Renderer\EG_TextureRenderer.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="570" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="EG_GUI\EG_Control.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="914" topLine="45" />
-		</Cursor>
-	</File>
-	<File name="GOL_Model.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="281" topLine="2" />
+			<Cursor1 position="317" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="EG_GUI\EG_Rect.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -51,49 +16,14 @@
 			<Cursor1 position="321" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="EG_Utility\EG_Utility.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_Renderer\EG_GeneralRenderer.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5199" topLine="185" />
+			<Cursor1 position="356" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="EG_Renderer\EG_RendererManager.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_WorldObject\EG_WorldSphere.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="564" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="EG_GUI\EG_Text.cpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2408" topLine="65" />
-		</Cursor>
-	</File>
-	<File name="EG_Utility\EG_Utility_GL.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4023" topLine="114" />
-		</Cursor>
-	</File>
-	<File name="EG_Main.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="907" topLine="105" />
-		</Cursor>
-	</File>
-	<File name="EG_GUI\EG_Button.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="EG_Shader.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4258" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="EG_GameBoard.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2619" topLine="88" />
-		</Cursor>
-	</File>
-	<File name="EG_WorldObject\EG_FullScreenQuad.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="797" topLine="6" />
+			<Cursor1 position="268" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="EG_GUI\EG_Text.h" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -101,54 +31,29 @@
 			<Cursor1 position="1370" topLine="38" />
 		</Cursor>
 	</File>
-	<File name="define.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_Renderer\EG_Renderer.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="787" topLine="34" />
+			<Cursor1 position="3681" topLine="224" />
 		</Cursor>
 	</File>
-	<File name="EG_Shader.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_WorldObject\EG_WorldSphere.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="648" topLine="25" />
+			<Cursor1 position="382" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="EG_GUI\EG_ListBox.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_GUI\EG_Button.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2584" topLine="102" />
+			<Cursor1 position="0" topLine="15" />
 		</Cursor>
 	</File>
-	<File name="EG_GUI\GOL_GUIManager.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_Renderer\EG_TextureRenderer.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2192" topLine="57" />
+			<Cursor1 position="570" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="mesh.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_Utility\EG_Utility.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="260" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="EG_Renderer\EG_TextureRenderer.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1806" topLine="77" />
-		</Cursor>
-	</File>
-	<File name="EG_GUI\GOL_GUIManager.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="444" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="EG_Renderer\EG_Renderer.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="8561" topLine="377" />
-		</Cursor>
-	</File>
-	<File name="EG_TimeManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="410" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="EG_Utility\EG_Utility_Debug.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="268" topLine="4" />
+			<Cursor1 position="178" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="EG_GUI\EG_Label.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -161,104 +66,24 @@
 			<Cursor1 position="797" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="EG_GUI\EG_Button.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_GUI\GOL_GUIManager.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2486" topLine="102" />
+			<Cursor1 position="444" topLine="10" />
 		</Cursor>
 	</File>
-	<File name="EG_WorldObject\EG_WorldSphere.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_GUI\gui_manager.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="268" topLine="0" />
+			<Cursor1 position="344" topLine="96" />
 		</Cursor>
 	</File>
-	<File name="EG_GUI\EG_Control.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_Main.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="534" topLine="14" />
+			<Cursor1 position="907" topLine="105" />
 		</Cursor>
 	</File>
-	<File name="EG_Utility\EG_Utility_SDL.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_GUI\text_engine.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="414" topLine="43" />
-		</Cursor>
-	</File>
-	<File name="EG_GUI\EG_ListBox.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="337" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="GOL_Model.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="436" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="EG_WorldObject\EG_FullScreenQuad.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="263" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="EG_GUI\EG_Label.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="511" topLine="13" />
-		</Cursor>
-	</File>
-	<File name="EG_GUI\EG_Slider.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="248" topLine="16" />
-		</Cursor>
-	</File>
-	<File name="EG_GUI\EG_Slider.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="375" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="sceneLoader.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4990" topLine="166" />
-		</Cursor>
-	</File>
-	<File name="EG_WorldObject\EG_Smoke.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1263" topLine="36" />
-		</Cursor>
-	</File>
-	<File name="EG_Model\EG_BuiltinModel\EG_QuadModelABS.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1574" topLine="85" />
-		</Cursor>
-	</File>
-	<File name="EG_Model\EG_BuiltinModel\EG_CubeModel.cpp" open="0" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="216" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="EG_Utility\EG_Utility.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="178" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="EG_Model\EG_Model.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="253" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="EG_Main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3020" topLine="112" />
-		</Cursor>
-	</File>
-	<File name="EG_WorldObject\EG_WorldSphere.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="382" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="EG_Renderer\EG_GeneralRenderer.cpp" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="895" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="EG_Model\EG_ImportedAnimatedModel.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2892" topLine="80" />
+			<Cursor1 position="30" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Particle.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -266,19 +91,189 @@
 			<Cursor1 position="1614" topLine="64" />
 		</Cursor>
 	</File>
+	<File name="EG_Utility\EG_Utility.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5199" topLine="185" />
+		</Cursor>
+	</File>
+	<File name="EG_Utility\EG_Utility_SDL.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="414" topLine="43" />
+		</Cursor>
+	</File>
+	<File name="EG_GUI\EG_ListBox.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2584" topLine="102" />
+		</Cursor>
+	</File>
+	<File name="EG_WorldObject\EG_FullScreenQuad.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="797" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="EG_WorldObject\EG_Smoke.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1263" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="EG_GUI\EG_Button.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2486" topLine="102" />
+		</Cursor>
+	</File>
+	<File name="GOL_Model.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="330" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="EG_GUI\EG_Slider.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="248" topLine="16" />
+		</Cursor>
+	</File>
 	<File name="EG_Model\EG_BuiltinModel\EG_QuadModelABS.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="428" topLine="13" />
 		</Cursor>
 	</File>
-	<File name="EG_WorldObject\EG_WorldBox.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="EG_WorldObject\EG_WorldObject.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="317" topLine="0" />
+			<Cursor1 position="6947" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="EG_GUI\EG_ListBox.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="337" topLine="10" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="16477" topLine="544" />
+		</Cursor>
+	</File>
+	<File name="GOL_Model.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="281" topLine="2" />
+		</Cursor>
+	</File>
+	<File name="EG_GUI\EG_Text.cpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2408" topLine="65" />
+		</Cursor>
+	</File>
+	<File name="EG_Utility\EG_Utility_GL.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4023" topLine="114" />
+		</Cursor>
+	</File>
+	<File name="EG_GUI\EG_Control.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="534" topLine="14" />
+		</Cursor>
+	</File>
+	<File name="EG_Renderer\EG_RendererManager.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="564" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="EG_GUI\EG_Slider.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="375" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="EG_Shader.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4258" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="EG_GUI\EG_Control.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="914" topLine="45" />
 		</Cursor>
 	</File>
 	<File name="EG_Model\EG_Model.cpp" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="293" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="define.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="787" topLine="34" />
+		</Cursor>
+	</File>
+	<File name="EG_GameBoard.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6069" topLine="184" />
+		</Cursor>
+	</File>
+	<File name="EG_Model\EG_BuiltinModel\EG_QuadModelABS.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1574" topLine="85" />
+		</Cursor>
+	</File>
+	<File name="EG_Renderer\EG_Renderer.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8561" topLine="377" />
+		</Cursor>
+	</File>
+	<File name="mesh.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="260" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="EG_Model\EG_ImportedAnimatedModel.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2892" topLine="80" />
+		</Cursor>
+	</File>
+	<File name="EG_Shader.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="648" topLine="25" />
+		</Cursor>
+	</File>
+	<File name="EG_GameBoard.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2619" topLine="88" />
+		</Cursor>
+	</File>
+	<File name="EG_Model\EG_Model.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="253" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="EG_TimeManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="410" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="sceneLoader.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4990" topLine="166" />
+		</Cursor>
+	</File>
+	<File name="EG_Model\EG_BuiltinModel\EG_CubeModel.cpp" open="0" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="216" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="EG_Renderer\EG_RendererManager.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="906" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="EG_Utility\EG_Utility_Debug.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="268" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="EG_TimeManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="434" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="EG_GUI\text_engine.h" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="432" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

@@ -1,21 +1,21 @@
 
-#include "EG_Utility.h"
+#include "utility.h"
 
 
 
-EG_Utility::EG_Utility()
+Utility::Utility()
 {
 
 }
 
 
-EG_Utility::~EG_Utility()
+Utility::~Utility()
 {
 
 }
 
 
-void EG_Utility::checkGLError()
+void Utility::checkGLError()
 {
     GLenum err (glGetError());
 
@@ -39,24 +39,24 @@ void EG_Utility::checkGLError()
 }
 
 
-glm::vec2 EG_Utility::scaleGlmVec(const glm::vec2 v, float s)
+glm::vec2 Utility::scaleGlmVec(const glm::vec2 v, float s)
 {
     return scaleGlmVec(v,s,s);
 
 }
 
-glm::vec2 EG_Utility::scaleGlmVec(const glm::vec2 v, float s1, float s2)
+glm::vec2 Utility::scaleGlmVec(const glm::vec2 v, float s1, float s2)
 {
     return scaleGlmVec(v,s1,s2);
 }
 
 
-glm::vec3 EG_Utility::scaleGlmVec(const glm::vec3 v, float s)
+glm::vec3 Utility::scaleGlmVec(const glm::vec3 v, float s)
 {
     return scaleGlmVec(v,s,s,s);
 }
 
-glm::vec3 EG_Utility::scaleGlmVec(const glm::vec3 v, float s1, float s2, float s3)
+glm::vec3 Utility::scaleGlmVec(const glm::vec3 v, float s1, float s2, float s3)
 {
     glm::vec3 newV(s1*v.x, s2*v.y, s3*v.z);
     return newV;

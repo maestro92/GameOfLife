@@ -74,7 +74,7 @@ bool EG_Control::update(MouseState & state, unsigned int& groupFlag)
     if(flag)
     {
         groupFlag = groupFlag | ( 1 << m_id);
-     //   EG_Utility::debug()
+     //   Utility::debug()
      //   std::bitset<32> x(groupFlag);
      //   cout << x << endl;
     }
@@ -105,7 +105,7 @@ int EG_Control::computeTextStartingY()
 }
 
 
-void EG_Control::renderSingle(pipeline& p, EG_Renderer* r, EG_Rect& rect)
+void EG_Control::renderSingle(pipeline& p, Renderer* r, EG_Rect& rect)
 {
     p.pushMatrix();
         p.translate(rect.x, rect.y, 0);
@@ -116,7 +116,7 @@ void EG_Control::renderSingle(pipeline& p, EG_Renderer* r, EG_Rect& rect)
 }
 
 
-void EG_Control::render(pipeline& p, EG_Renderer* r)
+void EG_Control::render(pipeline& p, Renderer* r)
 {
     r->enableShader();
     p.pushMatrix();

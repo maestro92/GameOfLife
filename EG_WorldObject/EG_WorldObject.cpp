@@ -214,42 +214,42 @@ float WorldObject::getBoundingVolumeSize()
 
 
 void WorldObject::renderSingle( pipeline& m_pipeline,
-                                EG_Renderer* Renderer,
+                                Renderer* renderer,
                                 int RenderPassID,
                                 meshLoader* model)
 {
-    Renderer->enableShader(RenderPassID);
-    render(m_pipeline, Renderer, RenderPassID, model);
-    Renderer->disableShader(RenderPassID);
+    renderer->enableShader(RenderPassID);
+    render(m_pipeline, renderer, RenderPassID, model);
+    renderer->disableShader(RenderPassID);
 }
 
 
 
 void WorldObject::render(   pipeline& m_pipeline,
-                            EG_Renderer* Renderer,
+                            Renderer* renderer,
                             int RenderPassID,
                             meshLoader* model)
 {
-    Renderer->enableShader(RenderPassID);
+    renderer->enableShader(RenderPassID);
     m_pipeline.pushMatrix();
         m_pipeline.translate(m_position);
         m_pipeline.scale(m_scale);
-        Renderer->loadUniformLocations(m_pipeline, RenderPassID);
+        renderer->loadUniformLocations(m_pipeline, RenderPassID);
         model->draw();
     m_pipeline.popMatrix();
-    Renderer->disableShader(RenderPassID);
+    renderer->disableShader(RenderPassID);
 }
 
 
 void WorldObject::renderGroup(  pipeline& m_pipeline,
-                                EG_Renderer* Renderer,
+                                Renderer* renderer,
                                 int RenderPassID,
                                 meshLoader* model)
 {
     m_pipeline.pushMatrix();
         m_pipeline.translate(m_position);
         m_pipeline.scale(m_scale);
-        Renderer->loadUniformLocations(m_pipeline, RenderPassID);
+        renderer->loadUniformLocations(m_pipeline, RenderPassID);
         model->draw();
     m_pipeline.popMatrix();
 }
@@ -257,7 +257,7 @@ void WorldObject::renderGroup(  pipeline& m_pipeline,
 
 
 void WorldObject::renderGroup( pipeline& m_pipeline,
-                                EG_Renderer* Renderer,
+                                Renderer* renderer,
                                 int RenderPassID,
                                 EG_Model* model)
 {
@@ -265,7 +265,7 @@ void WorldObject::renderGroup( pipeline& m_pipeline,
         m_pipeline.translate(m_position);
         m_pipeline.loadMatrix(glm::toMat4(m_orientation));
         m_pipeline.scale(m_scale);
-        Renderer->loadUniformLocations(m_pipeline, RenderPassID);
+        renderer->loadUniformLocations(m_pipeline, RenderPassID);
         model->render();
     m_pipeline.popMatrix();
 }
@@ -273,13 +273,13 @@ void WorldObject::renderGroup( pipeline& m_pipeline,
 
 
 void WorldObject::renderSingle( pipeline& m_pipeline,
-                                EG_Renderer* Renderer,
+                                Renderer* renderer,
                                 int RenderPassID,
                                 EG_Model* model)
 {
-    Renderer->enableShader(RenderPassID);
-    renderGroup(m_pipeline, Renderer, RenderPassID, model);
-    Renderer->disableShader(RenderPassID);
+    renderer->enableShader(RenderPassID);
+    renderGroup(m_pipeline, renderer, RenderPassID, model);
+    renderer->disableShader(RenderPassID);
 }
 
 
@@ -287,17 +287,17 @@ void WorldObject::renderSingle( pipeline& m_pipeline,
 
 
 void WorldObject::renderSingle( pipeline& m_pipeline,
-                                EG_Renderer* Renderer,
+                                Renderer* renderer,
                                 int RenderPassID,
                                 EG_ModelABS* model)
 {
-    Renderer->enableShader(RenderPassID);
-    renderGroup(m_pipeline, Renderer, RenderPassID, model);
-    Renderer->disableShader(RenderPassID);
+    renderer->enableShader(RenderPassID);
+    renderGroup(m_pipeline, renderer, RenderPassID, model);
+    renderer->disableShader(RenderPassID);
 }
 
 void WorldObject::renderGroup( pipeline& m_pipeline,
-                                EG_Renderer* Renderer,
+                                Renderer* renderer,
                                 int RenderPassID,
                                 EG_ModelABS* model)
 {
@@ -305,12 +305,12 @@ void WorldObject::renderGroup( pipeline& m_pipeline,
         m_pipeline.translate(m_position);
         m_pipeline.loadMatrix(glm::toMat4(m_orientation));
         m_pipeline.scale(m_scale);
-        Renderer->loadUniformLocations(m_pipeline, RenderPassID);
+        renderer->loadUniformLocations(m_pipeline, RenderPassID);
         model->render();
     m_pipeline.popMatrix();
 }
 
-void WorldObject::render(EG_Renderer* Renderer, int pass)
+void WorldObject::render(Renderer* renderer, int pass)
 {
     if(defaultModel != NULL)
     {
@@ -321,7 +321,7 @@ void WorldObject::render(EG_Renderer* Renderer, int pass)
 
 /*
 void WorldObject::renderSingle( pipeline& m_pipeline,
-                                EG_Renderer* Renderer,
+                                Renderer* renderer,
                                 int RenderPassID,
                                 EG_Model* model)
 {

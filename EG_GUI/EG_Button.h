@@ -22,7 +22,7 @@ class EG_Button : public EG_Control
         void setTextures(GLuint bgTexId, GLuint highlightTexId, GLuint pressedTexId);
         void setColors(glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pressedColor);
 
-        virtual void render(pipeline& p, EG_Renderer* r);
+        virtual void render(pipeline& p, Renderer* r);
 
         virtual int getType();
 

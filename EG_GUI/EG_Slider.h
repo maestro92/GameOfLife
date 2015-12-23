@@ -35,8 +35,8 @@ class EG_Slider : public EG_Control
         virtual bool update(MouseState &state, unsigned int& groupFlag);
         virtual bool update1(MouseState & state, unsigned int& groupFlag);
 
-        virtual void render(pipeline& m_pipeline,
-                            EG_Renderer* Renderer,
+        virtual void render(pipeline& p,
+                            Renderer* r,
                             int RenderPassID);
 
         virtual int getType();

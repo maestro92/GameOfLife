@@ -72,7 +72,7 @@ bool EG_InstancedModel::initFromAiScene(const aiScene* s, const string& Filename
     }
 
 
-    EG_Utility::checkGLError();
+    Utility::checkGLError();
 
 /*
     GLenum err;

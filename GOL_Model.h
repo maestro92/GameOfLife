@@ -1,14 +1,15 @@
 #ifndef GOL_MODEL_H_
 #define	GOL_MODEL_H_
 
-#include "EG_Utility.h"
+#include "utility.h"
+
 
 class GOL_Model
 {
     public:
         GOL_Model();
         GOL_Model(string name, int gw, int gh, int gs);
-        GOL_Model(string name, EG_TextureDataBuffer gData, int gs);
+        GOL_Model(string name, TextureDataBuffer gData, int gs);
 
         int m_width;
         int m_height;
@@ -19,9 +20,9 @@ class GOL_Model
 
     private:
         void init(int gs);
-        void initTexture(EG_TextureDataBuffer pData);
+        void initTexture(TextureDataBuffer pData);
 
-        EG_TextureDataBuffer m_pixelData;
+        TextureDataBuffer m_pixelData;
 
 
         string m_name;

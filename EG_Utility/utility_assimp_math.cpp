@@ -1,6 +1,6 @@
-#include "EG_Utility.h"
+#include "utility.h"
 
-glm::vec3 EG_Utility::toGlmVec(aiVector3D& v2)
+glm::vec3 Utility::toGlmVec(aiVector3D& v2)
 {
     glm::vec3 v1;
     v1.x = v2.x;
@@ -9,7 +9,7 @@ glm::vec3 EG_Utility::toGlmVec(aiVector3D& v2)
     return v1;
 }
 
-glm::mat4 EG_Utility::toGlmMat(aiMatrix3x3 m2)
+glm::mat4 Utility::toGlmMat(aiMatrix3x3 m2)
 {
     glm::mat4 m1;
     m1[0][0] = m2.a1; m1[0][1] = m2.a2; m1[0][2] = m2.a3; m1[0][3] = 0.0f;
@@ -19,7 +19,7 @@ glm::mat4 EG_Utility::toGlmMat(aiMatrix3x3 m2)
     return m1;
 }
 
-glm::mat4 EG_Utility::toGlmMat(aiMatrix4x4& m2)
+glm::mat4 Utility::toGlmMat(aiMatrix4x4& m2)
 {
     glm::mat4 m1;
     m1[0][0] = m2.a1; m1[0][1] = m2.a2; m1[0][2] = m2.a3; m1[0][3] = m2.a4;
@@ -30,7 +30,7 @@ glm::mat4 EG_Utility::toGlmMat(aiMatrix4x4& m2)
 }
 
 
-glm::mat4 EG_Utility::toGlmMat(const aiMatrix4x4& m2)
+glm::mat4 Utility::toGlmMat(const aiMatrix4x4& m2)
 {
     glm::mat4 m1;
     m1[0][0] = m2.a1; m1[0][1] = m2.a2; m1[0][2] = m2.a3; m1[0][3] = m2.a4;

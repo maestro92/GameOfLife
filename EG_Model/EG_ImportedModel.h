@@ -6,7 +6,7 @@
 #include <GL/glew.h>
 
 #include "define.h"
-#include "EG_Utility.h"
+#include "utility.h"
 #include <cstdlib>
 #include <iostream>
 #include <stdio.h>

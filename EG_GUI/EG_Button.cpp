@@ -50,7 +50,7 @@ bool EG_Button::update(MouseState & state, unsigned int& groupFlag)
         if(flag == true)
         {
             groupFlag = groupFlag | ( 1 << m_id);
-         //   EG_Utility::debug()
+         //   Utility::debug()
       //      std::bitset<32> x(groupFlag);
        //     cout << x << endl;
         }
@@ -71,7 +71,7 @@ bool EG_Button::update(MouseState & state, unsigned int& groupFlag)
     if(flag)
     {
         groupFlag = groupFlag | ( 1 << m_id);
-     //   EG_Utility::debug()
+     //   Utility::debug()
         std::bitset<32> x(groupFlag);
     //    cout << x << endl;
     }
@@ -100,7 +100,7 @@ void EG_Button::setColors(glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3
 }
 
 
-void EG_Button::render(pipeline& p, EG_Renderer* r)
+void EG_Button::render(pipeline& p, Renderer* r)
 {
     r->enableShader();
 

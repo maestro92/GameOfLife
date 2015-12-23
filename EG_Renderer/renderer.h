@@ -1,9 +1,9 @@
-#ifndef EG_RENDERER_H
-#define EG_RENDERER_H
+#ifndef RENDERER_H_
+#define RENDERER_H_
 #include "define.h"
-#include "EG_Shader.h"
+#include "shader.h"
 #include "pipeline.h"
-#include "EG_Utility.h"
+#include "utility.h"
 #include <unordered_map>
 #include <stack>
 
@@ -69,7 +69,7 @@ struct DataPair
 
     void printError()
     {
-        EG_Utility::debug(name, "unmatched type");
+        Utility::debug(name, "unmatched type");
         exit(1);
     }
     virtual void setValue(bool value){printError();};
@@ -102,12 +102,12 @@ struct BoolDataPair : public DataPair
 
     virtual void setUniLoc()
     {
-        EG_Utility::setUniLoc(uniLoc, value);
+        Utility::setUniLoc(uniLoc, value);
     }
 
     virtual void printValue()
     {
-        EG_Utility::debug("value is", value);
+        Utility::debug("value is", value);
     }
 };
 
@@ -130,12 +130,12 @@ struct IntDataPair : public DataPair
 
     virtual void setUniLoc()
     {
-        EG_Utility::setUniLoc(uniLoc, value);
+        Utility::setUniLoc(uniLoc, value);
     }
 
     virtual void printValue()
     {
-        EG_Utility::debug("value is", value);
+        Utility::debug("value is", value);
     }
 };
 
@@ -158,12 +158,12 @@ struct FloatDataPair : public DataPair
 
     void setUniLoc()
     {
-        EG_Utility::setUniLoc(uniLoc, value);
+        Utility::setUniLoc(uniLoc, value);
     }
 
     void printValue()
     {
-        EG_Utility::debug("value is", value);
+        Utility::debug("value is", value);
     }
 };
 
@@ -186,12 +186,12 @@ struct Vec2DataPair : public DataPair
 
     void setUniLoc()
     {
-        EG_Utility::setUniLoc(uniLoc, value);
+        Utility::setUniLoc(uniLoc, value);
     }
 
     void printValue()
     {
-        EG_Utility::debug("value is", value);
+        Utility::debug("value is", value);
     }
 };
 
@@ -214,12 +214,12 @@ struct Vec3DataPair : public DataPair
 
     void setUniLoc()
     {
-        EG_Utility::setUniLoc(uniLoc, value);
+        Utility::setUniLoc(uniLoc, value);
     }
 
     void printValue()
     {
-        EG_Utility::debug("value is", value);
+        Utility::debug("value is", value);
     }
 };
 
@@ -243,12 +243,12 @@ struct Vec4DataPair : public DataPair
 
     void setUniLoc()
     {
-        EG_Utility::setUniLoc(uniLoc, value);
+        Utility::setUniLoc(uniLoc, value);
     }
 
     void printValue()
     {
-        EG_Utility::debug("value is", value);
+        Utility::debug("value is", value);
     }
 };
 
@@ -271,12 +271,12 @@ struct Mat3DataPair : public DataPair
 
     void setUniLoc()
     {
-        EG_Utility::setUniLoc(uniLoc, value);
+        Utility::setUniLoc(uniLoc, value);
     }
 
     void printValue()
     {
-        EG_Utility::debug("value is", value);
+        Utility::debug("value is", value);
     }
 };
 
@@ -298,12 +298,12 @@ struct Mat4DataPair : public DataPair
 
     void setUniLoc()
     {
-        EG_Utility::setUniLoc(uniLoc, value);
+        Utility::setUniLoc(uniLoc, value);
     }
 
     void printValue()
     {
-        EG_Utility::debug("value is", value);
+        Utility::debug("value is", value);
     }
 };
 
@@ -323,11 +323,11 @@ enum DATA_PAIR_TYPE
 };
 
 
-class EG_Renderer
+class Renderer
 {
     public:
-        EG_Renderer();
-        virtual ~EG_Renderer();
+        Renderer();
+        virtual ~Renderer();
 
         virtual void init();
         virtual void init(int nShaders) = 0;

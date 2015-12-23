@@ -1,7 +1,7 @@
-#ifndef EG_SMOKE_H_
-#define EG_SMOKE_H_
+#ifndef SMOKE_H_
+#define SMOKE_H_
 
-#include "EG_Shader.h"
+#include "shader.h"
 
 #include "Smoke_struct.h"
 
