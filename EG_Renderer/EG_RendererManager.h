@@ -3,7 +3,7 @@
 
 #include "EG_QuadModelABS.h"
 #include "general_renderer.h"
-#include "EG_Rect.h"
+#include "Rect.h"
 // #include "GOL_ScreenRenderInfo.h"
 class EG_RendererManager
 {
@@ -29,7 +29,7 @@ class EG_RendererManager
         void init(int screenWidth, int screenHeight);
 
 
-        void renderText(GLuint TextureId, GLuint FboTarget, EG_Rect rect);
+        void renderText(GLuint TextureId, GLuint FboTarget, Rect rect);
 
         EG_QuadModelABS m_textureQuad;
         pipeline m_texturePipeline;

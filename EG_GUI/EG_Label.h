@@ -15,12 +15,12 @@
 #include <string>
 #include <unordered_map>
 
-#include "EG_Control.h"
+#include "Control.h"
 
 using namespace std;
 
 
-class EG_Label : public EG_Control
+class EG_Label : public Control
 {
     public:
 

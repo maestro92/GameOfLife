@@ -89,7 +89,7 @@ void EG_RendererManager::init(int screenWidth, int screenHeight)
 
 
     /// r_GUIRectRenderer
-    s = new Shader("/EG_GUIShaders/EG_Rect.vs", "/EG_GUIShaders/EG_Rect.fs");
+    s = new Shader("/EG_GUIShaders/Rect.vs", "/EG_GUIShaders/Rect.fs");
     r_RectRenderer.addShader(s);
     r_RectRenderer.addDataPair(RENDER_PASS1, "u_color", DP_VEC3);
 
@@ -106,7 +106,7 @@ void EG_RendererManager::init(int screenWidth, int screenHeight)
 
 
 
-void EG_RendererManager::renderText(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
+void EG_RendererManager::renderText(GLuint TextureId, GLuint FboTarget, Rect rect)
 {
     glViewport(0, 0, m_screenWidth, m_screenHeight);
 

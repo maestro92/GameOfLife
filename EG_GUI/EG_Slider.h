@@ -1,12 +1,12 @@
 #ifndef EG_SLIDER_H_
 #define EG_SLIDER_H_
 
-#include "EG_Control.h"
+#include "Control.h"
 
 
 using namespace std;
 
-class EG_Slider : public EG_Control
+class EG_Slider : public Control
 {
 
 
@@ -45,7 +45,7 @@ class EG_Slider : public EG_Control
 
     protected:
 
-        EG_Rect m_sliderQuadRect;
+        Rect m_sliderQuadRect;
         glm::vec3 m_sliderColor;
 
         float m_defaultValue;

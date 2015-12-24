@@ -33,11 +33,9 @@
 #include "EG_WorldAnimatedObject.h"
 
 #include "gui_manager.h"
-#include "EG_Button.h"
 #include "EG_XYZAxisModel.h"
 #include "EG_WorldBox.h"
 #include "EG_WorldSphere.h"
-#include "EG_ListBox.h"
 #include "EG_Slider.h"
 
 #include "pipeline.h"
@@ -99,10 +97,10 @@ class ExplosionGenerator
         /// GUI
         EG_Label m_GUIPanel;
 
-        EG_Button m_triggerButton;
-        EG_Button m_resetButton;
-        EG_Button m_minimizeButton;
-        EG_Button m_pauseButton;
+        Button m_triggerButton;
+        Button m_resetButton;
+        Button m_minimizeButton;
+        Button m_pauseButton;
 
 
         EG_Slider m_smokeSizeSlider;
@@ -112,14 +110,14 @@ class ExplosionGenerator
         EG_Slider m_particleCountSlider;    float m_particleCount;
         EG_Slider m_velocitySlider;         float m_velocity;
         EG_Slider m_maxRadiusSlider;        float m_maxRadius;
-        EG_ListBox m_listBox;
+        ListBox m_listBox;
 
 
 
 
         int m_GUIComponentsIDs;
         unsigned int m_GUIComponentsFlags;
-        vector<EG_Control*> m_GUIComponents;
+        vector<Control*> m_GUIComponents;
 
 
         EG_TimeManager m_timeManager;
@@ -169,7 +167,6 @@ class ExplosionGenerator
 
         GameBoard m_board;
 
-        TextEngine m_text;
         GUIManager m_gui;
         GOL_ModelManager m_GOLModelManager;
     public:

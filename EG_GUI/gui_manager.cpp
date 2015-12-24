@@ -66,8 +66,8 @@ void GUIManager::init(int screenWidth, int screenHeight,
     int x = m_screenWidth - 200;
     int y = 300;
     int w = 200;
-    int h = 200;
-    m_GOLModelListBox = EG_ListBox("nice", x, y, w, h, GREEN, 2);
+    int h = 300;
+    m_GOLModelListBox = ListBox("nice", x, y, w, h, GREEN, 2);
     m_GOLModelListBox.setColors(YELLOW, BLACK);
 
 
@@ -75,21 +75,15 @@ void GUIManager::init(int screenWidth, int screenHeight,
 
 
     /// r_textureRenderer
-    s = new Shader("EG_TextureRenderer.vs", "EG_TextureRenderer.fs");
+    s = new Shader("texture.vs", "texture.fs");
     r_textureRenderer.addShader(s);
     r_textureRenderer.addDataPair(RENDER_PASS1, "u_texture",    DP_INT);
 
 
     /// r_GUIRenderer
-    s = new Shader("/EG_GUIShaders/EG_Rect.vs", "/EG_GUIShaders/EG_Rect.fs");
+    s = new Shader("/EG_GUIShaders/rect.vs", "/EG_GUIShaders/rect.fs");
     r_RectRenderer.addShader(s);
     r_RectRenderer.addDataPair(RENDER_PASS1, "u_color", DP_VEC3);
-
-    /// r_TextRenderer
-    s = new Shader("/EG_GUIShaders/EG_Text.vs", "/EG_GUIShaders/EG_Text.fs");
-    r_textRenderer.addShader(s);
-    r_textRenderer.addDataPair(RENDER_PASS1, "u_texture",   DP_INT);
-    r_textRenderer.addDataPair(RENDER_PASS1, "u_color",     DP_VEC3);
 }
 
 
@@ -156,7 +150,7 @@ void GUIManager::renderTexture(GLuint TextureId, GLuint FboTarget, int x, int y,
 }
 
 
-void GUIManager::renderTexture(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
+void GUIManager::renderTexture(GLuint TextureId, GLuint FboTarget, Rect rect)
 {
     renderTexture(TextureId, FboTarget, rect.x, rect.y, rect.w, rect.h);
 }
@@ -182,14 +176,14 @@ void GUIManager::renderTextureSingle(GLuint TextureId, GLuint FboTarget, int x, 
     r_textureRenderer.disableShader();
 }
 
-void GUIManager::renderTextureSingle(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
+void GUIManager::renderTextureSingle(GLuint TextureId, GLuint FboTarget, Rect rect)
 {
 
 }
 
 
 /*
-void GUIManager::renderText(GLuint TextureId, GLuint FboTarget, EG_Rect rect)
+void GUIManager::renderText(GLuint TextureId, GLuint FboTarget, Rect rect)
 {
     glViewport(0, 0, m_screenWidth, m_screenHeight);
 

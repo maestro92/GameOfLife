@@ -13,6 +13,9 @@ class EG_QuadModelABS : public EG_ModelABS
         EG_QuadModelABS();
         EG_QuadModelABS(int i);
 
+        EG_QuadModelABS(int w, int h);
+        EG_QuadModelABS(int w, int h, float uv_x, float uv_y, float uv_w);
+
         // Destructor
 		~EG_QuadModelABS();
 

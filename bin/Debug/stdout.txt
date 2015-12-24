@@ -52,7 +52,7 @@ Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
 Error in Init_Shader with u_srcEmptyValue
-vs: /EG_GUIShaders/EG_Rect.vs, fs: /EG_GUIShaders/EG_Rect.fs
+vs: /EG_GUIShaders/Rect.vs, fs: /EG_GUIShaders/Rect.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -70,10 +70,10 @@ Error in Init_Shader with u_normalMat
 Error in Init_Shader
 Loading Texture Assets/Images/tank1B.png
 width 200
-height 200
+height 300
 m_colNum 2
 m_itemWidth 100
-vs: EG_TextureRenderer.vs, fs: EG_TextureRenderer.fs
+vs: texture.vs, fs: texture.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -81,15 +81,7 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
-vs: /EG_GUIShaders/EG_Rect.vs, fs: /EG_GUIShaders/EG_Rect.fs
-Error in Init_Shader with u_modelViewMat
-Error in Init_Shader with u_viewMat
-Error in Init_Shader with u_projMat
-Error in Init_Shader with u_modelMat
-Error in Init_Shader with u_viewNoRotateMat
-Error in Init_Shader with u_normalMat
-Error in Init_Shader
-vs: /EG_GUIShaders/EG_Text.vs, fs: /EG_GUIShaders/EG_Text.fs
+vs: /EG_GUIShaders/rect.vs, fs: /EG_GUIShaders/rect.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -113,15 +105,18 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
-vs: /EG_GUIShaders/EG_GUIText.vs, fs: /EG_GUIShaders/EG_GUIText.fs
-Error in Init_Shader with u_modelViewMat
-Error in Init_Shader with u_viewMat
-Error in Init_Shader with u_projMat
-Error in Init_Shader with u_modelMat
-Error in Init_Shader with u_viewNoRotateMat
-Error in Init_Shader with u_normalMat
-Error in Init_Shader
-Loading Texture assets/font.jpg
+m_curRowNum, m_curColNum 0 1
+
+m_curRowNum, m_curColNum 1 0
+
+m_curRowNum, m_curColNum 1 1
+
+m_curRowNum, m_curColNum 2 0
+
+m_curRowNum, m_curColNum 2 1
+
+m_curRowNum, m_curColNum 3 0
+
 Start
 clicking left
 m_curIndex 1
@@ -289,6 +284,838 @@ xi, yi 1 0
 m_curIndex 1
 xi, yi 1 0
 
+clicking Up left
+clicking left
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+clicking Up left
+clicking left
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+clicking Up left
+clicking left
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+clicking Up left
+clicking left
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+clicking Up left
+clicking left
 m_curIndex 1
 xi, yi 1 0
 
@@ -307,310 +1134,182 @@ xi, yi 1 0
 m_curIndex 1
 xi, yi 1 0
 
-clicking Up left
-clicking left
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
+m_curIndex 1
+xi, yi 1 0
 
 clicking Up left
 clicking left
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
 m_curIndex 3
 xi, yi 1 1
 
@@ -1015,70 +1714,23 @@ xi, yi 0 2
 m_curIndex 4
 xi, yi 0 2
 
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
 clicking Up left
 clicking left
-clicking Up left
-clicking left
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
 m_curIndex 5
 xi, yi 1 2
 
@@ -1281,9 +1933,1387 @@ clicking Up left
 clicking left
 clicking Up left
 clicking left
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
 clicking Up left
 clicking left
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
+m_curIndex 5
+xi, yi 1 2
+
 clicking Up left
 clicking left
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
 clicking Up left
-Terminating normally.
+clicking left
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+m_curIndex 3
+xi, yi 1 1
+
+clicking Up left
+clicking left
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+m_curIndex 0
+xi, yi 0 0
+
+clicking Up left
+clicking left
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+m_curIndex 2
+xi, yi 0 1
+
+clicking Up left
+clicking left
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+m_curIndex 4
+xi, yi 0 2
+
+clicking Up left

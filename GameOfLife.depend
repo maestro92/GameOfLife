@@ -1681,7 +1681,7 @@
 	"EG_EmitterParticle.h"
 	"general_renderer.h"
 
-1440566624 d:\martin\programming\c_c++\projects\gameoflife\eg_model\eg_builtinmodel\eg_quadmodelabs.h
+1450908367 d:\martin\programming\c_c++\projects\gameoflife\eg_model\eg_builtinmodel\eg_quadmodelabs.h
 	"EG_ModelABS.h"
 
 1436763264 d:\martin\programming\c_c++\projects\gameoflife\eg_emitter\eg_emitterparticle.h
@@ -1750,10 +1750,10 @@
 1450897165 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_control.cpp
 	"EG_Control.h"
 
-1450604490 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_label.cpp
+1450904386 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_label.cpp
 	"EG_Label.h"
 
-1450896104 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_label.h
+1450904386 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_label.h
 	"pipeline.h"
 	"define.h"
 	"utility.h"
@@ -1763,21 +1763,21 @@
 	<iostream>
 	<string>
 	<unordered_map>
-	"EG_Control.h"
+	"Control.h"
 
-1450896146 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_listbox.cpp
+1450912115 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_listbox.cpp
 	"EG_ListBox.h"
 
-1450896113 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_listbox.h
+1450912114 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_listbox.h
 	<vector>
-	"EG_Rect.h"
-	"EG_Control.h"
+	"Rect.h"
+	"Control.h"
 
-1450897165 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_slider.cpp
+1450904386 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_slider.cpp
 	"EG_Slider.h"
 
-1450896163 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_slider.h
-	"EG_Control.h"
+1450912115 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_slider.h
+	"Control.h"
 
 1450896180 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\eg_text.cpp
 	"EG_Text.h"
@@ -2064,10 +2064,10 @@
 1436648164 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_particleeffectsrenderers\eg_noisebasedparticleeffectrenderergpu.h
 	"EG_Renderer.h"
 
-1450895213 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.h
+1450912114 d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.h
 	"EG_QuadModelABS.h"
 	"general_renderer.h"
-	"EG_Rect.h"
+	"Rect.h"
 
 1440567720 d:\martin\programming\c_c++\projects\gameoflife\eg_worldobject\eg_fullscreenquad.h
 	<cstdlib>
@@ -2179,7 +2179,7 @@
 1432152617 source:d:\martin\programming\c_c++\projects\gameoflife\eg_model\eg_builtinmodel\eg_cubemodel.cpp
 	"EG_CubeModel.h"
 
-1450721783 source:d:\martin\programming\c_c++\projects\gameoflife\eg_model\eg_builtinmodel\eg_quadmodelabs.cpp
+1450908586 source:d:\martin\programming\c_c++\projects\gameoflife\eg_model\eg_builtinmodel\eg_quadmodelabs.cpp
 	"EG_QuadModelABS.h"
 
 1440564808 source:d:\martin\programming\c_c++\projects\gameoflife\eg_model\eg_builtinmodel\eg_xyzaxismodel.cpp
@@ -2282,7 +2282,7 @@
 1450609030 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderer.cpp
 	"EG_Renderer.h"
 
-1450847287 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.cpp
+1450912115 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_renderermanager.cpp
 	"EG_RendererManager.h"
 
 1438985863 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\eg_scenerenderer.cpp
@@ -2582,26 +2582,26 @@
 	"EG_QuadModelABS.h"
 	"pipeline.h"
 
-1450902668 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\text_engine.cpp
+1450912076 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\text_engine.cpp
 	"text_engine.h"
 
 1450842717 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\character.h
 	"EG_Utility.h"
 
-1450896239 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\gui_manager.cpp
+1450912646 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\gui_manager.cpp
 	"gui_manager.h"
 
-1450896186 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\gui_manager.h
+1450912696 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\gui_manager.h
 	"pipeline.h"
 	"utility.h"
-	"EG_Rect.h"
+	"Rect.h"
 	"EG_Slider.h"
-	"EG_ListBox.h"
-	"EG_Button.h"
+	"list_box.h"
+	"button.h"
 	"GOL_Model.h"
 	"general_renderer.h"
 
-1450902658 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\text_engine.h
+1450903944 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\text_engine.h
 	<unordered_map>
 	<ft2build.h>
 	"EG_QuadModelABS.h"
@@ -2613,7 +2613,7 @@
 1450896425 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\general_renderer.cpp
 	"general_renderer.h"
 
-1450902714 d:\martin\programming\c_c++\projects\gameoflife\main.h
+1450912741 d:\martin\programming\c_c++\projects\gameoflife\main.h
 	<cstdlib>
 	<iostream>
 	<stdio.h>
@@ -2634,11 +2634,9 @@
 	"EG_RendererManager.h"
 	"EG_WorldAnimatedObject.h"
 	"gui_manager.h"
-	"EG_Button.h"
 	"EG_XYZAxisModel.h"
 	"EG_WorldBox.h"
 	"EG_WorldSphere.h"
-	"EG_ListBox.h"
 	"EG_Slider.h"
 	"pipeline.h"
 	<ft2build.h>
@@ -2650,7 +2648,7 @@
 	"EG_TimeManager.h"
 	"text_engine.h"
 
-1450902800 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
+1450912446 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
 	"main.h"
 	"gl/gl.h"
 	"gl/glu.h"
@@ -2690,7 +2688,7 @@
 	<stdio.h>
 	<string.h>
 
-1450895769 d:\martin\programming\c_c++\projects\gameoflife\eg_utility\utility.h
+1450911818 d:\martin\programming\c_c++\projects\gameoflife\eg_utility\utility.h
 	<cstdlib>
 	<vector>
 	<iostream>
@@ -2744,4 +2742,37 @@
 
 1450896569 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\utility_sdl.cpp
 	"utility.h"
+
+1450911659 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\button.cpp
+	"button.h"
+
+1450904386 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\button.h
+	"Control.h"
+
+1450912120 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\control.h
+	"pipeline.h"
+	"define.h"
+	"utility.h"
+	"EG_QuadModelABS.h"
+	"text_engine.h"
+	"rect.h"
+	<GL/glew.h>
+	"define.h"
+	<iostream>
+	<string>
+	<bitset>
+
+1450912115 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\control.cpp
+	"Control.h"
+
+1450912109 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\rect.h
+	"define.h"
+
+1450913061 d:\martin\programming\c_c++\projects\gameoflife\eg_gui\list_box.h
+	<vector>
+	"Rect.h"
+	"Control.h"
+
+1450916310 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\list_box.cpp
+	"list_box.h"
 

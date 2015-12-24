@@ -151,6 +151,13 @@ void TextEngine::render(string text, float x, float y, float scale, glm::vec3 co
 }
 
 
+
+
+
+
+
+
+
 /*
 void TextEngine::render(string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color)
 {

@@ -8,7 +8,7 @@ EG_Slider::EG_Slider() : EG_Slider("Martin :)", 0, 0, 100, 100, BLUE, 0, 10)
 }
 
 EG_Slider::EG_Slider(string text, int x, int y, int width, int height,
-                     glm::vec3 color, float min, float max) : EG_Control(text, x, y, width, height, color)
+                     glm::vec3 color, float min, float max) : Control(text, x, y, width, height, color)
 {
     m_defaultValue = 0.0f;
     m_current = NULL;
@@ -61,7 +61,7 @@ float EG_Slider::getValue()
 
 bool EG_Slider::update(MouseState &state)
 {
-    EG_Control::update(state);
+    Control::update(state);
 
     int x = state.m_pos.x;
     int y = state.m_pos.y;
@@ -180,7 +180,7 @@ void EG_Slider::render(pipeline& p,
                     int RenderPassID)
 {
     /*
-    EG_Control::render(m_pipeline, Renderer, RENDER_PASS1, m_rect, p_modelPtr);
+    Control::render(m_pipeline, Renderer, RENDER_PASS1, m_rect, p_modelPtr);
 
     int offset_x = (int)((*m_current - m_minValue) / (m_maxValue - m_minValue) * (m_rect.w - tickSize) + m_rect.x);
     int offset_y = 0;
@@ -191,7 +191,7 @@ void EG_Slider::render(pipeline& p,
 
   //  glDisable(GL_BLEND);
     p_modelPtr = &m_sliderQuadModel;
-    EG_Control::render(m_pipeline,
+    Control::render(m_pipeline,
                         Renderer,
                         RENDER_PASS1, m_sliderQuadRect, p_modelPtr);
 
@@ -225,8 +225,8 @@ void EG_Slider::render(pipeline& p,
         s = m_text + ": " + cs;
     }
 
-    // offset_y = m_rect.y + m_rect.h - EG_Control::m_textEngine.fontSize - 2;
-    EG_Control::m_textEngine.render(m_pipeline, offset_x, offset_y, 15, s.c_str());
+    // offset_y = m_rect.y + m_rect.h - Control::m_textEngine.fontSize - 2;
+    Control::m_textEngine.render(m_pipeline, offset_x, offset_y, 15, s.c_str());
     */
 }
 

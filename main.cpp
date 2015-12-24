@@ -102,8 +102,6 @@ void ExplosionGenerator::initObjects()
 
 void ExplosionGenerator::initModels()
 {
-
-
     m_GOLModelManager.init(m_gridSize);
     m_GOLModelPtr = m_GOLModelManager.getDefaultGOLModel();
 }
@@ -111,85 +109,10 @@ void ExplosionGenerator::initModels()
 
 void ExplosionGenerator::initGUI()
 {
-    FT_Library ft;
-    if (FT_Init_FreeType(&ft))
-        std::cout << "ERROR::FREETYPE: Could not init FreeType Library" << std::endl;
-
-    FT_Face face;
-    if (FT_New_Face(ft, "Assets/Fonts/arial.ttf", 0, &face))
-        std::cout << "ERROR::FREETYPE: Failed to load font" << std::endl;
-
-    FT_Set_Pixel_Sizes(face, 0, 48);
-
-    if(FT_Load_Char(face, 'X', FT_LOAD_RENDER))
-    {
-        Utility::debug("Could not load character 'X'\n");
-    }
-
-    // Disable byte-alignment restriction
-    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-
-    // Load first 128 characters of ASCII set
-    for (GLubyte c = 0; c < 128; c++)
-    {
-        // Load character glyph
-        if (FT_Load_Char(face, c, FT_LOAD_RENDER))
-        {
-            std::cout << "ERROR::FREETYTPE: Failed to load Glyph" << std::endl;
-            continue;
-        }
-        // Generate texture
-        GLuint texture;
-        glGenTextures(1, &texture);
-        glBindTexture(GL_TEXTURE_2D, texture);
-        glTexImage2D(
-            GL_TEXTURE_2D,
-            0,
-            GL_RED,
-            face->glyph->bitmap.width,
-            face->glyph->bitmap.rows,
-            0,
-            GL_RED,
-            GL_UNSIGNED_BYTE,
-            face->glyph->bitmap.buffer
-        );
-        // Set texture options
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        // Now store character for later use
-        Character character = {
-            texture,
-            glm::ivec2(face->glyph->bitmap.width, face->glyph->bitmap.rows),
-            glm::ivec2(face->glyph->bitmap_left, face->glyph->bitmap_top),
-            face->glyph->advance.x
-        };
-        Characters.insert(std::pair<GLchar, Character>(c, character));
-    }
-    glBindTexture(GL_TEXTURE_2D, 0);
-    // Destroy FreeType once we're finished
-    FT_Done_Face(face);
-    FT_Done_FreeType(ft);
-
-    // Configure VAO/VBO for texture quads
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-    glBindVertexArray(VAO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 6 * 4, NULL, GL_DYNAMIC_DRAW);
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), 0);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
-
-
-    m_text = TextEngine("", 48, SCREEN_WIDTH, SCREEN_HEIGHT);
-
+    Control::init("", 36, SCREEN_WIDTH, SCREEN_HEIGHT);
 
     m_GUIComponentsFlags = 0;
 
-    EG_Control::m_textEngine.initialize();
 
     int X_OFFSET = 600;
 
@@ -225,13 +148,13 @@ void ExplosionGenerator::initGUI()
     m_smokeSizeSlider.initColoredQuad();
     m_GUIComponents.push_back(&m_smokeSizeSlider);
 */
-    m_resetButton = EG_Button("Reset", X_OFFSET, 200, BUTTON_WIDTH, BUTTON_HEIGHT, BLUE);
-    m_resetButton.setColors(BLUE, GREEN, RED);
+    m_resetButton = Button("Reset", X_OFFSET, 200, BUTTON_WIDTH, BUTTON_HEIGHT, BLUE);
+    m_resetButton.setColors(GRAY, BLACK, DARK_BLUE);
     m_resetButton.setID(m_GUIComponentsIDs);
     m_GUIComponents.push_back(&m_resetButton);
 
-    m_triggerButton = EG_Button("EXPLODE!", X_OFFSET, 0, BUTTON_WIDTH, BUTTON_HEIGHT, BLUE);
-    m_triggerButton.setColors(GREEN, BLUE, RED);
+    m_triggerButton = Button("EXPLODE!", X_OFFSET, 0, BUTTON_WIDTH, BUTTON_HEIGHT, BLUE);
+    m_triggerButton.setColors(GRAY, BLACK, DARK_BLUE);
     m_triggerButton.setID(m_GUIComponentsIDs);
     m_GUIComponents.push_back(&m_triggerButton);
 
@@ -519,8 +442,8 @@ void ExplosionGenerator::renderGUI()
     m_timeManager.addTick(getTicks);
     m_fps = m_timeManager.computeAverageFPS();
 
-    string final_str = "(" + Utility::floatToStr(m_mouseState.m_pos.x) + ", " + Utility::floatToStr(m_mouseState.m_pos.y) + ")";
-    EG_Control::m_textEngine.render(m_pipeline, 0, 10, final_str.c_str());
+//    string final_str = "(" + Utility::floatToStr(m_mouseState.m_pos.x) + ", " + Utility::floatToStr(m_mouseState.m_pos.y) + ")";
+//    Control::m_textEngine.render(m_pipeline, 0, 10, final_str.c_str());
 
     glDisable(GL_BLEND);
 
@@ -532,7 +455,7 @@ void ExplosionGenerator::renderGUI()
 
     for(int i=0; i<m_GUIComponents.size(); i++)
     {
-        EG_Control* control = m_GUIComponents[i];
+        Control* control = m_GUIComponents[i];
         control->render(m_pipeline, r_Technique);
     }
 
@@ -553,15 +476,15 @@ void ExplosionGenerator::renderGUI()
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 //    m_rm.renderText(Characters['c'].textureID, 0, m_gui.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
 
-    m_text.render("This is sample text", 25.0f, 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
-    m_text.render("(C) LearnOpenGL.com", 540.0f, 570.0f, 0.5f, glm::vec3(0.3, 0.7f, 0.9f));
+   // m_text.render("This is sample text", 25.0f, 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
+   // m_text.render("(C) LearnOpenGL.com", 540.0f, 570.0f, 0.5f, glm::vec3(0.3, 0.7f, 0.9f));
 
 
 
  //   RenderText("This is sample text", 25.0f, 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
     glDisable(GL_BLEND);
 
- //   m_gui.renderTexture(m_GOLModelManager.getModel(2)->getTexture(), 0, m_gui.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
+    m_gui.renderTexture(m_GOLModelManager.getModel(2)->getTexture(), 0, 600, 0 , 50, 50);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
 
   //  m_GUIManager.renderTexture(m_GOLModelManager.getModel(2)->getTexture(), 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
 //    m_rm.renderTexture(tempTexture, 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);

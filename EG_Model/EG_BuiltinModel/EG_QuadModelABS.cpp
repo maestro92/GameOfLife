@@ -15,6 +15,46 @@ EG_QuadModelABS::EG_QuadModelABS(int i)
 }
 
 
+EG_QuadModelABS::EG_QuadModelABS(int w, int h) : EG_QuadModelABS(w, h, 0, 0, 1)
+{ }
+
+
+EG_QuadModelABS::EG_QuadModelABS(int w, int h, float uv_x, float uv_y, float uv_w)
+{
+    /// assigning a quad for rendering textures
+    std::vector<unsigned int> indices;
+    std::vector<EG_VertexData> vertices;
+    EG_VertexData tmp;
+
+    float uv_x0 = uv_x;  float uv_x1 = uv_x + 1;
+    float uv_y0 = uv_y;  float uv_y1 = uv_y + 1;
+
+
+    /// 0. bot left
+    tmp.m_position = glm::vec3(0.0, 0.0, 0.0);
+    tmp.m_UV = glm::vec2(uv_x0 * uv_w, uv_y0 * uv_w);
+    vertices.push_back(tmp);
+    /// 1. bot right
+    tmp.m_position = glm::vec3(w, 0.0, 0.0);
+    tmp.m_UV = glm::vec2(uv_x1 * uv_w, uv_y0 * uv_w);
+    vertices.push_back(tmp);
+
+    /// 2. top right
+    tmp.m_position = glm::vec3(w, h, 0.0);
+    tmp.m_UV = glm::vec2(uv_x1 * uv_w, uv_y1 * uv_w);
+    vertices.push_back(tmp);
+    /// 3. top left
+    tmp.m_position = glm::vec3(0.0, h, 0.0);
+    tmp.m_UV = glm::vec2(uv_x0 * uv_w, uv_y1 * uv_w);
+    vertices.push_back(tmp);
+
+    initIndices(indices);
+
+    EG_Mesh m(vertices, indices);
+    m_meshes.push_back(m);
+}
+
+
 
 void EG_QuadModelABS::initIndices(vector<unsigned int>& indices)
 {

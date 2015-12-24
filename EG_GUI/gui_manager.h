@@ -3,10 +3,10 @@
 
 #include "pipeline.h"
 #include "utility.h"
-#include "EG_Rect.h"
+#include "Rect.h"
 #include "EG_Slider.h"
-#include "EG_ListBox.h"
-#include "EG_Button.h"
+#include "list_box.h"
+#include "button.h"
 #include "GOL_Model.h"
 
 #include "general_renderer.h"
@@ -21,12 +21,12 @@ class GUIManager
 
 
 
-        EG_Rect m_paletteRect;
+        Rect m_paletteRect;
         void initGUIRenderingSetup();
 
         void setGOLModelListBoxMenuContent(vector<GOL_Model*> models);
 
-        EG_ListBox m_GOLModelListBox;
+        ListBox m_GOLModelListBox;
 
 
 
@@ -34,11 +34,11 @@ class GUIManager
         void renderTextureFullScreen(GLuint TextrureId, GLuint FboTarget);
         void renderTexture(GLuint TextureId, int x, int y, int width, int height);
         void renderTexture(GLuint TextureId, GLuint FboTarget, int x, int y, int width, int height);
-        void renderTexture(GLuint TextureId, GLuint FboTarget, EG_Rect rect);
+        void renderTexture(GLuint TextureId, GLuint FboTarget, Rect rect);
 
         void renderTextureSingle(GLuint TextureId, int x, int y, int width, int height);
         void renderTextureSingle(GLuint TextureId, GLuint FboTarget, int x, int y, int width, int height);
-        void renderTextureSingle(GLuint TextureId, GLuint FboTarget, EG_Rect rect);
+        void renderTextureSingle(GLuint TextureId, GLuint FboTarget, Rect rect);
 
 
         GeneralRenderer  r_textureRenderer;
@@ -48,7 +48,7 @@ class GUIManager
 
 
         void renderGUIComponents();
-     //   void renderText(GLuint TextureId, GLuint FboTarget, EG_Rect rect);
+     //   void renderText(GLuint TextureId, GLuint FboTarget, Rect rect);
 
     private:
         EG_QuadModelABS m_textureQuad;
