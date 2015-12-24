@@ -368,8 +368,8 @@ void ExplosionGenerator::forwardRender()
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
 
-    glClearColor(0.1,0.1,0.1,1.0);
-//    glClearColor(1.0,1.0,1.0,1.0);
+//    glClearColor(0.1,0.1,0.1,1.0);
+    glClearColor(1.0,1.0,1.0,1.0);
     glClear(GL_COLOR_BUFFER_BIT);
 
     if(m_inputMode)
@@ -451,12 +451,14 @@ void ExplosionGenerator::renderGUI()
     m_gui.renderTextureSingle(m_gui.getGUIPaletteTexture(), 0, m_gui.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
 
     /// render Each GUI component
-    r_Technique = &m_gui.r_RectRenderer;
+
 
     for(int i=0; i<m_GUIComponents.size(); i++)
     {
         Control* control = m_GUIComponents[i];
-        control->render(m_pipeline, r_Technique);
+//        control->renderColored();
+        control->customRender();
+//        control->render();
     }
 
 /*
@@ -483,8 +485,8 @@ void ExplosionGenerator::renderGUI()
 
  //   RenderText("This is sample text", 25.0f, 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
     glDisable(GL_BLEND);
-
-    m_gui.renderTexture(m_GOLModelManager.getModel(2)->getTexture(), 0, 600, 0 , 50, 50);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
+    m_gui.renderTexture(m_gui.m_GOLModelListBox.m_items[2].m_textureID, 0, 600, 0 , 50, 50);
+//    m_gui.renderTexture(m_GOLModelManager.getModel(2)->getTexture(), 0, 600, 0 , 50, 50);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
 
   //  m_GUIManager.renderTexture(m_GOLModelManager.getModel(2)->getTexture(), 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
 //    m_rm.renderTexture(tempTexture, 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
