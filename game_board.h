@@ -3,10 +3,9 @@
 
 
 #include "define.h"
-#include "EG_QuadModelABS.h"
+#include "quad_model.h"
 #include "general_renderer.h"
-#include "EG_WorldObject.h"
-#include "GOL_Model.h"
+#include "gol_model.h"
 
 using namespace std;
 
@@ -24,8 +23,7 @@ enum FBOTargetId
 
 class GameBoard
 {
-    // private:
-    public:
+    private:
         struct RenderInfo
         {
             int width;
@@ -69,10 +67,8 @@ class GameBoard
         RenderInfo m_inputToSimulationRenderInfo;
         RenderInfo m_simulationToInputRenderInfo;
 
-        WorldObject o_quadObject;
-        EG_QuadModelABS m_boardQuadModel;
+        QuadModel m_boardQuadModel;
 
-        vector<vector<bool>> m_grids;
 
     public:
         DoubleFrameBufferObject m_userInputBoardDoubleBuffer;
@@ -95,12 +91,12 @@ class GameBoard
 
 
         void inputToSimluationBoard(Renderer* renderer);
-        void initUserInput(Renderer* renderer, MouseState& mouseState, GOL_Model* pattern);
-        void initUserInput(Renderer* renderer, MouseState& mouseState, GOL_Model* pattern, GLuint texture);
+        void initUserInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern);
+        void initUserInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern, GLuint texture);
         void update(Renderer* renderer);
 
-        void renderInput(Renderer* renderer, MouseState& mouseState, GOL_Model* pattern);
-        void renderInput(Renderer* renderer, MouseState& mouseState, GOL_Model* pattern, GLuint texture);
+        void renderInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern);
+        void renderInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern, GLuint texture);
 
 
         void renderInputToSimulation(Renderer* renderer);
@@ -111,6 +107,8 @@ class GameBoard
         void renderSimulation(Renderer* renderer, GLuint fboTarget);
         void renderSimulation(Renderer* renderer);
         glm::vec2 screenCoordToBoardCoord(glm::vec2 pos);
+
+        void reset();
 };
 
 

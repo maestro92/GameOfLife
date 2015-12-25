@@ -120,34 +120,6 @@ void ExplosionGenerator::initGUI()
     int BUTTON_WIDTH = 200;
     int BUTTON_HEIGHT = 35;
 
-/*
-    m_particleCountSlider.setID(m_GUIComponentsIDs);
-    m_particleCountSlider.setRect(X_OFFSET, 400, BUTTON_WIDTH, SLIDER_HEIGHT);
-    m_particleCountSlider.setColor(DARK_GRAY);
-    m_particleCountSlider.setSliderColor(GREEN);
-    m_particleCountSlider.setText("Particle Count");
-    m_particleCountSlider.setValue(&m_particleCount);
-    m_particleCountSlider.setMaxValue(100);
-    m_particleCountSlider.setMinValue(0.5);
-    m_particleCountSlider.setValueType(EG_Slider::INT_TYPE);
-    m_particleCountSlider.initColoredQuad();
-    m_GUIComponents.push_back(&m_particleCountSlider);
-*/
-
-
-
-/*
-    m_smokeSizeSlider.setID(m_GUIComponentsIDs);
-    m_smokeSizeSlider.setRect(X_OFFSET, 250, BUTTON_WIDTH, SLIDER_HEIGHT);
-    m_smokeSizeSlider.setColor(DARK_GRAY);
-    m_smokeSizeSlider.setSliderColor(GREEN);
-    m_smokeSizeSlider.setText("Smoke Size");
-    m_smokeSizeSlider.setValue(&m_smokeSize);
-    m_smokeSizeSlider.setMaxValue(20);
-    m_smokeSizeSlider.setMinValue(2);
-    m_smokeSizeSlider.initColoredQuad();
-    m_GUIComponents.push_back(&m_smokeSizeSlider);
-*/
     m_resetButton = Button("Reset", X_OFFSET, 200, BUTTON_WIDTH, BUTTON_HEIGHT, BLUE);
     m_resetButton.setColors(GRAY, BLACK, DARK_BLUE);
     m_resetButton.setID(m_GUIComponentsIDs);
@@ -172,10 +144,6 @@ void ExplosionGenerator::start()
     Uint32 startTime = SDL_GetTicks();
     Uint32 next_game_tick = 0;
     Uint32 delay_time = 0;
-
- //   m_timeManager.m_startTime = SDL_GetTicks();
-    m_timeManager.setStartTime(SDL_GetTicks());
-//    m_startTime = SDL_GetTicks();
 
     while(isRunning)
     {
@@ -282,8 +250,6 @@ void ExplosionGenerator::start()
 
 void ExplosionGenerator::update()
 {
-    float fDeltaTime = m_timeManager.GetElapsedTime();
-
     int mx, my;
     SDL_GetMouseState(&mx,&my);
 //    Utility::debug("mouse is", glm::vec2(mx, SCREEN_HEIGHT - my));
@@ -303,7 +269,20 @@ void ExplosionGenerator::update()
 //    sliding = m_velocitySlider.update(m_mouseState, m_GUIComponentsFlags);
 //    sliding = m_smokeSizeSlider.update(m_mouseState, m_GUIComponentsFlags);
     b = m_triggerButton.update(m_mouseState, m_GUIComponentsFlags);
+    if(b)
+    {
+        if(m_inputMode)
+            m_switchFlag = true;
+        m_inputMode = !m_inputMode;
+    }
+
     b = m_resetButton.update(m_mouseState, m_GUIComponentsFlags);
+    if(b)
+    {
+        m_inputMode = true;
+        m_switchFlag = false;
+    }
+
 
     b = m_gui.m_GOLModelListBox.update(m_mouseState);
 
@@ -335,8 +314,6 @@ void ExplosionGenerator::update()
         m_board.update(r_Technique);
         m_board.m_simulationDoubleBuffer.swapFrontBack();
     }
-
-    runningTime = (float)((double)SDL_GetTicks() - (double)m_timeManager.getStartTime()) / 1000.0f;
 }
 
 
@@ -394,24 +371,6 @@ void ExplosionGenerator::forwardRender()
     renderGUI();
 }
 
-/*
-void ExplosionGenerator::initGUIRenderStage()
-{
-    glDisable(GL_DEPTH_TEST);
-    glDisable(GL_CULL_FACE);
-
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
-
-    m_pipeline.reset();
-    m_pipeline.matrixMode(PROJECTION_MATRIX);
-    m_pipeline.loadIdentity();
-    m_pipeline.ortho(0, SCREEN_WIDTH, 0, SCREEN_HEIGHT, -1, 1);
-
-    m_pipeline.matrixMode(MODEL_MATRIX);
-    m_pipeline.loadIdentity();
-}
-*/
 
 void ExplosionGenerator::initGUIRenderStage()
 {
@@ -422,14 +381,6 @@ void ExplosionGenerator::initGUIRenderStage()
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE);
     // glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-    m_pipeline.reset();
-    m_pipeline.matrixMode(PROJECTION_MATRIX);
-    m_pipeline.loadIdentity();
-    m_pipeline.ortho(0, SCREEN_WIDTH, 0, SCREEN_HEIGHT, -1, 1);
-
-    m_pipeline.matrixMode(MODEL_MATRIX);
-    m_pipeline.loadIdentity();
 }
 
 
@@ -439,8 +390,6 @@ void ExplosionGenerator::renderGUI()
 
     /// http://sdl.beuc.net/sdl.wiki/SDL_Average_FPS_Measurement
     unsigned int getTicks = SDL_GetTicks();
-    m_timeManager.addTick(getTicks);
-    m_fps = m_timeManager.computeAverageFPS();
 
 //    string final_str = "(" + Utility::floatToStr(m_mouseState.m_pos.x) + ", " + Utility::floatToStr(m_mouseState.m_pos.y) + ")";
 //    Control::m_textEngine.render(m_pipeline, 0, 10, final_str.c_str());

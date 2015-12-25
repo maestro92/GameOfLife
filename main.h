@@ -1,5 +1,5 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H_
+#define MAIN_H_
 
 #include <cstdlib>
 #include <iostream>
@@ -8,41 +8,26 @@
 #include <sstream>
 #include "define.h"
 
-#include "GOL_ModelManager.h"
+#include "gol_model_manager.h"
 #include "game_board.h"
-#include "EG_Emitter.h"
-
-
-#include "EG_Model.h"
-#include "EG_ImportedModel.h"
-#include "EG_InstancedModel.h"
-
-#include "EG_GBuffer.h"
 
 #include "utility.h"
 #include "shader.h"
 #include "sceneLoader.h"
 
 
-#include "EG_Label.h"
+#include "label.h"
 
-
-
-#include "EG_RendererManager.h"
-
-#include "EG_WorldAnimatedObject.h"
 
 #include "gui_manager.h"
-#include "EG_XYZAxisModel.h"
-#include "EG_WorldBox.h"
-#include "EG_WorldSphere.h"
-#include "EG_Slider.h"
+#include "slider.h"
+#include "EG_Model.h"
 
 #include "pipeline.h"
 
 #include <ft2build.h>
 #include FT_FREETYPE_H
-
+#include "renderer_manager.h"
 #include "general_renderer.h"
 
 
@@ -52,7 +37,6 @@
 
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
-#include "EG_TimeManager.h"
 
 #include "text_engine.h"
 
@@ -90,12 +74,12 @@ e for events
 class ExplosionGenerator
 {
     private:
-        EG_RendererManager              m_rm;
+        RendererManager              m_rm;
         Renderer*                    r_Technique;
 
 
         /// GUI
-        EG_Label m_GUIPanel;
+        Label m_GUIPanel;
 
         Button m_triggerButton;
         Button m_resetButton;
@@ -103,13 +87,13 @@ class ExplosionGenerator
         Button m_pauseButton;
 
 
-        EG_Slider m_smokeSizeSlider;
+        Slider m_smokeSizeSlider;
         float m_smokeSize;
         bool m_testintSmokeMode;
 
-        EG_Slider m_particleCountSlider;    float m_particleCount;
-        EG_Slider m_velocitySlider;         float m_velocity;
-        EG_Slider m_maxRadiusSlider;        float m_maxRadius;
+        Slider m_particleCountSlider;    float m_particleCount;
+        Slider m_velocitySlider;         float m_velocity;
+        Slider m_maxRadiusSlider;        float m_maxRadius;
         ListBox m_listBox;
 
 
@@ -120,7 +104,6 @@ class ExplosionGenerator
         vector<Control*> m_GUIComponents;
 
 
-        EG_TimeManager m_timeManager;
         long long m_runningTime;
         MouseState m_mouseState;
 
@@ -147,20 +130,20 @@ class ExplosionGenerator
         bool isRunning;
 
 
-        GOL_Model* m_GOLModelPtr;
-        GOL_Model m_GOLSquare;
-        GOL_Model m_GOLSquareOutline;
-        GOL_Model m_GOLSpaceShip;
+        GOLModel* m_GOLModelPtr;
+        GOLModel m_GOLSquare;
+        GOLModel m_GOLSquareOutline;
+        GOLModel m_GOLSpaceShip;
 
    //     vector<string> m_GOLModelTitles;
-   //     vector<GOL_Model*> m_GOLModels;
+   //     vector<GOLModel*> m_GOLModels;
 
 
         //GOL_Square m_GOLSquare;
         //GOL_SquareOutline m_GOLSquareOutline;
 
         int m_gridSize;
-        EG_Label m_lb;
+        Label m_lb;
 
         GLuint tempTexture;
         GLuint tex;
@@ -168,7 +151,7 @@ class ExplosionGenerator
         GameBoard m_board;
 
         GUIManager m_gui;
-        GOL_ModelManager m_GOLModelManager;
+        GOLModelManager m_GOLModelManager;
     public:
 
 

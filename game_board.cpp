@@ -90,12 +90,6 @@ int GameBoard::getGridSize()
     return m_gridSize;
 }
 
-bool GameBoard::getBoard(int x, int y)
-{
-    return m_grids[y][x];
-}
-
-
 glm::vec2 GameBoard::screenCoordToBoardCoord(glm::vec2 pos)
 {
     glm::vec2 bCoord;
@@ -138,7 +132,7 @@ void GameBoard::initUserInput(Renderer* renderer, MouseState& mouseState)
 }
 */
 
-void GameBoard::initUserInput(Renderer* renderer, MouseState& mouseState, GOL_Model* pattern)
+void GameBoard::initUserInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern)
 {
     glViewport(0, 0, m_width, m_height);
     glBindFramebuffer(GL_FRAMEBUFFER, m_userInputBoardDoubleBuffer.pong.FBO);
@@ -174,7 +168,7 @@ void GameBoard::initUserInput(Renderer* renderer, MouseState& mouseState, GOL_Mo
 }
 
 
-void GameBoard::initUserInput(Renderer* renderer, MouseState& mouseState, GOL_Model* pattern, GLuint texture)
+void GameBoard::initUserInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern, GLuint texture)
 {
     glViewport(0, 0, m_width, m_height);
     glBindFramebuffer(GL_FRAMEBUFFER, m_userInputBoardDoubleBuffer.pong.FBO);
@@ -299,7 +293,7 @@ void GameBoard::renderInput(Renderer* renderer, MouseState& mouseState)
 
 
 
-void GameBoard::renderInput(Renderer* renderer, MouseState& mouseState, GOL_Model* pattern)
+void GameBoard::renderInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern)
 {
     glViewport(0, 0, m_width, m_height);
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -340,7 +334,7 @@ void GameBoard::renderInput(Renderer* renderer, MouseState& mouseState, GOL_Mode
 
 
 
-void GameBoard::renderInput(Renderer* renderer, MouseState& mouseState, GOL_Model* pattern, GLuint texture)
+void GameBoard::renderInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern, GLuint texture)
 {
     glViewport(0, 0, m_width, m_height);
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -447,3 +441,7 @@ void GameBoard::renderSimulation(Renderer* renderer)
 }
 
 
+void GameBoard::reset()
+{
+
+}

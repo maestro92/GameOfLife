@@ -4,12 +4,12 @@
 #include "utility.h"
 
 
-class GOL_Model
+class GOLModel
 {
     public:
-        GOL_Model();
-        GOL_Model(string name, int gw, int gh, int gs);
-        GOL_Model(string name, TextureDataBuffer gData, int gs);
+        GOLModel();
+        GOLModel(string name, int gw, int gh, int gs);
+        GOLModel(string name, TextureDataBuffer gData, int gs);
 
         int m_width;
         int m_height;

@@ -53,6 +53,11 @@ Error in Init_Shader with u_normalMat
 Error in Init_Shader
 Error in Init_Shader with u_srcEmptyValue
 vs: /EG_GUIShaders/Rect.vs, fs: /EG_GUIShaders/Rect.fs
+The file /EG_GUIShaders/Rect.vscannot be openned
+
+The file /EG_GUIShaders/Rect.fscannot be openned
+
+Error in Init_Shader with u_modelViewProjMat
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -60,6 +65,7 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
+Error in Init_Shader with u_color
 vs: /EG_GUIShaders/EG_Text.vs, fs: /EG_GUIShaders/EG_Text.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
@@ -69,19 +75,12 @@ Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
 Loading Texture Assets/Images/tank1B.png
+Error happened while loading the texture: 1282
 width 200
 height 300
 m_colNum 2
 m_itemWidth 100
 vs: texture.vs, fs: texture.fs
-Error in Init_Shader with u_modelViewMat
-Error in Init_Shader with u_viewMat
-Error in Init_Shader with u_projMat
-Error in Init_Shader with u_modelMat
-Error in Init_Shader with u_viewNoRotateMat
-Error in Init_Shader with u_normalMat
-Error in Init_Shader
-vs: /EG_GUIShaders/rect.vs, fs: /EG_GUIShaders/rect.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -105,3215 +104,12739 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
-m_curRowNum, m_curColNum 0 1
-
-m_curRowNum, m_curColNum 1 0
-
-m_curRowNum, m_curColNum 1 1
-
-m_curRowNum, m_curColNum 2 0
-
-m_curRowNum, m_curColNum 2 1
-
-m_curRowNum, m_curColNum 3 0
-
+vs: /EG_GUIShaders/colored_rect.vs, fs: /EG_GUIShaders/colored_rect.fs
+Error in Init_Shader with u_modelViewMat
+Error in Init_Shader with u_viewMat
+Error in Init_Shader with u_projMat
+Error in Init_Shader with u_modelMat
+Error in Init_Shader with u_viewNoRotateMat
+Error in Init_Shader with u_normalMat
+Error in Init_Shader
+vs: /EG_GUIShaders/textured_rect.vs, fs: /EG_GUIShaders/textured_rect.fs
+Error in Init_Shader with u_modelViewMat
+Error in Init_Shader with u_viewMat
+Error in Init_Shader with u_projMat
+Error in Init_Shader with u_modelMat
+Error in Init_Shader with u_viewNoRotateMat
+Error in Init_Shader with u_normalMat
+Error in Init_Shader
+vs: /EG_GUIShaders/list_box_item_highlight.vs, fs: /EG_GUIShaders/list_box_item_highlight.fs
+Error in Init_Shader with u_modelViewMat
+Error in Init_Shader with u_viewMat
+Error in Init_Shader with u_projMat
+Error in Init_Shader with u_modelMat
+Error in Init_Shader with u_viewNoRotateMat
+Error in Init_Shader with u_normalMat
+Error in Init_Shader
 Start
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
 clicking left
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
 clicking Up left
-clicking left
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-clicking Up left
-clicking left
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-clicking Up left
-clicking left
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-clicking Up left
-clicking left
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-clicking Up left
-clicking left
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-m_curIndex 1
-xi, yi 1 0
-
-clicking Up left
-clicking left
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-clicking Up left
-clicking left
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-clicking Up left
-clicking left
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-clicking Up left
-clicking left
-clicking Up left
-clicking left
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-clicking Up left
-clicking left
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-m_curIndex 5
-xi, yi 1 2
-
-clicking Up left
-clicking left
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-clicking Up left
-clicking left
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-m_curIndex 3
-xi, yi 1 1
-
-clicking Up left
-clicking left
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-m_curIndex 0
-xi, yi 0 0
-
-clicking Up left
-clicking left
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-m_curIndex 2
-xi, yi 0 1
-
-clicking Up left
-clicking left
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-m_curIndex 4
-xi, yi 0 2
-
-clicking Up left
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+index 0
+offset_x 600
+offset_y 525
+index 1
+offset_x 700
+offset_y 525
+index 2
+offset_x 600
+offset_y 450
+index 3
+offset_x 700
+offset_y 450
+index 4
+offset_x 600
+offset_y 375
+index 5
+offset_x 700
+offset_y 375
+Terminating normally.

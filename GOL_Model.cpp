@@ -1,11 +1,11 @@
-#include "GOL_Model.h"
+#include "gol_model.h"
 
-GOL_Model::GOL_Model()
+GOLModel::GOLModel()
 {
 
 }
 
-GOL_Model::GOL_Model(string name, int gw, int gh, int gs)
+GOLModel::GOLModel(string name, int gw, int gh, int gs)
 {
     m_name = name;
     m_gridWidth = gw;
@@ -13,7 +13,7 @@ GOL_Model::GOL_Model(string name, int gw, int gh, int gs)
     init(gs);
 }
 
-GOL_Model::GOL_Model(string name, TextureDataBuffer gData, int gs)
+GOLModel::GOLModel(string name, TextureDataBuffer gData, int gs)
 {
     m_name = name;
     m_gridHeight = gData.size();
@@ -33,7 +33,7 @@ GOL_Model::GOL_Model(string name, TextureDataBuffer gData, int gs)
 
 
 
-void GOL_Model::init(int gs)
+void GOLModel::init(int gs)
 {
     m_height = m_gridHeight * gs;
     m_width = m_gridWidth * gs;
@@ -54,7 +54,7 @@ void GOL_Model::init(int gs)
     this function takes the gridData (which is in grid coordinate) and converts
     it into pixel coordinate
 */
-void GOL_Model::initTexture(TextureDataBuffer gridData)
+void GOLModel::initTexture(TextureDataBuffer gridData)
 {
     for (int y = 0; y < m_gridHeight; y++)
     {
@@ -82,12 +82,12 @@ void GOL_Model::initTexture(TextureDataBuffer gridData)
 }
 
 
-string GOL_Model::getName()
+string GOLModel::getName()
 {
     return m_name;
 }
 
-GLuint GOL_Model::getTexture()
+GLuint GOLModel::getTexture()
 {
     return m_patternTexture;
 }
