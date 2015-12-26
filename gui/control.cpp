@@ -17,6 +17,18 @@ Control::Control(string text, int x, int y, int width, int height, glm::vec3 col
     m_isInside = false;
     m_rectColor = color;
     m_rectTexture = -1;
+    m_funcCallBack = NULL;
+
+    m_font.color = glm::vec3(0.5, 0.8f, 0.2f);
+    m_font.size = 0.8;
+
+    m_textStartingXs.resize(1);
+    m_textStartingYs.resize(1);
+
+    m_textStartingXs[0] = Control::getTextStartingX(text, m_font.size, m_rect.w, m_rect.x);
+    m_textStartingYs[0] = Control::getTextStartingY(text, m_font.size, m_rect.h, m_rect.y);
+    Utility::debug("X", m_textStartingXs[0]);
+    Utility::debug("Y", m_textStartingYs[0]);
 }
 
 Control::~Control()
@@ -130,7 +142,23 @@ bool Control::update(MouseState & state, unsigned int& groupFlag)
     return flag;
 }
 
+float Control::getTextStartingX(string text, float size, float rectWidth, float offsetX)
+{
+    float w = m_textEngine.getTextWidth(text, size);
 
+    float diff = (rectWidth - w)/2;
+
+    return offsetX + diff;
+}
+
+float Control::getTextStartingY(string text, float size, float rectHeight, float offsetY)
+{
+    float h = m_textEngine.getTextHeight(text, size);
+
+    float diff = (rectHeight - h)/2;
+
+    return offsetY + diff;
+}
 
 
 void Control::updatePipeline(Renderer* r)
@@ -151,6 +179,13 @@ void Control::customRender()
 {
 
 }
+
+
+void Control::emptyOnClick()
+{
+    Utility::debug("In " + m_text + " the empty OnClick Func");
+}
+
 
 /*
 void Control::renderColored()

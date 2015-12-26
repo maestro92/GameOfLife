@@ -8,12 +8,9 @@ class Button : public Control
 {
     public:
         Button();
-        Button(string text, int x, int y, int width, int height, FuncCallBack funcCallBack);
-        Button(string text, int x, int y, int width, int height, FuncCallBack funcCallBack,
-               glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pressedColor);
-
-        Button(string text, int x, int y, int width, int height, FuncCallBack funcCallBack, std::function<void()> callBack,
-               glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pressedColor);
+        Button(string text, int x, int y, int width, int height,
+               glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pressedColor,
+               std::function<void()> callBack);
 
 
         /// http://stackoverflow.com/questions/4271245/why-do-i-get-no-matching-function-when-i-inherit-this-function
@@ -31,18 +28,18 @@ class Button : public Control
 
         virtual int getType();
 
+
     protected:
         bool m_down;
 
         glm::vec3 m_highlightColor;
         glm::vec3 m_pressedColor;
 
-        FuncCallBack m_funcCallBack;
-        std::function<void()> m_callBack;
 
         GLuint m_highlightTexture;
         GLuint m_pressedTexture;
         /// have three textures for it
+
 
 };
 

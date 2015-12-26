@@ -2613,7 +2613,7 @@
 1451061862 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\general_renderer.cpp
 	"general_renderer.h"
 
-1451082825 d:\martin\programming\c_c++\projects\gameoflife\main.h
+1451099385 d:\martin\programming\c_c++\projects\gameoflife\main.h
 	<cstdlib>
 	<iostream>
 	<stdio.h>
@@ -2639,7 +2639,7 @@
 	"SDL/SDL_image.h"
 	"text_engine.h"
 
-1451087458 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
+1451099172 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
 	"main.h"
 	"gl/gl.h"
 	"gl/glu.h"
@@ -2664,7 +2664,7 @@
 	<sstream>
 	<stdio.h>
 
-1451063899 source:d:\martin\programming\c_c++\projects\gameoflife\game_board.cpp
+1451098865 source:d:\martin\programming\c_c++\projects\gameoflife\game_board.cpp
 	"game_board.h"
 
 1451064023 d:\martin\programming\c_c++\projects\gameoflife\game_board.h
@@ -2808,7 +2808,7 @@
 	"texture.h"
 	"EG_Mesh.h"
 
-1450911818 d:\martin\programming\c_c++\projects\gameoflife\utility\utility.h
+1451098941 d:\martin\programming\c_c++\projects\gameoflife\utility\utility.h
 	<cstdlib>
 	<vector>
 	<iostream>
@@ -2865,7 +2865,7 @@
 	<unordered_map>
 	"Control.h"
 
-1451076828 d:\martin\programming\c_c++\projects\gameoflife\gui\control.h
+1451104557 d:\martin\programming\c_c++\projects\gameoflife\gui\control.h
 	"pipeline.h"
 	"define.h"
 	"utility.h"
@@ -2878,7 +2878,7 @@
 	<string>
 	<bitset>
 
-1451064023 d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.h
+1451106063 d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.h
 	<unordered_map>
 	<ft2build.h>
 	"quad_model.h"
@@ -2892,7 +2892,7 @@
 	"general_renderer.h"
 	"Rect.h"
 
-1451081456 d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.h
+1451098253 d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.h
 	"pipeline.h"
 	"utility.h"
 	"Rect.h"
@@ -2900,17 +2900,19 @@
 	"list_box.h"
 	"button.h"
 	"gol_model.h"
+	"control.h"
 	"general_renderer.h"
 
 1451062568 d:\martin\programming\c_c++\projects\gameoflife\gui\slider.h
 	"Control.h"
 
-1450943294 d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.h
+1451097060 d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.h
 	<vector>
+	<gol_model.h>
 	"Rect.h"
 	"Control.h"
 
-1451087271 d:\martin\programming\c_c++\projects\gameoflife\gui\button.h
+1451102427 d:\martin\programming\c_c++\projects\gameoflife\gui\button.h
 	"func_call_back.h"
 	"control.h"
 	<functional>
@@ -2931,25 +2933,25 @@
 	<assimp/postprocess.h>
 	"texture.h"
 
-1451087540 source:d:\martin\programming\c_c++\projects\gameoflife\gui\button.cpp
+1451106187 source:d:\martin\programming\c_c++\projects\gameoflife\gui\button.cpp
 	"button.h"
 
-1451064023 source:d:\martin\programming\c_c++\projects\gameoflife\gui\control.cpp
+1451106133 source:d:\martin\programming\c_c++\projects\gameoflife\gui\control.cpp
 	"Control.h"
 
-1451081517 source:d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.cpp
+1451098261 source:d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.cpp
 	"gui_manager.h"
 
 1451062589 source:d:\martin\programming\c_c++\projects\gameoflife\gui\label.cpp
 	"Label.h"
 
-1451079788 source:d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.cpp
+1451097089 source:d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.cpp
 	"list_box.h"
 
 1451063839 source:d:\martin\programming\c_c++\projects\gameoflife\gui\slider.cpp
 	"Slider.h"
 
-1450912076 source:d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.cpp
+1451106151 source:d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.cpp
 	"text_engine.h"
 
 1451066488 source:d:\martin\programming\c_c++\projects\gameoflife\model\builtin_model\eg_cubemodel.cpp
@@ -3020,7 +3022,7 @@
 1450896486 source:d:\martin\programming\c_c++\projects\gameoflife\utility\utility_debug.cpp
 	"utility.h"
 
-1450896520 source:d:\martin\programming\c_c++\projects\gameoflife\utility\utility_gl.cpp
+1451098931 source:d:\martin\programming\c_c++\projects\gameoflife\utility\utility_gl.cpp
 	"utility.h"
 
 1450896538 source:d:\martin\programming\c_c++\projects\gameoflife\utility\utility_gl_uni_loc.cpp

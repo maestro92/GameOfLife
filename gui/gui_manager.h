@@ -8,7 +8,7 @@
 #include "list_box.h"
 #include "button.h"
 #include "gol_model.h"
-
+#include "control.h"
 #include "general_renderer.h"
 
 class GUIManager
@@ -24,10 +24,8 @@ class GUIManager
         Rect m_paletteRect;
         void initGUIRenderingSetup();
 
-        void setGOLModelListBoxMenuContent(vector<GOLModel*> models);
 
-        ListBox m_GOLModelListBox;
-
+        int getGOLModelListBoxIndex();
 
 
         void renderTextureFullScreen(GLuint TextureId);
@@ -44,15 +42,15 @@ class GUIManager
 
         GeneralRenderer  r_textureRenderer;
 
-
+        void updateAndRender(MouseState mouseState);
         void renderGUIComponents();
         void addGUIComponent(Control* control);
 
     private:
-        int m_GUIComponentsIDs;
-        unsigned int m_GUIComponentsFlags;
+        int m_GUIComponentsID;
+        int m_GUIComponentsFlags;
         vector<Control*> m_GUIComponents;
-
+        ListBox* m_GOLModelListBox;
 
         QuadModel m_textureQuad;
         GLuint m_GUIPaletteTexture;

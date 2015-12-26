@@ -1,3 +1,23 @@
+X 0.5
+Y 0.5
+X 0.5
+Y 0.5
+X 0.5
+Y 0.5
+X 0.5
+Y 0.5
+X 0.5
+Y 0.5
+X 50
+Y 50
+X 50
+Y 50
+X 50
+Y 50
+X 50
+Y 50
+X 0.5
+Y 0.5
 vs: EG_GOLUserInput.vs, fs: EG_GOLUserInput.fs
 Error in Init_Shader with u_modelViewProjMat
 Error in Init_Shader with u_modelViewMat
@@ -76,10 +96,6 @@ Error in Init_Shader with u_normalMat
 Error in Init_Shader
 Loading Texture Assets/Images/tank1B.png
 Error happened while loading the texture: 1282
-width 200
-height 300
-m_colNum 2
-m_itemWidth 100
 vs: texture.vs, fs: texture.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
@@ -128,12 +144,11 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
+X 669.6
+Y 7.1
+X 658
+Y 57.1
+X 700
+Y 450
 Start
-clicking left
-clicking Up left
-clicking left
-clicking Up left
-clicking left
-clicking Up left
-clicked
 Terminating normally.

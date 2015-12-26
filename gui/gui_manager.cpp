@@ -65,13 +65,6 @@ void GUIManager::init(int screenWidth, int screenHeight,
     }
     m_GUIPaletteTexture = Utility::loadTexture(pixelData, GL_NEAREST);
 
-    int x = m_screenWidth - 200;
-    int y = 300;
-    int w = 200;
-    int h = 300;
-    m_GOLModelListBox = ListBox("nice", x, y, w, h, GREEN, 2);
-    m_GOLModelListBox.setColors(YELLOW, BLACK);
-
 
     Shader* s;
 
@@ -81,15 +74,6 @@ void GUIManager::init(int screenWidth, int screenHeight,
     r_textureRenderer.addDataPair(RENDER_PASS1, "u_texture",    DP_INT);
 }
 
-
-void GUIManager::setGOLModelListBoxMenuContent(vector<GOLModel*> models)
-{
-    int count = models.size();
-    for(int i=0; i<count; i++)
-    {
-        m_GOLModelListBox.addItem(models[i]->getName(), glm::vec2(models[i]->m_width, models[i]->m_height), WHITE, models[i]->getTexture());
-    }
-}
 
 GLuint GUIManager::getGUIPaletteTexture()
 {
@@ -177,14 +161,34 @@ void GUIManager::renderTextureSingle(GLuint TextureId, GLuint FboTarget, Rect re
 }
 
 
-void GUIManager::renderGUI()
+void GUIManager::updateAndRender(MouseState mouseState)
 {
-
+    for(int i=0; i<m_GUIComponents.size(); i++)
+    {
+        Control* control = m_GUIComponents[i];
+        control->update(mouseState);
+        control->customRender();
+    }
 }
 
 
 void GUIManager::addGUIComponent(Control* control)
 {
-    control->setID(m_GUIComponentsIDs);
+    if(control->getType() == Control::CONTROL_TYPE::LIST_BOX)
+        m_GOLModelListBox = (ListBox*)control;
+
+    control->setID(m_GUIComponentsID);
     m_GUIComponents.push_back(control);
+}
+
+
+int GUIManager::getGOLModelListBoxIndex()
+{
+    if(m_GOLModelListBox)
+        return m_GOLModelListBox->getIndex();
+    else
+    {
+        Utility::debug("In GUIManager::getGOLListBoxIndex(), m_GOLModelListBox is NULL");
+        exit(1);
+    }
 }

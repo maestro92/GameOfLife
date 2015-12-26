@@ -55,7 +55,7 @@ ExplosionGenerator::ExplosionGenerator()
     m_testintSmokeMode = false;
 
 
-    SDL_WM_SetCaption("Template", NULL);
+    SDL_WM_SetCaption("GAME OF LIFE", NULL);
 }
 
 ExplosionGenerator::~ExplosionGenerator()
@@ -107,12 +107,6 @@ void ExplosionGenerator::initModels()
 }
 
 
-void ExplosionGenerator::explodeFunc()
-{
-    if(m_inputMode)
-        m_switchFlag = true;
-    m_inputMode = !m_inputMode;
-}
 
 void ExplosionGenerator::initGUI()
 {
@@ -127,28 +121,19 @@ void ExplosionGenerator::initGUI()
     int BUTTON_WIDTH = 200;
     int BUTTON_HEIGHT = 35;
 
-    auto func = []()
-    {
-        Utility::debug("clicked");
-    };
-    m_GUIComponents.push_back(new Button("Reset", X_OFFSET, 100, BUTTON_WIDTH, BUTTON_HEIGHT, func, GRAY, BLACK, DARK_BLUE) );
+    m_gui.addGUIComponent(new Button("Start",   X_OFFSET, 0, BUTTON_WIDTH, BUTTON_HEIGHT,
+                                          GRAY, BLACK, DARK_BLUE,
+                                          std::bind(&ExplosionGenerator::startCB, this)) );
 
+    m_gui.addGUIComponent(new Button("Reset",  X_OFFSET, 50, BUTTON_WIDTH, BUTTON_HEIGHT,
+                                         GRAY, BLACK, DARK_BLUE,
+                                         std::bind(&ExplosionGenerator::resetGameBoardCB, this)) );
 
-
-    m_GUIComponents.push_back(new Button("Reset1", X_OFFSET, 0, BUTTON_WIDTH, BUTTON_HEIGHT, func, std::bind(&ExplosionGenerator::explodeFunc, this), GRAY, BLACK, DARK_BLUE) );
-
-
-
-    auto func1 = []()
-    {
-        Utility::debug("clicked1");
-    };
-    m_GUIComponents.push_back(new Button("EXPLODE!", X_OFFSET, 200, BUTTON_WIDTH, BUTTON_HEIGHT, func1, GRAY, BLACK, DARK_BLUE) );
-
-    m_gui.m_GOLModelListBox.setID(m_GUIComponentsIDs);
-    m_GUIComponents.push_back(&m_gui.m_GOLModelListBox);
-
-    m_gui.setGOLModelListBoxMenuContent(m_GOLModelManager.getModels());
+    ListBox* lb = new ListBox("", X_OFFSET, 300, 200, 300,
+                                          YELLOW, BLACK, 2,
+                                          std::bind(&ExplosionGenerator::GOLModelListBoxCB, this));
+    lb->setContent(m_GOLModelManager.getModels());
+    m_gui.addGUIComponent(lb);
 }
 
 
@@ -303,10 +288,7 @@ void ExplosionGenerator::update()
 
 
 
-    b = m_gui.m_GOLModelListBox.update(m_mouseState);
 
-    int index = m_gui.m_GOLModelListBox.getIndex();
-    m_GOLModelPtr = m_GOLModelManager.getModel(index);
 
     // m_GOLModelPtr = m_GOLModelMenu[m_GUIManager.m_GOLModelListBox.getIndex()];
 
@@ -421,6 +403,9 @@ void ExplosionGenerator::renderGUI()
     /// render Each GUI component
   //  Utility::debug("size is", m_GUIComponents.size());
 
+    m_gui.updateAndRender(m_mouseState);
+
+    /*
     for(int i=0; i<m_GUIComponents.size(); i++)
     {
 
@@ -430,8 +415,13 @@ void ExplosionGenerator::renderGUI()
 
         control->update(m_mouseState);
         control->customRender();
+
+
+
 //        control->render();
     }
+*/
+
 
 /*
     m_rm.r_ButtonRenderer.enableShader(RENDER_PASS1);
@@ -457,7 +447,7 @@ void ExplosionGenerator::renderGUI()
 
  //   RenderText("This is sample text", 25.0f, 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
     glDisable(GL_BLEND);
-    m_gui.renderTexture(m_gui.m_GOLModelListBox.m_items[2].m_textureID, 0, 600, 0 , 50, 50);
+//    m_gui.renderTexture(m_gui.m_GOLModelListBox.m_items[2].m_textureID, 0, 600, 0 , 50, 50);
 //    m_gui.renderTexture(m_GOLModelManager.getModel(2)->getTexture(), 0, 600, 0 , 50, 50);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
 
   //  m_GUIManager.renderTexture(m_GOLModelManager.getModel(2)->getTexture(), 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
@@ -521,3 +511,24 @@ void ExplosionGenerator::RenderText(string text, GLfloat x, GLfloat y, GLfloat s
     glBindTexture(GL_TEXTURE_2D, 0);
 }
 */
+
+/// Function CallBacks
+void ExplosionGenerator::startCB()
+{
+    if(m_inputMode)
+        m_switchFlag = true;
+    m_inputMode = !m_inputMode;
+}
+
+void ExplosionGenerator::resetGameBoardCB()
+{
+    m_inputMode = true;
+    m_switchFlag = false;
+    m_board.reset();
+}
+
+void ExplosionGenerator::GOLModelListBoxCB()
+{
+    int idx = m_gui.getGOLModelListBoxIndex();
+    m_GOLModelPtr = m_GOLModelManager.getModel(idx);
+}

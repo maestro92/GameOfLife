@@ -131,9 +131,7 @@ class ExplosionGenerator
 
 
         GOLModel* m_GOLModelPtr;
-        GOLModel m_GOLSquare;
-        GOLModel m_GOLSquareOutline;
-        GOLModel m_GOLSpaceShip;
+
 
    //     vector<string> m_GOLModelTitles;
    //     vector<GOLModel*> m_GOLModels;
@@ -143,10 +141,9 @@ class ExplosionGenerator
         //GOL_SquareOutline m_GOLSquareOutline;
 
         int m_gridSize;
-        Label m_lb;
 
         GLuint tempTexture;
-        GLuint tex;
+
 
         GameBoard m_board;
 
@@ -179,7 +176,9 @@ class ExplosionGenerator
 
         void RenderText(string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color);
 
-        void explodeFunc();
+        void startCB();
+        void resetGameBoardCB();
+        void GOLModelListBoxCB();
 };
 
 

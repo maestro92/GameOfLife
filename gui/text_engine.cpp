@@ -112,7 +112,47 @@ TextEngine::TextEngine(string font, int size, int screenWidth, int screenHeight)
 }
 
 
-void TextEngine::render(string text, float x, float y, float scale, glm::vec3 color)
+
+float TextEngine::getTextWidth(string text, float size)
+{
+    float width = 0;
+    for (int i=0; i<text.size(); i++)
+    {
+        char c = text[i];
+        Character ch = Characters[c];
+
+        float xpos = width + ch.bearing.x * size;
+        float w = ch.size.x * size;
+
+        // Now advance cursors for next glyph (note that advance is number of 1/64 pixels)
+        width += (ch.advance >> 6) * size; // Bitshift by 6 to get value in pixels (2^6 = 64)
+    }
+    return width;
+}
+
+float TextEngine::getTextHeight(string text, float size)
+{
+    float minYPos = 0;
+    float maxYPos = 0;
+
+    for (int i=0; i<text.size(); i++)
+    {
+        char c = text[i];
+        Character ch = Characters[c];
+
+        float yBotPos = (ch.size.y - ch.bearing.y) * size;
+        float yTopPos = yBotPos + ch.size.y * size;
+
+        // Now advance cursors for next glyph (note that advance is number of 1/64 pixels)
+        minYPos = min(yBotPos, minYPos);
+        maxYPos = max(yTopPos, maxYPos);
+    }
+    return maxYPos - minYPos;
+}
+
+
+
+void TextEngine::render(string text, float x, float y, float size, glm::vec3 color)
 {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -125,11 +165,11 @@ void TextEngine::render(string text, float x, float y, float scale, glm::vec3 co
             char c = text[i];
             Character ch = Characters[c];
 
-            float xpos = x + ch.bearing.x * scale;
-            float ypos = y - (ch.size.y - ch.bearing.y) * scale;
+            float xpos = x + ch.bearing.x * size;
+            float ypos = y - (ch.size.y - ch.bearing.y) * size;
 
-            float w = ch.size.x * scale;
-            float h = ch.size.y * scale;
+            float w = ch.size.x * size;
+            float h = ch.size.y * size;
 
             m_pipeline.pushMatrix();
 
@@ -142,7 +182,7 @@ void TextEngine::render(string text, float x, float y, float scale, glm::vec3 co
                 m_quad.render();
 
             // Now advance cursors for next glyph (note that advance is number of 1/64 pixels)
-            x += (ch.advance >> 6) * scale; // Bitshift by 6 to get value in pixels (2^6 = 64)
+            x += (ch.advance >> 6) * size; // Bitshift by 6 to get value in pixels (2^6 = 64)
             m_pipeline.popMatrix();
         }
 

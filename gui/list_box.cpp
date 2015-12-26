@@ -7,8 +7,8 @@ ListBox::ListBox()
 }
 
 ListBox::ListBox(string text, int x, int y, int width, int height,
-                       glm::vec3 color, int colNum) :
-            Control(text, x, y, width, height, color)
+                 glm::vec3 color, glm::vec3 itemRectColor, int colNum, std::function<void()> callBack) :
+                Control(text, x, y, width, height, color)
 {
     m_colNum = colNum;
 
@@ -22,14 +22,19 @@ ListBox::ListBox(string text, int x, int y, int width, int height,
     m_itemWidth = (float)((float)width / (float)m_colNum);
     m_itemHeight = 75;
 
-
-    Utility::debug("width", width);
-    Utility::debug("height", height);
-    Utility::debug("m_colNum", m_colNum);
-    Utility::debug("m_itemWidth", m_itemWidth);
+    setColors(color, itemRectColor);
+    m_funcCallBack = callBack;
 }
 
 
+void ListBox::setContent(vector<GOLModel*> models)
+{
+    int count = models.size();
+    for(int i=0; i<count; i++)
+    {
+        addItem(models[i]->getName(), glm::vec2(models[i]->m_width, models[i]->m_height), WHITE, models[i]->getTexture());
+    }
+}
 
 void ListBox::addItem(string text, glm::vec2 dim, glm::vec3 color, GLuint texID)
 {
@@ -121,6 +126,8 @@ bool ListBox::update(MouseState & state)
     int x = state.m_pos.x;
     int y = state.m_pos.y;
 
+
+
     if( m_isInside && state.m_leftButtonDown)
     {
         int x_index = (x - m_rect.x) / m_itemWidth;
@@ -140,6 +147,7 @@ bool ListBox::update(MouseState & state)
 
             m_curIndexX = x_index;
             m_curIndexY = y_index;
+            m_funcCallBack();
             return true;
         }
 

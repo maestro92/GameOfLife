@@ -38,6 +38,7 @@ class Control
 
         virtual ~Control();
 
+
         // for labels, or basic controls, there'll only be one background
         virtual void setTexture(GLuint id);
 
@@ -77,15 +78,31 @@ class Control
         GLuint m_rectTexture;
 
 
+
+        std::function<void()> m_funcCallBack;
+
+
+        static float getTextStartingX(string text, float size, float rectWidth, float offsetX = 0);
+        static float getTextStartingY(string text, float size, float rectHeight, float offsetY = 0);
+
+        void emptyOnClick();
+        static void init(string font, int size, int sreenWidth, int screenHeight);
+
+    protected:
         bool m_isInside;
         int m_id;
         string m_text;
         Rect m_rect;
+        Font m_font;
+
         glm::vec3 m_rectColor;
+
+        vector<float> m_textStartingXs;
+        vector<float> m_textStartingYs;
+
 
         /// http://stackoverflow.com/questions/7083612/defining-a-static-variable-of-base-class
 
-        static void init(string font, int size, int sreenWidth, int screenHeight);
         static pipeline m_pipeline;
         static TextEngine m_textEngine;
         static QuadModel m_quadModel;

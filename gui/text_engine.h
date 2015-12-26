@@ -20,6 +20,13 @@ struct Character
     GLuint advance;    // Horizontal offset to advance to next glyph
 };
 
+struct Font
+{
+    glm::vec3 color;
+    float size;
+};
+
+
 class TextEngine
 {
     public:
@@ -28,7 +35,9 @@ class TextEngine
         TextEngine(string font, int size, int screenWidth, int screenHeight);
 
 
-        void render(string text, float x, float y, float scale, glm::vec3 color);
+        float getTextWidth(string text, float size);
+        float getTextHeight(string text, float size);
+        void render(string text, float x, float y, float size, glm::vec3 color);
 
         GLuint VAO, VBO;
         unordered_map<GLchar, Character> Characters;

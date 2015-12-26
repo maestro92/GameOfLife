@@ -443,5 +443,15 @@ void GameBoard::renderSimulation(Renderer* renderer)
 
 void GameBoard::reset()
 {
+    m_userInputBoardDoubleBuffer.clear(glm::vec4(1.0,1.0,1.0,1.0));
+    m_simulationDoubleBuffer.clear();
 
+
+    m_inputToSimulationRenderInfo.set(m_numGridsX, m_numGridsY,
+                                        m_userInputBoardDoubleBuffer.ping.colorTexture,
+                                        m_simulationDoubleBuffer.ping.FBO, 0, 1);
+
+    m_simulationToInputRenderInfo.set(m_width, m_height,
+                                        m_simulationDoubleBuffer.ping.colorTexture,
+                                        m_userInputBoardDoubleBuffer.ping.FBO, 1, 0);
 }

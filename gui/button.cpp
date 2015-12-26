@@ -2,38 +2,22 @@
 
 
 Button::Button()
-{
+{}
 
-}
-
-
-Button::Button(string text, int x, int y, int width, int height, FuncCallBack funcCallBack) :
-    Control(text, x, y, width, height, BLUE)
+Button::Button(string text, int x, int y, int width, int height,
+               glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pressedColor,
+               std::function<void()> callBack) : Control(text, x, y, width, height, BLUE)
 {
     m_down = false;
     m_highlightTexture = -1;
     m_pressedTexture = -1;
-    m_funcCallBack = funcCallBack;
-}
+    if(callBack == NULL)
+        m_funcCallBack = std::bind(&Control::emptyOnClick, this);
+    else
+        m_funcCallBack = callBack;
 
-Button::Button(string text, int x, int y, int width, int height, FuncCallBack funcCallBack,
-               glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pressedColor) : Button(text, x, y, width, height, funcCallBack)
-{
     setColors(bgColor, highlightColor, pressedColor);
 }
-
-Button::Button(string text, int x, int y, int width, int height, FuncCallBack funcCallBack, std::function<void()> callBack,
-               glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pressedColor) : Control(text, x, y, width, height, BLUE)
-{
-    m_down = false;
-    m_highlightTexture = -1;
-    m_pressedTexture = -1;
-
-    m_funcCallBack = funcCallBack;
-    m_callBack = callBack;
-    setColors(bgColor, highlightColor, pressedColor);
-}
-
 
 bool Button::update(MouseState & state)
 {
@@ -51,8 +35,6 @@ bool Button::update(MouseState & state)
         {
             m_down = false;
             m_funcCallBack();
-            if(m_callBack != NULL)
-                m_callBack();
             return true;
         }
     }
@@ -133,7 +115,6 @@ void Button::customRender()
 }
 
 
-
 void Button::render()
 {
     Control::r_coloredRectRenderer.enableShader();
@@ -148,7 +129,10 @@ void Button::render()
     updatePipeline(&Control::r_coloredRectRenderer);
     m_quadModel.render();
 
-    Control::m_textEngine.render(m_text, m_rect.x, m_rect.y, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
+
+
+
+    Control::m_textEngine.render(m_text, m_textStartingXs[0], m_textStartingYs[0], m_font.size, m_font.color);
     Control::r_coloredRectRenderer.disableShader();
 
  //   cout << "offset_x " << offset_x << endl;
@@ -210,4 +194,6 @@ int Button::getType()
 {
     return BUTTON;
 }
+
+
 
