@@ -4,7 +4,7 @@
 #include "SDL\SDL.h"
 
 using namespace std;
-
+using namespace std::placeholders;
 // https://www.youtube.com/watch?v=tlXM8qDOS3U
 // Screen dimension constants
 const int SCREEN_WIDTH = 800;
@@ -107,6 +107,13 @@ void ExplosionGenerator::initModels()
 }
 
 
+void ExplosionGenerator::explodeFunc()
+{
+    if(m_inputMode)
+        m_switchFlag = true;
+    m_inputMode = !m_inputMode;
+}
+
 void ExplosionGenerator::initGUI()
 {
     Control::init("", 36, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -120,15 +127,23 @@ void ExplosionGenerator::initGUI()
     int BUTTON_WIDTH = 200;
     int BUTTON_HEIGHT = 35;
 
-    m_resetButton = Button("Reset", X_OFFSET, 200, BUTTON_WIDTH, BUTTON_HEIGHT, BLUE);
-    m_resetButton.setColors(GRAY, BLACK, DARK_BLUE);
-    m_resetButton.setID(m_GUIComponentsIDs);
-    m_GUIComponents.push_back(&m_resetButton);
+    auto func = []()
+    {
+        Utility::debug("clicked");
+    };
+    m_GUIComponents.push_back(new Button("Reset", X_OFFSET, 100, BUTTON_WIDTH, BUTTON_HEIGHT, func, GRAY, BLACK, DARK_BLUE) );
 
-    m_triggerButton = Button("EXPLODE!", X_OFFSET, 0, BUTTON_WIDTH, BUTTON_HEIGHT, BLUE);
-    m_triggerButton.setColors(GRAY, BLACK, DARK_BLUE);
-    m_triggerButton.setID(m_GUIComponentsIDs);
-    m_GUIComponents.push_back(&m_triggerButton);
+
+
+    m_GUIComponents.push_back(new Button("Reset1", X_OFFSET, 0, BUTTON_WIDTH, BUTTON_HEIGHT, func, std::bind(&ExplosionGenerator::explodeFunc, this), GRAY, BLACK, DARK_BLUE) );
+
+
+
+    auto func1 = []()
+    {
+        Utility::debug("clicked1");
+    };
+    m_GUIComponents.push_back(new Button("EXPLODE!", X_OFFSET, 200, BUTTON_WIDTH, BUTTON_HEIGHT, func1, GRAY, BLACK, DARK_BLUE) );
 
     m_gui.m_GOLModelListBox.setID(m_GUIComponentsIDs);
     m_GUIComponents.push_back(&m_gui.m_GOLModelListBox);
@@ -268,6 +283,8 @@ void ExplosionGenerator::update()
 //    sliding = m_particleCountSlider.update(m_mouseState, m_GUIComponentsFlags) || m_maxRadiusSlider.update(m_mouseState, m_GUIComponentsFlags);
 //    sliding = m_velocitySlider.update(m_mouseState, m_GUIComponentsFlags);
 //    sliding = m_smokeSizeSlider.update(m_mouseState, m_GUIComponentsFlags);
+
+   /*
     b = m_triggerButton.update(m_mouseState, m_GUIComponentsFlags);
     if(b)
     {
@@ -282,6 +299,8 @@ void ExplosionGenerator::update()
         m_inputMode = true;
         m_switchFlag = false;
     }
+*/
+
 
 
     b = m_gui.m_GOLModelListBox.update(m_mouseState);
@@ -400,12 +419,16 @@ void ExplosionGenerator::renderGUI()
     m_gui.renderTextureSingle(m_gui.getGUIPaletteTexture(), 0, m_gui.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
 
     /// render Each GUI component
-
+  //  Utility::debug("size is", m_GUIComponents.size());
 
     for(int i=0; i<m_GUIComponents.size(); i++)
     {
+
+
         Control* control = m_GUIComponents[i];
 //        control->renderColored();
+
+        control->update(m_mouseState);
         control->customRender();
 //        control->render();
     }

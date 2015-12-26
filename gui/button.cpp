@@ -7,12 +7,31 @@ Button::Button()
 }
 
 
-Button::Button(string text, int x, int y, int width, int height, glm::vec3 c) :
-    Control(text, x, y, width, height, c)
+Button::Button(string text, int x, int y, int width, int height, FuncCallBack funcCallBack) :
+    Control(text, x, y, width, height, BLUE)
 {
     m_down = false;
     m_highlightTexture = -1;
     m_pressedTexture = -1;
+    m_funcCallBack = funcCallBack;
+}
+
+Button::Button(string text, int x, int y, int width, int height, FuncCallBack funcCallBack,
+               glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pressedColor) : Button(text, x, y, width, height, funcCallBack)
+{
+    setColors(bgColor, highlightColor, pressedColor);
+}
+
+Button::Button(string text, int x, int y, int width, int height, FuncCallBack funcCallBack, std::function<void()> callBack,
+               glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pressedColor) : Control(text, x, y, width, height, BLUE)
+{
+    m_down = false;
+    m_highlightTexture = -1;
+    m_pressedTexture = -1;
+
+    m_funcCallBack = funcCallBack;
+    m_callBack = callBack;
+    setColors(bgColor, highlightColor, pressedColor);
 }
 
 
@@ -31,7 +50,9 @@ bool Button::update(MouseState & state)
         else if (m_down)
         {
             m_down = false;
-
+            m_funcCallBack();
+            if(m_callBack != NULL)
+                m_callBack();
             return true;
         }
     }
@@ -99,6 +120,11 @@ void Button::setColors(glm::vec3 bgColor, glm::vec3 highlightColor, glm::vec3 pr
     m_pressedColor = pressedColor;
 }
 
+
+void Button::setFuncCallBack(FuncCallBack funcCallBack)
+{
+    m_funcCallBack = funcCallBack;
+}
 
 
 void Button::customRender()

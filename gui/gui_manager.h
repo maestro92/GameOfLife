@@ -46,9 +46,14 @@ class GUIManager
 
 
         void renderGUIComponents();
-     //   void renderText(GLuint TextureId, GLuint FboTarget, Rect rect);
+        void addGUIComponent(Control* control);
 
     private:
+        int m_GUIComponentsIDs;
+        unsigned int m_GUIComponentsFlags;
+        vector<Control*> m_GUIComponents;
+
+
         QuadModel m_textureQuad;
         GLuint m_GUIPaletteTexture;
         pipeline m_GUIPipeline;

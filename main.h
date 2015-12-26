@@ -178,6 +178,8 @@ class ExplosionGenerator
         void renderGUI();
 
         void RenderText(string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color);
+
+        void explodeFunc();
 };
 
 

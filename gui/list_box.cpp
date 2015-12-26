@@ -135,8 +135,8 @@ bool ListBox::update(MouseState & state)
         {
             m_curIndex = y_index * m_colNum + x_index;
 
-            Utility::debug("m_curIndex", m_curIndex);
-            Utility::debug("xi, yi", glm::vec2(x_index, y_index));
+        //    Utility::debug("m_curIndex", m_curIndex);
+        //    Utility::debug("xi, yi", glm::vec2(x_index, y_index));
 
             m_curIndexX = x_index;
             m_curIndexY = y_index;
@@ -258,7 +258,7 @@ void ListBox::customRender()
             {
                 int index = y * m_colNum + x;
 
-                Utility::debug("index", index);
+          //      Utility::debug("index", index);
 
                 if( index == m_items.size())
                     break;
@@ -268,8 +268,8 @@ void ListBox::customRender()
                 int offset_y = m_rect.y + m_rect.h - ((y + 1) * m_itemHeight);
                 Rect itemRect(offset_x, offset_y, m_itemWidth, m_itemHeight);
 
-                Utility::debug("offset_x", offset_x);
-                Utility::debug("offset_y", offset_y);
+          //      Utility::debug("offset_x", offset_x);
+        //        Utility::debug("offset_y", offset_y);
 /*
                 if (index == m_curIndex && m_curIndex >= 0)
                     r->setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, m_items[index].m_textureID);

@@ -5,6 +5,8 @@ void GUIManager::init(int screenWidth, int screenHeight,
                           int paletteX, int paletteY,
                           int paletteWidth, int paletteHeight)
 {
+    m_GUIComponentsFlags = 0;
+
     m_screenWidth = screenWidth;
     m_screenHeight = screenHeight;
 
@@ -181,3 +183,8 @@ void GUIManager::renderGUI()
 }
 
 
+void GUIManager::addGUIComponent(Control* control)
+{
+    control->setID(m_GUIComponentsIDs);
+    m_GUIComponents.push_back(control);
+}

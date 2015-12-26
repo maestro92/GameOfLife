@@ -2519,10 +2519,10 @@
 
 1448943502 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\gol_gui.cpp
 
-1451062064 d:\martin\programming\c_c++\projects\gameoflife\gol_model.h
+1451067358 d:\martin\programming\c_c++\projects\gameoflife\gol_model.h
 	"utility.h"
 
-1451062155 source:d:\martin\programming\c_c++\projects\gameoflife\gol_model.cpp
+1451067360 source:d:\martin\programming\c_c++\projects\gameoflife\gol_model.cpp
 	"gol_model.h"
 
 1449181512 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_sdl.cpp
@@ -2613,7 +2613,7 @@
 1451061862 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\general_renderer.cpp
 	"general_renderer.h"
 
-1451064175 d:\martin\programming\c_c++\projects\gameoflife\main.h
+1451082825 d:\martin\programming\c_c++\projects\gameoflife\main.h
 	<cstdlib>
 	<iostream>
 	<stdio.h>
@@ -2639,7 +2639,7 @@
 	"SDL/SDL_image.h"
 	"text_engine.h"
 
-1451064560 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
+1451087458 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
 	"main.h"
 	"gl/gl.h"
 	"gl/glu.h"
@@ -2865,7 +2865,7 @@
 	<unordered_map>
 	"Control.h"
 
-1451063977 d:\martin\programming\c_c++\projects\gameoflife\gui\control.h
+1451076828 d:\martin\programming\c_c++\projects\gameoflife\gui\control.h
 	"pipeline.h"
 	"define.h"
 	"utility.h"
@@ -2892,7 +2892,7 @@
 	"general_renderer.h"
 	"Rect.h"
 
-1451064023 d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.h
+1451081456 d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.h
 	"pipeline.h"
 	"utility.h"
 	"Rect.h"
@@ -2910,8 +2910,10 @@
 	"Rect.h"
 	"Control.h"
 
-1450938143 d:\martin\programming\c_c++\projects\gameoflife\gui\button.h
-	"Control.h"
+1451087271 d:\martin\programming\c_c++\projects\gameoflife\gui\button.h
+	"func_call_back.h"
+	"control.h"
+	<functional>
 
 1450896576 d:\martin\programming\c_c++\projects\gameoflife\model\eg_model.h
 	<GL/glew.h>
@@ -2929,19 +2931,19 @@
 	<assimp/postprocess.h>
 	"texture.h"
 
-1451063839 source:d:\martin\programming\c_c++\projects\gameoflife\gui\button.cpp
+1451087540 source:d:\martin\programming\c_c++\projects\gameoflife\gui\button.cpp
 	"button.h"
 
 1451064023 source:d:\martin\programming\c_c++\projects\gameoflife\gui\control.cpp
 	"Control.h"
 
-1451062131 source:d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.cpp
+1451081517 source:d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.cpp
 	"gui_manager.h"
 
 1451062589 source:d:\martin\programming\c_c++\projects\gameoflife\gui\label.cpp
 	"Label.h"
 
-1451063839 source:d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.cpp
+1451079788 source:d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.cpp
 	"list_box.h"
 
 1451063839 source:d:\martin\programming\c_c++\projects\gameoflife\gui\slider.cpp
@@ -3110,4 +3112,6 @@
 	<cstdlib>
 	"pipeline.h"
 	"EG_ModelABS.h"
+
+1451076970 d:\martin\programming\c_c++\projects\gameoflife\gui\func_call_back.h
 

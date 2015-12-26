@@ -1,7 +1,5 @@
-
-#ifndef EG_GUI_CONTROL_H_
-#define EG_GUI_CONTROL_H_
-
+#ifndef GUI_CONTROL_H_
+#define GUI_CONTROL_H_
 
 #include "pipeline.h"
 #include "define.h"
