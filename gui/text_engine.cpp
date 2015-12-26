@@ -113,6 +113,12 @@ TextEngine::TextEngine(string font, int size, int screenWidth, int screenHeight)
 
 
 
+vector<int> TextEngine::getWordWraps(string text, float size)
+{
+
+}
+
+
 float TextEngine::getTextWidth(string text, float size)
 {
     float width = 0;

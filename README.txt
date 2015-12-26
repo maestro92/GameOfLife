@@ -39,4 +39,10 @@ left top		right top
 left bottom 	right bottom
 
 
-4. Rendering Text
+4. All About Rendering Text
+
+
+
+
+
+word wrap/line break algorithm

@@ -34,7 +34,7 @@ class TextEngine
 
         TextEngine(string font, int size, int screenWidth, int screenHeight);
 
-
+        vector<int> getWordWraps(string text, float size);
         float getTextWidth(string text, float size);
         float getTextHeight(string text, float size);
         void render(string text, float x, float y, float size, glm::vec3 color);
