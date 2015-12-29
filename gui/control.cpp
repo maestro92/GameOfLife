@@ -20,13 +20,14 @@ Control::Control(string text, int x, int y, int width, int height, glm::vec3 col
     m_funcCallBack = NULL;
 
     m_font.color = glm::vec3(0.5, 0.8f, 0.2f);
-    m_font.size = 0.8;
+    m_font.size = 1.0;
 
     m_textStartingXs.resize(1);
     m_textStartingYs.resize(1);
 
     m_textStartingXs[0] = Control::getTextStartingX(text, m_font.size, m_rect.w, m_rect.x);
     m_textStartingYs[0] = Control::getTextStartingY(text, m_font.size, m_rect.h, m_rect.y);
+ //   m_textStartingYs[0] = m_rect.y;
     Utility::debug("X", m_textStartingXs[0]);
     Utility::debug("Y", m_textStartingYs[0]);
 }
@@ -153,11 +154,20 @@ float Control::getTextStartingX(string text, float size, float rectWidth, float 
 
 float Control::getTextStartingY(string text, float size, float rectHeight, float offsetY)
 {
+    if(text == "Ag")
+        int a = 1;
+    float y = m_textEngine.getTextBotY(text, size);
     float h = m_textEngine.getTextHeight(text, size);
 
-    float diff = (rectHeight - h)/2;
+    float diff = 0;
+    if(y == 0)
+        diff = (rectHeight - h)/2;
+    else
+        diff = (rectHeight - h)/3;
 
-    return offsetY + diff;
+    float sy = offsetY + y + diff;
+    return sy;
+
 }
 
 

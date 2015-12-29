@@ -29,7 +29,7 @@ static float runningTime = 0.0f;
 
 
 
-std::map<GLchar, Character> Characters;
+std::map<GLchar, Character> m_characters;
 GLuint VAO, VBO;
 
 
@@ -110,7 +110,7 @@ void ExplosionGenerator::initModels()
 
 void ExplosionGenerator::initGUI()
 {
-    Control::init("", 36, SCREEN_WIDTH, SCREEN_HEIGHT);
+    Control::init("", 30, SCREEN_WIDTH, SCREEN_HEIGHT);
 
     m_GUIComponentsFlags = 0;
 
@@ -121,11 +121,12 @@ void ExplosionGenerator::initGUI()
     int BUTTON_WIDTH = 200;
     int BUTTON_HEIGHT = 35;
 
-    m_gui.addGUIComponent(new Button("Start",   X_OFFSET, 0, BUTTON_WIDTH, BUTTON_HEIGHT,
+
+    m_gui.addGUIComponent(new Button("Start_y",   X_OFFSET, 100, BUTTON_WIDTH, BUTTON_HEIGHT,
                                           GRAY, BLACK, DARK_BLUE,
                                           std::bind(&ExplosionGenerator::startCB, this)) );
 
-    m_gui.addGUIComponent(new Button("Reset",  X_OFFSET, 50, BUTTON_WIDTH, BUTTON_HEIGHT,
+    m_gui.addGUIComponent(new Button("Reset",  X_OFFSET, 150, BUTTON_WIDTH, BUTTON_HEIGHT,
                                          GRAY, BLACK, DARK_BLUE,
                                          std::bind(&ExplosionGenerator::resetGameBoardCB, this)) );
 
@@ -438,7 +439,7 @@ void ExplosionGenerator::renderGUI()
 */
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-//    m_rm.renderText(Characters['c'].textureID, 0, m_gui.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
+//    m_rm.renderText(m_characters['c'].textureID, 0, m_gui.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
 
    // m_text.render("This is sample text", 25.0f, 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
    // m_text.render("(C) LearnOpenGL.com", 540.0f, 570.0f, 0.5f, glm::vec3(0.3, 0.7f, 0.9f));
@@ -472,7 +473,7 @@ void ExplosionGenerator::RenderText(string text, GLfloat x, GLfloat y, GLfloat s
     std::string::const_iterator c;
     for (c = text.begin(); c != text.end(); c++)
     {
-        Character ch = Characters[*c];
+        Character ch = m_characters[*c];
 
         m_GUIManager.r_textRenderer.setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, ch.TextureID);
         m_GUIManager.r_textRenderer.setData(RENDER_PASS1, "u_color", color);

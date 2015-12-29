@@ -1,21 +1,471 @@
+char is  M
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  a
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  r
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  t
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  i
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  n
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is   
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  :
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  )
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
 X 0.5
 Y 0.5
+char is  M
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  a
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  r
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  t
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  i
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  n
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is   
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  :
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  )
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
 X 0.5
 Y 0.5
+char is  M
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  a
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  r
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  t
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  i
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  n
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is   
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  :
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  )
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
 X 0.5
 Y 0.5
+char is  M
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  a
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  r
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  t
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  i
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  n
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is   
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  :
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  )
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
 X 0.5
 Y 0.5
+char is  M
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  a
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  r
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  t
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  i
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  n
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is   
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  :
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  )
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
 X 0.5
 Y 0.5
+char is  M
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  a
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  r
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  t
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  i
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  n
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is   
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  :
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  )
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
 X 50
 Y 50
+char is  M
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  a
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  r
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  t
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  i
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  n
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is   
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  :
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  )
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
 X 50
 Y 50
+char is  M
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  a
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  r
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  t
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  i
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  n
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is   
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  :
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  )
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
 X 50
 Y 50
+char is  M
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  a
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  r
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  t
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  i
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  n
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is   
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  :
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  )
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
 X 50
 Y 50
+char is  M
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  a
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  r
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  t
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  i
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  n
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is   
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  :
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
+char is  )
+ch.size.y 0
+ch.bearing.y 0
+yBotPos 0
+yTopPos 0
 X 0.5
 Y 0.5
 vs: EG_GOLUserInput.vs, fs: EG_GOLUserInput.fs
@@ -144,11 +594,95 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
-X 669.6
-Y 7.1
-X 662.4
-Y 57.1
+char is  A
+ch.size.y 22
+ch.bearing.y 22
+yBotPos 0
+yTopPos 22
+char is  g
+ch.size.y 22
+ch.bearing.y 16
+yBotPos -6
+yTopPos 16
+char is  H
+ch.size.y 22
+ch.bearing.y 22
+yBotPos 0
+yTopPos 22
+char is  y
+ch.size.y 22
+ch.bearing.y 16
+yBotPos -6
+yTopPos 16
+X 363.5
+Y 58.3333
+char is  S
+ch.size.y 22
+ch.bearing.y 22
+yBotPos 0
+yTopPos 22
+char is  t
+ch.size.y 22
+ch.bearing.y 22
+yBotPos 0
+yTopPos 22
+char is  a
+ch.size.y 16
+ch.bearing.y 16
+yBotPos 0
+yTopPos 16
+char is  r
+ch.size.y 16
+ch.bearing.y 16
+yBotPos 0
+yTopPos 16
+char is  t
+ch.size.y 22
+ch.bearing.y 22
+yBotPos 0
+yTopPos 22
+char is  _
+ch.size.y 3
+ch.bearing.y -3
+yBotPos -6
+yTopPos -3
+char is  y
+ch.size.y 22
+ch.bearing.y 16
+yBotPos -6
+yTopPos 16
+X 653
+Y 108.333
+char is  R
+ch.size.y 22
+ch.bearing.y 22
+yBotPos 0
+yTopPos 22
+char is  e
+ch.size.y 16
+ch.bearing.y 16
+yBotPos 0
+yTopPos 16
+char is  s
+ch.size.y 16
+ch.bearing.y 16
+yBotPos 0
+yTopPos 16
+char is  e
+ch.size.y 16
+ch.bearing.y 16
+yBotPos 0
+yTopPos 16
+char is  t
+ch.size.y 22
+ch.bearing.y 22
+yBotPos 0
+yTopPos 22
+X 661.5
+Y 156.5
 X 700
-Y 450
+Y 500
 Start
+clicking left
+clicking Up left
 Terminating normally.

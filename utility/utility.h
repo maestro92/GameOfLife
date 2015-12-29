@@ -201,6 +201,7 @@ class Utility
 
         static void debug(string s);
         static void debug(string s, bool b);
+        static void debug(string s, char c);
         static void debug(string s, string s2);
         static void debug(string s, unsigned int i);
         static void debug(string s, int i);

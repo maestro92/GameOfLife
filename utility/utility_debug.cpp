@@ -26,6 +26,11 @@ void Utility::debug(string s, bool b)
         cout << "false" << endl;
 }
 
+void Utility::debug(string s, char c)
+{
+    cout << s << "  "  << c << endl;
+}
+
 void Utility::debug(string s, string s2)
 {
     cout << s << "  "  << s2 << endl;

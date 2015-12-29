@@ -41,8 +41,10 @@ left bottom 	right bottom
 
 4. All About Rendering Text
 
+font size vs pixel size
+	http://graphicdesign.stackexchange.com/questions/4035/what-does-the-size-of-the-font-translate-to-exactly
 
 
-
+instanced rendering?
 
 word wrap/line break algorithm

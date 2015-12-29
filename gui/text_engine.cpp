@@ -22,10 +22,6 @@ TextEngine::TextEngine(string font, int size, int screenWidth, int screenHeight)
     m_quad.init(1,1);
 
 
-
-
-
-
     /// init freetype font
     string fontPath = "Assets/Fronts/" + font;
 
@@ -55,6 +51,7 @@ TextEngine::TextEngine(string font, int size, int screenWidth, int screenHeight)
             std::cout << "ERROR::FREETYTPE: Failed to load Glyph" << std::endl;
             continue;
         }
+
         // Generate texture
         GLuint texture;
         glGenTextures(1, &texture);
@@ -76,13 +73,16 @@ TextEngine::TextEngine(string font, int size, int screenWidth, int screenHeight)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
         // Now store character for later use
+
+        int height = face->glyph->bitmap.rows;
         Character character = {
             texture,
-            glm::ivec2(face->glyph->bitmap.width, face->glyph->bitmap.rows),
+            glm::ivec2(face->glyph->bitmap.width, height),
             glm::ivec2(face->glyph->bitmap_left, face->glyph->bitmap_top),
             face->glyph->advance.x
         };
-        Characters.insert(std::pair<GLchar, Character>(c, character));
+
+        m_characters.insert(std::pair<GLchar, Character>(c, character));
     }
     glBindTexture(GL_TEXTURE_2D, 0);
     // Destroy FreeType once we're finished
@@ -125,7 +125,7 @@ float TextEngine::getTextWidth(string text, float size)
     for (int i=0; i<text.size(); i++)
     {
         char c = text[i];
-        Character ch = Characters[c];
+        Character ch = m_characters[c];
 
         float xpos = width + ch.bearing.x * size;
         float w = ch.size.x * size;
@@ -136,18 +136,42 @@ float TextEngine::getTextWidth(string text, float size)
     return width;
 }
 
-float TextEngine::getTextHeight(string text, float size)
+
+float TextEngine::getTextBotY(string text, float size)
 {
     float minYPos = 0;
+
+    for (int i=0; i<text.size(); i++)
+    {
+        char c = text[i];
+        Character ch = m_characters[c];
+
+        float yBotPos = (ch.size.y - ch.bearing.y) * size;
+
+        minYPos = max(yBotPos, minYPos);
+    }
+    return minYPos;
+}
+
+
+float TextEngine::getTextHeight(string text, float size)
+{
+    float minYPos = 100;
     float maxYPos = 0;
 
     for (int i=0; i<text.size(); i++)
     {
         char c = text[i];
-        Character ch = Characters[c];
+        Character ch = m_characters[c];
 
-        float yBotPos = (ch.size.y - ch.bearing.y) * size;
-        float yTopPos = yBotPos + ch.size.y * size;
+        float yBotPos = -(ch.size.y - ch.bearing.y) * size;
+        float yTopPos = ch.bearing.y * size;
+
+        Utility::debug("char is", c);
+        Utility::debug("ch.size.y", ch.size.y);
+        Utility::debug("ch.bearing.y", ch.bearing.y);
+        Utility::debug("yBotPos", yBotPos);
+        Utility::debug("yTopPos", yTopPos);
 
         // Now advance cursors for next glyph (note that advance is number of 1/64 pixels)
         minYPos = min(yBotPos, minYPos);
@@ -160,6 +184,9 @@ float TextEngine::getTextHeight(string text, float size)
 
 void TextEngine::render(string text, float x, float y, float size, glm::vec3 color)
 {
+    if(text == "AgHy")
+        int a = 1;
+
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
@@ -169,11 +196,13 @@ void TextEngine::render(string text, float x, float y, float size, glm::vec3 col
         for (int i=0; i<text.size(); i++)
         {
             char c = text[i];
-            Character ch = Characters[c];
+            Character ch = m_characters[c];
 
             float xpos = x + ch.bearing.x * size;
             float ypos = y - (ch.size.y - ch.bearing.y) * size;
 
+        //    Utility::debug("xpos, ypos", c);
+        //    Utility::debug("xpos, ypos", glm::vec2(xpos, ypos));
             float w = ch.size.x * size;
             float h = ch.size.y * size;
 
@@ -221,7 +250,7 @@ void TextEngine::render(string text, GLfloat x, GLfloat y, GLfloat scale, glm::v
         std::string::const_iterator c;
         for (c = text.begin(); c != text.end(); c++)
         {
-            Character ch = Characters[*c];
+            Character ch = m_characters[*c];
 
             GLfloat xpos = x + ch.bearing.x * scale;
             GLfloat ypos = y - (ch.size.y - ch.bearing.y) * scale;

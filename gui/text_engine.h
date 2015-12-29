@@ -36,11 +36,14 @@ class TextEngine
 
         vector<int> getWordWraps(string text, float size);
         float getTextWidth(string text, float size);
+        float getTextBotY(string text, float size);
         float getTextHeight(string text, float size);
         void render(string text, float x, float y, float size, glm::vec3 color);
 
         GLuint VAO, VBO;
-        unordered_map<GLchar, Character> Characters;
+        unordered_map<GLchar, Character> m_characters;
+        float m_globalYMax;
+        float m_globalYMin;
 
 
     private:
