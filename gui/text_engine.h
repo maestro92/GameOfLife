@@ -31,15 +31,17 @@ struct LineBreakInfo
     int lines;
     vector<int> lineBreaks;
     int maxWidth;
+    int maxHeight;
 
     LineBreakInfo()
     {}
 
-    LineBreakInfo(int l, vector<int> lb, int mw)
+    LineBreakInfo(int l, vector<int> lb, int mw, int mh)
     {
         lines = l;
         lineBreaks = lb;
         maxWidth = mw;
+        maxHeight = mh;
     }
 };
 
@@ -49,21 +51,20 @@ class TextEngine
     public:
         TextEngine();
 
-        TextEngine(string font, int size, int screenWidth, int screenHeight);
+        TextEngine(string font, int fontSize, int screenWidth, int screenHeight);
 
-        vector<int> getWordWraps(string text, float size);
-        float getTextWidth(string text, float size);
-        float getTextBotY(string text, float size);
-        float getTextHeight(string text, float size);
+        float getTextWidth(string text, float fontSize);
+        float getMaxDecenderHeight(float fontSize);
+        float getTextHeight(string text, float fontSize);
 
-        float getTotalTextWidth(string text, float size);
-        float getTotalTextHeight(string text, float size);
+        float getTotalTextWidth(string text, float fontSize);
+        float getTotalTextHeight(string text, float fontSize);
 
 
 //        vector<int> getLineBreaks(string text, float size, int linePixelWidth);
-        LineBreakInfo computeLineBreakInfo(string text, float size, int linePixelWidth);
-        void render(string text, float x, float y, float size, glm::vec3 color);
-        void render(string text, float x, float y, float size, glm::vec3 color, vector<int> lineBreaks);
+        LineBreakInfo computeLineBreakInfo(string text, float fontSize, int linePixelWidth);
+        void render(string text, float x, float y, float fontSize, glm::vec3 color);
+        void render(string text, float x, float y, float fontSize, glm::vec3 color, vector<int> lineBreaks);
 
         static vector<string> getWords(string text);
         void lineWrappedGreedyAlgo(string text);
@@ -75,14 +76,15 @@ class TextEngine
 
 
 
-        GLuint VAO, VBO;
+
         unordered_map<GLchar, Character> m_characters;
         float m_globalYMax;
         float m_globalYMin;
 
-
         int m_fontSize;
+
     private:
+        float m_maxDescenderHeight;
         QuadModel m_quad;
         pipeline m_pipeline;
 

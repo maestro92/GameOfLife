@@ -39,9 +39,6 @@ class Control
         };
 
 
-
-
-
         Control();
         Control(string text, int x, int y, int width, int height, glm::vec3 color);
 
@@ -89,18 +86,9 @@ class Control
 
         void setFont(int size, glm::vec3 color);
 
-
         GLuint m_rectTexture;
-
-
         std::function<void()> m_funcCallBack;
 
-/*
-        static float getTextStartingX(float textWidth, float rectWidth, float offsetX = 0);
-        static float getTextStartingX(string text, float size, float rectWidth, float offsetX = 0);
-        static float getTextStartingY(float textHeight, float size, float rectHeight, float offsetY = 0);
-        static float getTextStartingY(string text, float size, float rectHeight, float offsetY = 0);
-*/
 
         float computeCenteredTextStartingX(float textWidth, float rectWidth, float offsetX = 0);
         float computeCenteredTextStartingX(string text, float fontSize, float rectWidth, float offsetX = 0);
@@ -121,8 +109,6 @@ class Control
         Font m_font;
 
         glm::vec3 m_rectColor;
-
-        // vector<int> m_lineBreaks;
 
         LineBreakInfo m_lineBreakInfo;
         vector<float> m_textStartingXs;
