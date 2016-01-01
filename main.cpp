@@ -110,7 +110,7 @@ void ExplosionGenerator::initModels()
 
 void ExplosionGenerator::initGUI()
 {
-    Control::init("", 30, SCREEN_WIDTH, SCREEN_HEIGHT);
+    Control::init("", 35, SCREEN_WIDTH, SCREEN_HEIGHT);
 
     m_GUIComponentsFlags = 0;
 
@@ -121,18 +121,139 @@ void ExplosionGenerator::initGUI()
     int BUTTON_WIDTH = 200;
     int BUTTON_HEIGHT = 35;
 
+//    string text = "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.";
+    string text = "aaa bb cc ddddd";
+/*
+    Control::m_textEngine.lineWrappedGreedyAlgo(text);
+    Control::m_textEngine.lineWrappedDynamicAlgo(text);
+*/
+    Control::m_textEngine.lineWrappedDynamicAlgo1(text);
 
-    m_gui.addGUIComponent(new Button("Start_y",   X_OFFSET, 100, BUTTON_WIDTH, BUTTON_HEIGHT,
-                                          GRAY, BLACK, DARK_BLUE,
-                                          std::bind(&ExplosionGenerator::startCB, this)) );
+    string golDescription = "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.";
 
-    m_gui.addGUIComponent(new Button("Reset",  X_OFFSET, 150, BUTTON_WIDTH, BUTTON_HEIGHT,
-                                         GRAY, BLACK, DARK_BLUE,
-                                         std::bind(&ExplosionGenerator::resetGameBoardCB, this)) );
 
-    ListBox* lb = new ListBox("", X_OFFSET, 300, 200, 300,
-                                          YELLOW, BLACK, 2,
-                                          std::bind(&ExplosionGenerator::GOLModelListBoxCB, this));
+    Control* temp = new Label(golDescription,
+                                X_OFFSET, 500,
+                                BUTTON_WIDTH, 5,
+                                GRAY);
+    temp->setFont(1, RED);
+    m_gui.addGUIComponent(temp);
+
+
+/*
+    temp = new Button("ABCDEFG abcdefghijklmnopqrstuvwxyz", 0, 100,
+                                800, 50,
+                                GRAY, BLACK, DARK_BLUE,
+                                std::bind(&ExplosionGenerator::startCB, this));
+    temp->setFont(50, GREEN);
+    m_gui.addGUIComponent(temp);
+
+    temp = new Button("ABCDEFG abcdefghijklmnopqrstuvwxyz", 0, 50,
+                                800, 25,
+                                GRAY, BLACK, DARK_BLUE,
+                                std::bind(&ExplosionGenerator::startCB, this));
+    temp->setFont(25, GREEN);
+    m_gui.addGUIComponent(temp);
+
+
+    temp = new Button("ABCDEFG abcdefghijklmnopqrstuvwxyz", 0, 0,
+                                800, BUTTON_HEIGHT,
+                                GRAY, BLACK, DARK_BLUE,
+                                std::bind(&ExplosionGenerator::startCB, this));
+    temp->setFont(35, GREEN);
+    m_gui.addGUIComponent(temp);
+*/
+    int width = 120;
+/*
+    temp = new Button("aaa bb", 0, 170,
+                        width, BUTTON_HEIGHT,
+                        GRAY, BLACK, DARK_BLUE,
+                        std::bind(&ExplosionGenerator::startCB, this));
+    temp->setFont(35, GREEN);
+    temp->updateLineBreaks();
+    m_gui.addGUIComponent(temp);
+
+    temp = new Button("bb cc", 0, 135,
+                        width, BUTTON_HEIGHT,
+                        GRAY, BLACK, DARK_BLUE,
+                        std::bind(&ExplosionGenerator::startCB, this));
+    temp->setFont(35, GREEN);
+    temp->updateLineBreaks();
+    m_gui.addGUIComponent(temp);
+
+    temp = new Button("ddddd", 0, 100,
+                        width, BUTTON_HEIGHT,
+                        GRAY, BLACK, DARK_BLUE,
+                        std::bind(&ExplosionGenerator::startCB, this));
+    temp->setFont(35, GREEN);
+    temp->updateLineBreaks();
+    m_gui.addGUIComponent(temp);
+*/
+
+
+    int scale = 5;
+
+    temp = new Button("aaa bb cc dddd", 0, 0,
+                        width, BUTTON_HEIGHT * scale,
+                        GRAY, BLACK, DARK_BLUE,
+                        std::bind(&ExplosionGenerator::startCB, this));
+    temp->setFont(35, GREEN);
+    temp->setTextLayout(true, LEFT_ALIGNED, TOP_ALIGNED);
+    m_gui.addGUIComponent(temp);
+
+
+
+    temp = new Button("aaa bb cc dddd", 150, 0,
+                        width, BUTTON_HEIGHT * scale,
+                        GRAY, BLACK, DARK_BLUE,
+                        std::bind(&ExplosionGenerator::startCB, this));
+    temp->setFont(35, GREEN);
+    temp->setTextLayout(true, CENTER, CENTER);
+    m_gui.addGUIComponent(temp);
+
+
+    temp = new Button("aaa bb cc dddd", 300, 0,
+                        width, BUTTON_HEIGHT * scale,
+                        GRAY, BLACK, DARK_BLUE,
+                        std::bind(&ExplosionGenerator::startCB, this));
+    temp->setFont(35, GREEN);
+    temp->setTextLayout(true, CENTER, TOP_ALIGNED);
+    m_gui.addGUIComponent(temp);
+
+
+
+
+    temp = new Button("aaa bb cc dddd", 300, 200,
+                        width, BUTTON_HEIGHT * scale,
+                        GRAY, BLACK, DARK_BLUE,
+                        std::bind(&ExplosionGenerator::startCB, this));
+    temp->setFont(35, GREEN);
+    temp->setTextLayout(false, CENTER, CENTER);
+    m_gui.addGUIComponent(temp);
+
+
+    temp = new Button("Start t", X_OFFSET, 25,
+                                BUTTON_WIDTH, BUTTON_HEIGHT,
+                                GRAY, BLACK, DARK_BLUE,
+                                std::bind(&ExplosionGenerator::startCB, this));
+    temp->setFont(35, GREEN);
+    temp->setTextLayout(false, CENTER, CENTER);
+    m_gui.addGUIComponent(temp);
+
+
+    temp = new Button("Reset t",  X_OFFSET, 75,
+                                BUTTON_WIDTH, BUTTON_HEIGHT,
+                                GRAY, BLACK, DARK_BLUE,
+                                std::bind(&ExplosionGenerator::resetGameBoardCB, this));
+    temp->setFont(35, GREEN);
+    temp->setTextLayout(false, CENTER, CENTER);
+    m_gui.addGUIComponent(temp);
+
+
+    ListBox* lb = new ListBox("",  X_OFFSET, 150,
+                                    200, 300,
+                                    YELLOW, BLACK, 2,
+                                    std::bind(&ExplosionGenerator::GOLModelListBoxCB, this));
     lb->setContent(m_GOLModelManager.getModels());
     m_gui.addGUIComponent(lb);
 }

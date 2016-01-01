@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <fstream>
 #include <cstdio>
-
+#include <iomanip>
 
 #define NO_SDL_GLEXT
 #include <GL/glew.h>
@@ -211,6 +211,12 @@ class Utility
         static void debug(string s, glm::vec4 v);
         static void debug(string s, glm::mat3 m);
         static void debug(string s, glm::mat4 m);
+        template <class T>
+        static void debug(string s, vector<T> v);
+
+        template <class T>
+        static void debug(string s, vector< vector<T> > v);
+
         static void checkGLError();
 
 
@@ -236,6 +242,25 @@ vector<T> Utility::reserveVector(int size)
     return v;
 }
 
+template <class T>
+void Utility::debug(string s, vector<T> v)
+{
+    cout << s << endl;
+    for(int i = 0; i < v.size(); i++)
+        cout << v[i] << " ";
+    cout << endl;
+}
 
-
+template <class T>
+void Utility::debug(string s, vector< vector<T> > v)
+{
+    cout << s << endl;
+    for(int y = 0; y < v.size(); y++)
+    {
+        for(int x = 0; x < v[y].size(); x++)
+            cout << setw(20) << left << v[y][x];
+        cout << endl;
+    }
+    cout << endl;
+}
 #endif

@@ -26,6 +26,23 @@ struct Font
     float size;
 };
 
+struct LineBreakInfo
+{
+    int lines;
+    vector<int> lineBreaks;
+    int maxWidth;
+
+    LineBreakInfo()
+    {}
+
+    LineBreakInfo(int l, vector<int> lb, int mw)
+    {
+        lines = l;
+        lineBreaks = lb;
+        maxWidth = mw;
+    }
+};
+
 
 class TextEngine
 {
@@ -38,7 +55,25 @@ class TextEngine
         float getTextWidth(string text, float size);
         float getTextBotY(string text, float size);
         float getTextHeight(string text, float size);
+
+        float getTotalTextWidth(string text, float size);
+        float getTotalTextHeight(string text, float size);
+
+
+//        vector<int> getLineBreaks(string text, float size, int linePixelWidth);
+        LineBreakInfo computeLineBreakInfo(string text, float size, int linePixelWidth);
         void render(string text, float x, float y, float size, glm::vec3 color);
+        void render(string text, float x, float y, float size, glm::vec3 color, vector<int> lineBreaks);
+
+        static vector<string> getWords(string text);
+        void lineWrappedGreedyAlgo(string text);
+        void lineWrappedDynamicAlgo(string text);
+        void lineWrappedDynamicAlgo1(string text);
+
+
+        int printSolution (int p[], int n);
+
+
 
         GLuint VAO, VBO;
         unordered_map<GLchar, Character> m_characters;
@@ -46,8 +81,8 @@ class TextEngine
         float m_globalYMin;
 
 
+        int m_fontSize;
     private:
-
         QuadModel m_quad;
         pipeline m_pipeline;
 

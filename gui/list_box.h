@@ -64,7 +64,7 @@ class ListBox : public Control
         virtual int getType();
         vector<ListBoxItem> m_items;
 
-
+        Rect getListBoxItemModelRect(Rect& itemRect, int index);
 
     protected:
         int m_curIndex;

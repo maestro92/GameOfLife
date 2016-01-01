@@ -25,12 +25,19 @@ Control::Control(string text, int x, int y, int width, int height, glm::vec3 col
     m_textStartingXs.resize(1);
     m_textStartingYs.resize(1);
 
+/*
     m_textStartingXs[0] = Control::getTextStartingX(text, m_font.size, m_rect.w, m_rect.x);
     m_textStartingYs[0] = Control::getTextStartingY(text, m_font.size, m_rect.h, m_rect.y);
  //   m_textStartingYs[0] = m_rect.y;
     Utility::debug("X", m_textStartingXs[0]);
     Utility::debug("Y", m_textStartingYs[0]);
+*/
+
+    setTextLayout(false, CENTER, CENTER);
 }
+
+
+
 
 Control::~Control()
 {
@@ -65,7 +72,6 @@ void Control::init(string font, int size, int sreenWidth, int screenHeight)
     r_listBoxHighlightRenderer.addDataPair(RENDER_PASS1, "u_y2",    DP_FLOAT);
 
 
-
     m_pipeline.matrixMode(PROJECTION_MATRIX);
     m_pipeline.loadIdentity();
     m_pipeline.ortho(0, sreenWidth, 0, screenHeight, -1, 1);
@@ -73,10 +79,6 @@ void Control::init(string font, int size, int sreenWidth, int screenHeight)
     m_pipeline.matrixMode(MODEL_MATRIX);
     m_pipeline.loadIdentity();
 }
-
-
-
-
 
 void Control::setID(int& ID)
 {
@@ -89,6 +91,69 @@ void Control::setText(string text)
     m_text = text;
 }
 
+/*
+void Control::updateLineBreakInfo()
+{
+    m_lineBreakInfo = m_textEngine.computeLineBreakInfo(m_text, m_font.size, m_rect.w);
+
+    m_textStartingXs[0] = Control::getTextStartingX(m_lineBreakInfo.maxWidth, m_rect.w, m_rect.x);
+    m_textStartingYs[0] = Control::getTextStartingY(m_lineBreakInfo.lines * m_font.size, m_font.size, m_rect.h, m_rect.y + m_rect.h);
+}
+*/
+
+
+void Control::setTextLayout(bool setLineBreakFlag, int xLayoutFlag, int yLayoutFlag)
+{
+    if(setLineBreakFlag)
+    {
+        m_lineBreakInfo = m_textEngine.computeLineBreakInfo(m_text, m_font.size, m_rect.w);
+    }
+
+    switch(xLayoutFlag)
+    {
+        case LEFT_ALIGNED:
+            m_textStartingXs[0] = m_rect.x;
+            break;
+
+        case CENTER:
+            if(setLineBreakFlag)
+                m_textStartingXs[0] = computeCenteredTextStartingX(m_lineBreakInfo.maxWidth, m_rect.w, m_rect.x);
+            else
+                m_textStartingXs[0] = computeCenteredTextStartingX(m_text, m_font.size, m_rect.w, m_rect.x);
+            break;
+
+        default:
+            Utility::debug("Error in Control::setTextLayout xLayoutFlag");
+            exit(1);
+            break;
+    }
+
+
+    switch(yLayoutFlag)
+    {
+        case TOP_ALIGNED:
+            m_textStartingYs[0] = m_rect.y + m_rect.h - m_font.size;
+            break;
+
+        case CENTER:
+            if(setLineBreakFlag)
+                m_textStartingYs[0] = computeCenteredTextStartingY(m_lineBreakInfo.lines * m_font.size, m_font.size,
+                                                                   m_rect.h, m_rect.y + m_rect.h);
+            else
+                m_textStartingYs[0] = computeCenteredTextStartingY(m_text, m_font.size, m_rect.h, m_rect.y);
+            break;
+
+        default:
+            Utility::debug("Error in Control::setTextLayout yLayoutFlag");
+            exit(1);
+            break;
+    }
+}
+
+
+
+
+
 void Control::setTexture(GLuint id)
 {
     m_rectTexture = id;
@@ -97,6 +162,15 @@ void Control::setTexture(GLuint id)
 void Control::setColor(glm::vec3 color)
 {
     m_rectColor = color;
+}
+
+void Control::setFont(int size, glm::vec3 color)
+{
+    m_font.size = size;
+    m_font.color = color;
+
+//    m_textStartingXs[0] = Control::getTextStartingX(m_text, m_font.size, m_rect.w, m_rect.x);
+//    m_textStartingYs[0] = Control::getTextStartingY(m_text, m_font.size, m_rect.h, m_rect.y);
 }
 
 void Control::setRect(int x, int y, int w, int h)
@@ -143,21 +217,39 @@ bool Control::update(MouseState & state, unsigned int& groupFlag)
     return flag;
 }
 
+/*
+float Control::getTextStartingX(float textWidth, float rectWidth, float offsetX)
+{
+    float diff = (rectWidth - textWidth)/2;
+
+    return offsetX + diff;
+}
+
 float Control::getTextStartingX(string text, float size, float rectWidth, float offsetX)
 {
-    float w = m_textEngine.getTextWidth(text, size);
+    float ratio = size/m_textEngine.m_fontSize;
+
+    float w = m_textEngine.getTextWidth(text, ratio);
 
     float diff = (rectWidth - w)/2;
 
     return offsetX + diff;
 }
 
+float Control::getTextStartingY(float textHeight, float fontSize, float rectHeight, float offsetY)
+{
+    float diff = (rectHeight - textHeight)/2;
+
+    return offsetY - diff - fontSize;
+}
+
+
 float Control::getTextStartingY(string text, float size, float rectHeight, float offsetY)
 {
-    if(text == "Ag")
-        int a = 1;
-    float y = m_textEngine.getTextBotY(text, size);
-    float h = m_textEngine.getTextHeight(text, size);
+    float ratio = size/m_textEngine.m_fontSize;
+
+    float y = m_textEngine.getTextBotY(text, ratio);
+    float h = m_textEngine.getTextHeight(text, ratio);
 
     float diff = 0;
     if(y == 0)
@@ -167,8 +259,49 @@ float Control::getTextStartingY(string text, float size, float rectHeight, float
 
     float sy = offsetY + y + diff;
     return sy;
-
 }
+*/
+
+float Control::computeCenteredTextStartingX(float textWidth, float rectWidth, float offsetX)
+{
+    float diff = (rectWidth - textWidth)/2;
+    return offsetX + diff;
+}
+
+float Control::computeCenteredTextStartingX(string text, float fontSize, float rectWidth, float offsetX)
+{
+    float scale = fontSize/m_textEngine.m_fontSize;
+    float w = m_textEngine.getTextWidth(text, scale);
+    float diff = (rectWidth - w)/2;
+    return offsetX + diff;
+}
+
+float Control::computeCenteredTextStartingY(float textHeight, float fontSize, float rectHeight, float offsetY)
+{
+    float diff = (rectHeight - textHeight)/2;
+    return offsetY - diff - fontSize;
+}
+
+float Control::computeCenteredTextStartingY(string text, float fontSize, float rectHeight, float offsetY)
+{
+    float scale = fontSize/m_textEngine.m_fontSize;
+
+    float y = m_textEngine.getTextBotY(text, scale);
+    float h = m_textEngine.getTextHeight(text, scale);
+
+    float diff = 0;
+    if(y == 0)
+        diff = (rectHeight - h)/2;
+    else
+        diff = (rectHeight - h)/3;
+
+    float sy = offsetY + y + diff;
+    return sy;
+}
+
+
+
+
 
 
 void Control::updatePipeline(Renderer* r)

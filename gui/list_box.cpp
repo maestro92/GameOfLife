@@ -305,35 +305,45 @@ void ListBox::customRender()
                     hlr->disableShader();
                 }
 
-
-
                 r->enableShader();
-
+                    Rect tempRect = getListBoxItemModelRect(itemRect, index);
+/*
                     Rect tempRect = itemRect;
-                    //int dim = max(itemRect.w >> 2, itemRect.h >> 2);
                     tempRect.x = itemRect.x + 45;
-                    tempRect.y = itemRect.y + 25;
-                    tempRect.w = (int)(m_items[index].m_dim.x * 1.2);
-                    tempRect.h = (int)(m_items[index].m_dim.y * 1.2);
+                    tempRect.y = itemRect.y + 35;
+                    tempRect.w = (int)(m_items[index].m_dim.x);
+                    tempRect.h = (int)(m_items[index].m_dim.y);
+*/
+//                    tempRect.w = (int)(m_items[index].m_dim.x * 1.2);
+//                    tempRect.h = (int)(m_items[index].m_dim.y * 1.2);
                     r->setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, m_items[index].m_textureID);
                     updatePipeline(r, tempRect);
                     m_quadModel.render();
 
                 r->disableShader();
 
-
-
-
-
                 // render text
                 offset_x = m_rect.x + x * m_itemWidth;
                 offset_y = m_rect.y + m_rect.h - ((y + 1) * m_itemHeight) + 10;
 
                 Control::m_textEngine.render(m_items[index].m_text, offset_x, offset_y, 0.4f, glm::vec3(0.5, 0.8f, 0.2f));
-
             }
         }
+}
 
+Rect ListBox::getListBoxItemModelRect(Rect& itemRect, int index)
+{
+    Rect modelRect = itemRect;
+
+    int offset_x = (itemRect.w - m_items[index].m_dim.x)/2;
+    int offset_y = (itemRect.h - m_items[index].m_dim.y)*2/3;
+
+    modelRect.x = itemRect.x + offset_x;
+    modelRect.y = itemRect.y + offset_y;
+    modelRect.w = (int)(m_items[index].m_dim.x);
+    modelRect.h = (int)(m_items[index].m_dim.y);
+
+    return modelRect;
 }
 
 
