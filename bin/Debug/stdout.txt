@@ -92,6 +92,10 @@ cols, rows is 1 3
 
 cols, rows is 4 4
 
+cols, rows is 3 4
+
+cols, rows is 4 4
+
 vs: /EG_GUIShaders/text.vs, fs: /EG_GUIShaders/text.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
@@ -232,12 +236,21 @@ lineCosts
 
 lineBreaks
 
+word is  Beehive
+lineCosts
+2147483647          2147483647          
+2147483647          0                   
+
+lineBreaks
+
+word is  Loaf
+lineCosts
+2147483647          2147483647          
+2147483647          0                   
+
+lineBreaks
+
 Start
 clicking left
 clicking Up left
-clicking left
-clicking Up left
-clicking left
-clicking Up left
-clicking left
-clicking Up left
+Terminating normally.

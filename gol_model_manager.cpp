@@ -11,10 +11,12 @@ void GOLModelManager::init(int gs)
 {
     m_GOLModels.push_back(new GOLModel("Dot", generateSquareGridModel(1), gs));
     m_GOLModels.push_back(new GOLModel("Square Outline", generateSquareOutlineGridModel(5), gs));
-    m_GOLModels.push_back(new GOLModel("Glider", readModelFromFile("GOL_glider.txt"), gs));
-    m_GOLModels.push_back(new GOLModel("Lightweight Spaceship", readModelFromFile("GOL_lightweight_spaceship.txt"), gs));
-    m_GOLModels.push_back(new GOLModel("Blinker", readModelFromFile("GOL_blinker.txt"), gs));
-    m_GOLModels.push_back(new GOLModel("Beacon", readModelFromFile("GOL_beacon.txt"), gs));
+    m_GOLModels.push_back(new GOLModel("Glider", readModelFromFile("gol_glider.txt"), gs));
+    m_GOLModels.push_back(new GOLModel("Lightweight Spaceship", readModelFromFile("gol_lightweight_spaceship.txt"), gs));
+    m_GOLModels.push_back(new GOLModel("Blinker", readModelFromFile("gol_blinker.txt"), gs));
+    m_GOLModels.push_back(new GOLModel("Beacon", readModelFromFile("gol_beacon.txt"), gs));
+    m_GOLModels.push_back(new GOLModel("Beehive", readModelFromFile("gol_beehive.txt"), gs));
+    m_GOLModels.push_back(new GOLModel("Loaf", readModelFromFile("gol_loaf.txt"), gs));
 
 }
 
