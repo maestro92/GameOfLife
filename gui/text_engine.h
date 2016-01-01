@@ -36,12 +36,11 @@ struct LineBreakInfo
     LineBreakInfo()
     {}
 
-    LineBreakInfo(int l, vector<int> lb, int mw, int mh)
+    LineBreakInfo(int l, vector<int> lb, int mw)
     {
         lines = l;
         lineBreaks = lb;
         maxWidth = mw;
-        maxHeight = mh;
     }
 };
 

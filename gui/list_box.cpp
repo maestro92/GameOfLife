@@ -38,8 +38,26 @@ void ListBox::setContent(vector<GOLModel*> models)
 
 void ListBox::addItem(string text, glm::vec2 dim, glm::vec3 color, GLuint texID)
 {
-    ListBoxItem item(text, dim, color, texID);
+
+  //  LineBreakInfo info = Control::m_textEngine.getLineBreakInfo(text, m_itemFont.size);
+    int index = m_items.size();
+
+    int offset_x = m_rect.x + m_curColNum * m_itemWidth;
+    int offset_y = m_rect.y + m_curRowNum * m_itemHeight;
+
+    Rect itemRect(offset_x, offset_y, m_itemWidth, m_itemHeight);
+
+    Rect modelRect;
+    modelRect.x = itemRect.x + (itemRect.w - dim.x) * 0.5;
+    modelRect.y = itemRect.y + (itemRect.h - dim.y) * 0.33;
+    modelRect.w = dim.x;
+    modelRect.h = dim.y;
+
+
+    ListBoxItem item(text, dim, itemRect, modelRect, color, texID);
     m_items.push_back(item);
+
+
 
     if(m_curColNum == m_colNum-1)
     {
@@ -48,6 +66,7 @@ void ListBox::addItem(string text, glm::vec2 dim, glm::vec3 color, GLuint texID)
     }
     else
         m_curColNum++;
+//    m_lineBreakInfos.push_back()
 }
 
 
@@ -72,6 +91,67 @@ void ListBox::removeItem(int index)
 
     if(index >= (int) m_items.size())
         m_curIndex = (int)m_items.size() - 1;
+}
+
+void ListBox::setItemFont(float fontSize, glm::vec3 color)
+{
+    m_itemFont.size = fontSize;
+    m_itemFont.color = color;
+}
+
+
+
+
+/*
+void ListBox::setItemsTextLayout(ListBoxItem& item, int xLayoutFlag, int yLayoutFlag)
+{
+
+}
+*/
+
+void ListBox::setItemsTextLayout(int xLayoutFlag, int yLayoutFlag)
+{
+    for(int i=0; i<m_items.size(); i++)
+    {
+        string text = m_items[i].text;
+        Rect rect = m_items[i].rect;
+        rect.y += (rect.h / 2);
+        rect.h = rect.h / 2;
+        m_items[i].lineBreakInfo = m_textEngine.computeLineBreakInfo(text, m_itemFont.size, rect.w);
+
+        switch(xLayoutFlag)
+        {
+            case LEFT_ALIGNED:
+                m_items[i].textStartingX = rect.x + m_itemFont.size * 0.05;
+                break;
+
+            case CENTER:
+                m_items[i].textStartingX = computeCenteredTextStartingX(m_items[i].lineBreakInfo.maxWidth, rect.w, rect.x);
+                break;
+
+            default:
+                Utility::debug("Error in Control::setTextLayout xLayoutFlag");
+                exit(1);
+                break;
+        }
+
+        switch(yLayoutFlag)
+        {
+            case TOP_ALIGNED:
+                m_items[i].textStartingY = rect.y - m_itemFont.size + m_textEngine.getMaxDecenderHeight(m_itemFont.size);
+                break;
+
+            case CENTER:
+                m_items[i].textStartingY = computeCenteredTextStartingY(m_items[i].lineBreakInfo.lines * m_itemFont.size, m_itemFont.size,
+                                                                       rect.h, rect.y + m_itemFont.size);
+                break;
+
+            default:
+                Utility::debug("Error in Control::setTextLayout yLayoutFlag");
+                exit(1);
+                break;
+        }
+    }
 }
 
 /*
@@ -124,15 +204,12 @@ bool ListBox::update(MouseState & state)
     Control::update(state);
 
     int x = state.m_pos.x;
-    int y = state.m_pos.y;
-
-
+    int y = Control::m_screenHeight - state.m_pos.y;
 
     if( m_isInside && state.m_leftButtonDown)
     {
         int x_index = (x - m_rect.x) / m_itemWidth;
-        int y_index = (m_rect.y + m_rect.h - y) / m_itemHeight;
-
+        int y_index = (y - m_rect.y) / m_itemHeight;
 
         bool bx = x_index >= 0 && x_index < m_colNum;
         bool by = y_index >= 0 && y_index < ( (int)m_items.size() / m_colNum) ;
@@ -142,27 +219,11 @@ bool ListBox::update(MouseState & state)
         {
             m_curIndex = y_index * m_colNum + x_index;
 
-        //    Utility::debug("m_curIndex", m_curIndex);
-        //    Utility::debug("xi, yi", glm::vec2(x_index, y_index));
-
             m_curIndexX = x_index;
             m_curIndexY = y_index;
             m_funcCallBack();
             return true;
         }
-
-
-
-        /*
-        int tempIndex = (m_rect.y + m_rect.h - y) / m_itemHeight;
-
-        if( tempIndex >= 0 && tempIndex < (int)m_items.size())
-        {
-            m_curIndex = tempIndex;
-            return true;
-        }
-        */
-
     }
     return false;
 }
@@ -170,13 +231,11 @@ bool ListBox::update(MouseState & state)
 
 void ListBox::render()
 {
+    /*
     Control::r_coloredRectRenderer.enableShader();
         Control::r_coloredRectRenderer.setData(RENDER_PASS1, "u_color", m_rectColor);
         updatePipeline(&Control::r_coloredRectRenderer);
         m_quadModel.render();
-
-        // renderColoredSingle(m_rect);
-
 
         // render the itemRectBox
         if( m_curIndex >= 0)
@@ -188,16 +247,6 @@ void ListBox::render()
             Control::r_coloredRectRenderer.setData(RENDER_PASS1, "u_color", m_itemRectColor);
             updatePipeline(&Control::r_coloredRectRenderer, itemRect);
             m_quadModel.render();
-
-
-            /*
-            int offset_x = m_rect.x;
-            int offset_y = m_rect.y + m_rect.h - ((m_curIndex + 1) * m_itemHeight);
-
-            Rect itemRect(offset_x, offset_y, m_itemWidth.w, m_itemHeight);
-            r->setData(RENDER_PASS1, "u_color", m_itemRectColor);
-            Control::renderSingle(p, r, itemRect);
-            */
         }
 
     Control::r_coloredRectRenderer.disableShader();
@@ -221,40 +270,67 @@ void ListBox::render()
             }
         }
     }
-
-
-    /*
-    Control::render(m_pipeline, Renderer, RENDER_PASS1);
-    int offset_x;
-    int offset_y = 0;
- //   Control::m_textEngine.render(m_pipeline, offset_x, offset_y, m_label.c_str());
-    if( m_curIndex >= 0)
-    {
-        offset_x = 0;
-
-        offset_y = m_curIndex * m_itemHeight;
-
-
-        Renderer->enableShader(RenderPassID);
-            m_pipeline.pushMatrix();
-                glm::vec3 shift(offset_x, offset_y, 0);
-                m_pipeline.translate(shift);
-                Renderer->loadUniformLocations(m_pipeline, RenderPassID);
-                m_cur.render();
-            m_pipeline.popMatrix();
-        Renderer->disableShader(RenderPassID);
-    }
-
-
-    for (int i = 0; i< (int) m_items.size(); i++)
-    {
-
-   //     Control::m_textEngine.render(m_pipeline, offset_x, offset_y, m_label.c_str());
-    }
     */
 }
 
 
+
+void ListBox::customRender()
+{
+    Renderer* r = &Control::r_texturedRectRenderer;
+    Renderer* hlr = &Control::r_listBoxHighlightRenderer;
+        for(int y = 0; y < m_curRowNum; y++)
+        {
+            for(int x = 0; x < m_colNum; x++)
+            {
+                int i = y * m_colNum + x;
+
+                if( i == m_items.size())
+                    break;
+
+/*
+                // render texture
+                int offset_x = m_rect.x + x * m_itemWidth;
+                int offset_y = m_rect.y + y * m_itemHeight;
+
+                Rect itemRect(offset_x, offset_y, m_itemWidth, m_itemHeight);
+*/
+                Rect itemRect = m_items[i].rect;
+                if (i == m_curIndex && m_curIndex >= 0)
+                {
+                    float gap = 2;
+                    hlr->enableShader();
+                        hlr->setData(RENDER_PASS1, "u_x1", itemRect.x + gap);
+                        hlr->setData(RENDER_PASS1, "u_x2", itemRect.x + itemRect.w - gap);
+
+                        hlr->setData(RENDER_PASS1, "u_y1", Control::toGUICoord(itemRect.y + itemRect.h - gap) );
+                        hlr->setData(RENDER_PASS1, "u_y2", Control::toGUICoord(itemRect.y + gap) );
+
+                    updatePipeline(hlr, itemRect);
+                    m_quadModel.render();
+                    hlr->disableShader();
+                }
+
+                r->enableShader();
+                    Rect tempRect = m_items[i].modelRect;
+
+                    r->setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, m_items[i].textureID);
+                    updatePipeline(r, tempRect);
+                    m_quadModel.render();
+
+                r->disableShader();
+
+                // render text
+                Control::m_textEngine.render(m_items[i].text, m_items[i].textStartingX, m_items[i].textStartingY,
+                                             m_itemFont.size, m_itemFont.color, m_items[i].lineBreakInfo.lineBreaks);
+            }
+        }
+}
+
+
+
+
+/*
 void ListBox::customRender()
 {
     Renderer* r = &Control::r_texturedRectRenderer;
@@ -266,29 +342,13 @@ void ListBox::customRender()
             {
                 int index = y * m_colNum + x;
 
-          //      Utility::debug("index", index);
-
                 if( index == m_items.size())
                     break;
 
-                // render texture
                 int offset_x = m_rect.x + x * m_itemWidth;
                 int offset_y = m_rect.y + m_rect.h - ((y + 1) * m_itemHeight);
                 Rect itemRect(offset_x, offset_y, m_itemWidth, m_itemHeight);
 
-          //      Utility::debug("offset_x", offset_x);
-        //        Utility::debug("offset_y", offset_y);
-/*
-                if (index == m_curIndex && m_curIndex >= 0)
-                    r->setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, m_items[index].m_textureID);
-
-                else
-                    r->setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, m_items[index].m_textureID);
-
-
-                updatePipeline(r, itemRect);
-                m_quadModel.render();
-*/
 
                 if (index == m_curIndex && m_curIndex >= 0)
                 {
@@ -307,15 +367,7 @@ void ListBox::customRender()
 
                 r->enableShader();
                     Rect tempRect = getListBoxItemModelRect(itemRect, index);
-/*
-                    Rect tempRect = itemRect;
-                    tempRect.x = itemRect.x + 45;
-                    tempRect.y = itemRect.y + 35;
-                    tempRect.w = (int)(m_items[index].m_dim.x);
-                    tempRect.h = (int)(m_items[index].m_dim.y);
-*/
-//                    tempRect.w = (int)(m_items[index].m_dim.x * 1.2);
-//                    tempRect.h = (int)(m_items[index].m_dim.y * 1.2);
+
                     r->setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, m_items[index].m_textureID);
                     updatePipeline(r, tempRect);
                     m_quadModel.render();
@@ -327,24 +379,10 @@ void ListBox::customRender()
                 offset_y = m_rect.y + m_rect.h - ((y + 1) * m_itemHeight) + 10;
 
                 Control::m_textEngine.render(m_items[index].m_text, offset_x, offset_y, 0.4f, glm::vec3(0.5, 0.8f, 0.2f));
-            }
+            }h
         }
 }
-
-Rect ListBox::getListBoxItemModelRect(Rect& itemRect, int index)
-{
-    Rect modelRect = itemRect;
-
-    int offset_x = (itemRect.w - m_items[index].m_dim.x)/2;
-    int offset_y = (itemRect.h - m_items[index].m_dim.y)*2/3;
-
-    modelRect.x = itemRect.x + offset_x;
-    modelRect.y = itemRect.y + offset_y;
-    modelRect.w = (int)(m_items[index].m_dim.x);
-    modelRect.h = (int)(m_items[index].m_dim.y);
-
-    return modelRect;
-}
+*/
 
 
 int ListBox::getType()

@@ -10,7 +10,7 @@ out vec4 FragColor;
 void main()
 {
 
-	vec2 tc = vf_UV;	tc.y = 1.0 - tc.y;
+	vec2 tc = vf_UV;//	tc.y = 1.0 - tc.y;
 	// pos = tc;
 
 //	FragColor = texture(u_texture, tc);

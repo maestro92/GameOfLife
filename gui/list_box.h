@@ -11,26 +11,27 @@ using namespace std;
 
 struct ListBoxItem
 {
-    string m_text;
-    glm::vec2 m_dim;
-    glm::vec3 m_color;
-    GLuint m_textureID;
-    GLuint m_highlightTextureID;
+    string text;
+    glm::vec2 dim;
+    glm::vec3 color;
+    Rect rect;
+    Rect modelRect;
+    GLuint textureID;
+    LineBreakInfo lineBreakInfo;
+    float textStartingX;
+    float textStartingY;
 
     ListBoxItem()
-    {
-        m_text = "Martin";
-        m_dim = glm::vec2(5,5);
-        m_color = BLUE;
-        m_textureID = -1;
-    }
+    { }
 
-    ListBoxItem(string text, glm::vec2 dim, glm::vec3 color, GLuint texture)
+    ListBoxItem(string t, glm::vec2 d, Rect r, Rect mr, glm::vec3 c, GLuint tex)
     {
-        m_text = text;
-        m_dim = dim;
-        m_color = color;
-        m_textureID = texture;
+        text = t;
+        dim = d;
+        rect = r;
+        modelRect = mr;
+        color = c;
+        textureID = tex;
     }
 };
 
@@ -49,7 +50,13 @@ class ListBox : public Control
         void removeItem(int index);
         void setCurrent(int index);
 
+
         void setColors(glm::vec3 rectColor, glm::vec3 itemRectColor);
+        void setItemFont(float fontSize, glm::vec3 color);
+
+        // void setItemTextLayout(ListBoxItem& item, int xLayoutFlag, int yLayoutFlag);
+        void setItemsTextLayout(int xLayoutFlag, int yLayoutFlag);
+
 
         int getIndex();
         int getCount();
@@ -63,8 +70,6 @@ class ListBox : public Control
 
         virtual int getType();
         vector<ListBoxItem> m_items;
-
-        Rect getListBoxItemModelRect(Rect& itemRect, int index);
 
     protected:
         int m_curIndex;
@@ -80,9 +85,7 @@ class ListBox : public Control
         float m_itemHeight;
 
         glm::vec3 m_itemRectColor;
-
-  //      vector<string> m_items;
-
+        Font m_itemFont;
 };
 
 

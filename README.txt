@@ -48,3 +48,11 @@ font size vs pixel size
 instanced rendering?
 
 word wrap/line break algorithm
+
+
+
+5. In rendering GUI, we often want to set the top left as (0,0) so y increases as it the screen coordinates goes
+down. the trick is to
+http://stackoverflow.com/questions/25416820/set-origin-to-top-left-corner-of-screen-in-opengl-es-2
+
+invert the bottom with top in the ortho matrix

@@ -5,7 +5,8 @@ pipeline Control::m_pipeline;
 QuadModel Control::m_quadModel;// = QuadModel(1,1);
 GeneralRenderer Control::r_coloredRectRenderer;GeneralRenderer Control::r_texturedRectRenderer;
 GeneralRenderer Control::r_listBoxHighlightRenderer;
-
+int Control::m_screenWidth;
+int Control::m_screenHeight;
 
 Control::Control() : Control("Martin :)", 0,0,1,1, BLUE)
 {}
@@ -22,6 +23,7 @@ Control::Control(string text, int x, int y, int width, int height, glm::vec3 col
     m_font.color = glm::vec3(0.5, 0.8f, 0.2f);
     m_font.size = 35;
 
+    m_lineBreakInfos.resize(1);
     m_textStartingXs.resize(1);
     m_textStartingYs.resize(1);
 
@@ -39,9 +41,9 @@ Control::~Control()
 
 
 
-void Control::init(string font, int size, int sreenWidth, int screenHeight)
+void Control::init(string font, int size, int screenWidth, int screenHeight)
 {
-    m_textEngine = TextEngine("", size, sreenWidth, screenHeight);
+    m_textEngine = TextEngine("", size, screenWidth, screenHeight);
     m_quadModel = QuadModel(1,1);
 
     Shader* s;
@@ -63,13 +65,18 @@ void Control::init(string font, int size, int sreenWidth, int screenHeight)
     r_listBoxHighlightRenderer.addDataPair(RENDER_PASS1, "u_y1",    DP_FLOAT);
     r_listBoxHighlightRenderer.addDataPair(RENDER_PASS1, "u_y2",    DP_FLOAT);
 
+    /// http://stackoverflow.com/questions/25416820/set-origin-to-top-left-corner-of-screen-in-opengl-es-2
+    /// to set the top left (0,0), we invert bot with top in the ortho matrix
 
     m_pipeline.matrixMode(PROJECTION_MATRIX);
     m_pipeline.loadIdentity();
-    m_pipeline.ortho(0, sreenWidth, 0, screenHeight, -1, 1);
+    m_pipeline.ortho(0, screenWidth, screenHeight, 0, -1, 1);
 
     m_pipeline.matrixMode(MODEL_MATRIX);
     m_pipeline.loadIdentity();
+
+    m_screenWidth = screenWidth;
+    m_screenHeight = screenHeight;
 }
 
 void Control::setID(int& ID)
@@ -111,8 +118,9 @@ void Control::setRect(int x, int y, int w, int h)
 bool Control::update(MouseState & state)
 {
     int x = state.m_pos.x;
-    int y = state.m_pos.y;
+    int y = m_screenHeight - state.m_pos.y;
 
+  //  Utility::debug("x, y", glm::vec2(x, y));
     m_isInside = false;
 
     if( (x >= m_rect.x && x <= m_rect.x + m_rect.w) &&
@@ -148,10 +156,8 @@ void Control::setTextLayout(bool setLineBreakFlag, int xLayoutFlag, int yLayoutF
 {
     if(setLineBreakFlag)
     {
-        m_lineBreakInfo = m_textEngine.computeLineBreakInfo(m_text, m_font.size, m_rect.w);
+        m_lineBreakInfos[0] = m_textEngine.computeLineBreakInfo(m_text, m_font.size, m_rect.w);
     }
-
-    Utility::debug("LineBreak", m_lineBreakInfo.lineBreaks);
 
     switch(xLayoutFlag)
     {
@@ -161,7 +167,7 @@ void Control::setTextLayout(bool setLineBreakFlag, int xLayoutFlag, int yLayoutF
 
         case CENTER:
             if(setLineBreakFlag)
-                m_textStartingXs[0] = computeCenteredTextStartingX(m_lineBreakInfo.maxWidth, m_rect.w, m_rect.x);
+                m_textStartingXs[0] = computeCenteredTextStartingX(m_lineBreakInfos[0].maxWidth, m_rect.w, m_rect.x);
             else
                 m_textStartingXs[0] = computeCenteredTextStartingX(m_text, m_font.size, m_rect.w, m_rect.x);
             break;
@@ -176,15 +182,70 @@ void Control::setTextLayout(bool setLineBreakFlag, int xLayoutFlag, int yLayoutF
     switch(yLayoutFlag)
     {
         case TOP_ALIGNED:
-            m_textStartingYs[0] = m_rect.y + m_rect.h - m_font.size;
+            m_textStartingYs[0] = m_rect.y + m_font.size - m_textEngine.getMaxDecenderHeight(m_font.size) + m_font.size * 0.05;
             break;
 
         case CENTER:
             if(setLineBreakFlag)
-                m_textStartingYs[0] = computeCenteredTextStartingY(m_lineBreakInfo.lines * m_font.size, m_font.size,
-                                                                   m_rect.h, m_rect.y + m_rect.h);
+                m_textStartingYs[0] = computeCenteredTextStartingY(m_lineBreakInfos[0].lines * m_font.size, m_font.size,
+                                                                   m_rect.h, m_rect.y + m_font.size);
+
             else
-                m_textStartingYs[0] = computeCenteredTextStartingY(m_text, m_font.size, m_rect.h, m_rect.y);
+                m_textStartingYs[0] = computeCenteredTextStartingY(m_text, m_font.size, m_rect.h, m_rect.y + m_font.size);
+
+            break;
+
+        default:
+            Utility::debug("Error in Control::setTextLayout yLayoutFlag");
+            exit(1);
+            break;
+    }
+}
+
+
+
+void Control::setRectTextLayout(LineBreakInfo& lineBreakInfo, float& startingX, float& startingY,
+                                string text, float fontSize, Rect rect, bool setLineBreakFlag, int xLayoutFlag, int yLayoutFlag)
+{
+    if(setLineBreakFlag)
+    {
+        lineBreakInfo = m_textEngine.computeLineBreakInfo(text, fontSize, rect.w);
+    }
+
+    switch(xLayoutFlag)
+    {
+        case LEFT_ALIGNED:
+            startingX = rect.x + fontSize * 0.05;
+            break;
+
+        case CENTER:
+            if(setLineBreakFlag)
+                startingX = computeCenteredTextStartingX(lineBreakInfo.maxWidth, rect.w, rect.x);
+            else
+                startingX = computeCenteredTextStartingX(text, fontSize, rect.w, rect.x);
+            break;
+
+        default:
+            Utility::debug("Error in Control::setTextLayout xLayoutFlag");
+            exit(1);
+            break;
+    }
+
+
+    switch(yLayoutFlag)
+    {
+        case TOP_ALIGNED:
+            startingY = rect.y - fontSize + m_textEngine.getMaxDecenderHeight(fontSize);
+            break;
+
+        case CENTER:
+            if(setLineBreakFlag)
+                startingY = computeCenteredTextStartingY(lineBreakInfo.lines * fontSize, fontSize,
+                                                                   rect.h, rect.y + fontSize);
+
+            else
+                startingY = computeCenteredTextStartingY(text, fontSize, rect.h, rect.y + fontSize);
+
             break;
 
         default:
@@ -207,11 +268,12 @@ float Control::computeCenteredTextStartingX(string text, float fontSize, float r
     return offsetX + diff;
 }
 
+/// this computes the y axis baseline
 float Control::computeCenteredTextStartingY(float textHeight, float fontSize, float rectHeight, float offsetY)
 {
     float decenderHeight = m_textEngine.getMaxDecenderHeight(fontSize);
     float diff = (rectHeight - textHeight)/2;
-    return offsetY - fontSize + decenderHeight - diff;
+    return offsetY - decenderHeight + diff;
 }
 
 float Control::computeCenteredTextStartingY(string text, float fontSize, float rectHeight, float offsetY)
@@ -225,7 +287,8 @@ float Control::computeCenteredTextStartingY(string text, float fontSize, float r
     else
         diff = (rectHeight - h)/3;
 
-    float sy = offsetY + decenderHeight + diff;
+//    float sy = offsetY + diff;
+    float sy = offsetY - decenderHeight + diff;
     return sy;
 }
 

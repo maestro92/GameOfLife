@@ -13,7 +13,7 @@ void GUIManager::init(int screenWidth, int screenHeight,
     // set m_GUIPipeline
     m_GUIPipeline.matrixMode(PROJECTION_MATRIX);
     m_GUIPipeline.loadIdentity();
-    m_GUIPipeline.ortho(0, m_screenWidth, 0, m_screenHeight, -1, 1);
+    m_GUIPipeline.ortho(0, m_screenWidth, m_screenHeight, 0, -1, 1);
 
     m_GUIPipeline.matrixMode(MODEL_MATRIX);
     m_GUIPipeline.loadIdentity();
@@ -85,9 +85,6 @@ void GUIManager::initGUIRenderingSetup()
     glViewport(0, 0, m_screenWidth, m_screenHeight);
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
-
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 }
 
 

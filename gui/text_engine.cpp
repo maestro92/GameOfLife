@@ -15,7 +15,7 @@ TextEngine::TextEngine(string font, int fontSize, int screenWidth, int screenHei
     // set m_GUIPipeline
     m_pipeline.matrixMode(PROJECTION_MATRIX);
     m_pipeline.loadIdentity();
-    m_pipeline.ortho(0, m_screenWidth, 0, m_screenHeight, -1, 1);
+    m_pipeline.ortho(0, m_screenWidth, m_screenHeight, 0, -1, 1);
 
     m_pipeline.matrixMode(MODEL_MATRIX);
     m_pipeline.loadIdentity();
@@ -202,6 +202,9 @@ void TextEngine::render(string text, float x, float y, float fontSize, glm::vec3
 }
 
 
+
+
+
 void TextEngine::render(string text, float x, float y, float fontSize, glm::vec3 color, vector<int> lineBreaks)
 {
     float scale = fontSize/m_fontSize;
@@ -221,14 +224,17 @@ void TextEngine::render(string text, float x, float y, float fontSize, glm::vec3
 
             if(j < lineBreaks.size() && i == lineBreaks[j])
             {
-                offsetY -= fontSize;
+                offsetY += fontSize;
                 offsetX = x;
                 j++;
                 continue;
             }
 
+//            float xpos = offsetX + ch.bearing.x * scale;
+//            float ypos = offsetY - (ch.size.y - ch.bearing.y) * scale;
+
             float xpos = offsetX + ch.bearing.x * scale;
-            float ypos = offsetY - (ch.size.y - ch.bearing.y) * scale;
+            float ypos = offsetY - ch.bearing.y * scale;
 
             float w = ch.size.x * scale;
             float h = ch.size.y * scale;
@@ -714,7 +720,7 @@ LineBreakInfo TextEngine::computeLineBreakInfo(string text, float fontSize, int 
 
     Utility::debug<int>("lineBreaks", lineBreaks);
 
-    LineBreakInfo info(lineBreaks.size()+1, lineBreaks, maxLineWidth, 0);
+    LineBreakInfo info(lineBreaks.size()+1, lineBreaks, maxLineWidth);
 
     return info;
 }

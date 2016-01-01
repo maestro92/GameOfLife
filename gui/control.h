@@ -82,6 +82,9 @@ class Control
         void setText(string text);
 
         void setTextLayout(bool setLineBreakFlag, int xLayoutFlag, int yLayoutFlag);
+        void setRectTextLayout(LineBreakInfo& lineBreakInfo, float& startingX, float& startingY,
+                                string text, float fontSize, Rect rect, bool setLineBreakFlag, int xLayoutFlag, int yLayoutFlag);
+
         void updateLineBreakInfo();
 
         void setFont(int size, glm::vec3 color);
@@ -89,6 +92,16 @@ class Control
         GLuint m_rectTexture;
         std::function<void()> m_funcCallBack;
 
+
+        inline int toGUICoord(int y)
+        {
+            return Control::m_screenHeight - y;
+        }
+
+        inline float toGUICoord(float y)
+        {
+            return Control::m_screenHeight - y;
+        }
 
         float computeCenteredTextStartingX(float textWidth, float rectWidth, float offsetX = 0);
         float computeCenteredTextStartingX(string text, float fontSize, float rectWidth, float offsetX = 0);
@@ -98,7 +111,7 @@ class Control
 
 
         void emptyOnClick();
-        static void init(string font, int size, int sreenWidth, int screenHeight);
+        static void init(string font, int size, int screenWidth, int screenHeight);
 
         static TextEngine m_textEngine;
     protected:
@@ -110,7 +123,7 @@ class Control
 
         glm::vec3 m_rectColor;
 
-        LineBreakInfo m_lineBreakInfo;
+        vector<LineBreakInfo> m_lineBreakInfos;
         vector<float> m_textStartingXs;
         vector<float> m_textStartingYs;
 
@@ -118,7 +131,8 @@ class Control
         /// http://stackoverflow.com/questions/7083612/defining-a-static-variable-of-base-class
 
         static pipeline m_pipeline;
-
+        static int m_screenWidth;
+        static int m_screenHeight;
         static QuadModel m_quadModel;
         static GeneralRenderer r_coloredRectRenderer;        static GeneralRenderer r_texturedRectRenderer;
         static GeneralRenderer r_listBoxHighlightRenderer;

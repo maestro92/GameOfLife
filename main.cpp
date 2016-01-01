@@ -110,7 +110,7 @@ void ExplosionGenerator::initModels()
 
 void ExplosionGenerator::initGUI()
 {
-    Control::init("", 35, SCREEN_WIDTH, SCREEN_HEIGHT);
+    Control::init("", 100, SCREEN_WIDTH, SCREEN_HEIGHT);
 
     m_GUIComponentsFlags = 0;
 
@@ -119,42 +119,17 @@ void ExplosionGenerator::initGUI()
 
     int SLIDER_HEIGHT = 35;
     int BUTTON_WIDTH = 200;
-    int BUTTON_HEIGHT = 35;
+    int BUTTON_HEIGHT = 30;
 
 //    string text = "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.";
 
-/*
-    Control::m_textEngine.lineWrappedGreedyAlgo(text);
-    Control::m_textEngine.lineWrappedDynamicAlgo(text);
-*/
-
-/*
-    Control* temp = new Label("GAME OF LIFEg",
-                                200, 300,
-                                BUTTON_WIDTH, 100,
-                                GRAY);
-    temp->setFont(50, BLACK);
-    temp->setTextLayout(true, CENTER, CENTER);
-    m_gui.addGUIComponent(temp);
-*/
-
-
-
-    Control* temp = new Button("GAME OF LIFE",
-                                200, 300,
-                                BUTTON_WIDTH, 200,
-                                GRAY, BLACK, DARK_BLUE,
-                                std::bind(&ExplosionGenerator::startCB, this));
-    temp->setFont(50, BLACK);
-    temp->setTextLayout(true, CENTER, CENTER);
-    m_gui.addGUIComponent(temp);
-
+    Control* temp;
 
     temp = new Label("GAME OF LIFE",
-                                40, 550,
-                                BUTTON_WIDTH, 50,
-                                GRAY);
-    temp->setFont(50, BLACK);
+                                X_OFFSET, 0,
+                                BUTTON_WIDTH, 120,
+                                BLACK);
+    temp->setFont(50, WHITE);
     temp->setTextLayout(true, CENTER, CENTER);
     m_gui.addGUIComponent(temp);
 
@@ -162,57 +137,42 @@ void ExplosionGenerator::initGUI()
     string golDescription = "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.";
 
     temp = new Label(golDescription,
-                        X_OFFSET, 400,
-                        BUTTON_WIDTH, 50,
-                        WHITE);
-    temp->setFont(15, BLACK);
-    temp->setTextLayout(true, LEFT_ALIGNED, CENTER);
+                        X_OFFSET, 120,
+                        BUTTON_WIDTH, 100,
+                        BLACK);
+    temp->setFont(15, WHITE);
+    temp->setTextLayout(true, CENTER, TOP_ALIGNED);
     m_gui.addGUIComponent(temp);
 
 
 
-    ListBox* lb = new ListBox("",  X_OFFSET, 160,
-                                    200, 300,
-                                    YELLOW, BLACK, 2,
+    ListBox* lb = new ListBox("",  X_OFFSET, 220,
+                                    200, 400,
+                                    WHITE, BLACK, 2,
                                     std::bind(&ExplosionGenerator::GOLModelListBoxCB, this));
+    lb->setItemFont(14, GREEN);
     lb->setContent(m_GOLModelManager.getModels());
+    lb->setItemsTextLayout(CENTER, CENTER);
     m_gui.addGUIComponent(lb);
 
 
 
-/*
-    temp = new Label(golDescription,
-                        X_OFFSET, 390,
-                        BUTTON_WIDTH, 100,
-                        WHITE);
-    temp->setFont(15, BLACK);
-    temp->setTextLayout(true, CENTER, TOP_ALIGNED);
-    m_gui.addGUIComponent(temp);
-*/
-
-
-    int width = 120;
-    int scale = 5;
-
-    temp = new Button("Start g", X_OFFSET, 25,
+    temp = new Button("Start", X_OFFSET, 535,
                                 BUTTON_WIDTH, BUTTON_HEIGHT,
                                 GRAY, BLACK, DARK_BLUE,
                                 std::bind(&ExplosionGenerator::startCB, this));
-    temp->setFont(35, GREEN);
+    temp->setFont(25, GREEN);
     temp->setTextLayout(false, CENTER, CENTER);
     m_gui.addGUIComponent(temp);
 
 
-    temp = new Button("Resetg",  X_OFFSET, 75,
+    temp = new Button("Reset",  X_OFFSET, 570,
                                 BUTTON_WIDTH, BUTTON_HEIGHT,
                                 GRAY, BLACK, DARK_BLUE,
                                 std::bind(&ExplosionGenerator::resetGameBoardCB, this));
-    temp->setFont(35, GREEN);
+    temp->setFont(25, GREEN);
     temp->setTextLayout(false, CENTER, CENTER);
     m_gui.addGUIComponent(temp);
-
-
-
 }
 
 
@@ -452,144 +412,20 @@ void ExplosionGenerator::forwardRender()
 }
 
 
-void ExplosionGenerator::initGUIRenderStage()
-{
-    glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-    glDisable(GL_DEPTH_TEST);
-    glDisable(GL_CULL_FACE);
-
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
-    // glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-}
-
-
 void ExplosionGenerator::renderGUI()
 {
-    initGUIRenderStage();
 
+    m_gui.initGUIRenderingSetup();
     /// http://sdl.beuc.net/sdl.wiki/SDL_Average_FPS_Measurement
     unsigned int getTicks = SDL_GetTicks();
 
 //    string final_str = "(" + Utility::floatToStr(m_mouseState.m_pos.x) + ", " + Utility::floatToStr(m_mouseState.m_pos.y) + ")";
 //    Control::m_textEngine.render(m_pipeline, 0, 10, final_str.c_str());
 
-    glDisable(GL_BLEND);
-
-
-    m_gui.renderTextureSingle(m_gui.getGUIPaletteTexture(), 0, m_gui.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
-
-    /// render Each GUI component
-  //  Utility::debug("size is", m_GUIComponents.size());
-
     m_gui.updateAndRender(m_mouseState);
-
-    /*
-    for(int i=0; i<m_GUIComponents.size(); i++)
-    {
-
-
-        Control* control = m_GUIComponents[i];
-//        control->renderColored();
-
-        control->update(m_mouseState);
-        control->customRender();
-
-
-
-//        control->render();
-    }
-*/
-
-
-/*
-    m_rm.r_ButtonRenderer.enableShader(RENDER_PASS1);
-    m_rm.r_ButtonRenderer.setData(RENDER_PASS1, "u_color", glm::vec3(1.0,0.0,0.0));
-
-    m_pipeline.pushMatrix();
-        m_pipeline.translate(m_triggerButton.m_rect.x, m_triggerButton.m_rect.y, 0);
-        m_pipeline.scale(m_triggerButton.m_rect.w, m_triggerButton.m_rect.h, 1.0);
-
-        m_rm.r_ButtonRenderer.loadUniformLocations(m_pipeline, RENDER_PASS1);
-        m_rm.m_textureQuad.render();
-    m_pipeline.popMatrix();
-    m_rm.r_ButtonRenderer.disableShader(RENDER_PASS1);
-*/
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-//    m_rm.renderText(m_characters['c'].textureID, 0, m_gui.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
-
-   // m_text.render("This is sample text", 25.0f, 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
-   // m_text.render("(C) LearnOpenGL.com", 540.0f, 570.0f, 0.5f, glm::vec3(0.3, 0.7f, 0.9f));
-
-
-
- //   RenderText("This is sample text", 25.0f, 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
-    glDisable(GL_BLEND);
-//    m_gui.renderTexture(m_gui.m_GOLModelListBox.m_items[2].m_textureID, 0, 600, 0 , 50, 50);
-//    m_gui.renderTexture(m_GOLModelManager.getModel(2)->getTexture(), 0, 600, 0 , 50, 50);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
-
-  //  m_GUIManager.renderTexture(m_GOLModelManager.getModel(2)->getTexture(), 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
-//    m_rm.renderTexture(tempTexture, 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
-//    m_rm.renderTexture(tex, 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
-
- //   m_rm.renderTexture(m_GUIManager.getGUIPaletteTexture(), 0, m_GUIManager.m_paletteRect);// SCREEN_WIDTH - 200, 0, 200, SCREEN_HEIGHT);
 }
 
-/*
-void ExplosionGenerator::RenderText(string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color)
-{
-    m_GUIManager.r_textRenderer.enableShader();
 
-    // shader.Use();
-    // glUniform3f(glGetUniformLocation(shader.Program, "textColor"), color.x, color.y, color.z);
-    glActiveTexture(GL_TEXTURE0);
-    glBindVertexArray(VAO);
-
-
-    // Iterate through all characters
-    std::string::const_iterator c;
-    for (c = text.begin(); c != text.end(); c++)
-    {
-        Character ch = m_characters[*c];
-
-        m_GUIManager.r_textRenderer.setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, ch.TextureID);
-        m_GUIManager.r_textRenderer.setData(RENDER_PASS1, "u_color", color);
-        m_GUIManager.r_textRenderer.loadUniformLocations(m_GUIManager.m_texturePipeline, RENDER_PASS1);
-
-        GLfloat xpos = x + ch.Bearing.x * scale;
-        GLfloat ypos = y - (ch.Size.y - ch.Bearing.y) * scale;
-
-        GLfloat w = ch.Size.x * scale;
-        GLfloat h = ch.Size.y * scale;
-        // Update VBO for each character
-        GLfloat vertices[6][4] = {
-            { xpos,     ypos + h,   0.0, 0.0 },
-            { xpos,     ypos,       0.0, 1.0 },
-            { xpos + w, ypos,       1.0, 1.0 },
-
-            { xpos,     ypos + h,   0.0, 0.0 },
-            { xpos + w, ypos,       1.0, 1.0 },
-            { xpos + w, ypos + h,   1.0, 0.0 }
-        };
-        // Render glyph texture over quad
-        glBindTexture(GL_TEXTURE_2D, ch.TextureID);
-        // Update content of VBO memory
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vertices), vertices); // Be sure to use glBufferSubData and not glBufferData
-
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-
-        // Render quad
-        glDrawArrays(GL_TRIANGLES, 0, 6);
-        // Now advance cursors for next glyph (note that advance is number of 1/64 pixels)
-        x += (ch.Advance >> 6) * scale; // Bitshift by 6 to get value in pixels (2^6 = 64 (divide amount of 1/64th pixels by 64 to get amount of pixels))
-    }
-    glBindVertexArray(0);
-    glBindTexture(GL_TEXTURE_2D, 0);
-}
-*/
 
 /// Function CallBacks
 void ExplosionGenerator::startCB()

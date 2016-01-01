@@ -2639,7 +2639,7 @@
 	"SDL/SDL_image.h"
 	"text_engine.h"
 
-1451618137 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
+1451639456 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
 	"main.h"
 	"gl/gl.h"
 	"gl/glu.h"
@@ -2866,7 +2866,7 @@
 	<unordered_map>
 	"Control.h"
 
-1451611465 d:\martin\programming\c_c++\projects\gameoflife\gui\control.h
+1451636661 d:\martin\programming\c_c++\projects\gameoflife\gui\control.h
 	"pipeline.h"
 	"define.h"
 	"utility.h"
@@ -2879,7 +2879,7 @@
 	<string>
 	<bitset>
 
-1451616433 d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.h
+1451622975 d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.h
 	<unordered_map>
 	<ft2build.h>
 	"quad_model.h"
@@ -2907,7 +2907,7 @@
 1451062568 d:\martin\programming\c_c++\projects\gameoflife\gui\slider.h
 	"Control.h"
 
-1451517315 d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.h
+1451637023 d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.h
 	<vector>
 	<gol_model.h>
 	"Rect.h"
@@ -2934,25 +2934,25 @@
 	<assimp/postprocess.h>
 	"texture.h"
 
-1451601630 source:d:\martin\programming\c_c++\projects\gameoflife\gui\button.cpp
+1451632254 source:d:\martin\programming\c_c++\projects\gameoflife\gui\button.cpp
 	"button.h"
 
-1451618055 source:d:\martin\programming\c_c++\projects\gameoflife\gui\control.cpp
+1451639263 source:d:\martin\programming\c_c++\projects\gameoflife\gui\control.cpp
 	"Control.h"
 
-1451098261 source:d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.cpp
+1451627818 source:d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.cpp
 	"gui_manager.h"
 
-1451610741 source:d:\martin\programming\c_c++\projects\gameoflife\gui\label.cpp
+1451632317 source:d:\martin\programming\c_c++\projects\gameoflife\gui\label.cpp
 	"Label.h"
 
-1451517497 source:d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.cpp
+1451638628 source:d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.cpp
 	"list_box.h"
 
 1451063839 source:d:\martin\programming\c_c++\projects\gameoflife\gui\slider.cpp
 	"Slider.h"
 
-1451618113 source:d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.cpp
+1451626845 source:d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.cpp
 	"text_engine.h"
 
 1451066488 source:d:\martin\programming\c_c++\projects\gameoflife\model\builtin_model\eg_cubemodel.cpp
