@@ -50,22 +50,19 @@ class TextEngine
     public:
         TextEngine();
 
-        TextEngine(string font, int fontSize, int screenWidth, int screenHeight);
+        TextEngine(string font, int fontPixelSize, int screenWidth, int screenHeight);
 
-        float getTextWidth(string text, float fontSize);
-        float getMaxDecenderHeight(float fontSize);
-        float getTextHeight(string text, float fontSize);
+        float getTextWidth(string text, float fontPixelSize);
+        float getMaxDecenderHeight(float fontPixelSize);
 
-        float getTotalTextWidth(string text, float fontSize);
-        float getTotalTextHeight(string text, float fontSize);
-
-
-//        vector<int> getLineBreaks(string text, float size, int linePixelWidth);
-        LineBreakInfo computeLineBreakInfo(string text, float fontSize, int linePixelWidth);
-        void render(string text, float x, float y, float fontSize, glm::vec3 color);
-        void render(string text, float x, float y, float fontSize, glm::vec3 color, vector<int> lineBreaks);
+        LineBreakInfo computeLineBreakInfo(string text, float fontPixelSize, int linePixelWidth);
+        void render(string text, float x, float y, float fontPixelSize, glm::vec3 color);
+        void render(string text, float x, float y, float fontPixelSize, glm::vec3 color, vector<int> lineBreaks);
 
         static vector<string> getWords(string text);
+        vector<vector<int>> computeLineCosts(vector<string> words, float fontPixelSize, int n, int linePixelWidth, float spacePixelWidth);
+        vector<int> computeLineBreakStartIndices(vector<vector<int>> lineCosts, int n);
+
         void lineWrappedGreedyAlgo(string text);
         void lineWrappedDynamicAlgo(string text);
         void lineWrappedDynamicAlgo1(string text);
@@ -80,7 +77,7 @@ class TextEngine
         float m_globalYMax;
         float m_globalYMin;
 
-        int m_fontSize;
+        int m_initFontPixelSize;
 
     private:
         float m_maxDescenderHeight;

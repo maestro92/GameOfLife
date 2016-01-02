@@ -14,12 +14,10 @@ GOLModel::GOLModel(string name, TextureDataBuffer gData, int gs)
     m_height = m_gridHeight * gs;
     m_width = m_gridWidth * gs;
 
-    m_thumbnailWidth = m_gridHeight * 5;
-    m_thumbnailHeight = m_gridWidth * 5;
+    m_thumbnailWidth = m_gridWidth * 5;
+    m_thumbnailHeight = m_gridHeight * 5;
 
     m_gridSize = gs;
-
-//    m_pixelData = Utility::createEmptyBuffer(m_width, m_height);
 
     m_patternTexture = Utility::loadTexture(gridDataToPixelData(gData, m_gridSize), GL_NEAREST);
     m_thumbnailTexture = Utility::loadTexture(gridDataToPixelData(gData, 5), GL_NEAREST);

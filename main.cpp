@@ -69,7 +69,7 @@ void ExplosionGenerator::initRenderers()
 
 void ExplosionGenerator::initObjects()
 {
-    m_gridSize = 50;
+    m_gridSize = 5;
     m_board = GameBoard(SCREEN_WIDTH-200, SCREEN_HEIGHT, m_gridSize);
 
     int x = SCREEN_WIDTH - 200;
@@ -99,7 +99,7 @@ void ExplosionGenerator::initGUI()
     int BUTTON_HEIGHT = 30;
 
     Control* temp;
-/*
+
     temp = new Label("GAME OF LIFE",
                                 X_OFFSET, 0,
                                 BUTTON_WIDTH, 120,
@@ -118,7 +118,6 @@ void ExplosionGenerator::initGUI()
     temp->setFont(15, WHITE);
     temp->setTextLayout(true, CENTER, TOP_ALIGNED);
     m_gui.addGUIComponent(temp);
-
 
 
 
@@ -149,9 +148,9 @@ void ExplosionGenerator::initGUI()
     temp->setFont(25, GREEN);
     temp->setTextLayout(false, CENTER, CENTER);
     m_gui.addGUIComponent(temp);
-*/
 
 
+/*
     temp = new Label("ABCDL_gyp", 0, 100,
                                 SCREEN_WIDTH, 25,
                                 LIGHT_GRAY);
@@ -172,6 +171,7 @@ void ExplosionGenerator::initGUI()
     temp->setFont(50, BLACK);
     temp->setTextLayout(false, CENTER, CENTER);
     m_gui.addGUIComponent(temp);
+    */
 }
 
 
@@ -360,7 +360,6 @@ void ExplosionGenerator::renderGUI()
     unsigned int getTicks = SDL_GetTicks();
 
 //    string final_str = "(" + Utility::floatToStr(m_mouseState.m_pos.x) + ", " + Utility::floatToStr(m_mouseState.m_pos.y) + ")";
-//    Control::m_textEngine.render(m_pipeline, 0, 10, final_str.c_str());
 
     m_gui.updateAndRender(m_mouseState);
 }

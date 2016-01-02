@@ -63,7 +63,6 @@ void ListBox::addItem(string text, glm::vec2 textureSize, glm::vec3 color, GLuin
     }
     else
         m_curColNum++;
-//    m_lineBreakInfos.push_back()
 }
 
 

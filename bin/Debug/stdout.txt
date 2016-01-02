@@ -62,7 +62,7 @@ cols, rows is 3 4
 
 cols, rows is 4 4
 
-vs: /EG_GUIShaders/text.vs, fs: /EG_GUIShaders/text.fs
+vs: /gui_shaders/text.vs, fs: /gui_shaders/text.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -70,7 +70,7 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
-vs: /EG_GUIShaders/colored_rect.vs, fs: /EG_GUIShaders/colored_rect.fs
+vs: /gui_shaders/colored_rect.vs, fs: /gui_shaders/colored_rect.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -78,7 +78,7 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
-vs: /EG_GUIShaders/textured_rect.vs, fs: /EG_GUIShaders/textured_rect.fs
+vs: /gui_shaders/textured_rect.vs, fs: /gui_shaders/textured_rect.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -86,7 +86,7 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
-vs: /EG_GUIShaders/list_box_item_highlight.vs, fs: /EG_GUIShaders/list_box_item_highlight.fs
+vs: /gui_shaders/list_box_item_highlight.vs, fs: /gui_shaders/list_box_item_highlight.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat

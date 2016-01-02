@@ -2522,7 +2522,7 @@
 1451693058 d:\martin\programming\c_c++\projects\gameoflife\gol_model.h
 	"utility.h"
 
-1451692956 source:d:\martin\programming\c_c++\projects\gameoflife\gol_model.cpp
+1451724907 source:d:\martin\programming\c_c++\projects\gameoflife\gol_model.cpp
 	"gol_model.h"
 
 1449181512 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_sdl.cpp
@@ -2639,7 +2639,7 @@
 	"SDL/SDL_image.h"
 	"text_engine.h"
 
-1451710910 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
+1451724910 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
 	"main.h"
 	"gl/gl.h"
 	"gl/glu.h"
@@ -2879,7 +2879,7 @@
 	<string>
 	<bitset>
 
-1451641436 d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.h
+1451725469 d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.h
 	<unordered_map>
 	<ft2build.h>
 	"quad_model.h"
@@ -2937,7 +2937,7 @@
 1451632254 source:d:\martin\programming\c_c++\projects\gameoflife\gui\button.cpp
 	"button.h"
 
-1451710047 source:d:\martin\programming\c_c++\projects\gameoflife\gui\control.cpp
+1451715249 source:d:\martin\programming\c_c++\projects\gameoflife\gui\control.cpp
 	"Control.h"
 
 1451692677 source:d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.cpp
@@ -2946,13 +2946,13 @@
 1451632317 source:d:\martin\programming\c_c++\projects\gameoflife\gui\label.cpp
 	"Label.h"
 
-1451693128 source:d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.cpp
+1451724928 source:d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.cpp
 	"list_box.h"
 
 1451063839 source:d:\martin\programming\c_c++\projects\gameoflife\gui\slider.cpp
 	"Slider.h"
 
-1451641548 source:d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.cpp
+1451724746 source:d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.cpp
 	"text_engine.h"
 
 1451066488 source:d:\martin\programming\c_c++\projects\gameoflife\model\builtin_model\eg_cubemodel.cpp

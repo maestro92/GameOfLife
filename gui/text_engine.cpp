@@ -6,7 +6,7 @@ TextEngine::TextEngine()
 
 }
 
-TextEngine::TextEngine(string font, int fontSize, int screenWidth, int screenHeight)
+TextEngine::TextEngine(string font, int fontPixelSize, int screenWidth, int screenHeight)
 {
 
     m_screenWidth = screenWidth;
@@ -34,8 +34,8 @@ TextEngine::TextEngine(string font, int fontSize, int screenWidth, int screenHei
     if (FT_New_Face(ft, "Assets/Fonts/arial.ttf", 0, &face))
         Utility::debug("ERROR::FREETYPE: Failed to load font");
 
-    m_fontSize = fontSize;
-    FT_Set_Pixel_Sizes(face, 0, fontSize);
+    m_initFontPixelSize = fontPixelSize;
+    FT_Set_Pixel_Sizes(face, 0, fontPixelSize);
     if(FT_Load_Char(face, 'X', FT_LOAD_RENDER))
     {
         Utility::debug("Could not load character 'X'\n");
@@ -100,7 +100,7 @@ TextEngine::TextEngine(string font, int fontSize, int screenWidth, int screenHei
     Shader* s;
 
     /// r_TextRenderer
-    s = new Shader("/EG_GUIShaders/text.vs", "/EG_GUIShaders/text.fs");
+    s = new Shader("/gui_shaders/text.vs", "/gui_shaders/text.fs");
     r_textRenderer.addShader(s);
     r_textRenderer.addDataPair(RENDER_PASS1, "u_texture",   DP_INT);
     r_textRenderer.addDataPair(RENDER_PASS1, "u_color",     DP_VEC3);
@@ -109,9 +109,9 @@ TextEngine::TextEngine(string font, int fontSize, int screenWidth, int screenHei
 
 
 
-float TextEngine::getTextWidth(string text, float fontSize)
+float TextEngine::getTextWidth(string text, float fontPixelSize)
 {
-    float scale = fontSize/m_fontSize;
+    float scale = fontPixelSize/m_initFontPixelSize;
     float width = 0;
     for (int i=0; i<text.size(); i++)
     {
@@ -129,40 +129,18 @@ float TextEngine::getTextWidth(string text, float fontSize)
 
 
 
-float TextEngine::getMaxDecenderHeight(float fontSize)
+float TextEngine::getMaxDecenderHeight(float fontPixelSize)
 {
-    float scale = fontSize/m_fontSize;
+    float scale = fontPixelSize/m_initFontPixelSize;
     float result = m_maxDescenderHeight * scale;
     return result;
 }
 
 
-float TextEngine::getTextHeight(string text, float fontSize)
+void TextEngine::render(string text, float x, float y, float fontPixelSize, glm::vec3 color)
 {
-    float scale = fontSize/m_fontSize;
+    float scale = fontPixelSize/m_initFontPixelSize;
 
-    float minYPos = INT_MAX;
-    float maxYPos = INT_MIN;
-
-    for (int i=0; i<text.size(); i++)
-    {
-        char c = text[i];
-        Character ch = m_characters[c];
-
-        float yBotPos = -(ch.size.y - ch.bearing.y) * scale;
-        float yTopPos = ch.bearing.y * scale;
-
-        // Now advance cursors for next glyph (note that advance is number of 1/64 pixels)
-        minYPos = min(yBotPos, minYPos);
-        maxYPos = max(yTopPos, maxYPos);
-    }
-    return maxYPos - minYPos;
-}
-
-
-void TextEngine::render(string text, float x, float y, float fontSize, glm::vec3 color)
-{
-    float scale = fontSize/m_fontSize;
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
@@ -203,9 +181,9 @@ void TextEngine::render(string text, float x, float y, float fontSize, glm::vec3
 
 
 
-void TextEngine::render(string text, float x, float y, float fontSize, glm::vec3 color, vector<int> lineBreaks)
+void TextEngine::render(string text, float x, float y, float fontPixelSize, glm::vec3 color, vector<int> lineBreaks)
 {
-    float scale = fontSize/m_fontSize;
+    float scale = fontPixelSize/m_initFontPixelSize;
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     float offsetY = y;
@@ -222,14 +200,11 @@ void TextEngine::render(string text, float x, float y, float fontSize, glm::vec3
 
             if(j < lineBreaks.size() && i == lineBreaks[j])
             {
-                offsetY += fontSize;
+                offsetY += fontPixelSize;
                 offsetX = x;
                 j++;
                 continue;
             }
-
-//            float xpos = offsetX + ch.bearing.x * scale;
-//            float ypos = offsetY - (ch.size.y - ch.bearing.y) * scale;
 
             float xpos = offsetX + ch.bearing.x * scale;
             float ypos = offsetY - ch.bearing.y * scale;
@@ -257,139 +232,8 @@ void TextEngine::render(string text, float x, float y, float fontSize, glm::vec3
 }
 
 
-/*
-void TextEngine::render(string text, float x, float y, float size, glm::vec3 color, vector<int> lineBreaks)
-{
-    float scale = size/m_fontSize;
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-    r_textRenderer.enableShader();
-        r_textRenderer.setData(RENDER_PASS1, "u_color", color);
-
-        int j = 0;
-        float offsetY = y; //+ lineBreaks.size() * size;
-        for (int i=0; i<text.size(); i++)
-        {
-            char c = text[i];
-            Utility::debug("char is", c);
 
 
-            if(j < lineBreaks.size() && i == lineBreaks[j])
-            {
-                Utility::debug("linebreak at", lineBreaks[j]);
-                Utility::debug("offsetY ", offsetY);
-            //    offsetY -= size;
-                j++;
-            }
-
-            Character ch = m_characters[c];
-
-            float xpos = x + ch.bearing.x * scale;
-            float ypos = y - (ch.size.y - ch.bearing.y) * scale;
-
-            float w = ch.size.x * scale;
-            float h = ch.size.y * scale;
-
-            m_pipeline.pushMatrix();
-
-                m_pipeline.translate(xpos, ypos, 0);
-                m_pipeline.scale(w, h, 0);
-
-                r_textRenderer.setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, ch.textureID);
-                r_textRenderer.loadUniformLocations(m_pipeline, RENDER_PASS1);
-
-                m_quad.render();
-
-            // Now advance cursors for next glyph (note that advance is number of 1/64 pixels)
-            x += (ch.advance >> 6) * size; // Bitshift by 6 to get value in pixels (2^6 = 64)
-            m_pipeline.popMatrix();
-        }
-
-    r_textRenderer.disableShader();
-    glDisable(GL_BLEND);
-}
-*/
-
-
-/*
-void TextEngine::render(float x, float y, glm::vec3 color, LineBreakInfo lineBreakInfo)
-{
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-    r_textRenderer.enableShader();
-        r_textRenderer.setData(RENDER_PASS1, "u_color", color);
-
-        for (int i=0; i<text.size(); i++)
-        {
-            char c = text[i];
-            Character ch = m_characters[c];
-
-            float xpos = x + ch.bearing.x * size;
-            float ypos = y - (ch.size.y - ch.bearing.y) * size;
-
-            float w = ch.size.x * size;
-            float h = ch.size.y * size;
-
-            m_pipeline.pushMatrix();
-
-                m_pipeline.translate(xpos, ypos, 0);
-                m_pipeline.scale(w, h, 0);
-
-                r_textRenderer.setData(RENDER_PASS1, "u_texture", 0, GL_TEXTURE0, ch.textureID);
-                r_textRenderer.loadUniformLocations(m_pipeline, RENDER_PASS1);
-
-                m_quad.render();
-
-            // Now advance cursors for next glyph (note that advance is number of 1/64 pixels)
-            x += (ch.advance >> 6) * size; // Bitshift by 6 to get value in pixels (2^6 = 64)
-            m_pipeline.popMatrix();
-        }
-
-    r_textRenderer.disableShader();
-    glDisable(GL_BLEND);
-}
-*/
-
-vector<string> TextEngine::getWords(string text)
-{
-    vector<string> words;
-
-    bool inWord = false;
-    int start = 0;
-    for(int i=0; i<text.size(); i++)
-    {
-        char c = text[i];
-
-        if(inWord)
-        {
-            if(c == ' ')
-            {
-                int size = i - start;
-                string subString = text.substr(start, size);
-                inWord = false;
-                words.push_back(subString);
-            }
-        }
-        else
-        {
-            if(c != ' ')
-            {
-                start = i;
-                inWord = true;
-            }
-        }
-    }
-
-    if(inWord)
-    {
-        int size = text.size() - start;
-        string subString = text.substr(start, size);
-        words.push_back(subString);
-    }
-    return words;
-}
 
 void TextEngine::lineWrappedGreedyAlgo(string text)
 {
@@ -620,65 +464,21 @@ void TextEngine::lineWrappedDynamicAlgo1(string text)
     cout << endl;
 
 //    printSolution(p, n);
-
-
-
 }
 
-LineBreakInfo TextEngine::computeLineBreakInfo(string text, float fontSize, int linePixelWidth)
+
+
+
+
+LineBreakInfo TextEngine::computeLineBreakInfo(string text, float fontPixelSize, int linePixelWidth)
 {
     vector<string> words = getWords(text);
     int n = words.size();
 
-    float spacePixelWidth = getTextWidth(" ", fontSize);
+    float spacePixelWidth = getTextWidth(" ", fontPixelSize);
 
-    // calculate all the combination cost
-    vector<vector<int>> lineCosts(n+1, vector<int>(n+1, INT_MAX));
-
-    for(int y = 1; y <= n; y++)
-    {
-        Utility::debug("word is", words[y-1]);
-        float wordPixelWidth = getTextWidth(words[y-1], fontSize);
-
-        int cost = linePixelWidth - wordPixelWidth;
-        lineCosts[y][y] = cost * cost * cost;
-
-        for(int x = y+1; x <= n; x++)
-        {
-            wordPixelWidth = getTextWidth(words[x-1], fontSize);
-
-            cost -= (wordPixelWidth + spacePixelWidth);
-            if(cost < 0)
-                break;
-            else
-                lineCosts[y][x] = cost * cost * cost;
-        }
-    }
-
-    lineCosts[n][n] = 0;
-    Utility::debug<int>("lineCosts", lineCosts);
-
-    // calculate the mincost
-    vector<int> startIndices(n+1, 0);
-    vector<int> minCosts(n+1, 0);
-    for(int y = 1; y <= n; y++)
-    {
-        minCosts[y] = INT_MAX;
-        for(int x = 1; x <= y; x++)
-        {
-            /// if from a previous word to a current word
-            /// the cost is INT_MAX, we skip
-            if(lineCosts[x][y] == INT_MAX)
-                continue;
-
-            if(minCosts[x-1] + lineCosts[x][y] < minCosts[y])
-            {
-                minCosts[y] = minCosts[x-1] + lineCosts[x][y];
-                startIndices[y] = x;
-            }
-        }
-    }
-
+    vector<vector<int>> lineCosts = computeLineCosts(words, fontPixelSize, n, linePixelWidth, spacePixelWidth);
+    vector<int> startIndices = computeLineBreakStartIndices(lineCosts, n);
 
     vector<int> endPositions(n+1, 0);
     for(int i = startIndices.size()-1; i > 0 ;i--)
@@ -698,31 +498,114 @@ LineBreakInfo TextEngine::computeLineBreakInfo(string text, float fontSize, int 
     for(int i = 0; i<words.size(); i++)
     {
         charIndex += (words[i].size()+1);
-        curLineWidth = getTextWidth(words[i], fontSize);
+        curLineWidth = getTextWidth(words[i], fontPixelSize);
 
         int end = endPositions[i+1];
         while( (i+1) < end)
         {
             i++;
             charIndex += (words[i].size()+1);
-            curLineWidth += (spacePixelWidth + getTextWidth(words[i], fontSize));
+            curLineWidth += (spacePixelWidth + getTextWidth(words[i], fontPixelSize));
 
         }
         lineBreaks.push_back(charIndex-1);
         maxLineWidth = max(maxLineWidth, curLineWidth);
-
     }
 
     if(!lineBreaks.empty())
         lineBreaks.pop_back();
 
-    Utility::debug<int>("lineBreaks", lineBreaks);
-
-    LineBreakInfo info(lineBreaks.size()+1, lineBreaks, maxLineWidth);
-
-    return info;
+    return LineBreakInfo(lineBreaks.size()+1, lineBreaks, maxLineWidth);
 }
 
+vector<vector<int>> TextEngine::computeLineCosts(vector<string> words, float fontPixelSize, int n, int linePixelWidth, float spacePixelWidth)
+{
+    vector<vector<int>> lineCosts(n+1, vector<int>(n+1, INT_MAX));
+    for(int y = 1; y <= n; y++)
+    {
+        float wordPixelWidth = getTextWidth(words[y-1], fontPixelSize);
+
+        int cost = linePixelWidth - wordPixelWidth;
+        lineCosts[y][y] = cost * cost * cost;
+
+        for(int x = y+1; x <= n; x++)
+        {
+            wordPixelWidth = getTextWidth(words[x-1], fontPixelSize);
+
+            cost -= (wordPixelWidth + spacePixelWidth);
+            if(cost < 0)
+                break;
+            else
+                lineCosts[y][x] = cost * cost * cost;
+        }
+    }
+    lineCosts[n][n] = 0;
+    return lineCosts;
+}
+
+vector<int> TextEngine::computeLineBreakStartIndices(vector<vector<int>> lineCosts, int n)
+{
+    vector<int> startIndices(n+1, 0);
+    vector<int> minCosts(n+1, 0);
+    for(int y = 1; y <= n; y++)
+    {
+        minCosts[y] = INT_MAX;
+        for(int x = 1; x <= y; x++)
+        {
+            /// if from a previous word to a current word
+            /// the cost is INT_MAX, we skip
+            if(lineCosts[x][y] == INT_MAX)
+                continue;
+
+            if(minCosts[x-1] + lineCosts[x][y] < minCosts[y])
+            {
+                minCosts[y] = minCosts[x-1] + lineCosts[x][y];
+                startIndices[y] = x;
+            }
+        }
+    }
+    return startIndices;
+}
+
+
+vector<string> TextEngine::getWords(string text)
+{
+    vector<string> words;
+
+    bool inWord = false;
+    int start = 0;
+    for(int i=0; i<text.size(); i++)
+    {
+        char c = text[i];
+
+        if(inWord)
+        {
+            if(c == ' ')
+            {
+                int size = i - start;
+                string subString = text.substr(start, size);
+                inWord = false;
+                words.push_back(subString);
+            }
+        }
+        else
+        {
+            if(c != ' ')
+            {
+                start = i;
+                inWord = true;
+            }
+        }
+    }
+
+    if(inWord)
+    {
+        int size = text.size() - start;
+        string subString = text.substr(start, size);
+        words.push_back(subString);
+    }
+    return words;
+}
 
 
 

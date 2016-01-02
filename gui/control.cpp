@@ -30,16 +30,10 @@ Control::Control(string text, int x, int y, int width, int height, glm::vec3 col
     setTextLayout(false, CENTER, CENTER);
 }
 
-
-
-
 Control::~Control()
 {
 
 }
-
-
-
 
 void Control::init(string font, int size, int screenWidth, int screenHeight)
 {
@@ -49,16 +43,16 @@ void Control::init(string font, int size, int screenWidth, int screenHeight)
     Shader* s;
 
     /// r_coloredRect and r_texturedRect
-    s = new Shader("/EG_GUIShaders/colored_rect.vs", "/EG_GUIShaders/colored_rect.fs");
+    s = new Shader("/gui_shaders/colored_rect.vs", "/gui_shaders/colored_rect.fs");
     r_coloredRectRenderer.addShader(s);
     r_coloredRectRenderer.addDataPair(RENDER_PASS1, "u_color", DP_VEC3);
 
-    s = new Shader("/EG_GUIShaders/textured_rect.vs", "/EG_GUIShaders/textured_rect.fs");
+    s = new Shader("/gui_shaders/textured_rect.vs", "/gui_shaders/textured_rect.fs");
     r_texturedRectRenderer.addShader(s);
     r_texturedRectRenderer.addDataPair(RENDER_PASS1, "u_texture",    DP_INT);
 
 
-    s = new Shader("/EG_GUIShaders/list_box_item_highlight.vs", "/EG_GUIShaders/list_box_item_highlight.fs");
+    s = new Shader("/gui_shaders/list_box_item_highlight.vs", "/gui_shaders/list_box_item_highlight.fs");
     r_listBoxHighlightRenderer.addShader(s);
     r_listBoxHighlightRenderer.addDataPair(RENDER_PASS1, "u_x1",    DP_FLOAT);
     r_listBoxHighlightRenderer.addDataPair(RENDER_PASS1, "u_x2",    DP_FLOAT);
@@ -132,7 +126,6 @@ bool Control::update(MouseState & state)
     return false;
 }
 
-
 bool Control::update(MouseState & state, unsigned int& groupFlag)
 {
     bool flag = update(state);
@@ -178,7 +171,6 @@ void Control::setTextLayout(bool setLineBreakFlag, int xLayoutFlag, int yLayoutF
             break;
     }
 
-
     switch(yLayoutFlag)
     {
         case TOP_ALIGNED:
@@ -201,7 +193,6 @@ void Control::setTextLayout(bool setLineBreakFlag, int xLayoutFlag, int yLayoutF
             break;
     }
 }
-
 
 
 void Control::setRectTextLayout(LineBreakInfo& lineBreakInfo, float& startingX, float& startingY,
