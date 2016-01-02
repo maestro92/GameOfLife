@@ -279,17 +279,8 @@ float Control::computeCenteredTextStartingY(float textHeight, float fontSize, fl
 float Control::computeCenteredTextStartingY(string text, float fontSize, float rectHeight, float offsetY)
 {
     float decenderHeight = m_textEngine.getMaxDecenderHeight(fontSize);
-    float h = m_textEngine.getTextHeight(text, fontSize);
-
-    float diff = 0;
-    if(decenderHeight == 0)
-        diff = (rectHeight - h)/2;
-    else
-        diff = (rectHeight - h)/3;
-
-//    float sy = offsetY + diff;
-    float sy = offsetY - decenderHeight + diff;
-    return sy;
+    float diff = (rectHeight - fontSize)/2;
+    return offsetY - decenderHeight + diff;
 }
 
 

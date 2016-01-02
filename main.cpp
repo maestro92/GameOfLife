@@ -90,7 +90,7 @@ void ExplosionGenerator::initModels()
 
 void ExplosionGenerator::initGUI()
 {
-    Control::init("", 100, SCREEN_WIDTH, SCREEN_HEIGHT);
+    Control::init("", 25, SCREEN_WIDTH, SCREEN_HEIGHT);
 
     int X_OFFSET = 600;
 
@@ -99,7 +99,7 @@ void ExplosionGenerator::initGUI()
     int BUTTON_HEIGHT = 30;
 
     Control* temp;
-
+/*
     temp = new Label("GAME OF LIFE",
                                 X_OFFSET, 0,
                                 BUTTON_WIDTH, 120,
@@ -147,6 +147,29 @@ void ExplosionGenerator::initGUI()
                                 GRAY, BLACK, DARK_BLUE,
                                 std::bind(&ExplosionGenerator::resetGameBoardCB, this));
     temp->setFont(25, GREEN);
+    temp->setTextLayout(false, CENTER, CENTER);
+    m_gui.addGUIComponent(temp);
+*/
+
+
+    temp = new Label("ABCDL_gyp", 0, 100,
+                                SCREEN_WIDTH, 25,
+                                LIGHT_GRAY);
+    temp->setFont(25, BLACK);
+    temp->setTextLayout(false, CENTER, CENTER);
+    m_gui.addGUIComponent(temp);
+
+    temp = new Label("ABCDL_gyp", 0, 140,
+                                SCREEN_WIDTH, 35,
+                                LIGHT_GRAY);
+    temp->setFont(35, BLACK);
+    temp->setTextLayout(false, CENTER, CENTER);
+    m_gui.addGUIComponent(temp);
+
+    temp = new Label("ABCDL_gyp", 0, 180,
+                                SCREEN_WIDTH, 50,
+                                LIGHT_GRAY);
+    temp->setFont(50, BLACK);
     temp->setTextLayout(false, CENTER, CENTER);
     m_gui.addGUIComponent(temp);
 }

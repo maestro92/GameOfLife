@@ -2639,7 +2639,7 @@
 	"SDL/SDL_image.h"
 	"text_engine.h"
 
-1451697581 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
+1451710910 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
 	"main.h"
 	"gl/gl.h"
 	"gl/glu.h"
@@ -2664,7 +2664,7 @@
 	<sstream>
 	<stdio.h>
 
-1451699664 source:d:\martin\programming\c_c++\projects\gameoflife\game_board.cpp
+1451700512 source:d:\martin\programming\c_c++\projects\gameoflife\game_board.cpp
 	"game_board.h"
 
 1451642138 d:\martin\programming\c_c++\projects\gameoflife\game_board.h
@@ -2937,7 +2937,7 @@
 1451632254 source:d:\martin\programming\c_c++\projects\gameoflife\gui\button.cpp
 	"button.h"
 
-1451641436 source:d:\martin\programming\c_c++\projects\gameoflife\gui\control.cpp
+1451710047 source:d:\martin\programming\c_c++\projects\gameoflife\gui\control.cpp
 	"Control.h"
 
 1451692677 source:d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.cpp
