@@ -12,15 +12,6 @@ Renderer::~Renderer()
 
 }
 
-
-void Renderer::allocateMemberVariables(int nShaders)
-{
-    m_numShaders = nShaders;
-    m_matricesUniLocs.resize(nShaders);
-    m_shaders.resize(nShaders);
-    m_allDataPairs.resize(nShaders);
-}
-
 void Renderer::addShader(Shader* s)
 {
     m_shaders.push_back(s);
@@ -118,27 +109,6 @@ void Renderer::addDataPair(int pass, const char* name, int dataType)
         exit(1);
     }
     m_tables[pass][name]->uniLoc = getUniLoc(m_shaders[pass], name);
-
-//    p->label = "here";
-//    m_tables[pass][name] = p;
-
-/*
-    DataPair* dpdp = m_tables[RENDER_PASS2]["u_color"];
-    dpdp->setValue(glm::vec4(1.0,0.0,0.0,1.0));
-    Utility::debug("it is", dpdp->value)
-*/
-
-
-
-/*
-    (m_tables[RENDER_PASS2]["u_color"])->setValue(glm::vec4(1.0,0.0,0.0,1.0));
-   // Utility::debug("it is", (m_tables[RENDER_PASS2]["u_color"])->value);
-    m_tables[RENDER_PASS2]["u_color"]->printValue();
-    int a = 1;
-*/
-
-//    std::pair<string, DataPair*> newPair(name, p);
-//    m_tables[pass].insert(newPair);
 }
 
 
@@ -235,13 +205,6 @@ void Renderer::printTables()
     }
 }
 
-/*
-void Renderer::initDataPairUniLoc(DataPair* p, Shader* s, int pass, const char* name)
-{
-    p->uniLoc = getUniLoc(s, name);
-    m_allDataPairs[pass].push_back(p);
-}
-*/
 
 
 GLuint Renderer::getUniLoc(Shader* s, const char* name)
@@ -249,8 +212,16 @@ GLuint Renderer::getUniLoc(Shader* s, const char* name)
     return GetUniformLocation(s, name);
 }
 
-void Renderer::loadUniformLocations(int RenderPassID)
-{}
+void Renderer::loadUniformLocations()
+{
+    loadUniformLocations(RENDER_PASS1);
+}
+
+void Renderer::loadUniformLocations(int pass)
+{
+    for ( auto local_it = m_tables[pass].begin(); local_it!= m_tables[pass].end(); ++local_it )
+        (local_it->second)->setUniLoc();
+}
 
 
 void Renderer::loadUniformLocations(pipeline& p)
@@ -258,11 +229,13 @@ void Renderer::loadUniformLocations(pipeline& p)
     loadUniformLocations(p, RENDER_PASS1);
 }
 
-void Renderer::loadUniformLocations(pipeline& p, int RenderPassID)
+void Renderer::loadUniformLocations(pipeline& p, int pass)
 {
-    if(RenderPassID != m_curShader)
+    loadUniformLocations(pass);
+
+    if(pass != m_curShader)
     {
-        Utility::debug("######### RenderPassID Not Matching");
+        Utility::debug("######### pass Not Matching");
     }
 
 	if(!p.matricesReady)
@@ -274,11 +247,11 @@ void Renderer::loadUniformLocations(pipeline& p, int RenderPassID)
 		p.normalMatrix=glm::mat3(p.modelViewMatrix);
 	}
 
-	glUniformMatrix4fv(m_matricesUniLocs[RenderPassID].ModelMatrix,1,GL_FALSE,&p.modelMatrix[p.modelMatrix.size()-1][0][0]);
-    glUniformMatrix4fv(m_matricesUniLocs[RenderPassID].ViewMatrix,1,GL_FALSE,&p.viewMatrix[p.viewMatrix.size()-1][0][0]);
-	glUniformMatrix4fv(m_matricesUniLocs[RenderPassID].ModelviewMatrix,1,GL_FALSE,&p.modelViewMatrix[0][0]);
-	glUniformMatrix4fv(m_matricesUniLocs[RenderPassID].ModelviewProjection,1,GL_FALSE,&p.modelViewProjectionMatrix[0][0]);
-	glUniformMatrix3fv(m_matricesUniLocs[RenderPassID].NormalMatrix,1,GL_FALSE,&p.normalMatrix[0][0]);
+	glUniformMatrix4fv(m_matricesUniLocs[pass].ModelMatrix,1,GL_FALSE,&p.modelMatrix[p.modelMatrix.size()-1][0][0]);
+    glUniformMatrix4fv(m_matricesUniLocs[pass].ViewMatrix,1,GL_FALSE,&p.viewMatrix[p.viewMatrix.size()-1][0][0]);
+	glUniformMatrix4fv(m_matricesUniLocs[pass].ModelviewMatrix,1,GL_FALSE,&p.modelViewMatrix[0][0]);
+	glUniformMatrix4fv(m_matricesUniLocs[pass].ModelviewProjection,1,GL_FALSE,&p.modelViewProjectionMatrix[0][0]);
+	glUniformMatrix3fv(m_matricesUniLocs[pass].NormalMatrix,1,GL_FALSE,&p.normalMatrix[0][0]);
 }
 
 

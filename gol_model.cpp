@@ -5,81 +5,62 @@ GOLModel::GOLModel()
 
 }
 
-GOLModel::GOLModel(string name, int gw, int gh, int gs)
-{
-    m_name = name;
-    m_gridWidth = gw;
-    m_gridHeight = gh;
-    init(gs);
-}
-
 GOLModel::GOLModel(string name, TextureDataBuffer gData, int gs)
 {
     m_name = name;
     m_gridHeight = gData.size();
     m_gridWidth = gData[0].size();
-    init(gs);
-    initTexture(gData);
-    for (int y = 0; y < m_height; y++)
-    {
-        for (int x = 0; x < m_width; x++)
-        {
-            int num = (int)m_pixelData[y][x][3];
-        //    cout << ((num == 255) ? 1 : 0);
-        }
-     //   cout << endl;
-    }
-}
 
-
-
-void GOLModel::init(int gs)
-{
     m_height = m_gridHeight * gs;
     m_width = m_gridWidth * gs;
 
+    m_thumbnailWidth = m_gridHeight * 5;
+    m_thumbnailHeight = m_gridWidth * 5;
+
     m_gridSize = gs;
 
-    m_pixelData.resize(m_height);
-    for(int i=0; i<m_height; i++)
-    {
-        m_pixelData[i].resize(m_width);
-        for(int j=0; j<m_width; j++)
-            m_pixelData[i][j].resize(4);
-    }
+//    m_pixelData = Utility::createEmptyBuffer(m_width, m_height);
+
+    m_patternTexture = Utility::loadTexture(gridDataToPixelData(gData, m_gridSize), GL_NEAREST);
+    m_thumbnailTexture = Utility::loadTexture(gridDataToPixelData(gData, 5), GL_NEAREST);
 }
 
 
-/*
-    this function takes the gridData (which is in grid coordinate) and converts
-    it into pixel coordinate
-*/
-void GOLModel::initTexture(TextureDataBuffer gridData)
+TextureDataBuffer GOLModel::gridDataToPixelData(TextureDataBuffer gridData, int gs)
 {
-    for (int y = 0; y < m_gridHeight; y++)
-    {
-        for (int x = 0; x < m_gridWidth; x++)
-        {
-            int sy = y * m_gridSize;
-            int sx = x * m_gridSize;
+    int gh = gridData.size();
+    int gw = gridData[0].size();
 
-            int ey = (y + 1) * m_gridSize;
-            int ex = (x + 1) * m_gridSize;
+    int ph = gh * gs;
+    int pw = gw * gs;
+
+    TextureDataBuffer pixelData = Utility::createEmptyBuffer(pw, ph);
+
+    for (int y = 0; y < gh; y++)
+    {
+        for (int x = 0; x < gw; x++)
+        {
+            int sy = y * gs;
+            int sx = x * gs;
+
+            int ey = (y + 1) * gs;
+            int ex = (x + 1) * gs;
 
             for(int py = sy; py < ey; py++)
             {
                 for(int px = sx; px < ex; px++)
                 {
-                    m_pixelData[py][px][0] = gridData[y][x][0];
-                    m_pixelData[py][px][1] = gridData[y][x][1];
-                    m_pixelData[py][px][2] = gridData[y][x][2];
-                    m_pixelData[py][px][3] = gridData[y][x][3];
+                    pixelData[py][px][0] = gridData[y][x][0];
+                    pixelData[py][px][1] = gridData[y][x][1];
+                    pixelData[py][px][2] = gridData[y][x][2];
+                    pixelData[py][px][3] = gridData[y][x][3];
                 }
             }
         }
     }
-    m_patternTexture = Utility::loadTexture(m_pixelData, GL_NEAREST);
+    return pixelData;
 }
+
 
 
 string GOLModel::getName()
@@ -90,4 +71,9 @@ string GOLModel::getName()
 GLuint GOLModel::getTexture()
 {
     return m_patternTexture;
+}
+
+GLuint GOLModel::getThumbnailTexture()
+{
+    return m_thumbnailTexture;
 }

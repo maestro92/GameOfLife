@@ -9,7 +9,7 @@
 #include "button.h"
 #include "gol_model.h"
 #include "control.h"
-#include "general_renderer.h"
+#include "renderer.h"
 
 class GUIManager
 {
@@ -40,7 +40,7 @@ class GUIManager
 
         void renderGUI();
 
-        GeneralRenderer  r_textureRenderer;
+        Renderer  r_textureRenderer;
 
         void updateAndRender(MouseState mouseState);
         void renderGUIComponents();

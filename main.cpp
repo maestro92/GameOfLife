@@ -27,33 +27,16 @@ SDL_Event event;
 static float runningTime = 0.0f;
 
 
-
-
-std::map<GLchar, Character> m_characters;
-GLuint VAO, VBO;
-
-
-
-
-
-
 ExplosionGenerator::ExplosionGenerator()
 {
     isRunning = true;
     m_inputMode = true;
     m_switchFlag = false;
 
-    m_GUIComponentsFlags = 0;
-    m_GUIComponentsIDs = 0;
-
     initRenderers();
     initObjects();
     initModels();
     initGUI();
-
-    m_smokeSize = 10;
-    m_testintSmokeMode = false;
-
 
     SDL_WM_SetCaption("GAME OF LIFE", NULL);
 }
@@ -79,14 +62,14 @@ void ExplosionGenerator::initOpenGL()
 
 void ExplosionGenerator::initRenderers()
 {
-    m_rm.init(SCREEN_WIDTH, SCREEN_HEIGHT);
+    m_rm.init();
     tempTexture = Utility::loadTexture("Assets/Images/tank1B.png");
 }
 
 
 void ExplosionGenerator::initObjects()
 {
-    m_gridSize = 5;
+    m_gridSize = 50;
     m_board = GameBoard(SCREEN_WIDTH-200, SCREEN_HEIGHT, m_gridSize);
 
     int x = SCREEN_WIDTH - 200;
@@ -94,9 +77,6 @@ void ExplosionGenerator::initObjects()
     int w = 200;
     int h = SCREEN_HEIGHT;
     m_gui.init(SCREEN_WIDTH, SCREEN_HEIGHT, x, y, w, h);
-
-  //  m_GOLSquare = GOL_Square(1, 1, m_gridSize);
-  //  m_GOLSquareOutline = GOL_SquareOutline(5, 5, m_gridSize);
 }
 
 
@@ -112,16 +92,11 @@ void ExplosionGenerator::initGUI()
 {
     Control::init("", 100, SCREEN_WIDTH, SCREEN_HEIGHT);
 
-    m_GUIComponentsFlags = 0;
-
-
     int X_OFFSET = 600;
 
     int SLIDER_HEIGHT = 35;
     int BUTTON_WIDTH = 200;
     int BUTTON_HEIGHT = 30;
-
-//    string text = "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.";
 
     Control* temp;
 
@@ -143,6 +118,7 @@ void ExplosionGenerator::initGUI()
     temp->setFont(15, WHITE);
     temp->setTextLayout(true, CENTER, TOP_ALIGNED);
     m_gui.addGUIComponent(temp);
+
 
 
 
@@ -254,17 +230,8 @@ void ExplosionGenerator::start()
                                 m_switchFlag = true;
                             m_inputMode = !m_inputMode;
                             break;
-
-                        case SDLK_r:
-                            Utility::debug("pressing R");
-
-
-
-                            break;
                     }
                     break;
-
-
 			}
         }
             update();
@@ -291,54 +258,13 @@ void ExplosionGenerator::update()
 {
     int mx, my;
     SDL_GetMouseState(&mx,&my);
-//    Utility::debug("mouse is", glm::vec2(mx, SCREEN_HEIGHT - my));
 
     m_mouseState.m_pos = glm::vec2(mx, SCREEN_HEIGHT - my);
-
-    bool sliding = false;
-    bool b = false;
-
-//    std::bitset<32> flag(m_GUIComponentsFlags);
-//    cout << flag << endl;
-
-
-  //  if(m_GUIComponentsFlags == 0)
-
-//    sliding = m_particleCountSlider.update(m_mouseState, m_GUIComponentsFlags) || m_maxRadiusSlider.update(m_mouseState, m_GUIComponentsFlags);
-//    sliding = m_velocitySlider.update(m_mouseState, m_GUIComponentsFlags);
-//    sliding = m_smokeSizeSlider.update(m_mouseState, m_GUIComponentsFlags);
-
-   /*
-    b = m_triggerButton.update(m_mouseState, m_GUIComponentsFlags);
-    if(b)
-    {
-        if(m_inputMode)
-            m_switchFlag = true;
-        m_inputMode = !m_inputMode;
-    }
-
-    b = m_resetButton.update(m_mouseState, m_GUIComponentsFlags);
-    if(b)
-    {
-        m_inputMode = true;
-        m_switchFlag = false;
-    }
-*/
-
-
-
-
-
-    // m_GOLModelPtr = m_GOLModelMenu[m_GUIManager.m_GOLModelListBox.getIndex()];
-
-    // if(m_GOLModelListBox.getIndex())
 
     if(m_inputMode)
     {
         r_Technique = &m_rm.r_GOLUserInputWithPattern;
-        // m_GOLModelPtr = &m_GOLSquareOutline;
         m_board.initUserInput(r_Technique, m_mouseState, m_GOLModelPtr);
-//        m_board.initUserInput(r_Technique, m_mouseState, m_GOLModelPtr, m_GOLModelManager.getModel(2)->getTexture());
         m_board.m_userInputBoardDoubleBuffer.swapFrontBack();
     }
     else
@@ -385,28 +311,19 @@ void ExplosionGenerator::forwardRender()
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
 
-//    glClearColor(0.1,0.1,0.1,1.0);
     glClearColor(1.0,1.0,1.0,1.0);
     glClear(GL_COLOR_BUFFER_BIT);
 
     if(m_inputMode)
     {
         r_Technique = &m_rm.r_GOLRenderInputWithPattern;
-    //    m_GOLModelPtr = &m_GOLSquareOutline;
-//        m_GOLModelPtr = &m_GOLSquare;
-//        m_board.initUserInput(r_Technique, m_mouseState, m_GOLModelManager.getModel(2)->getTexture());
-
-    //    m_board.renderInput(r_Technique, m_mouseState, m_GOLModelPtr);
-    //      m_board.renderInput(r_Technique, m_mouseState, m_GOLModelPtr, m_GOLModelManager.getModel(2)->getTexture());
-          m_board.renderInput(r_Technique, m_mouseState, m_GOLModelPtr);
+        m_board.renderInput(r_Technique, m_mouseState, m_GOLModelPtr);
     }
     else
     {
         r_Technique = &m_rm.r_GOLRenderSimluation;
         m_board.renderSimulation(r_Technique);
     }
-
-
 
     renderGUI();
 }

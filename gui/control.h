@@ -134,8 +134,8 @@ class Control
         static int m_screenWidth;
         static int m_screenHeight;
         static QuadModel m_quadModel;
-        static GeneralRenderer r_coloredRectRenderer;        static GeneralRenderer r_texturedRectRenderer;
-        static GeneralRenderer r_listBoxHighlightRenderer;
+        static Renderer r_coloredRectRenderer;        static Renderer r_texturedRectRenderer;
+        static Renderer r_listBoxHighlightRenderer;
 };
 
 

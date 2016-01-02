@@ -4,7 +4,7 @@
 
 #include "define.h"
 #include "quad_model.h"
-#include "general_renderer.h"
+#include "renderer.h"
 #include "gol_model.h"
 
 using namespace std;
@@ -92,13 +92,9 @@ class GameBoard
 
         void inputToSimluationBoard(Renderer* renderer);
         void initUserInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern);
-        void initUserInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern, GLuint texture);
         void update(Renderer* renderer);
 
         void renderInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern);
-        void renderInput(Renderer* renderer, MouseState& mouseState, GOLModel* pattern, GLuint texture);
-
-
         void renderInputToSimulation(Renderer* renderer);
         void renderSimulationToInput(Renderer* renderer);
         void renderIntermediate(Renderer* renderer, RenderInfo& rInfo);
@@ -106,7 +102,14 @@ class GameBoard
         void renderSimulation(Renderer* renderer, FBOTargetId target);
         void renderSimulation(Renderer* renderer, GLuint fboTarget);
         void renderSimulation(Renderer* renderer);
-        glm::vec2 screenCoordToBoardCoord(glm::vec2 pos);
+
+        inline glm::vec2 screenCoordToBoardCoord(glm::vec2 pos)
+        {
+            glm::vec2 bCoord;
+            bCoord.x = floor(pos.x * m_invGridSize);
+            bCoord.y = floor(pos.y * m_invGridSize);
+            return bCoord;
+        }
 
         void reset();
 };

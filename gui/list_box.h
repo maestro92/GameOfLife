@@ -12,7 +12,7 @@ using namespace std;
 struct ListBoxItem
 {
     string text;
-    glm::vec2 dim;
+    glm::vec2 textureSize;
     glm::vec3 color;
     Rect rect;
     Rect modelRect;
@@ -24,10 +24,10 @@ struct ListBoxItem
     ListBoxItem()
     { }
 
-    ListBoxItem(string t, glm::vec2 d, Rect r, Rect mr, glm::vec3 c, GLuint tex)
+    ListBoxItem(string t, glm::vec2 texSize, Rect r, Rect mr, glm::vec3 c, GLuint tex)
     {
         text = t;
-        dim = d;
+        textureSize = texSize;
         rect = r;
         modelRect = mr;
         color = c;
@@ -45,7 +45,7 @@ class ListBox : public Control
 
         void setContent(vector<GOLModel*> models);
 
-        void addItem(string text, glm::vec2 dim, glm::vec3 color, GLuint texID);
+        void addItem(string text, glm::vec2 textureSize, glm::vec3 color, GLuint texID);
 
         void removeItem(int index);
         void setCurrent(int index);

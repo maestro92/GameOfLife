@@ -7,7 +7,7 @@
 #include FT_FREETYPE_H
 
 #include "quad_model.h"
-#include "general_renderer.h"
+#include "renderer.h"
 
 
 
@@ -90,7 +90,7 @@ class TextEngine
         int m_screenWidth;
         int m_screenHeight;
 
-        GeneralRenderer r_textRenderer;
+        Renderer r_textRenderer;
 
 };
 

@@ -1,5 +1,5 @@
-#ifndef EG_DEFINE_H_
-#define EG_DEFINE_H_
+#ifndef DEFINE_H_
+#define DEFINE_H_
 
 
 

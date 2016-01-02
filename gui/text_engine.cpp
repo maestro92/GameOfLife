@@ -175,10 +175,8 @@ void TextEngine::render(string text, float x, float y, float fontSize, glm::vec3
             Character ch = m_characters[c];
 
             float xpos = x + ch.bearing.x * scale;
-            float ypos = y - (ch.size.y - ch.bearing.y) * scale;
+            float ypos = y - ch.bearing.y * scale;
 
-        //    Utility::debug("xpos, ypos", c);
-        //    Utility::debug("xpos, ypos", glm::vec2(xpos, ypos));
             float w = ch.size.x * scale;
             float h = ch.size.y * scale;
 

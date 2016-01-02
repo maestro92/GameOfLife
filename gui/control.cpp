@@ -3,8 +3,8 @@
 TextEngine Control::m_textEngine;
 pipeline Control::m_pipeline;
 QuadModel Control::m_quadModel;// = QuadModel(1,1);
-GeneralRenderer Control::r_coloredRectRenderer;GeneralRenderer Control::r_texturedRectRenderer;
-GeneralRenderer Control::r_listBoxHighlightRenderer;
+Renderer Control::r_coloredRectRenderer;Renderer Control::r_texturedRectRenderer;
+Renderer Control::r_listBoxHighlightRenderer;
 int Control::m_screenWidth;
 int Control::m_screenHeight;
 

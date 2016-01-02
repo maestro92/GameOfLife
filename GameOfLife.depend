@@ -1427,7 +1427,7 @@
 	"glm/gtx/transform.hpp"
 	<GL/glew.h>
 
-1444331681 d:\martin\programming\c_c++\projects\gameoflife\define.h
+1451642829 d:\martin\programming\c_c++\projects\gameoflife\define.h
 	<string>
 	<iostream>
 	<ctime>
@@ -2519,10 +2519,10 @@
 
 1448943502 source:d:\martin\programming\c_c++\projects\gameoflife\eg_gui\gol_gui.cpp
 
-1451067358 d:\martin\programming\c_c++\projects\gameoflife\gol_model.h
+1451693058 d:\martin\programming\c_c++\projects\gameoflife\gol_model.h
 	"utility.h"
 
-1451067360 source:d:\martin\programming\c_c++\projects\gameoflife\gol_model.cpp
+1451692956 source:d:\martin\programming\c_c++\projects\gameoflife\gol_model.cpp
 	"gol_model.h"
 
 1449181512 source:d:\martin\programming\c_c++\projects\gameoflife\eg_utility\eg_utility_sdl.cpp
@@ -2613,7 +2613,7 @@
 1451061862 source:d:\martin\programming\c_c++\projects\gameoflife\eg_renderer\general_renderer.cpp
 	"general_renderer.h"
 
-1451099385 d:\martin\programming\c_c++\projects\gameoflife\main.h
+1451687458 d:\martin\programming\c_c++\projects\gameoflife\main.h
 	<cstdlib>
 	<iostream>
 	<stdio.h>
@@ -2632,14 +2632,14 @@
 	"pipeline.h"
 	<ft2build.h>
 	"renderer_manager.h"
-	"general_renderer.h"
+	"renderer.h"
 	<GL/glew.h>
 	"SDL/SDL_opengl.h"
 	"SDL/SDL.h"
 	"SDL/SDL_image.h"
 	"text_engine.h"
 
-1451639456 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
+1451697581 source:d:\martin\programming\c_c++\projects\gameoflife\main.cpp
 	"main.h"
 	"gl/gl.h"
 	"gl/glu.h"
@@ -2664,13 +2664,13 @@
 	<sstream>
 	<stdio.h>
 
-1451098865 source:d:\martin\programming\c_c++\projects\gameoflife\game_board.cpp
+1451699664 source:d:\martin\programming\c_c++\projects\gameoflife\game_board.cpp
 	"game_board.h"
 
-1451064023 d:\martin\programming\c_c++\projects\gameoflife\game_board.h
+1451642138 d:\martin\programming\c_c++\projects\gameoflife\game_board.h
 	"define.h"
 	"quad_model.h"
-	"general_renderer.h"
+	"renderer.h"
 	"gol_model.h"
 
 1450895243 source:d:\martin\programming\c_c++\projects\gameoflife\shader.cpp
@@ -2769,7 +2769,7 @@
 1451640229 source:d:\martin\programming\c_c++\projects\gameoflife\gol_model_manager.cpp
 	"gol_model_manager.h"
 
-1451062173 d:\martin\programming\c_c++\projects\gameoflife\gol_model_manager.h
+1451691972 d:\martin\programming\c_c++\projects\gameoflife\gol_model_manager.h
 	"utility.h"
 	"gol_model.h"
 
@@ -2846,7 +2846,7 @@
 1451061575 d:\martin\programming\c_c++\projects\gameoflife\renderer\general_renderer.h
 	"renderer.h"
 
-1451061831 d:\martin\programming\c_c++\projects\gameoflife\renderer\renderer.h
+1451641033 d:\martin\programming\c_c++\projects\gameoflife\renderer\renderer.h
 	"define.h"
 	"shader.h"
 	"pipeline.h"
@@ -2866,7 +2866,7 @@
 	<unordered_map>
 	"Control.h"
 
-1451636661 d:\martin\programming\c_c++\projects\gameoflife\gui\control.h
+1451641436 d:\martin\programming\c_c++\projects\gameoflife\gui\control.h
 	"pipeline.h"
 	"define.h"
 	"utility.h"
@@ -2879,11 +2879,11 @@
 	<string>
 	<bitset>
 
-1451622975 d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.h
+1451641436 d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.h
 	<unordered_map>
 	<ft2build.h>
 	"quad_model.h"
-	"general_renderer.h"
+	"renderer.h"
 
 1450912109 d:\martin\programming\c_c++\projects\gameoflife\gui\rect.h
 	"define.h"
@@ -2893,7 +2893,7 @@
 	"general_renderer.h"
 	"Rect.h"
 
-1451098253 d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.h
+1451641436 d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.h
 	"pipeline.h"
 	"utility.h"
 	"Rect.h"
@@ -2902,12 +2902,12 @@
 	"button.h"
 	"gol_model.h"
 	"control.h"
-	"general_renderer.h"
+	"renderer.h"
 
 1451062568 d:\martin\programming\c_c++\projects\gameoflife\gui\slider.h
 	"Control.h"
 
-1451637023 d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.h
+1451692104 d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.h
 	<vector>
 	<gol_model.h>
 	"Rect.h"
@@ -2937,22 +2937,22 @@
 1451632254 source:d:\martin\programming\c_c++\projects\gameoflife\gui\button.cpp
 	"button.h"
 
-1451639263 source:d:\martin\programming\c_c++\projects\gameoflife\gui\control.cpp
+1451641436 source:d:\martin\programming\c_c++\projects\gameoflife\gui\control.cpp
 	"Control.h"
 
-1451627818 source:d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.cpp
+1451692677 source:d:\martin\programming\c_c++\projects\gameoflife\gui\gui_manager.cpp
 	"gui_manager.h"
 
 1451632317 source:d:\martin\programming\c_c++\projects\gameoflife\gui\label.cpp
 	"Label.h"
 
-1451638628 source:d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.cpp
+1451693128 source:d:\martin\programming\c_c++\projects\gameoflife\gui\list_box.cpp
 	"list_box.h"
 
 1451063839 source:d:\martin\programming\c_c++\projects\gameoflife\gui\slider.cpp
 	"Slider.h"
 
-1451626845 source:d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.cpp
+1451641548 source:d:\martin\programming\c_c++\projects\gameoflife\gui\text_engine.cpp
 	"text_engine.h"
 
 1451066488 source:d:\martin\programming\c_c++\projects\gameoflife\model\builtin_model\eg_cubemodel.cpp
@@ -3011,7 +3011,7 @@
 1451061862 source:d:\martin\programming\c_c++\projects\gameoflife\renderer\general_renderer.cpp
 	"general_renderer.h"
 
-1451061927 source:d:\martin\programming\c_c++\projects\gameoflife\renderer\renderer.cpp
+1451641158 source:d:\martin\programming\c_c++\projects\gameoflife\renderer\renderer.cpp
 	"Renderer.h"
 
 1450896455 source:d:\martin\programming\c_c++\projects\gameoflife\utility\utility.cpp
@@ -3041,9 +3041,9 @@
 1451064014 source:d:\martin\programming\c_c++\projects\gameoflife\model\builtin_model\quad_model.cpp
 	"quad_model.h"
 
-1451064157 d:\martin\programming\c_c++\projects\gameoflife\renderer\renderer_manager.h
+1451642821 d:\martin\programming\c_c++\projects\gameoflife\renderer\renderer_manager.h
 	"quad_model.h"
-	"general_renderer.h"
+	"renderer.h"
 	"Rect.h"
 
 1451064097 source:d:\martin\programming\c_c++\projects\gameoflife\model\imported_animated_model.cpp
@@ -3092,7 +3092,7 @@
 1421301257 d:\martin\programming\c_c++\projects\gameoflife\model\meshdata.h
 	"define.h"
 
-1451064202 source:d:\martin\programming\c_c++\projects\gameoflife\renderer\renderer_manager.cpp
+1451642813 source:d:\martin\programming\c_c++\projects\gameoflife\renderer\renderer_manager.cpp
 	"renderer_manager.h"
 
 1432152333 source:d:\martin\programming\c_c++\projects\gameoflife\model\mesh.cpp
@@ -3117,4 +3117,7 @@
 	"EG_ModelABS.h"
 
 1451076970 d:\martin\programming\c_c++\projects\gameoflife\gui\func_call_back.h
+
+1451066488 source:d:\martin\programming\c_c++\projects\gameoflife\model\builtin_model\cube_model.cpp
+	"cube_model.h"
 

@@ -28,7 +28,7 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
 #include "renderer_manager.h"
-#include "general_renderer.h"
+#include "renderer.h"
 
 
 #define NO_SDL_GLEXT
@@ -39,8 +39,6 @@
 #include "SDL/SDL_image.h"
 
 #include "text_engine.h"
-
-
 
 
 #define FRAME_VALUES 10
@@ -79,36 +77,10 @@ class ExplosionGenerator
 
 
         /// GUI
-        Label m_GUIPanel;
-
-        Button m_triggerButton;
-        Button m_resetButton;
-        Button m_minimizeButton;
-        Button m_pauseButton;
-
-
-        Slider m_smokeSizeSlider;
-        float m_smokeSize;
-        bool m_testintSmokeMode;
-
-        Slider m_particleCountSlider;    float m_particleCount;
-        Slider m_velocitySlider;         float m_velocity;
-        Slider m_maxRadiusSlider;        float m_maxRadius;
-        ListBox m_listBox;
-
-
-
-
-        int m_GUIComponentsIDs;
-        unsigned int m_GUIComponentsFlags;
-        vector<Control*> m_GUIComponents;
-
-
         long long m_runningTime;
         MouseState m_mouseState;
 
         pipeline m_pipeline;
-
 
         bool m_inputMode;
         bool m_switchFlag;
@@ -128,30 +100,17 @@ class ExplosionGenerator
         unsigned int m_prevFrameTick;
 
         bool isRunning;
-
-
         GOLModel* m_GOLModelPtr;
-
-
-   //     vector<string> m_GOLModelTitles;
-   //     vector<GOLModel*> m_GOLModels;
-
-
-        //GOL_Square m_GOLSquare;
-        //GOL_SquareOutline m_GOLSquareOutline;
 
         int m_gridSize;
 
         GLuint tempTexture;
-
 
         GameBoard m_board;
 
         GUIManager m_gui;
         GOLModelManager m_GOLModelManager;
     public:
-
-
 
         ExplosionGenerator();
         ~ExplosionGenerator();
@@ -161,7 +120,6 @@ class ExplosionGenerator
         void initObjects();
         void initModels();
         void initRenderers();
-
         void initGUI();
 
         void start();
@@ -169,18 +127,14 @@ class ExplosionGenerator
 
         void forwardRender();
         void renderScene();
-        void initGUIRenderStage();
-        void getUserInput(glm::vec2 position);
 
         void renderGUI();
 
-        void RenderText(string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color);
 
         void startCB();
         void resetGameBoardCB();
         void GOLModelListBoxCB();
 };
-
 
 
 

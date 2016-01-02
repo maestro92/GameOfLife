@@ -32,14 +32,12 @@ void ListBox::setContent(vector<GOLModel*> models)
     int count = models.size();
     for(int i=0; i<count; i++)
     {
-        addItem(models[i]->getName(), glm::vec2(models[i]->m_width, models[i]->m_height), WHITE, models[i]->getTexture());
+        addItem(models[i]->getName(), glm::vec2(models[i]->m_thumbnailWidth, models[i]->m_thumbnailHeight), WHITE, models[i]->getThumbnailTexture());
     }
 }
 
-void ListBox::addItem(string text, glm::vec2 dim, glm::vec3 color, GLuint texID)
+void ListBox::addItem(string text, glm::vec2 textureSize, glm::vec3 color, GLuint texID)
 {
-
-  //  LineBreakInfo info = Control::m_textEngine.getLineBreakInfo(text, m_itemFont.size);
     int index = m_items.size();
 
     int offset_x = m_rect.x + m_curColNum * m_itemWidth;
@@ -48,15 +46,14 @@ void ListBox::addItem(string text, glm::vec2 dim, glm::vec3 color, GLuint texID)
     Rect itemRect(offset_x, offset_y, m_itemWidth, m_itemHeight);
 
     Rect modelRect;
-    modelRect.x = itemRect.x + (itemRect.w - dim.x) * 0.5;
-    modelRect.y = itemRect.y + (itemRect.h - dim.y) * 0.33;
-    modelRect.w = dim.x;
-    modelRect.h = dim.y;
+    modelRect.x = itemRect.x + (itemRect.w - textureSize.x) * 0.5;
+    modelRect.y = itemRect.y + (itemRect.h - textureSize.y) * 0.33;
+    modelRect.w = textureSize.x;
+    modelRect.h = textureSize.y;
 
 
-    ListBoxItem item(text, dim, itemRect, modelRect, color, texID);
+    ListBoxItem item(text, textureSize, itemRect, modelRect, color, texID);
     m_items.push_back(item);
-
 
 
     if(m_curColNum == m_colNum-1)

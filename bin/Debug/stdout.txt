@@ -1,15 +1,4 @@
-vs: EG_GOLUserInput.vs, fs: EG_GOLUserInput.fs
-Error in Init_Shader with u_modelViewProjMat
-Error in Init_Shader with u_modelViewMat
-Error in Init_Shader with u_viewMat
-Error in Init_Shader with u_projMat
-Error in Init_Shader with u_modelMat
-Error in Init_Shader with u_viewNoRotateMat
-Error in Init_Shader with u_normalMat
-Error in Init_Shader
-Error in Init_Shader with u_invWidth
-Error in Init_Shader with u_invHeight
-vs: EG_GOLUserInputWithPattern.vs, fs: EG_GOLUserInputWithPattern.fs
+vs: gol_user_input_with_pattern.vs, fs: gol_user_input_with_pattern.fs
 Error in Init_Shader with u_modelViewProjMat
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
@@ -19,7 +8,7 @@ Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
 Error in Init_Shader with u_boardTexture
-vs: EG_GOLUpdate.vs, fs: EG_GOLUpdate.fs
+vs: gol_update.vs, fs: gol_update.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -27,7 +16,7 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
-vs: EG_GOLRenderInputWithPattern.vs, fs: EG_GOLRenderInputWithPattern.fs
+vs: gol_render_input_with_pattern.vs, fs: gol_render_input_with_pattern.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -35,7 +24,7 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
-vs: EG_GOLRenderSimulation.vs, fs: EG_GOLRenderSimulation.fs
+vs: gol_render_simulation.vs, fs: gol_render_simulation.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -43,7 +32,7 @@ Error in Init_Shader with u_modelMat
 Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
-vs: EG_GOLRenderIntermediate.vs, fs: EG_GOLRenderIntermediate.fs
+vs: gol_render_intermediate.vs, fs: gol_render_intermediate.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
 Error in Init_Shader with u_projMat
@@ -52,30 +41,7 @@ Error in Init_Shader with u_viewNoRotateMat
 Error in Init_Shader with u_normalMat
 Error in Init_Shader
 Error in Init_Shader with u_srcEmptyValue
-vs: /EG_GUIShaders/Rect.vs, fs: /EG_GUIShaders/Rect.fs
-The file /EG_GUIShaders/Rect.vscannot be openned
-
-The file /EG_GUIShaders/Rect.fscannot be openned
-
-Error in Init_Shader with u_modelViewProjMat
-Error in Init_Shader with u_modelViewMat
-Error in Init_Shader with u_viewMat
-Error in Init_Shader with u_projMat
-Error in Init_Shader with u_modelMat
-Error in Init_Shader with u_viewNoRotateMat
-Error in Init_Shader with u_normalMat
-Error in Init_Shader
-Error in Init_Shader with u_color
-vs: /EG_GUIShaders/EG_Text.vs, fs: /EG_GUIShaders/EG_Text.fs
-Error in Init_Shader with u_modelViewMat
-Error in Init_Shader with u_viewMat
-Error in Init_Shader with u_projMat
-Error in Init_Shader with u_modelMat
-Error in Init_Shader with u_viewNoRotateMat
-Error in Init_Shader with u_normalMat
-Error in Init_Shader
 Loading Texture Assets/Images/tank1B.png
-Error happened while loading the texture: 1282
 vs: texture.vs, fs: texture.fs
 Error in Init_Shader with u_modelViewMat
 Error in Init_Shader with u_viewMat
@@ -251,6 +217,4 @@ lineCosts
 lineBreaks
 
 Start
-clicking left
-clicking Up left
 Terminating normally.

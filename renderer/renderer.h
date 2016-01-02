@@ -330,20 +330,18 @@ class Renderer
         virtual ~Renderer();
 
         void addShader(Shader* s);
-        void allocateMemberVariables(int nShaders);
 
         void enableShader();
-        void enableShader(int RenderPassID);
+        void enableShader(int pass);
         void disableShader();
-        void disableShader(int RenderPassID);
+        void disableShader(int pass);
 
         GLuint GetUniformLocation(Shader* s, const char* UniformName);
 
-        bool Init_Shader_GL_Location(Shader* s, MatricesLocation& Mat);
-
-        virtual void loadUniformLocations(int RenderPassID);
+        virtual void loadUniformLocations();
+        virtual void loadUniformLocations(int pass);
         virtual void loadUniformLocations(pipeline& p);
-        virtual void loadUniformLocations(pipeline& p, int RenderPassID);
+        virtual void loadUniformLocations(pipeline& p, int pass);
         virtual void render();
 
         void initDataPairUniLoc(DataPair* p, int pass, const char* name);
